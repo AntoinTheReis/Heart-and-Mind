@@ -23,6 +23,8 @@ public class Controls : MonoBehaviour
     /// </summary>
     public bool OnJumpReleased() => input.actions["Jump"].WasReleasedThisFrame();
 
+    public bool OnJumpHeld() => input.actions["Jump"].IsPressed();
+
 
     /// <summary>
     /// Returns true every frame that the 'primary' input is pressed
