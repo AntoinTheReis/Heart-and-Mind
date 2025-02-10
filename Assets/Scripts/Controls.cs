@@ -18,6 +18,10 @@ public class Controls : MonoBehaviour
     /// Returns true during the frame the 'jump' input is pressed
     /// </summary>
     public bool OnJumpPressed() => input.actions["Jump"].triggered;
+    /// <summary>
+    /// Returns true during the frame the 'jump' input is released
+    /// </summary>
+    public bool OnJumpReleased() => input.actions["Jump"].WasReleasedThisFrame();
 
 
     /// <summary>
@@ -36,14 +40,5 @@ public class Controls : MonoBehaviour
     /// Returns true every frame that the 'interact' input is pressed
     /// </summary>
     public bool OnInteractPressed() => input.actions["Interact"].triggered;
-
-
-
-    //Debug inputs
-    public bool Shape1() => input.actions["AdminShape1"].triggered;
-    public bool Shape2() => input.actions["AdminShape2"].triggered;
-    public bool Shape3() => input.actions["AdminShape3"].triggered;
-    public bool Shape4() => input.actions["AdminShape4"].triggered;
-
-
+    
 }
