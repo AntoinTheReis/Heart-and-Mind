@@ -202,8 +202,8 @@ Transform:
   m_GameObject: {fileID: 599524336}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3221, y: -4, z: 0}
-  m_LocalScale: {x: 36.099083, y: 1, z: 1}
+  m_LocalPosition: {x: -1.6258, y: -5.22, z: 0}
+  m_LocalScale: {x: 47.98073, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -423,12 +423,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f276012e08fced74a96a14e77f0cf0c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  airMoveMultiplier: 0.02
-  jump: 14
-  fallMultiplier: 4
-  lowJumpMultiplier: 3.5
-  maxXvelocity: 10
+  speed: 10
+  airMoveMultiplier: 10
+  airDeaccelerator: 0.01
+  airCruisingCap: 0.05
+  jump: 20
+  fallMultiplier: 8
+  lowJumpMultiplier: 20
+  maxXvelocity: 1.4
 --- !u!114 &1342721612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,7 +540,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

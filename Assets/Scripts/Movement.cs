@@ -18,6 +18,8 @@ public class Movement : MonoBehaviour
     [Header ("Miscelanious variables")]
     public float speed = 5f;
     public float airMoveMultiplier = 0.2f;
+    public float airDeaccelerator = 0.8f;
+    public float airCruisingCap = 1f;
 
     [Header ("Jump variables")]
     public float jump = 5f;
@@ -39,7 +41,14 @@ public class Movement : MonoBehaviour
     void Update()
     {
         if (onFloor) horizontal_movement = input.MoveInput().x;
-        else horizontal_movement += input.MoveInput().x * airMoveMultiplier;
+        else if (input.MoveInput().x == 0 && horizontal_movement != 0)
+        {
+            Deaccelerate();
+        }
+        else
+        {
+            horizontal_movement += input.MoveInput().x * airMoveMultiplier * Time.deltaTime;
+        }
 
         if (horizontal_movement > maxXvelocity) horizontal_movement = maxXvelocity;
         else if (horizontal_movement < -maxXvelocity) horizontal_movement = -maxXvelocity;
@@ -76,6 +85,22 @@ public class Movement : MonoBehaviour
     {
         Debug.Log("Jumped!");
         rb.velocity = Vector2.up * jump;
+    }
+
+    private void Deaccelerate()
+    {
+        if((horizontal_movement > 0 && horizontal_movement < airCruisingCap) || (horizontal_movement < 0 && horizontal_movement > -airCruisingCap))
+        {
+            horizontal_movement = 0;
+        }
+        else if (horizontal_movement > 0)
+        {
+            horizontal_movement -= airDeaccelerator;
+        }
+        else if(horizontal_movement < 0)
+        {
+            horizontal_movement += airDeaccelerator;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
