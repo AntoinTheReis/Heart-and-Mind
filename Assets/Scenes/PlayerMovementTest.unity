@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 599524338}
   - component: {fileID: 599524337}
   - component: {fileID: 599524339}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -427,10 +427,20 @@ MonoBehaviour:
   airMoveMultiplier: 10
   airDeaccelerator: 0.01
   airCruisingCap: 0.05
+  maxActualSpeed: {x: 5, y: 5}
+  dashSpeed: 100
+  dashWait: 0.25
   jump: 20
   fallMultiplier: 8
   lowJumpMultiplier: 20
   maxXvelocity: 1.4
+  collisionRadius: 0.25
+  bottomOffset: {x: 0, y: -0.94}
+  rightOffset: {x: 0.37, y: 0}
+  leftOffset: {x: -0.37, y: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &1342721612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,8 +560,8 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!1 &1782389866
 GameObject:
   m_ObjectHideFlags: 0

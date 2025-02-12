@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using DG.Tweening;
 
 [RequireComponent(typeof(Controls))]
 public class Movement : MonoBehaviour
@@ -20,6 +21,13 @@ public class Movement : MonoBehaviour
     public float airMoveMultiplier = 0.2f;
     public float airDeaccelerator = 0.8f;
     public float airCruisingCap = 1f;
+    public Vector2 maxActualSpeed;
+
+    [Header("Dash variables")]
+    public float dashSpeed;
+    public float dashWait = 0.3f;
+    private bool isDashing = false;
+    private bool canDash = false;
 
     [Header ("Jump variables")]
     public float jump = 5f;
@@ -29,6 +37,12 @@ public class Movement : MonoBehaviour
 
     private bool onFloor;
     private bool onWalls;
+
+    [Header("Floor and Wall Checks")]
+    public float collisionRadius = 0.25f;
+    public Vector2 bottomOffset, rightOffset, leftOffset;
+    private Color debugCollisionColor = Color.red;
+    public LayerMask groundLayer;
 
 
     private void Awake()
@@ -58,9 +72,11 @@ public class Movement : MonoBehaviour
             Debug.Log("Interact Pressed");
         }
 
-        if (input.OnPrimaryPressed())
+        if (input.OnPrimaryPressed() && !isDashing)
         {
             Debug.Log("Primary Pressed");
+            if(input.MoveInput().x != 0 || input.MoveInput().y != 0) Dash(input.MoveInput().x, input.MoveInput().y); 
+            else Dash(1, 0);
         }
 
         if(onFloor && input.OnJumpPressed())
@@ -79,6 +95,8 @@ public class Movement : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
+        if(!isDashing && rb.velocity.x > maxActualSpeed.x) rb.velocity = new Vector2(maxActualSpeed.x, rb.velocity.y);
+        if (!isDashing && rb.velocity.x > maxActualSpeed.x) rb.velocity = new Vector2(maxActualSpeed.x, rb.velocity.y);
     }
 
     private void Jump()
@@ -95,11 +113,11 @@ public class Movement : MonoBehaviour
         }
         else if (horizontal_movement > 0)
         {
-            horizontal_movement -= airDeaccelerator;
+            horizontal_movement -= airDeaccelerator * Time.deltaTime;
         }
         else if(horizontal_movement < 0)
         {
-            horizontal_movement += airDeaccelerator;
+            horizontal_movement += airDeaccelerator * Time.deltaTime;
         }
     }
 
@@ -115,6 +133,56 @@ public class Movement : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Platform") onFloor = false;
+    }
+
+
+    //Platforms need to be added to the "Platforms" layer in the editor. 
+    private void FloorAndWallsCheck()
+    {
+        onFloor = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, collisionRadius, groundLayer);
+        onWalls = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer) || Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer);
+        if (!isDashing)
+        {
+            canDash = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, collisionRadius, groundLayer);
+        }
+    }
+
+    private void Dash(float x, float y)
+    {
+        rb.gravityScale = 0;
+        rb.velocity = Vector2.zero;
+        Vector2 dir = new Vector2(x, y);
+        DOVirtual.Float(14, 0, .8f, RigidbodyDrag);
+
+        rb.velocity += dir.normalized * dashSpeed;
+        StartCoroutine(DashWait());
+    }
+
+    IEnumerator DashWait()
+    {
+        isDashing = true;
+        canDash = false;
+
+        yield return new WaitForSeconds(dashWait);
+
+        rb.gravityScale = 5;
+        isDashing = false;
+    }
+
+    private void RigidbodyDrag(float x)
+    {
+        rb.drag = x;
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+
+        var positions = new Vector2[] { bottomOffset, rightOffset, leftOffset };
+
+        Gizmos.DrawWireSphere((Vector2)transform.position + bottomOffset, collisionRadius);
+        Gizmos.DrawWireSphere((Vector2)transform.position + rightOffset, collisionRadius);
+        Gizmos.DrawWireSphere((Vector2)transform.position + leftOffset, collisionRadius);
     }
 
 }
