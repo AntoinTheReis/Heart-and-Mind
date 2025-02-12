@@ -27,7 +27,7 @@ public class Movement : MonoBehaviour
     public float dashSpeed;
     public float dashWait = 0.3f;
     private bool isDashing = false;
-    private bool canDash = false;
+    public bool canDash = true;
 
     [Header ("Jump variables")]
     public float jump = 5f;
@@ -54,6 +54,9 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        FloorAndWallsCheck();
+
         if (onFloor) horizontal_movement = input.MoveInput().x;
         else if (input.MoveInput().x == 0 && horizontal_movement != 0)
         {
@@ -72,7 +75,7 @@ public class Movement : MonoBehaviour
             Debug.Log("Interact Pressed");
         }
 
-        if (input.OnPrimaryPressed() && !isDashing)
+        if (input.OnPrimaryPressed() && !isDashing && canDash)
         {
             Debug.Log("Primary Pressed");
             if(input.MoveInput().x != 0 || input.MoveInput().y != 0) Dash(input.MoveInput().x, input.MoveInput().y); 
@@ -141,9 +144,9 @@ public class Movement : MonoBehaviour
     {
         onFloor = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, collisionRadius, groundLayer);
         onWalls = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer) || Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer);
-        if (!isDashing)
+        if (!isDashing && onFloor)
         {
-            canDash = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, collisionRadius, groundLayer);
+            canDash = true;
         }
     }
 
