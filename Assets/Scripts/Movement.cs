@@ -46,11 +46,11 @@ public class Movement : MonoBehaviour
     public float wallJumpVertical = 1;
     private float wallTime;
     private float currentWallSpeed;
-    public bool wallJumping;
-    public float currentWallJumpAir;
+    private bool wallJumping;
+    private float currentWallJumpAir;
 
 
-    private bool onFloor;
+    public bool onFloor;
     private bool onWalls;
     private float wallSide;
 
@@ -80,16 +80,24 @@ public class Movement : MonoBehaviour
         if (input.MoveInput().x > 0) side = 1;
         else if (input.MoveInput().x < 0) side = -1;
 
-        //speed changes if the player is in the air
-        if (onFloor) horizontal_movement = input.MoveInput().x;
-        else if (input.MoveInput().x == 0 && horizontal_movement != 0)
+        if (!isDashing) //Player can only influence movement with WASD if not Dashing
         {
-            Deaccelerate();
-        }
-        else
-        {
-            if (!wallJumping) horizontal_movement += input.MoveInput().x * airMoveMultiplier * Time.deltaTime;
-            else horizontal_movement += input.MoveInput().x * airMoveMultiplier * currentWallJumpAir * Time.deltaTime;
+            if (onFloor && !isDashing)
+            {
+                if (onWalls && (wallSide == input.MoveInput().x)) horizontal_movement = 0;
+                else horizontal_movement = input.MoveInput().x;
+            }
+            else if (input.MoveInput().x == 0 && horizontal_movement != 0)  //speed changes if the player is in the air
+            {
+                if (onWalls) horizontal_movement = 0;
+                else Deaccelerate();
+            }
+            else
+            {
+                if (onWalls && (wallSide == input.MoveInput().x)) horizontal_movement = 0;
+                else if (!wallJumping) horizontal_movement += input.MoveInput().x * airMoveMultiplier * Time.deltaTime;
+                else if (!(wallSide == input.MoveInput().x && onWalls)) horizontal_movement += input.MoveInput().x * airMoveMultiplier * currentWallJumpAir * Time.deltaTime;
+            }
         }
 
         //maxVelocity calculations
@@ -124,7 +132,7 @@ public class Movement : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
-        else if (rb.velocity.y > 0 && !input.OnJumpHeld())
+        else if (rb.velocity.y > 0 && !input.OnJumpHeld() && !isDashing)
         {
             rb.velocity += Vector2.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
@@ -136,21 +144,24 @@ public class Movement : MonoBehaviour
         if (onWalls && !onFloor && !wallJumping)
         {
             side = wallSide * -1;
-            rb.gravityScale = 0;
-            if (wallTime >= wallSticky)
+            if(input.MoveInput().x == wallSide)
             {
-                WallSlide();
-            }
-            else
-            {
-                rb.velocity = new Vector2(rb.velocity.x, 0);
-                wallTime += Time.deltaTime;
+                rb.gravityScale = 0;
+                if (wallTime >= wallSticky)
+                {
+                    WallSlide();
+                }
+                else
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, 0);
+                    wallTime += Time.deltaTime;
+                }
             }
             if (input.OnJumpPressed())
             {
                 WallJump(side);
             }
-        }
+        } 
         else if (!isDashing)
         {
             currentWallSpeed = 0;
@@ -208,6 +219,7 @@ public class Movement : MonoBehaviour
     {
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
+        horizontal_movement = 0;
         Vector2 dir = new Vector2(x, y);
         DOVirtual.Float(14, 0, .8f, RigidbodyDrag);
 

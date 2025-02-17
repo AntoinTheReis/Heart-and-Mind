@@ -585,7 +585,7 @@ MonoBehaviour:
   airMoveMultiplier: 10
   airDeaccelerator: 0.01
   airCruisingCap: 0.05
-  maxActualSpeed: {x: 5, y: 5}
+  maxActualSpeed: {x: 7, y: 5}
   dashSpeed: 100
   dashWait: 0.25
   canDash: 1
@@ -600,9 +600,8 @@ MonoBehaviour:
   wallJumpAirTime: 2
   wallJumpHorizontal: 1.2
   wallJumpVertical: 1
-  wallJumping: 0
-  currentWallJumpAir: 0
-  collisionRadius: 0.3
+  onFloor: 0
+  collisionRadius: 0.16
   bottomOffset: {x: 0, y: -0.94}
   rightOffset: {x: 0.37, y: 0}
   leftOffset: {x: -0.37, y: 0}
