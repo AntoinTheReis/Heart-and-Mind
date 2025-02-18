@@ -35,6 +35,11 @@ public class Controls : MonoBehaviour
     /// </summary>
     public bool OnPrimaryPressed() => input.actions["Primary"].triggered;
     /// <summary>
+    /// Returns true on the frame the 'primary' input is released
+    /// </summary>
+    public bool OnPrimaryReleased() => input.actions["Primary"].WasReleasedThisFrame();
+    
+    /// <summary>
     /// Returns true every frame that the 'interact' input is pressed
     /// </summary>
     public bool InteractPressed() => input.actions["Interact"].IsPressed();
