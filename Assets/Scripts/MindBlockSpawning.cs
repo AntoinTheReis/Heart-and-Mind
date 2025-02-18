@@ -1,21 +1,18 @@
-using System;
+
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class MindBlockSpawning : MonoBehaviour
 {
    [SerializeField] private GameObject BlockPrefab;
    private GameObject spawnedBlock;
-   [SerializeField] private float minSpawnDistance;
-   [SerializeField] private float maxSpawnDistance;
+   //[SerializeField] private float minSpawnDistance;
+   [SerializeField] private float maxBlockSpawnDistance;
+   [SerializeField] private float blockSlideStep;
    [Tooltip("How many milliseconds to hold button to activate spawn coroutine")][SerializeField] private int spawnDelay;
    private void OnDrawGizmos()
    {
-      Gizmos.DrawWireSphere(transform.position, minSpawnDistance);
-      Gizmos.DrawWireSphere(transform.position, maxSpawnDistance);
+      Gizmos.DrawWireSphere(transform.position, maxBlockSpawnDistance);
    }
 
    private Controls input;
@@ -49,12 +46,23 @@ public class MindBlockSpawning : MonoBehaviour
 
       keepMovingBlock: //omg i made my own update function inside a coroutine thats crazy
       //Moving block position
-      spawnedBlock.transform.position += (Vector3)input.MoveInput() * (4 * Time.deltaTime);
+      Vector3 newBlockPos = spawnedBlock.transform.position + (Vector3)input.MoveInput() * (4 * Time.deltaTime);
+      if (Vector3.Distance(transform.position, newBlockPos) < maxBlockSpawnDistance)
+      {
+         spawnedBlock.transform.position = newBlockPos;
+      }
+      else
+      {
+         //TODO Add some juice for not being able to move the block that far
+         Debug.Log("Can't move block");
+         spawnedBlock.transform.position = Vector3.MoveTowards(spawnedBlock.transform.position, transform.position, blockSlideStep);
+      }
       
       //Releasing block
       if (!input.PrimaryPressed())
       {
          blockRigidbody.gravityScale = 1;
+         GetComponent<MindMovement>().canMove = true;
          yield break;
       }
       else
@@ -69,9 +77,17 @@ public class MindBlockSpawning : MonoBehaviour
       if(spawnedBlock != null) Destroy(spawnedBlock); //destroy already spawned block
       spawnedBlock = Instantiate(BlockPrefab, transform.position, Quaternion.identity); //makes new one
       //resets position and rigidbody parameters
-      spawnedBlock.transform.position = transform.position + Vector3.up * minSpawnDistance;
+      if (input.MoveInput().y < 0) //if player is holding down
+      {
+         spawnedBlock.transform.position = transform.position - Vector3.up * 1;
+      }
+      else
+      {
+         spawnedBlock.transform.position = transform.position + Vector3.up * 1;
+      }
       spawnedBlock.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
       spawnedBlock.GetComponent<Rigidbody2D>().gravityScale = 0;
+      GetComponent<MindMovement>().canMove = false;
    }
 
 
