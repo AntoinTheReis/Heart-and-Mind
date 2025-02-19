@@ -16,6 +16,10 @@ public class Movement : MonoBehaviour
     private float horizontal_movement;
     private float vertical_movement;
 
+    public bool onFloor;
+    private bool onWalls;
+    private float wallSide;
+
     [Header ("Miscelanious variables")]
     public float speed = 5f;
     public float airMoveMultiplier = 0.2f;
@@ -35,6 +39,10 @@ public class Movement : MonoBehaviour
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
     public float maxXvelocity = 10f;
+    public float coyoteTimeJump = 0.2f;
+    private float coyoteTimeJumpCounter;
+    public float jumpBufferTime = 0.2f;
+    private float jumpBufferCounter;
 
     [Header("Wall Slide & Wall Jump")]
     public float wallSticky;
@@ -44,15 +52,13 @@ public class Movement : MonoBehaviour
     public float wallJumpAirTime = 0.5f;
     public float wallJumpHorizontal = 1;
     public float wallJumpVertical = 1;
+    public float coyoteTimeWall = 0.2f;
+    private float coyoteTimeWallCounter;
     private float wallTime;
     private float currentWallSpeed;
     private bool wallJumping;
     private float currentWallJumpAir;
-
-
-    public bool onFloor;
-    private bool onWalls;
-    private float wallSide;
+    private bool leftWall;
 
     [Header("Floor and Wall Checks")]
     public float collisionRadius = 0.25f;
@@ -76,25 +82,35 @@ public class Movement : MonoBehaviour
         //Deactivat wallJumping bool
         if (onFloor && !isDashing) wallJumping = false;
 
+        //calculates coyote time for jump
+        if (onFloor) coyoteTimeJumpCounter = coyoteTimeJump;
+        else coyoteTimeJumpCounter -= Time.deltaTime;
+
+        //calculates buffer for jump press
+        if (input.OnJumpPressed()) jumpBufferCounter = jumpBufferTime;
+        else jumpBufferCounter -= Time.deltaTime;
+
         //Keeping track of what side the player is facing
         if (input.MoveInput().x > 0) side = 1;
         else if (input.MoveInput().x < 0) side = -1;
 
         if (!isDashing) //Player can only influence movement with WASD if not Dashing
         {
-            if (onFloor && !isDashing)
+            if (onFloor)
             {
-                if (onWalls && (wallSide == input.MoveInput().x)) horizontal_movement = 0;
+                currentWallSpeed = 0;
+                if (onWalls && (wallSide == input.MoveInput().x) && !wallJumping) horizontal_movement = 0;
                 else horizontal_movement = input.MoveInput().x;
             }
             else if (input.MoveInput().x == 0 && horizontal_movement != 0)  //speed changes if the player is in the air
             {
-                if (onWalls) horizontal_movement = 0;
+                if (onWalls && !wallJumping) horizontal_movement = 0;
                 else Deaccelerate();
             }
             else
             {
-                if (onWalls && (wallSide == input.MoveInput().x)) horizontal_movement = 0;
+                Debug.Log(rb.velocity);
+                if (onWalls && (wallSide == input.MoveInput().x) && !wallJumping) horizontal_movement = 0;
                 else if (!wallJumping) horizontal_movement += input.MoveInput().x * airMoveMultiplier * Time.deltaTime;
                 else if (!(wallSide == input.MoveInput().x && onWalls)) horizontal_movement += input.MoveInput().x * airMoveMultiplier * currentWallJumpAir * Time.deltaTime;
             }
@@ -117,7 +133,7 @@ public class Movement : MonoBehaviour
             else Dash(side, 0);
         }
 
-        if(onFloor && input.OnJumpPressed())
+        if((coyoteTimeJumpCounter > 0) && input.OnJumpPressed())
         {
             Jump();
         }
@@ -138,11 +154,14 @@ public class Movement : MonoBehaviour
         }
 
         //Speed limiters
-        if(!isDashing && rb.velocity.x > maxActualSpeed.x) rb.velocity = new Vector2(maxActualSpeed.x, rb.velocity.y);
+        if(!isDashing && (rb.velocity.x > maxActualSpeed.x)) rb.velocity = new Vector2(maxActualSpeed.x, rb.velocity.y);
+        else if(!isDashing && (rb.velocity.x < -(maxActualSpeed.x))) rb.velocity = new Vector2(-(maxActualSpeed.x), rb.velocity.y);
 
         //Wall Slide Calcs
-        if (onWalls && !onFloor && !wallJumping)
+        if (onWalls && !onFloor && (!wallJumping || leftWall))
         {
+            wallJumping = false;
+            coyoteTimeWallCounter = coyoteTimeWall;
             side = wallSide * -1;
             if(input.MoveInput().x == wallSide)
             {
@@ -157,23 +176,32 @@ public class Movement : MonoBehaviour
                     wallTime += Time.deltaTime;
                 }
             }
-            if (input.OnJumpPressed())
+            else
             {
-                WallJump(side);
+                rb.gravityScale = 5;
             }
         } 
         else if (!isDashing)
         {
+            coyoteTimeWallCounter -= Time.deltaTime;
             currentWallSpeed = 0;
             wallTime = 0;
             rb.gravityScale = 5;
         }
+
+        //wall jumping with coyote time
+        if (input.OnJumpPressed() && (coyoteTimeWallCounter > 0)) WallJump(side);
+
+        //A check to make consecutive walljumps possible
+        leftWall = !onWalls && wallJumping && !onFloor;
     }
 
     private void Jump()
     {
         Debug.Log("Jumped!");
         rb.velocity = Vector2.up * jump;
+        coyoteTimeJumpCounter = 0;
+        jumpBufferCounter = 0;
     }
 
     private void WallJump(float side)
@@ -181,8 +209,14 @@ public class Movement : MonoBehaviour
         Debug.Log("Wall Jumped");
         wallJumping = true;
         DOVirtual.Float(wallJumpAir, 1, wallJumpAirTime, CurrentWallJumpAir);
-        Vector2 dir = new Vector2(side * wallJumpHorizontal, wallJumpVertical);
+        Vector2 dir = new Vector2(Mathf.Sign(side) * wallJumpHorizontal, wallJumpVertical);
+        rb.velocity = Vector2.zero; 
         rb.velocity = dir * jump;
+        rb.AddForce(dir * jump);
+        coyoteTimeWallCounter = 0;
+        jumpBufferCounter = 0;
+
+        Debug.Log($"WallJump - Side: {side}, Dir: {dir}, Jump: {jump}, Velocity Before: {rb.velocity}");
     }
 
     private void Deaccelerate()
@@ -206,8 +240,10 @@ public class Movement : MonoBehaviour
     {
         onFloor = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, collisionRadius, groundLayer);
         onWalls = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer) || Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer);
+
         if (Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer)) wallSide = 1;
-        else wallSide = -1;
+        else if (Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer)) wallSide = -1;
+        else wallSide = 0;
 
         if (!isDashing && onFloor && !onWalls)
         {
