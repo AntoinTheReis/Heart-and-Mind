@@ -133,7 +133,7 @@ public class Movement : MonoBehaviour
             else Dash(side, 0);
         }
 
-        if((coyoteTimeJumpCounter > 0) && input.OnJumpPressed())
+        if((coyoteTimeJumpCounter > 0) && (jumpBufferCounter > 0))
         {
             Jump();
         }
@@ -190,7 +190,7 @@ public class Movement : MonoBehaviour
         }
 
         //wall jumping with coyote time
-        if (input.OnJumpPressed() && (coyoteTimeWallCounter > 0)) WallJump(side);
+        if ((jumpBufferCounter > 0) && (coyoteTimeWallCounter > 0)) WallJump(side);
 
         //A check to make consecutive walljumps possible
         leftWall = !onWalls && wallJumping && !onFloor;
