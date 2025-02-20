@@ -848,8 +848,9 @@ MonoBehaviour:
   airCruisingCap: 0.05
   maxActualSpeed: {x: 7, y: 7}
   dashSpeed: 80
-  dashWait: 0.25
-  canDash: 1
+  dashWait: 0.42
+  dragDashDuration: 0.25
+  dragDashMax: 14
   jump: 20
   fallMultiplier: 8
   lowJumpMultiplier: 20

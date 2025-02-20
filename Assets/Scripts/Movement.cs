@@ -31,8 +31,10 @@ public class Movement : MonoBehaviour
     [Header("Dash variables")]
     public float dashSpeed;
     public float dashWait = 0.3f;
+    public float dragDashDuration = 0.8f;
+    public float dragDashMax = 14f;
     private bool isDashing = false;
-    public bool canDash = true;
+    private bool canDash = true;
 
     [Header ("Jump variables")]
     public float jump = 5f;
@@ -257,7 +259,7 @@ public class Movement : MonoBehaviour
         rb.velocity = Vector2.zero;
         horizontal_movement = 0;
         Vector2 dir = new Vector2(x, y);
-        DOVirtual.Float(14, 0, .8f, RigidbodyDrag);
+        DOVirtual.Float(dragDashMax, 0, dragDashDuration, RigidbodyDrag);
 
         rb.velocity += dir.normalized * dashSpeed;
         StartCoroutine(DashWait());
