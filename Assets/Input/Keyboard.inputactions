@@ -66,6 +66,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "8a4b238b-5f8f-4cd2-8d87-bb0e2339641a",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "2D Vector",
                     "id": "4e571990-17ae-45c0-a431-cca22890bc68",
                     "path": "2DVector",
@@ -157,6 +168,17 @@
                     "name": "",
                     "id": "0474ddd0-d40a-4d64-a520-012af588b171",
                     "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d91db64b-a3db-4dc2-a812-62b8795dc1a1",
+                    "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
