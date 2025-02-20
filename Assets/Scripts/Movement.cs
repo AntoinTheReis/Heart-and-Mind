@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
     private float horizontal_movement;
     private float vertical_movement;
 
-    public bool onFloor;
+    private bool onFloor;
     private bool onWalls;
     private float wallSide;
 
@@ -60,7 +60,7 @@ public class Movement : MonoBehaviour
     private float currentWallSpeed;
     private bool wallJumping;
     private float currentWallJumpAir;
-    private bool leftWall;
+    private bool leftWall;   //as in leaving, not as in the side
 
     [Header("Floor and Wall Checks")]
     public float collisionRadius = 0.25f;
@@ -111,7 +111,6 @@ public class Movement : MonoBehaviour
             }
             else
             {
-                Debug.Log(rb.velocity);
                 if (onWalls && (wallSide == input.MoveInput().x) && !wallJumping) horizontal_movement = 0;
                 else if (!wallJumping) horizontal_movement += input.MoveInput().x * airMoveMultiplier * Time.deltaTime;
                 else if (!(wallSide == input.MoveInput().x && onWalls)) horizontal_movement += input.MoveInput().x * airMoveMultiplier * currentWallJumpAir * Time.deltaTime;
