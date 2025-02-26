@@ -503,8 +503,8 @@ MonoBehaviour:
   characterSwitcher: {fileID: 117654435}
   followSpeed: 5
   maxDistance: 8
-  timeToSetFollowSpawn: 0.2
-  characterMaterialization: 0.4
+  timeToSetFollowSpawn: 0.25
+  characterMaterialization: 0.5
   bounded: 1
   roomNameUI: {fileID: 0}
 --- !u!114 &720449395
