@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9eee5e588cfed94ea4325bbcb55fa48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room_width: 18
-  room_height: 10
+  room_width: 51
+  room_height: 24
   room_is_selected: 0
   cover: {fileID: 0}
 --- !u!61 &2188319996702184336
