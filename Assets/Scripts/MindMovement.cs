@@ -7,9 +7,6 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Controls))]
 public class MindMovement : MonoBehaviour
 {
-    //Written just to see input and as a base, go cook antonio <3
-    public bool canMove = true;
-
     Rigidbody2D rb;
     Controls input;
 
@@ -19,6 +16,10 @@ public class MindMovement : MonoBehaviour
     private bool onFloor;
     private bool onWalls;
     private float wallSide;
+
+    [Header ("Externally Manipulated")]
+    public bool canMove = true;  //Mind skill conditional
+    public bool turnedOn = false;  //Character switching conditional
 
     [Header("Miscelanious variables")]
     public float speed = 5f;
@@ -55,7 +56,6 @@ public class MindMovement : MonoBehaviour
     {
         FloorAndWallsCheck();
 
-
         //calculates coyote time for jump
         if (onFloor) coyoteTimeJumpCounter = coyoteTimeJump;
         else coyoteTimeJumpCounter -= Time.deltaTime;
@@ -70,8 +70,9 @@ public class MindMovement : MonoBehaviour
 
         if (onFloor)
         {
-            if (onWalls && (wallSide == input.MoveInput().x) ) horizontal_movement = 0;
-            else horizontal_movement = input.MoveInput().x;
+            if (onWalls && (wallSide == input.MoveInput().x)) horizontal_movement = 0;
+            else if (turnedOn && canMove) horizontal_movement = input.MoveInput().x;
+            else horizontal_movement = 0;
         }
         else if (input.MoveInput().x == 0 && horizontal_movement != 0)  //speed changes if the player is in the air
         {
@@ -81,8 +82,11 @@ public class MindMovement : MonoBehaviour
         else
         {
             if (onWalls && (wallSide == input.MoveInput().x)) horizontal_movement = 0;
-            else if (!(wallSide == input.MoveInput().x && onWalls)) horizontal_movement += input.MoveInput().x * airMoveMultiplier * Time.deltaTime;
-            else horizontal_movement += input.MoveInput().x * airMoveMultiplier * Time.deltaTime;
+            else if (turnedOn && canMove)
+            {
+                if (!(wallSide == input.MoveInput().x && onWalls)) horizontal_movement += input.MoveInput().x * airMoveMultiplier * Time.deltaTime;
+                else horizontal_movement += input.MoveInput().x * airMoveMultiplier * Time.deltaTime;
+            }
         }
 
         //maxVelocity calculations
@@ -95,7 +99,7 @@ public class MindMovement : MonoBehaviour
         }
 
 
-        if ((coyoteTimeJumpCounter > 0) && (jumpBufferCounter > 0))
+        if ((coyoteTimeJumpCounter > 0) && (jumpBufferCounter > 0) && turnedOn && canMove)
         {
             Jump();
         }

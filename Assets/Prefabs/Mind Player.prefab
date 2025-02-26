@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8683301040874959528}
   - component: {fileID: 6556409655674295825}
   - component: {fileID: 4817034444311610703}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mind Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canMove: 1
+  turnedOn: 1
   speed: 6.5
   airMoveMultiplier: 6.5
   airDeaccelerator: 0.01
@@ -200,7 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7112829726043816023}
   - component: {fileID: 6625172005883625036}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}

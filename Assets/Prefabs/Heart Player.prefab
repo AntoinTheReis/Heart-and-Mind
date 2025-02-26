@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6029402008933333522}
   - component: {fileID: 3706732601457735610}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 210528420843331964}
   - component: {fileID: 3005949718448252378}
   - component: {fileID: 7020654500470741762}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Heart Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f276012e08fced74a96a14e77f0cf0c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onFloor: 0
+  turnedOn: 0
   speed: 10
   airMoveMultiplier: 10
   airDeaccelerator: 0.01
@@ -222,7 +222,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

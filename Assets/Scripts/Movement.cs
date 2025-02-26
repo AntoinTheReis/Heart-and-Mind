@@ -20,6 +20,9 @@ public class Movement : MonoBehaviour
     private bool onWalls;
     private float wallSide;
 
+    [Header("Externally Manipulated")]
+    public bool turnedOn = false;  //Character switching conditional
+
     [Header ("Miscelanious variables")]
     public float speed = 5f;
     public float airMoveMultiplier = 0.2f;
@@ -102,7 +105,8 @@ public class Movement : MonoBehaviour
             {
                 currentWallSpeed = 0;
                 if (onWalls && (wallSide == input.MoveInput().x) && !wallJumping) horizontal_movement = 0;
-                else horizontal_movement = input.MoveInput().x;
+                else if (turnedOn) horizontal_movement = input.MoveInput().x;
+                else horizontal_movement = 0;
             }
             else if (input.MoveInput().x == 0 && horizontal_movement != 0)  //speed changes if the player is in the air
             {
@@ -112,8 +116,11 @@ public class Movement : MonoBehaviour
             else
             {
                 if (onWalls && (wallSide == input.MoveInput().x) && !wallJumping) horizontal_movement = 0;
-                else if (!wallJumping) horizontal_movement += input.MoveInput().x * airMoveMultiplier * Time.deltaTime;
-                else if (!(wallSide == input.MoveInput().x && onWalls)) horizontal_movement += input.MoveInput().x * airMoveMultiplier * currentWallJumpAir * Time.deltaTime;
+                else if (turnedOn)
+                {
+                    if (!wallJumping) horizontal_movement += input.MoveInput().x * airMoveMultiplier * Time.deltaTime;
+                    else if (!(wallSide == input.MoveInput().x && onWalls)) horizontal_movement += input.MoveInput().x * airMoveMultiplier * currentWallJumpAir * Time.deltaTime;
+                }
             }
         }
 
@@ -127,14 +134,14 @@ public class Movement : MonoBehaviour
         }
 
         //Dash Inputs
-        if (input.OnPrimaryPressed() && !isDashing && canDash)
+        if (input.OnPrimaryPressed() && !isDashing && canDash && turnedOn)
         {
             Debug.Log("Primary Pressed");
             if(input.MoveInput().x != 0 || input.MoveInput().y != 0) Dash(input.MoveInput().x, input.MoveInput().y); 
             else Dash(side, 0);
         }
 
-        if((coyoteTimeJumpCounter > 0) && (jumpBufferCounter > 0))
+        if((coyoteTimeJumpCounter > 0) && (jumpBufferCounter > 0) && turnedOn)
         {
             Jump();
         }
@@ -191,7 +198,7 @@ public class Movement : MonoBehaviour
         }
 
         //wall jumping with coyote time
-        if ((jumpBufferCounter > 0) && (coyoteTimeWallCounter > 0)) WallJump(side);
+        if ((jumpBufferCounter > 0) && (coyoteTimeWallCounter > 0) && turnedOn) WallJump(side);
 
         //A check to make consecutive walljumps possible
         leftWall = !onWalls && wallJumping && !onFloor;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Users;
 
 public class Controls : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Controls : MonoBehaviour
 
     private void Awake()
     {
+        InputUser.PerformPairingWithDevice(Keyboard.current, input.user, InputUserPairingOptions.None);  //forces keybaord to the playerInput
+
         input.actions.Enable();  // Ensure input actions are enabled
         Debug.Log("PlayerInput enabled: " + input.enabled);
     }
