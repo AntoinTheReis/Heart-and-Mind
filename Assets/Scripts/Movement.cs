@@ -202,6 +202,8 @@ public class Movement : MonoBehaviour
 
         //A check to make consecutive walljumps possible
         leftWall = !onWalls && wallJumping && !onFloor;
+
+        if (isDashing && rb.velocity == Vector2.zero) DashCancel();  //Cancel dash effects if player is still (hit a wall or floor)
     }
 
     private void Jump()
@@ -210,6 +212,7 @@ public class Movement : MonoBehaviour
         rb.velocity = Vector2.up * jump;
         coyoteTimeJumpCounter = 0;
         jumpBufferCounter = 0;
+        DashCancel();
     }
 
     private void WallJump(float side)
@@ -223,8 +226,9 @@ public class Movement : MonoBehaviour
         rb.AddForce(dir * jump);
         coyoteTimeWallCounter = 0;
         jumpBufferCounter = 0;
+        DashCancel();
 
-        Debug.Log($"WallJump - Side: {side}, Dir: {dir}, Jump: {jump}, Velocity Before: {rb.velocity}");
+        //Debug.Log($"WallJump - Side: {side}, Dir: {dir}, Jump: {jump}, Velocity Before: {rb.velocity}");
     }
 
     private void Deaccelerate()
@@ -309,6 +313,12 @@ public class Movement : MonoBehaviour
         Gizmos.DrawWireSphere((Vector2)transform.position + bottomOffset, collisionRadius);
         Gizmos.DrawWireSphere((Vector2)transform.position + rightOffset, collisionRadius);
         Gizmos.DrawWireSphere((Vector2)transform.position + leftOffset, collisionRadius);
+    }
+
+    private void DashCancel()
+    {
+        isDashing = false;
+        rb.gravityScale = 5;
     }
 
 }
