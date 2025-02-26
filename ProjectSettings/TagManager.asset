@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MindBlock
   - Platform
+  - Damage
   layers:
   - Default
   - TransparentFX

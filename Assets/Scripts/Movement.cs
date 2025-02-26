@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     
     Controls input;
     Rigidbody2D rb;
+    DamageAndRespawn respawn;
 
     private float horizontal_movement;
     private float vertical_movement;
@@ -76,6 +77,7 @@ public class Movement : MonoBehaviour
     {
         input = GetComponent<Controls>();
         rb = GetComponent<Rigidbody2D>();
+        respawn = GetComponent<DamageAndRespawn>();
     }
     
     // Update is called once per frame
@@ -184,7 +186,7 @@ public class Movement : MonoBehaviour
                     wallTime += Time.deltaTime;
                 }
             }
-            else
+            else if(!respawn.respawning)
             {
                 rb.gravityScale = 5;
             }
@@ -194,7 +196,7 @@ public class Movement : MonoBehaviour
             coyoteTimeWallCounter -= Time.deltaTime;
             currentWallSpeed = 0;
             wallTime = 0;
-            rb.gravityScale = 5;
+            if (!respawn.respawning) rb.gravityScale = 5;
         }
 
         //wall jumping with coyote time
@@ -282,7 +284,7 @@ public class Movement : MonoBehaviour
 
         yield return new WaitForSeconds(dashWait);
 
-        rb.gravityScale = 5;
+        if (!respawn.respawning) rb.gravityScale = 5;
         isDashing = false;
     }
 
@@ -318,7 +320,14 @@ public class Movement : MonoBehaviour
     private void DashCancel()
     {
         isDashing = false;
-        rb.gravityScale = 5;
+        if (!respawn.respawning) rb.gravityScale = 5;
+    }
+
+    public void ZeroMovement()
+    {
+        horizontal_movement = 0;
+        vertical_movement = 0;
+        rb.velocity = Vector2.zero;
     }
 
 }

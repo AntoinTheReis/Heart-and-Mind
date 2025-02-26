@@ -168,4 +168,11 @@ public class MindMovement : MonoBehaviour
         Gizmos.DrawWireSphere((Vector2)transform.position + rightOffset, collisionRadius);
         Gizmos.DrawWireSphere((Vector2)transform.position + leftOffset, collisionRadius);
     }
+    public void ZeroMovement()
+    {
+        horizontal_movement = 0;
+        vertical_movement = 0;
+        rb.velocity = Vector2.zero;
+    }
+
 }
