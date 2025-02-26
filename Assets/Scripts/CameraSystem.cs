@@ -1,10 +1,13 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Net;
 using System.Runtime.InteropServices.WindowsRuntime;
+using DG.Tweening;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 /*
  * MAURICIO: Camera script to go on main camera - game should not have multiple cameras 
@@ -12,11 +15,15 @@ using UnityEngine;
 
 public class CameraSystem : MonoBehaviour
 {
-    [SerializeField] GameObject target;
+    public Switcher characterSwitcher;
+    private GameObject target;
 
     [Header("Camera Movement Settings")]
     [SerializeField] float followSpeed = 5f;
     [SerializeField] float maxDistance = 8f;
+    [SerializeField] float timeToSetFollowSpawn = 0.2f;
+    [SerializeField] float characterMaterialization = 0.4f;
+    private SpriteRenderer followerSprite;
 
     [Tooltip("Determines if the camera is bounded to the current room or moves to the target freely")]
     [SerializeField] bool bounded = true;
@@ -27,6 +34,7 @@ public class CameraSystem : MonoBehaviour
     Camera cam;
     float half_height;
     float half_width;
+    private Room previousRoom;
 
     private void Start()
     {
@@ -37,7 +45,8 @@ public class CameraSystem : MonoBehaviour
     }
     private void Update()
     {
-       
+        if (characterSwitcher.activeCharacter == 1) target = characterSwitcher.heartObject;
+        else target = characterSwitcher.mindObject;
 
         //If no target found, attempts to default to player
         if (target == null) target = GameObject.FindGameObjectWithTag("Player");
@@ -54,6 +63,7 @@ public class CameraSystem : MonoBehaviour
         {
             RoomTracker.target = target.transform;
             if (RoomTracker.current_room == null) goto BoundFailed;
+            else if (RoomTracker.current_room != previousRoom) StartCoroutine("IdleFollow");
 
             Vector3 room_pos = RoomTracker.current_room.transform.position;
             Vector2 room_size = new Vector2(RoomTracker.current_room.room_width/2, RoomTracker.current_room.room_height/2);
@@ -69,7 +79,7 @@ public class CameraSystem : MonoBehaviour
             if(target_position.y - half_height < room_pos.y - room_size.y) { target_position.y = room_pos.y - room_size.y + half_height; }
 
 
-
+            previousRoom = RoomTracker.current_room;
         }
     BoundFailed:  //goto lable for when bound fails, unbinding the camera
         //Debug.Log("Bound failed");
@@ -109,7 +119,31 @@ public class CameraSystem : MonoBehaviour
     }
 
 
+    IEnumerator IdleFollow()  //Transporting other character into new Room
+    {
+        GameObject otherCharacter;
 
+        if (characterSwitcher.activeCharacter == 1) otherCharacter = characterSwitcher.mindObject;
+        else otherCharacter = characterSwitcher.heartObject;
+        followerSprite = otherCharacter.GetComponentInChildren<SpriteRenderer>();
+        Color tmp = followerSprite.color;   //Setting color to transparent
+        tmp.a = 0f;
+        followerSprite.color = tmp;
+
+        yield return new WaitForSecondsRealtime(timeToSetFollowSpawn);
+        Vector2 spawnPos = target.transform.position;
+
+        otherCharacter.transform.position = spawnPos;
+        DOVirtual.Float(0, 1, characterMaterialization, SpriteAlpha);
+
+    }
+
+    private void SpriteAlpha(float alpha)
+    {
+        Color tmp = followerSprite.color;
+        tmp.a = alpha;
+        followerSprite.color = tmp;
+    }
 
     //TODO: CAMERA SHAKE
     public void ShakeCamera() { Debug.Log("Camera Shake (unimplemented)"); }
