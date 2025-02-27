@@ -17,6 +17,7 @@ public class DamageAndRespawn : MonoBehaviour
     private Movement movement;
     private MindMovement mMovement;
     private Collider2D collider2d;
+    private Room lastActualRoom;
 
     // Start is called before the first frame update
     void Start()
@@ -36,10 +37,17 @@ public class DamageAndRespawn : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (RoomTracker.current_room != null && RoomTracker.current_room != lastActualRoom)
+        {
+            lastActualRoom = RoomTracker.current_room;
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Damage")
+        if(collision.gameObject.tag == "Damage")  //For spikes and stuff !Death with knockback!
         {
             if (heartOrMind == 1)
             {
@@ -50,6 +58,7 @@ public class DamageAndRespawn : MonoBehaviour
             {
                 mMovement.ZeroMovement();
                 mMovement.enabled = false;
+                GetComponent<MindBlockSpawning>().enabled = false;
             }
             respawning = true;
             rb.gravityScale = 0;
@@ -65,6 +74,27 @@ public class DamageAndRespawn : MonoBehaviour
 
             StartCoroutine(Respawn());
         }
+
+        if(collision.gameObject.tag == "Death")  //For deaths without knockback, such as falling in a pit
+        {
+            if (heartOrMind == 1)
+            {
+                movement.ZeroMovement();
+                movement.enabled = false;
+            }
+            else
+            {
+                mMovement.ZeroMovement();
+                mMovement.enabled = false;
+                GetComponent<MindBlockSpawning>().enabled = false;
+            }
+            respawning = true;
+            rb.gravityScale = 0;
+            rb.drag = 0;
+
+            StartCoroutine(Respawn());
+        }
+
     }
 
     IEnumerator Respawn()
@@ -74,6 +104,9 @@ public class DamageAndRespawn : MonoBehaviour
         Color tmp = spriteRenderer.color;   //Setting color to transparent
         tmp.a = 0f;
         spriteRenderer.color = tmp;
+
+        if(RoomTracker.current_room !=  null) transform.position = RoomTracker.current_room.checkpoint.position;  //Have to set the checkpoint/respawn point in the unity editor.
+        else transform.position = lastActualRoom.checkpoint.position;
 
         DOVirtual.Float(0, 1, materializationTime, SpriteAlpha);
     }
@@ -92,7 +125,11 @@ public class DamageAndRespawn : MonoBehaviour
         if (alpha == 1)
         {
             if (heartOrMind == 1) movement.enabled = true;
-            else mMovement.enabled = true;
+            else
+            {
+                mMovement.enabled = true;
+                GetComponent<MindBlockSpawning>().enabled = true;
+            }
             respawning = false;
             rb.gravityScale = 5;
             //collider2d.enabled = true;

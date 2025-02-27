@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Net;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Runtime.Serialization.Json;
 using DG.Tweening;
 using TMPro;
 using Unity.VisualScripting;
@@ -35,22 +36,20 @@ public class CameraSystem : MonoBehaviour
     float half_height;
     float half_width;
     private Room previousRoom;
+    private Room lastActualRoom;
 
     private void Start()
     {
         cam = GetComponent<Camera>();
         half_height = cam.orthographicSize;
         half_width = cam.aspect * half_height;
-
+        lastActualRoom = RoomTracker.current_room;
     }
     private void Update()
     {
         if (characterSwitcher.activeCharacter == 1) target = characterSwitcher.heartObject;
         else target = characterSwitcher.mindObject;
 
-        //If no target found, attempts to default to player
-        if (target == null) target = GameObject.FindGameObjectWithTag("Player");
-        //If no player found, don't move camera
         if (target == null)
         {
             Debug.LogError("No Camera target found");
@@ -62,15 +61,32 @@ public class CameraSystem : MonoBehaviour
         if (bounded)
         {
             RoomTracker.target = target.transform;
-            if (RoomTracker.current_room == null) goto BoundFailed;
-            else if (RoomTracker.current_room != previousRoom) StartCoroutine("IdleFollow");
+            //if (RoomTracker.current_room == null) goto BoundFailed;
+            if (RoomTracker.current_room != previousRoom && RoomTracker.current_room != null && RoomTracker.current_room != lastActualRoom) StartCoroutine("IdleFollow");  //Moves the other character when the room changes
 
-            Vector3 room_pos = RoomTracker.current_room.transform.position;
-            Vector2 room_size = new Vector2(RoomTracker.current_room.room_width/2, RoomTracker.current_room.room_height/2);
+            Vector3 room_pos;
+            Vector2 room_size;
+
+            if (RoomTracker.current_room != null && RoomTracker.current_room != lastActualRoom)
+            {
+                lastActualRoom = RoomTracker.current_room;
+            }
+
+
+            if (RoomTracker.current_room != null)
+            {
+                room_pos = RoomTracker.current_room.transform.position;
+                room_size = new Vector2(RoomTracker.current_room.room_width / 2, RoomTracker.current_room.room_height / 2);
+            }
+            else
+            {
+                room_pos = lastActualRoom.transform.position;
+                room_size = new Vector2(lastActualRoom.room_width / 2, lastActualRoom.room_height/ 2);
+            }
 
             //  camera clamping
             //horizontal max
-            if(target_position.x + half_width > room_pos.x + room_size.x) { target_position.x = room_pos.x + room_size.x - half_width; }
+            if (target_position.x + half_width > room_pos.x + room_size.x) { target_position.x = room_pos.x + room_size.x - half_width; }
             //horizontal min
             if (target_position.x - half_width < room_pos.x - room_size.x) { target_position.x = room_pos.x - room_size.x + half_width; }
             //vertical max
@@ -95,6 +111,7 @@ public class CameraSystem : MonoBehaviour
         //Enforce max distance
         if(Vector3.Distance(transform.position, target_position) > maxDistance)
         {
+            Vector3 difference = transform.position - target_position;
             Vector3 difference = transform.position - target_position;
             difference.Normalize();
             difference *= maxDistance;

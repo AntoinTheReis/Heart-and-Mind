@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8683301040874959528}
   - component: {fileID: 6556409655674295825}
   - component: {fileID: 4817034444311610703}
+  - component: {fileID: 5931158504851554038}
   m_Layer: 6
   m_Name: Mind Player
   m_TagString: Untagged
@@ -191,6 +192,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &5931158504851554038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046843607443177467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8984f19f78e00442b034a709bcbce13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePush: 1000
+  respawnTime: 0.5
+  materializationTime: 0.5
+  respawning: 0
+  dragDashMax: 14
 --- !u!1 &2166980037536431569
 GameObject:
   m_ObjectHideFlags: 0

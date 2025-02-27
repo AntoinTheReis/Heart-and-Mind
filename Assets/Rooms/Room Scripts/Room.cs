@@ -13,6 +13,7 @@ public class Room : MonoBehaviour
     public int room_width;
     public int room_height;
     public bool room_is_selected;
+    public Transform checkpoint;
     bool room_is_selected_last_state = false;
     [HideInInspector] public Transform cover;
 
@@ -43,7 +44,12 @@ public class Room : MonoBehaviour
         if (room_is_selected != room_is_selected_last_state)
         {
             room_is_selected_last_state = room_is_selected;
-            if (!room_is_selected)
+            if (RoomTracker.current_room == null)
+            {
+                Debug.Log("There is no current room");
+                coverFadeOut();
+            }
+            else if (!room_is_selected)
             {
                 coverFadeIn();
             }
@@ -77,6 +83,7 @@ public class Room : MonoBehaviour
         if(collision.transform == RoomTracker.target )
         {
             room_is_selected = false;
+            RoomTracker.current_room = null;
             StartCoroutine(NullRoomTimer(0.1f));
         }
     }
