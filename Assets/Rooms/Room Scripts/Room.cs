@@ -17,7 +17,7 @@ public class Room : MonoBehaviour
     bool room_is_selected_last_state = false;
     [HideInInspector] public Transform cover;
 
-    //MAURICIO: Adding a trigger collider for checking if target is inside
+    // Adding a trigger collider for checking if target is inside
     BoxCollider2D room_bounds;
 
     // draw an outline at these sizes, for debug reasons:
@@ -34,7 +34,7 @@ public class Room : MonoBehaviour
         cover = transform.Find("cover");
         cover.localScale = new Vector3(room_width, room_height, 0);
 
-        //MAURICIO: Set bounds of collider
+        // Set bounds of collider
         room_bounds = GetComponent<BoxCollider2D>();
         room_bounds.size = new Vector2(room_width-1, room_height-1);
     }

@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 7544948988033912947}
   - component: {fileID: 7822082203024166460}
   - component: {fileID: 8198805410120459213}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9eee5e588cfed94ea4325bbcb55fa48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room_width: 52
+  room_width: 44
   room_height: 24
   room_is_selected: 0
   checkpoint: {fileID: 1933416818812703427}

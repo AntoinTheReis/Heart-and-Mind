@@ -58,7 +58,7 @@ public class DamageAndRespawn : MonoBehaviour
             {
                 mMovement.ZeroMovement();
                 mMovement.enabled = false;
-                GetComponent<MindBlockSpawning>().enabled = false;
+                GetComponent<MindBlockTelekinesis>().enabled = false;
             }
             respawning = true;
             rb.gravityScale = 0;
@@ -86,7 +86,7 @@ public class DamageAndRespawn : MonoBehaviour
             {
                 mMovement.ZeroMovement();
                 mMovement.enabled = false;
-                GetComponent<MindBlockSpawning>().enabled = false;
+                GetComponent<MindBlockTelekinesis>().enabled = false;
             }
             respawning = true;
             rb.gravityScale = 0;
@@ -128,7 +128,7 @@ public class DamageAndRespawn : MonoBehaviour
             else
             {
                 mMovement.enabled = true;
-                GetComponent<MindBlockSpawning>().enabled = true;
+                GetComponent<MindBlockTelekinesis>().enabled = true;
             }
             respawning = false;
             rb.gravityScale = 5;

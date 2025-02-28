@@ -12,7 +12,7 @@ public class MindBlockTelekinesis : MonoBehaviour
     LinkedListNode<GameObject> selectedBlockNode = null;
     GameObject selectedBlock = null;
 
-    private Controls input;
+    public Controls input;
     private bool active = false;
     private void Start()
     {

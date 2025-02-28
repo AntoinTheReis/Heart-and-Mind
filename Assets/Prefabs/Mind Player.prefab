@@ -206,7 +206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a5d7fba5419a8448fafa9fb7413271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectionOverlay: {fileID: 6954486341722395419}
+  SelectionOverlay: {fileID: 5131291680487559466}
+  input: {fileID: 5872171845495467708}
 --- !u!1 &2166980037536431569
 GameObject:
   m_ObjectHideFlags: 0

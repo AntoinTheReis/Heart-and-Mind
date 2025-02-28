@@ -16,7 +16,7 @@ public class Switcher : MonoBehaviour
     private Movement heartMovement;
     private MindMovement mindMovement;
 
-    private MindBlockSpawning mindBlockSpawning;
+    private MindBlockTelekinesis mindBlockMechanic;
 
 
     private void Awake()
@@ -27,7 +27,7 @@ public class Switcher : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mindBlockSpawning = mindObject.GetComponent<MindBlockSpawning>();
+        mindBlockMechanic = mindObject.GetComponent<MindBlockTelekinesis>();
 
         heartMovement = heartObject.GetComponent<Movement>();
         mindMovement = mindObject.GetComponent<MindMovement>();
@@ -52,14 +52,14 @@ public class Switcher : MonoBehaviour
             if(activeCharacter == 1)
             {
                 activeCharacter = 2;
-                mindBlockSpawning.enabled = true;
+                mindBlockMechanic.enabled = true;
                 mindMovement.turnedOn = true;
                 heartMovement.turnedOn = false;
             }
             else
             {
                 activeCharacter = 1;
-                mindBlockSpawning.enabled = false;
+                mindBlockMechanic.enabled = false;
                 mindMovement.turnedOn = false;
                 heartMovement.turnedOn = true;
             }
