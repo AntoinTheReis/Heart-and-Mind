@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
+using FMODUnity;
 
 [RequireComponent(typeof(Controls))]
 public class Movement : MonoBehaviour
@@ -73,13 +74,35 @@ public class Movement : MonoBehaviour
     public LayerMask groundLayer;
 
 
+    #region Audio
+    public FMODUnity.EventReference sfx_jump;
+    FMOD.Studio.EventInstance sfx_jumpInstance;
+
+    public FMODUnity.EventReference sfx_dialogue;
+    FMOD.Studio.EventInstance sfx_dialogueInstance;
+    FMOD.Studio.PARAMETER_ID sfx_dialogueCharacter;
+    public int charVoice;
+    #endregion
+
     private void Awake()
     {
         input = GetComponent<Controls>();
         rb = GetComponent<Rigidbody2D>();
         respawn = GetComponent<DamageAndRespawn>();
+
+        #region Audio EventInstances
+        sfx_jumpInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_jump);
+
+        sfx_dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_dialogue);
+        FMOD.Studio.EventDescription dialogueDescription;
+        sfx_dialogueInstance.getDescription(out dialogueDescription);
+        FMOD.Studio.PARAMETER_DESCRIPTION dialogueParameterDescription;
+        dialogueDescription.getParameterDescriptionByName("H1M2", out dialogueParameterDescription);
+        sfx_dialogueCharacter = dialogueParameterDescription.id;
+        sfx_dialogueInstance.setParameterByID(sfx_dialogueCharacter, 1);
+        #endregion
     }
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -210,6 +233,27 @@ public class Movement : MonoBehaviour
 
     private void Jump()
     {
+        #region Jump Audio
+        if (sfx_jumpInstance.isValid())
+        {
+            FMOD.Studio.PLAYBACK_STATE playbackstate;
+            sfx_jumpInstance.getPlaybackState(out playbackstate);
+            if (playbackstate == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+            {
+                sfx_jumpInstance.start();
+            }
+        }
+        //if (sfx_dialogueInstance.isValid())
+        //{
+        //    FMOD.Studio.PLAYBACK_STATE playbackstate;
+        //    sfx_dialogueInstance.getPlaybackState(out playbackstate);
+        //    if (playbackstate == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+        //    {
+        //        sfx_dialogueInstance.start();
+        //    }
+        //}
+        #endregion
+
         Debug.Log("Jumped!");
         rb.velocity = Vector2.up * jump;
         coyoteTimeJumpCounter = 0;
