@@ -208,6 +208,21 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
+  sfx_jump:
+    Guid:
+      Data1: -1349432866
+      Data2: 1333727038
+      Data3: -641093699
+      Data4: -2011441781
+    Path: event:/SFX_Jump
+  sfx_dialogue:
+    Guid:
+      Data1: -576654384
+      Data2: 1318459271
+      Data3: 1716860328
+      Data4: -637721636
+    Path: event:/SFX_Dialogue
+  charVoice: 0
 --- !u!70 &3005949718448252378
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

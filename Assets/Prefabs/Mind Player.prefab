@@ -150,6 +150,20 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
+  sfx_jump:
+    Guid:
+      Data1: -1349432866
+      Data2: 1333727038
+      Data3: -641093699
+      Data4: -2011441781
+    Path: event:/SFX_Jump
+  sfx_dialogue:
+    Guid:
+      Data1: -576654384
+      Data2: 1318459271
+      Data3: 1716860328
+      Data4: -637721636
+    Path: event:/SFX_Dialogue
 --- !u!50 &4817034444311610703
 Rigidbody2D:
   serializedVersion: 4
