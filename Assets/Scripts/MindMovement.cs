@@ -13,7 +13,7 @@ public class MindMovement : MonoBehaviour
     private float horizontal_movement;
     private float vertical_movement;
 
-    private bool onFloor;
+    public bool onFloor;
     private bool onWalls;
     private float wallSide;
 
@@ -37,7 +37,7 @@ public class MindMovement : MonoBehaviour
     public float coyoteTimeJump = 0.2f;
     private float coyoteTimeJumpCounter;
     public float jumpBufferTime = 0.2f;
-    private float jumpBufferCounter;
+    public float jumpBufferCounter;
 
     [Header("Floor and Wall Checks")]
     public float collisionRadius = 0.25f;
@@ -169,8 +169,6 @@ public class MindMovement : MonoBehaviour
         //    }
         //}
         #endregion
-
-        Debug.Log("Jumped!");
         rb.velocity = Vector2.up * jump;
         coyoteTimeJumpCounter = 0;
         jumpBufferCounter = 0;

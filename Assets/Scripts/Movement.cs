@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour
     private float horizontal_movement;
     private float vertical_movement;
 
-    private bool onFloor;
+    public bool onFloor;
     private bool onWalls;
     private float wallSide;
 
@@ -49,7 +49,7 @@ public class Movement : MonoBehaviour
     public float coyoteTimeJump = 0.2f;
     private float coyoteTimeJumpCounter;
     public float jumpBufferTime = 0.2f;
-    private float jumpBufferCounter;
+    public float jumpBufferCounter;
 
     [Header("Wall Slide & Wall Jump")]
     public float wallSticky;
@@ -155,13 +155,12 @@ public class Movement : MonoBehaviour
 
         if (input.OnInteractPressed())
         {
-            Debug.Log("Interact Pressed");
+
         }
 
         //Dash Inputs
         if (input.OnPrimaryPressed() && !isDashing && canDash && turnedOn)
         {
-            Debug.Log("Primary Pressed");
             if(input.MoveInput().x != 0 || input.MoveInput().y != 0) Dash(input.MoveInput().x, input.MoveInput().y); 
             else Dash(side, 0);
         }
@@ -254,7 +253,6 @@ public class Movement : MonoBehaviour
         //}
         #endregion
 
-        Debug.Log("Jumped!");
         rb.velocity = Vector2.up * jump;
         coyoteTimeJumpCounter = 0;
         jumpBufferCounter = 0;
@@ -263,7 +261,6 @@ public class Movement : MonoBehaviour
 
     private void WallJump(float side)
     {
-        Debug.Log("Wall Jumped");
         wallJumping = true;
         DOVirtual.Float(wallJumpAir, 1, wallJumpAirTime, CurrentWallJumpAir);
         Vector2 dir = new Vector2(Mathf.Sign(side) * wallJumpHorizontal, wallJumpVertical);

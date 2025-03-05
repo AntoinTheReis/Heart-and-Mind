@@ -97,7 +97,7 @@ public class CameraSystem : MonoBehaviour
 
             previousRoom = RoomTracker.current_room;
         }
-    BoundFailed:  //goto lable for when bound fails, unbinding the camera
+    //BoundFailed:  //goto lable for when bound fails, unbinding the camera
         //Debug.Log("Bound failed");
         #endregion
 

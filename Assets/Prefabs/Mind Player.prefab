@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7237773892070292257}
   m_Layer: 6
   m_Name: Mind Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9df59bef16a1a4cb8697d5782b63ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onFloor: 0
   canMove: 1
   turnedOn: 1
   speed: 6.5
@@ -143,8 +144,9 @@ MonoBehaviour:
   maxXvelocity: 1.4
   coyoteTimeJump: 0.07
   jumpBufferTime: 0.07
+  jumpBufferCounter: 0
   collisionRadius: 0.16
-  bottomOffset: {x: 0, y: -0.94}
+  bottomOffset: {x: 0, y: -0.86}
   rightOffset: {x: 0.37, y: 0}
   leftOffset: {x: -0.37, y: 0}
   groundLayer:
