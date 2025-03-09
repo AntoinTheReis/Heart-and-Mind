@@ -140,9 +140,12 @@ public class CameraSystem : MonoBehaviour
     {
         GameObject otherCharacter;
 
-        if (characterSwitcher.activeCharacter == 1) otherCharacter = characterSwitcher.mindObject;
-        else otherCharacter = characterSwitcher.heartObject;
+        /*if (characterSwitcher.activeCharacter == 1) otherCharacter = characterSwitcher.mindObject;
+        else otherCharacter = characterSwitcher.heartObject;*/
+
+        otherCharacter = characterSwitcher.mindObject;
         followerSprite = otherCharacter.GetComponentInChildren<SpriteRenderer>();
+
         Color tmp = followerSprite.color;   //Setting color to transparent
         tmp.a = 0f;
         followerSprite.color = tmp;
@@ -150,7 +153,9 @@ public class CameraSystem : MonoBehaviour
         yield return new WaitForSecondsRealtime(timeToSetFollowSpawn);
         Vector2 spawnPos = target.transform.position;
 
-        otherCharacter.transform.position = spawnPos;
+        otherCharacter.transform.position = RoomTracker.current_room.mindBusStops[0].position;
+        otherCharacter.GetComponent<MindTeleporting>().busStops = RoomTracker.current_room.mindBusStops;
+        otherCharacter.GetComponent<MindTeleporting>();
         DOVirtual.Float(0, 1, characterMaterialization, SpriteAlpha);
 
     }

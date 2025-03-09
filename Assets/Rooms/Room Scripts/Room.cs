@@ -16,6 +16,7 @@ public class Room : MonoBehaviour
     public Transform checkpoint;
     bool room_is_selected_last_state = false;
     [HideInInspector] public Transform cover;
+    public List<Transform> mindBusStops;
 
     // Adding a trigger collider for checking if target is inside
     BoxCollider2D room_bounds;

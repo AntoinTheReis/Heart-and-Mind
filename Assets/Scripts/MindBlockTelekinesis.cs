@@ -13,7 +13,7 @@ public class MindBlockTelekinesis : MonoBehaviour
     GameObject selectedBlock = null;
 
     public Controls input;
-    private bool active = false;
+    public bool active = false;
     private void Start()
     {
         SelectionOverlay.GetComponent<SpriteRenderer>().enabled = false;
@@ -22,7 +22,7 @@ public class MindBlockTelekinesis : MonoBehaviour
 
     private void Update()
     {
-        GetComponent<MindMovement>().canMove = !active;
+        //GetComponent<MindMovement>().canMove = !active;
         
         if (input.OnPrimaryPressed() && !active)
         {

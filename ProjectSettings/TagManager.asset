@@ -8,6 +8,7 @@ TagManager:
   - Platform
   - Damage
   - Death
+  - Switcher
   layers:
   - Default
   - TransparentFX
