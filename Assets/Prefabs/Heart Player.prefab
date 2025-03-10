@@ -336,8 +336,8 @@ MonoBehaviour:
   coyoteTimeWall: 0.07
   collisionRadius: 0.16
   bottomOffset: {x: 0, y: -0.86}
-  rightOffset: {x: 0.37, y: 0}
-  leftOffset: {x: -0.37, y: 0}
+  rightOffset: {x: 0.43, y: 0}
+  leftOffset: {x: -0.43, y: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
