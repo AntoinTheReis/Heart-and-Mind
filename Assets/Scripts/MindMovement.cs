@@ -93,7 +93,11 @@ public class MindMovement : MonoBehaviour
 
         if (onFloor)
         {
-            if (onWalls && (wallSide == input.MoveInput().x)) horizontal_movement = 0;
+            if (onWalls && ((wallSide == 1 && input.MoveInput().x > 0) || (wallSide == -1 && input.MoveInput().x < 0)))
+            {
+                Debug.Log("Horizontal input: " + input.MoveInput().x + "| making horizontal movement 0");
+                horizontal_movement = 0;
+            }
             else if (turnedOn && canMove) horizontal_movement = input.MoveInput().x;
             else horizontal_movement = 0;
         }
