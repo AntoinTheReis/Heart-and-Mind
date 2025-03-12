@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4594681738906803558, guid: 9883322c3734a3e4a9da4ec777d5cf7e, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3709767019843197429, guid: 9883322c3734a3e4a9da4ec777d5cf7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.27
@@ -684,7 +688,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7aa07c90cb23524e82ac533847db790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heart: {fileID: 1492682809}
 --- !u!4 &557851053
 Transform:
   m_ObjectHideFlags: 0
