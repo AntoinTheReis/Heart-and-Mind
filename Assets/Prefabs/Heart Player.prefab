@@ -315,10 +315,10 @@ MonoBehaviour:
   airDeaccelerator: 0.01
   airCruisingCap: 0.05
   maxActualSpeed: {x: 7, y: 7}
-  dashSpeed: 80
-  dashWait: 0.42
-  dragDashDuration: 0.25
-  dragDashMax: 14
+  dashSpeed: 120
+  dashWait: 0.2
+  dragDashDuration: 0.9
+  dragDashMax: 20
   jump: 20
   fallMultiplier: 8
   lowJumpMultiplier: 20

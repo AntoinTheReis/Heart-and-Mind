@@ -134,7 +134,12 @@ public class Movement : MonoBehaviour
                     Debug.Log("Horizontal input: " + input.MoveInput().x + "| making horizontal movement 0");
                     horizontal_movement = 0;
                 }
-                else if (turnedOn) horizontal_movement = input.MoveInput().x;
+                else if (turnedOn)
+                {
+                    if (input.MoveInput().x > 0) horizontal_movement = 1;
+                    else if (input.MoveInput().x < 0) horizontal_movement -= 1;
+                    else horizontal_movement = 0;
+                }
                 else horizontal_movement = 0;
             }
             else if (input.MoveInput().x == 0 && horizontal_movement != 0)  //speed changes if the player is in the air
