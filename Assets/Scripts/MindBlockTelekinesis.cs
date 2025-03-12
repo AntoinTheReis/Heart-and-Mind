@@ -56,10 +56,8 @@ public class MindBlockTelekinesis : MonoBehaviour
             
             //Moving selected block
             selectedBlock = selectedBlockNode.Value;
+            selectedBlock.GetComponent<Block>().SelectBlock();
             Rigidbody2D blockRb = selectedBlock.GetComponent<Rigidbody2D>();
-            blockRb.gravityScale = 0;
-            blockRb.angularDrag = 1;
-
             Vector3 newBlockPos = selectedBlock.transform.position + (Vector3)input.MoveInput() * (4 * Time.deltaTime);
             //make the selected block's velocity approach zero (to push back against any external forces to give the feeling of catching the block)
             blockRb.velocity = Vector2.Lerp(blockRb.velocity, Vector2.zero,  Time.deltaTime);
@@ -71,10 +69,9 @@ public class MindBlockTelekinesis : MonoBehaviour
             SelectionOverlay.transform.position = selectedBlock.transform.position;
             
             //Leaving the active state with the jump key:
-            if (input.OnJumpPressed() || selectedBlock.GetComponent<Block>().IsOffScreen())
+            if (input.OnJumpPressed() || selectedBlock.GetComponent<Block>().IsOffScreen() || GameObject.FindWithTag("Switcher").GetComponent<Switcher>().activeCharacter != 2)
             {
-                selectedBlock.GetComponent<Rigidbody2D>().gravityScale = 1;
-                selectedBlock.GetComponent<Rigidbody2D>().angularDrag = 0.05f;
+                selectedBlock.GetComponent<Block>().DeselectBlock();
                 SelectionOverlay.GetComponent<SpriteRenderer>().enabled = false;
                 active = false;
             }

@@ -240,7 +240,7 @@ MonoBehaviour:
   leftOffset: {x: -0.37, y: 0}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 384
   sfx_jump:
     Guid:
       Data1: -1349432866
