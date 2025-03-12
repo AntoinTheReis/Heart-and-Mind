@@ -40,6 +40,7 @@ public class Movement : MonoBehaviour
     public float dragDashMax = 14f;
     private bool isDashing = false;
     private bool canDash = true;
+    private bool dashHitStop;
 
     [Header ("Jump variables")]
     public float jump = 5f;
@@ -129,7 +130,7 @@ public class Movement : MonoBehaviour
             if (onFloor)
             {
                 currentWallSpeed = 0;
-                if (onWalls && ((wallSide == 1 && input.MoveInput().x > 0) || (wallSide == -1 && input.MoveInput().x < 0)))
+                if (!wallJumping && onWalls && ((wallSide == 1 && input.MoveInput().x > 0) || (wallSide == -1 && input.MoveInput().x < 0)))
                 {
                     Debug.Log("Horizontal input: " + input.MoveInput().x + "| making horizontal movement 0");
                     horizontal_movement = 0;
@@ -149,7 +150,7 @@ public class Movement : MonoBehaviour
             }
             else
             {
-                if (onWalls && ((wallSide == 1 && input.MoveInput().x > 0) || (wallSide == -1 && input.MoveInput().x < 0)))
+                if (!wallJumping && onWalls && ((wallSide == 1 && input.MoveInput().x > 0) || (wallSide == -1 && input.MoveInput().x < 0)))
                 {
                     Debug.Log("Horizontal input: " + input.MoveInput().x + "| making horizontal movement 0");
                     horizontal_movement = 0;
@@ -165,11 +166,6 @@ public class Movement : MonoBehaviour
         //maxVelocity calculations
         if (horizontal_movement > maxXvelocity) horizontal_movement = maxXvelocity;
         else if (horizontal_movement < -maxXvelocity) horizontal_movement = -maxXvelocity;
-
-        if (input.OnInteractPressed())
-        {
-
-        }
 
         //Dash Inputs
         if (input.OnPrimaryPressed() && !isDashing && canDash && turnedOn)
@@ -276,10 +272,18 @@ public class Movement : MonoBehaviour
     {
         wallJumping = true;
         DOVirtual.Float(wallJumpAir, 1, wallJumpAirTime, CurrentWallJumpAir);
+
         Vector2 dir = new Vector2(Mathf.Sign(side) * wallJumpHorizontal, wallJumpVertical);
-        rb.velocity = Vector2.zero; 
-        rb.velocity = dir * jump;
-        rb.AddForce(dir * jump);
+        rb.velocity = Vector2.zero;
+
+        //rb.velocity = dir * jump;
+        //rb.AddForce(dir * jump);
+
+        rb.velocity = Vector2.up * jump * wallJumpVertical;
+        if (side > 0) horizontal_movement += wallJumpHorizontal;
+        else horizontal_movement -= wallJumpHorizontal;
+
+
         coyoteTimeWallCounter = 0;
         jumpBufferCounter = 0;
         DashCancel();
@@ -321,9 +325,12 @@ public class Movement : MonoBehaviour
 
     private void Dash(float x, float y)
     {
+        dashHitStop = false;
+
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
         horizontal_movement = 0;
+
         Vector2 dir = new Vector2(x, y);
         DOVirtual.Float(dragDashMax, 0, dragDashDuration, RigidbodyDrag);
 
@@ -344,7 +351,7 @@ public class Movement : MonoBehaviour
 
     private void RigidbodyDrag(float x)
     {
-        rb.drag = x;
+        if(!dashHitStop) rb.drag = x;
     }
     private void CurrentWallJumpAir(float x)
     {
@@ -373,6 +380,8 @@ public class Movement : MonoBehaviour
 
     private void DashCancel()
     {
+        dashHitStop = true;
+        rb.drag = 0;
         isDashing = false;
         if (!respawn.respawning) rb.gravityScale = 5;
     }
