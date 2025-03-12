@@ -390,8 +390,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9eee5e588cfed94ea4325bbcb55fa48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room_width: 44
-  room_height: 24
+  room_width: 80
+  room_height: 35
   room_is_selected: 0
   checkpoint: {fileID: 1933416818812703427}
   cover: {fileID: 0}
