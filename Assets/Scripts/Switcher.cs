@@ -52,14 +52,14 @@ public class Switcher : MonoBehaviour
             if(activeCharacter == 1)
             {
                 activeCharacter = 2;
-                mindBlockMechanic.enabled = true;
+                //mindBlockMechanic.enabled = true;
                 mindMovement.turnedOn = true;
                 heartMovement.turnedOn = false;
             }
             else
             {
                 activeCharacter = 1;
-                mindBlockMechanic.enabled = false;
+                //mindBlockMechanic.enabled = false;
                 mindMovement.turnedOn = false;
                 heartMovement.turnedOn = true;
             }
