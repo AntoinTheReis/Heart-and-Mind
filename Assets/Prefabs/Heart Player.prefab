@@ -312,7 +312,7 @@ MonoBehaviour:
   turnedOn: 0
   speed: 10
   airMoveMultiplier: 10
-  airDeaccelerator: 0.01
+  airDeaccelerator: 3.5
   airCruisingCap: 0.05
   maxActualSpeed: {x: 7, y: 7}
   dashSpeed: 120
