@@ -144,6 +144,7 @@ public class CameraSystem : MonoBehaviour
         else otherCharacter = characterSwitcher.heartObject;*/
 
         otherCharacter = characterSwitcher.mindObject;
+        otherCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         followerSprite = otherCharacter.GetComponentInChildren<SpriteRenderer>();
 
         Color tmp = followerSprite.color;   //Setting color to transparent
