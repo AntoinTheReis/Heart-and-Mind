@@ -12736,21 +12736,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -4594681738906803558, guid: 9883322c3734a3e4a9da4ec777d5cf7e, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4594681738906803558, guid: 9883322c3734a3e4a9da4ec777d5cf7e, type: 3}
-      propertyPath: m_IncludeLayers.m_Bits
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3709767019843197429, guid: 9883322c3734a3e4a9da4ec777d5cf7e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.12
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 3709767019843197429, guid: 9883322c3734a3e4a9da4ec777d5cf7e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.27
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3709767019843197429, guid: 9883322c3734a3e4a9da4ec777d5cf7e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12790,7 +12782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6574169198173939630, guid: 9883322c3734a3e4a9da4ec777d5cf7e, type: 3}
       propertyPath: m_Mass
-      value: 100
+      value: 57.87
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12848,14 +12840,6 @@ PrefabInstance:
     - target: {fileID: 3486820644290101175, guid: 0dedfb4ce2571264a94a122572f7dbe3, type: 3}
       propertyPath: m_Name
       value: Cloud
-      objectReference: {fileID: 0}
-    - target: {fileID: 3486820644290101175, guid: 0dedfb4ce2571264a94a122572f7dbe3, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6289633775576878638, guid: 0dedfb4ce2571264a94a122572f7dbe3, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

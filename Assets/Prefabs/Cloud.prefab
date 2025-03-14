@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 267121107898692062}
   - component: {fileID: 5865628649878601457}
   - component: {fileID: 6289633775576878638}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 759
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
