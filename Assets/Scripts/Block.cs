@@ -7,7 +7,7 @@ public class Block : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Collider2D col;
-    public LayerMask ignoreWhenSelected;
+    public bool selected = false;
 
     private void Start()
     {
@@ -19,15 +19,18 @@ public class Block : MonoBehaviour
     {
         rb.gravityScale = 0;
         rb.angularVelocity = 1;
-        col.excludeLayers = ignoreWhenSelected;
+        selected = true;
+        
 
     }
 
     public void DeselectBlock()
     {
-        col.excludeLayers = new LayerMask();
+        //col.excludeLayers &= ~(1 << ignoreWhenSelected);
+        //col.excludeLayers = 0;
         rb.gravityScale = 1;
         rb.angularDrag = 0.05f;
+        selected = false;
     }
 
     private void OnBecameVisible()
@@ -46,8 +49,23 @@ public class Block : MonoBehaviour
     {
         return !GetComponent<Renderer>().isVisible;
     }
-    
-    
-    
-    
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 9)
+        {
+            //Debug.Log("Block hits cloud");
+            collision.collider.isTrigger = selected;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        //On trigger enter here will only trigger when a deselected block enters from the outside
+        if (other.gameObject.layer == 9)
+        {
+            //Debug.Log("BLock enters cloud");
+            other.isTrigger = selected;
+        }
+    }
 }
