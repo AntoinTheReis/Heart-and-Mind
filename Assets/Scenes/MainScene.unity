@@ -186,7 +186,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1736780683}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -239,6 +239,18 @@ PrefabInstance:
     - target: {fileID: 3174949928152191781, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_Name
       value: Room Template
+      objectReference: {fileID: 0}
+    - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
+      propertyPath: room_width
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
+      propertyPath: room_height
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
+      propertyPath: CamSizeInRoom
+      value: 11.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -461,6 +473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterSwitcher: {fileID: 1681223891}
   followSpeed: 5
+  zoomSpeed: 2
   maxDistance: 8
   timeToSetFollowSpawn: 0.2
   characterMaterialization: 0.4
@@ -529,6 +542,14 @@ PrefabInstance:
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: room_width
       value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
+      propertyPath: room_height
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
+      propertyPath: CamSizeInRoom
+      value: 11.26
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: room_is_selected
@@ -12504,17 +12525,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 789437869}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
---- !u!4 &789437869 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-  m_PrefabInstance: {fileID: 285436271}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1035154581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12592,11 +12605,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b10e4593d9ed740b0372363ce61391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1736780683 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-  m_PrefabInstance: {fileID: 743887163}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1783242380 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2046843607443177467, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
@@ -12913,6 +12921,7 @@ SceneRoots:
   - {fileID: 1937732979}
   - {fileID: 743887163}
   - {fileID: 2116175047}
+  - {fileID: 285436271}
   - {fileID: 1035154581}
   - {fileID: 154815704}
   - {fileID: 4105962504173257932}
