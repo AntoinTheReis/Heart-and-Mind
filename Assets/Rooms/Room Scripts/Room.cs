@@ -17,6 +17,8 @@ public class Room : MonoBehaviour
     bool room_is_selected_last_state = false;
     [HideInInspector] public Transform cover;
     public List<Transform> mindBusStops;
+    public float CamSizeInRoom = 7f;
+    public bool isSubroom = false;
 
     // Adding a trigger collider for checking if target is inside
     BoxCollider2D room_bounds;
@@ -26,7 +28,11 @@ public class Room : MonoBehaviour
     {
         // Display the explosion radius when selected
         Gizmos.color = new Color(1, 1, 0, 0.75F);
-        Gizmos.DrawWireCube(transform.position, new Vector3(room_width, room_height, 0));
+        Gizmos.DrawWireCube(transform.position, new Vector2(room_width, room_height));
+        Gizmos.color = new Color(0, 1, 1, 0.75F);
+        Gizmos.DrawWireCube(transform.position, 2 * new Vector2(Camera.main.aspect * CamSizeInRoom, CamSizeInRoom));
+        Gizmos.color = new Color(0, 0, 0, 0.4F);
+        if(transform.Find("cover").GetComponent<SpriteRenderer>().enabled) Gizmos.DrawCube(transform.position, new Vector3(room_width, room_height, 0));
     }
     
 
@@ -50,7 +56,8 @@ public class Room : MonoBehaviour
                 Debug.Log("There is no current room");
                 coverFadeOut();
             }
-            else if (!room_is_selected)
+            
+            if (!room_is_selected)
             {
                 coverFadeIn();
             }
@@ -71,21 +78,41 @@ public class Room : MonoBehaviour
         cover.gameObject.SetActive(false);
     }
 
+    private void switchRoomToThis()
+    {
+        Debug.Log("Entered room "+ this.name  + "."); 
+        
+        CameraSystem camSys = Camera.main.GetComponent<CameraSystem>();
+        room_is_selected = true;
+        RoomTracker.current_room = this;
+        camSys.ChangeCameraSize(CamSizeInRoom);
+        camSys.changeRoomText();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (RoomTracker.current_room.isSubroom) return;
+        if (collision.transform == RoomTracker.target)
+        {
+            switchRoomToThis();
+        }
+    }
+    
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.transform == RoomTracker.target)
+        if(RoomTracker.current_room == null && collision.transform == RoomTracker.target)
         {
-            room_is_selected = true;
-            RoomTracker.current_room = this;
+            switchRoomToThis();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        //if (RoomTracker.current_room != this) return;
         if(collision.transform == RoomTracker.target )
         {
             room_is_selected = false;
             RoomTracker.current_room = null;
-            StartCoroutine(NullRoomTimer(0.1f));
+            //StartCoroutine(NullRoomTimer(0.1f));
         }
     }
 

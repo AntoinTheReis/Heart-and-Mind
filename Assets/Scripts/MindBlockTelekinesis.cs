@@ -48,7 +48,7 @@ public class MindBlockTelekinesis : MonoBehaviour
             if (selectedBlockNode == null) selectedBlockNode = BlockTracker.BlocksOnScreen.First; //remember, the head of the list here CANNOT be null, so now we know that we have something not-null selected
             if (input.OnPrimaryPressed()) //Cycling through blocks on screen:
             {
-                if(selectedBlock != null) selectedBlock.GetComponent<Rigidbody2D>().gravityScale = 1; //turn back on gravity for the old selected block
+                if(selectedBlock != null) selectedBlock.GetComponent<Block>().DeselectBlock(); //turn back on gravity for the old selected block
                 if (selectedBlockNode.Next != null) 
                     selectedBlockNode = selectedBlockNode.Next; //goes to next node on the linked list of blocks on screen (next here can be null, so we check)
                 else selectedBlockNode = BlockTracker.BlocksOnScreen.First;

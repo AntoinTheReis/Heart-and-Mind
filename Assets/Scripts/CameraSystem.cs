@@ -21,6 +21,8 @@ public class CameraSystem : MonoBehaviour
 
     [Header("Camera Movement Settings")]
     [SerializeField] float followSpeed = 5f;
+
+    [SerializeField] private float zoomSpeed = 2f;
     [SerializeField] float maxDistance = 8f;
     [SerializeField] float timeToSetFollowSpawn = 0.2f;
     [SerializeField] float characterMaterialization = 0.4f;
@@ -67,6 +69,7 @@ public class CameraSystem : MonoBehaviour
             Vector3 room_pos;
             Vector2 room_size;
 
+            //On room chance
             if (RoomTracker.current_room != null && RoomTracker.current_room != lastActualRoom)
             {
                 lastActualRoom = RoomTracker.current_room;
@@ -83,7 +86,14 @@ public class CameraSystem : MonoBehaviour
                 room_pos = lastActualRoom.transform.position;
                 room_size = new Vector2(lastActualRoom.room_width / 2, lastActualRoom.room_height/ 2);
             }
-
+            
+            
+            //camera resizing
+            //if(camera gets resized){}
+                half_height = cam.orthographicSize;
+                half_width = cam.aspect * half_height;
+            
+            
             //  camera clamping
             //horizontal max
             if (target_position.x + half_width > room_pos.x + room_size.x) { target_position.x = room_pos.x + room_size.x - half_width; }
@@ -127,12 +137,31 @@ public class CameraSystem : MonoBehaviour
 
     }
 
-    private void LateUpdate()
-    {
-        #region UI
-        if(roomNameUI != null) roomNameUI.text = RoomTracker.current_room != null ? RoomTracker.current_room.name : "unknown";
-        #endregion
 
+
+    public void ChangeCameraSize(float new_size)
+    {
+        StartCoroutine(LerpCamSize(new_size));
+    }
+
+    IEnumerator LerpCamSize(float new_size)
+    {
+        float elapsedTime = 0f;
+        while (Mathf.Abs(cam.orthographicSize - new_size) > 0.01f) //Camera can only take a second to lerp, otherwise fucntion gets cancelled (without this, quickly switching rooms will cause opposing lerps)
+        {
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, new_size, zoomSpeed * Time.deltaTime);
+            elapsedTime += Time.deltaTime;
+            if (elapsedTime > 1) yield break;
+            yield return null;
+        }
+        cam.orthographicSize = new_size;
+
+        
+    }
+
+    public void changeRoomText()
+    {
+        if(roomNameUI != null && RoomTracker.current_room != null) roomNameUI.text = RoomTracker.current_room.name;
     }
 
 
