@@ -348,6 +348,13 @@ MonoBehaviour:
       Data3: -641093699
       Data4: -2011441781
     Path: event:/SFX_Jump
+  sfx_dash:
+    Guid:
+      Data1: 1889981279
+      Data2: 1184081592
+      Data3: 720187318
+      Data4: -2120728174
+    Path: event:/SFX_Dash
   sfx_dialogue:
     Guid:
       Data1: -576654384
