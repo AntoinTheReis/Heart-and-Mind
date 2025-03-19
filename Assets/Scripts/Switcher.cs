@@ -49,20 +49,44 @@ public class Switcher : MonoBehaviour
     {
         if (input.OnInteractPressed())
         {
-            if(activeCharacter == 1)
-            {
-                activeCharacter = 2;
-                //mindBlockMechanic.enabled = true;
-                mindMovement.turnedOn = true;
-                heartMovement.turnedOn = false;
-            }
-            else
-            {
-                activeCharacter = 1;
-                //mindBlockMechanic.enabled = false;
-                mindMovement.turnedOn = false;
-                heartMovement.turnedOn = true;
-            }
+            SwitchCharacters();
+        }
+    }
+
+    public void SwitchCharacters()
+    {
+        if(activeCharacter == 1)
+        {
+            activeCharacter = 2;
+            //mindBlockMechanic.enabled = true;
+            mindMovement.turnedOn = true;
+            heartMovement.turnedOn = false;
+        }
+        else
+        {
+            activeCharacter = 1;
+            //mindBlockMechanic.enabled = false;
+            mindMovement.turnedOn = false;
+            heartMovement.turnedOn = true;
+        }
+    }
+    
+    public void SwitchCharacters(int character)
+    {
+        if (activeCharacter == character) return;
+        if(character == 2)
+        {
+            activeCharacter = 2;
+            //mindBlockMechanic.enabled = true;
+            mindMovement.turnedOn = true;
+            heartMovement.turnedOn = false;
+        }
+        else
+        {
+            activeCharacter = 1;
+            //mindBlockMechanic.enabled = false;
+            mindMovement.turnedOn = false;
+            heartMovement.turnedOn = true;
         }
     }
 }
