@@ -100,6 +100,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{4e04200d-9097-43b9-af32-c75f0d4b548a}">
+		<property name="volume">
+			<value>3</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -116,6 +119,7 @@
 	<object class="MixerBusEffectChain" id="{877275a1-a3d3-4581-b689-3ee18dc396d3}">
 		<relationship name="effects">
 			<destination>{0f7ad0b9-61e9-4c91-bb46-226406f79f4f}</destination>
+			<destination>{5d658eec-ca0f-4344-8167-fd3ac8cfc7ab}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{e512c448-0246-4b01-a930-c5afcfbe55aa}" />
@@ -127,5 +131,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{c78e7cf3-5439-4a1f-b5a4-2cd9feb6cf5a}" />
 	<object class="MixerBusFader" id="{0f7ad0b9-61e9-4c91-bb46-226406f79f4f}" />
+	<object class="ThreeEQEffect" id="{5d658eec-ca0f-4344-8167-fd3ac8cfc7ab}" />
 	<object class="MixerBusFader" id="{51a577ba-3edf-4d41-9d4f-e15e871fcb1d}" />
 </objects>
