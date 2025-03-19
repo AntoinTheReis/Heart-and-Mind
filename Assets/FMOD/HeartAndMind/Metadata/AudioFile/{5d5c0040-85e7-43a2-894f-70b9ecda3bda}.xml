@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5d5c0040-85e7-43a2-894f-70b9ecda3bda}">
+		<property name="assetPath">
+			<value>Intertwined [Act 1 Pre-Separation] - Xtra Piano.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>120</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b68a2418-38d4-4045-be64-28ac98ce7f22}</destination>
+		</relationship>
+	</object>
+</objects>
