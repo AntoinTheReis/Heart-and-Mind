@@ -5,7 +5,7 @@
 			<value>SFX_Dash</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{8fa2ba3c-f41a-4b44-85cd-69689f66d29b}</destination>
@@ -60,7 +60,7 @@
 	<object class="MarkerTrack" id="{a3f1d653-a4ab-4ddc-8ab7-4f7999a65362}" />
 	<object class="GroupTrack" id="{f9100a07-ce50-4055-8a7a-99fa34119980}">
 		<relationship name="modules">
-			<destination>{9b8c39b7-d0ea-43c4-9628-c4df2656fddf}</destination>
+			<destination>{36bd42ed-f100-446b-9745-f5c7fbdf0190}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{f41aa806-5913-40e4-8316-14c2f63d5802}</destination>
@@ -68,7 +68,7 @@
 	</object>
 	<object class="Timeline" id="{95eb3ece-5c71-4a25-b558-c8082702ae54}">
 		<relationship name="modules">
-			<destination>{9b8c39b7-d0ea-43c4-9628-c4df2656fddf}</destination>
+			<destination>{36bd42ed-f100-446b-9745-f5c7fbdf0190}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{05ba260e-558e-4715-8637-dade7f7f1558}">
@@ -88,15 +88,12 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{93a14a87-db50-482e-a5d1-da669bc74e84}" />
-	<object class="SingleSound" id="{9b8c39b7-d0ea-43c4-9628-c4df2656fddf}">
+	<object class="SingleSound" id="{36bd42ed-f100-446b-9745-f5c7fbdf0190}">
 		<property name="length">
-			<value>0.265625</value>
-		</property>
-		<property name="timelockedOffset">
-			<value>0.1875</value>
+			<value>0.46634920634920635</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{a606851a-c3d5-42d9-a0e8-3b307f0918cb}</destination>
+			<destination>{989e3d45-aa29-45c2-b958-af039b45fa34}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{f41aa806-5913-40e4-8316-14c2f63d5802}">
@@ -130,13 +127,16 @@
 	<object class="MixerBusPanner" id="{26287c6f-bbe4-48cc-b7f5-eb60ffa33fa0}" />
 	<object class="MixerBusFader" id="{2b265dfd-e954-4e28-8658-a6db3d75634c}" />
 	<object class="ThreeEQEffect" id="{0235c2d0-d8e9-48c3-b3e0-78b5cf92d10c}">
+		<property name="lowGain">
+			<value>-23</value>
+		</property>
 		<property name="highGain">
 			<value>-1.5</value>
 		</property>
 	</object>
 	<object class="SFXReverbEffect" id="{97ec3869-5b14-4ac6-b58c-4d700aafed1d}">
 		<property name="wetLevel">
-			<value>-18.5</value>
+			<value>-34</value>
 		</property>
 		<property name="dryLevel">
 			<value>-7.5</value>
