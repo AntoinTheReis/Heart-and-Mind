@@ -38,7 +38,7 @@ public class Movement : MonoBehaviour
     public float dashWait = 0.3f;
     public float dragDashDuration = 0.8f;
     public float dragDashMax = 14f;
-    private bool isDashing = false;
+    public bool isDashing = false;
     private bool canDash = true;
     private bool dashHitStop;
 
