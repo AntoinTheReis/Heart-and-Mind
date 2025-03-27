@@ -14,6 +14,9 @@ public class MindBlockTelekinesis : MonoBehaviour
 
     public Controls input;
     public bool active = false;
+
+    private bool firstFrameOfTelekinesis = false;
+
     private void Start()
     {
         SelectionOverlay.GetComponent<SpriteRenderer>().enabled = false;
@@ -26,19 +29,7 @@ public class MindBlockTelekinesis : MonoBehaviour
         
         if (input.OnPrimaryPressed() && !active)
         {
-            if (BlockTracker.BlocksOnScreen.First == null)
-            {
-                //TODO: play some informative sound effect that there are no blocks on screen to select
-            }
-            else
-            {
-                //Sorting the linked list based on distance from the player
-                if (BlockTracker.BlocksOnScreen.Count > 1)
-                {
-                     BlockTracker.SortByDistance(ref BlockTracker.BlocksOnScreen, transform.position);
-                }
-                active = true; //therefore we can assume that we are only active when at least one block is on screen
-            }
+            ActivateTelekinesis();
         }
 
         if (active)
@@ -46,8 +37,9 @@ public class MindBlockTelekinesis : MonoBehaviour
             SelectionOverlay.GetComponent<SpriteRenderer>().enabled = true;
             
             if (selectedBlockNode == null) selectedBlockNode = BlockTracker.BlocksOnScreen.First; //remember, the head of the list here CANNOT be null, so now we know that we have something not-null selected
-            if (input.OnPrimaryPressed()) //Cycling through blocks on screen:
+            if (firstFrameOfTelekinesis) //Cycling through blocks on screen:
             {
+                firstFrameOfTelekinesis = false;
                 if(selectedBlock != null) selectedBlock.GetComponent<Block>().DeselectBlock(); //turn back on gravity for the old selected block
                 if (selectedBlockNode.Next != null) 
                     selectedBlockNode = selectedBlockNode.Next; //goes to next node on the linked list of blocks on screen (next here can be null, so we check)
@@ -71,6 +63,7 @@ public class MindBlockTelekinesis : MonoBehaviour
             //Leaving the active state with the jump key:
             if (input.OnJumpPressed() || selectedBlock.GetComponent<Block>().IsOffScreen() || GameObject.FindWithTag("Switcher").GetComponent<Switcher>().activeCharacter != 2)
             {
+                Debug.Log("Make active = false");
                 selectedBlock.GetComponent<Block>().DeselectBlock();
                 SelectionOverlay.GetComponent<SpriteRenderer>().enabled = false;
                 active = false;
@@ -78,4 +71,26 @@ public class MindBlockTelekinesis : MonoBehaviour
         }
     }
 
+
+    public void ActivateTelekinesis()
+    {
+        Debug.Log("Activate Telekinesis called");
+        firstFrameOfTelekinesis = true;
+
+        if (BlockTracker.BlocksOnScreen.First == null)
+        {
+            //TODO: play some informative sound effect that there are no blocks on screen to select
+            Debug.Log("No blocks on screen");
+        }
+        else
+        {
+            //Sorting the linked list based on distance from the player
+            if (BlockTracker.BlocksOnScreen.Count > 1)
+            {
+                BlockTracker.SortByDistance(ref BlockTracker.BlocksOnScreen, transform.position);
+            }
+            active = true; //therefore we can assume that we are only active when at least one block is on screen
+            Debug.Log("There was a block on screen");
+        }
+    }
 }

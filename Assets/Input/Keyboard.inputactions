@@ -55,28 +55,6 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "345a6bf7-f0cb-4d73-a191-8b94ba8d8de0",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8a4b238b-5f8f-4cd2-8d87-bb0e2339641a",
-                    "path": "<Keyboard>/j",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
                     "name": "2D Vector",
                     "id": "4e571990-17ae-45c0-a431-cca22890bc68",
                     "path": "2DVector",
@@ -155,19 +133,19 @@
                 },
                 {
                     "name": "",
-                    "id": "e5d79007-aee3-402c-b5fb-d607623a2b42",
+                    "id": "a05a03fb-556a-4a5c-a411-5b79bc6ac55a",
                     "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Primary",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "0474ddd0-d40a-4d64-a520-012af588b171",
-                    "path": "<Gamepad>/buttonEast",
+                    "id": "a07aa6df-a7e9-45ca-b4fe-6a3dc4353106",
+                    "path": "<Keyboard>/n",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -177,45 +155,34 @@
                 },
                 {
                     "name": "",
-                    "id": "d91db64b-a3db-4dc2-a812-62b8795dc1a1",
+                    "id": "720778ec-3594-4961-a0ed-2fe772dcf485",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "92f3dfc9-0d56-4054-9500-59d9a5a3ef4e",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1856d23e-2005-4fa2-a94f-40abf41e6087",
                     "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Primary",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c0f0cbec-d1d2-4e99-b464-9655ca9e06fc",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ff01d63c-ff8d-40cc-bc13-8a0886c8adbe",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b036547f-f9e7-4063-98bc-662d2209e5de",
-                    "path": "<Keyboard>/l",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

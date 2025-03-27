@@ -221,7 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onFloor: 0
   canMove: 1
-  turnedOn: 1
+  turnedOn: 0
   speed: 6.5
   airMoveMultiplier: 6.5
   airDeaccelerator: 0.01

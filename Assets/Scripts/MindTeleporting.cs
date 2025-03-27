@@ -28,7 +28,7 @@ public class MindTeleporting : MonoBehaviour
     private bool lateStart = false;
 
     private bool positionUpdated = false;
-    private bool movementMode = false;
+    public bool movementMode = false;
 
     private MindBlockTelekinesis telekinesis;
 

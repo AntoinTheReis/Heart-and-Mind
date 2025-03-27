@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onFloor: 0
-  turnedOn: 0
+  turnedOn: 1
   speed: 10
   airMoveMultiplier: 10
   airDeaccelerator: 3.5
@@ -319,6 +319,7 @@ MonoBehaviour:
   dashWait: 0.2
   dragDashDuration: 0.9
   dragDashMax: 20
+  isDashing: 0
   jump: 20
   fallMultiplier: 8
   lowJumpMultiplier: 20
