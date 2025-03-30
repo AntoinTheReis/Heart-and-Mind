@@ -7,8 +7,8 @@ public class Switcher : MonoBehaviour
 {
     Controls input;
 
-    //1 is heart and 2 is mind
-    public int activeCharacter = 1; 
+    [Tooltip("1 is heart and 2 is mind")]
+    public int activeCharacter; 
 
     public GameObject mindObject;
     public GameObject heartObject;
@@ -31,17 +31,6 @@ public class Switcher : MonoBehaviour
 
         heartMovement = heartObject.GetComponent<Movement>();
         mindMovement = mindObject.GetComponent<MindMovement>();
-
-        if (mindMovement.turnedOn)  //Checking what character is active and making sure one is active and one is inactive
-        {
-            activeCharacter = 2;    //Mind character takes priority
-            heartMovement.turnedOn = false;
-        }
-        else
-        {
-            activeCharacter = 1;
-            heartMovement.turnedOn = true;
-        }
     }
 
     // Update is called once per frame

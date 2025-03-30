@@ -9,6 +9,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
+using Yarn.Unity;
 
 /*
  * MAURICIO: Camera script to go on main camera - game should not have multiple cameras 
@@ -17,7 +18,7 @@ using UnityEngine.Rendering;
 public class CameraSystem : MonoBehaviour
 {
     public Switcher characterSwitcher;
-    private GameObject target;
+    [SerializeField] private GameObject target;
 
     [Header("Camera Movement Settings")]
     [SerializeField] float followSpeed = 5f;
@@ -26,10 +27,18 @@ public class CameraSystem : MonoBehaviour
     [SerializeField] float maxDistance = 8f;
     [SerializeField] float timeToSetFollowSpawn = 0.2f;
     [SerializeField] float characterMaterialization = 0.4f;
+    
+    [Header("Screen Shake Settings")]
+    [Tooltip("Number of seconds until a call of screenShake() ends")] [SerializeField] float shakeDuration = 0.2f;
+    [Tooltip("The magnitude of each shake")] [SerializeField] float shakeAmount = 0.2f;
+    [Tooltip("Repeat shake every n seconds. (The lower, the faster)")] [SerializeField] float shakeRate = 0.2f;
+    
+    
     private SpriteRenderer followerSprite;
+    [HideInInspector] public bool inDialouge{ get; set; }
 
     [Tooltip("Determines if the camera is bounded to the current room or moves to the target freely")]
-    [SerializeField] bool bounded = true;
+    bool bounded = true;
 
     [Header("UI")]
     [SerializeField] TextMeshProUGUI roomNameUI;
@@ -42,16 +51,74 @@ public class CameraSystem : MonoBehaviour
 
     private void Start()
     {
+        inDialouge = false;
         cam = GetComponent<Camera>();
         half_height = cam.orthographicSize;
         half_width = cam.aspect * half_height;
         lastActualRoom = RoomTracker.current_room;
     }
+    
+    #region Yarnspinner Commands
+    /*
+     * Custom yarnspinner command, written in yarn files as so:
+     * <<pan Camera GameObject>>
+     * This command for exmaple will change the camera's target to any given GameObject, panning the camera over to it
+     */
+    [YarnCommand("pan")]
+    public void changeTarget(GameObject new_target)
+    {
+        if(new_target == null) Debug.LogError("Chosen target is null!");
+        target = new_target;
+    }
+    
+    /*
+     * Custom yarnspinner command, written in yarn files as so:
+     * <<shake Camera>>
+     * Will shake the camera based on variables determined in CameraSystem
+     */
+    [YarnCommand("shake")]
+    public void screenShake()
+    {
+        startShaking();
+        StartCoroutine("StopShaking");
+    }
+
+    [YarnCommand("startShaking")]
+    public void startShaking()
+    {
+        InvokeRepeating("InduceRandomOffset", 0f, shakeRate);
+    }
+    
+    [YarnCommand("stopShaking")]
+    public IEnumerator StopShaking()
+    {
+        yield return new WaitForSeconds(shakeDuration);
+        CancelInvoke("InduceRandomOffset");
+        yield break;
+    }
+    private void InduceRandomOffset()
+    {
+        transform.position += (Vector3)Random.insideUnitCircle * shakeAmount;
+    }
+    
+    /*
+     * Custom yarnspinner command, written in yarn files as so:
+     * <<size Camera 7>>
+     * Will change the camera's size to given size, camera size gets reset when dialogue ends
+     */
+    [YarnCommand("size")]
+    public void ChangeCameraSize(float new_size)
+    {
+        StartCoroutine(LerpCamSize(new_size));
+    }
+    #endregion
+    
     private void Update()
     {
-        if (characterSwitcher.activeCharacter == 1) target = characterSwitcher.heartObject;
-        else target = characterSwitcher.mindObject;
-
+        if (!inDialouge)
+        {
+            changeTarget(characterSwitcher.activeCharacter == 2 ? characterSwitcher.mindObject : characterSwitcher.heartObject);
+        }
         if (target == null)
         {
             Debug.LogError("No Camera target found");
@@ -137,13 +204,6 @@ public class CameraSystem : MonoBehaviour
 
     }
 
-
-
-    public void ChangeCameraSize(float new_size)
-    {
-        StartCoroutine(LerpCamSize(new_size));
-    }
-
     IEnumerator LerpCamSize(float new_size)
     {
         float elapsedTime = 0f;
@@ -155,8 +215,11 @@ public class CameraSystem : MonoBehaviour
             yield return null;
         }
         cam.orthographicSize = new_size;
+    }
 
-        
+    public void resetCamSize()
+    {
+        ChangeCameraSize(RoomTracker.current_room.CamSizeInRoom);
     }
 
     public void changeRoomText()
@@ -189,15 +252,12 @@ public class CameraSystem : MonoBehaviour
         DOVirtual.Float(0, 1, characterMaterialization, SpriteAlpha);
 
     }
-
+    
     private void SpriteAlpha(float alpha)
     {
         Color tmp = followerSprite.color;
         tmp.a = alpha;
         followerSprite.color = tmp;
     }
-
-    //TODO: CAMERA SHAKE
-    public void ShakeCamera() { Debug.Log("Camera Shake (unimplemented)"); }
 }
 
