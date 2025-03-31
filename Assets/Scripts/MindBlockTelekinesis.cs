@@ -74,7 +74,6 @@ public class MindBlockTelekinesis : MonoBehaviour
     public void ActivateTelekinesis()
     {
         Debug.Log("Activate Telekinesis called");
-
         if (BlockTracker.BlocksOnScreen.First == null)
         {
             //TODO: play some informative sound effect that there are no blocks on screen to select
