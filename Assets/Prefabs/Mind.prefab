@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 7237773892070292257}
   - component: {fileID: 1193111388844499997}
   m_Layer: 6
-  m_Name: Mind Player
+  m_Name: Mind
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

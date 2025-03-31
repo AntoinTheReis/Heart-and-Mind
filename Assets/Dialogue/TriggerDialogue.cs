@@ -15,14 +15,6 @@ public class TriggerDialogue : MonoBehaviour
         dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            dialogueRunner.StartDialogue(startNode);
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!triggered && !dialogueRunner.IsDialogueRunning && collision.gameObject.CompareTag("Player"))

@@ -24,7 +24,7 @@ public class CameraSystem : MonoBehaviour
     [SerializeField] float followSpeed = 5f;
 
     [SerializeField] private float zoomSpeed = 2f;
-    [SerializeField] float maxDistance = 8f;
+    //[SerializeField] float maxDistance = 8f;
     [SerializeField] float timeToSetFollowSpawn = 0.2f;
     [SerializeField] float characterMaterialization = 0.4f;
     
@@ -35,7 +35,6 @@ public class CameraSystem : MonoBehaviour
     
     
     private SpriteRenderer followerSprite;
-    [HideInInspector] public bool inDialouge{ get; set; }
 
     [Tooltip("Determines if the camera is bounded to the current room or moves to the target freely")]
     bool bounded = true;
@@ -48,14 +47,16 @@ public class CameraSystem : MonoBehaviour
     float half_width;
     private Room previousRoom;
     private Room lastActualRoom;
+    
+    DialogueRunner dialogueRunner;
 
     private void Start()
     {
-        inDialouge = false;
         cam = GetComponent<Camera>();
         half_height = cam.orthographicSize;
         half_width = cam.aspect * half_height;
         lastActualRoom = RoomTracker.current_room;
+        dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
     }
     
     #region Yarnspinner Commands
@@ -115,7 +116,7 @@ public class CameraSystem : MonoBehaviour
     
     private void Update()
     {
-        if (!inDialouge)
+        if (!dialogueRunner.IsDialogueRunning)
         {
             changeTarget(characterSwitcher.activeCharacter == 2 ? characterSwitcher.mindObject : characterSwitcher.heartObject);
         }
