@@ -96,7 +96,7 @@ public class Switcher : MonoBehaviour
         Debug.Log("Moving and looking");
         yield return new WaitForSecondsRealtime(telekinesisWaitTime);
         Debug.Log(!mindObject.GetComponent<MindBlockTelekinesis>().active);
-        if(!mindObject.GetComponent<MindBlockTelekinesis>().active) mindObject.GetComponent<MindBlockTelekinesis>().ActivateTelekinesis();
+        if(!mindObject.GetComponent<MindBlockTelekinesis>().active && !mindObject.GetComponent<MindTeleporting>().movementMode) mindObject.GetComponent<MindBlockTelekinesis>().ActivateTelekinesis();
     }
 
 }

@@ -116,11 +116,14 @@ public class MindTeleporting : MonoBehaviour
         if (switcher.activeCharacter == 1 || telekinesis.active)
         {
             movementMode = false;
+            telekinesis.ActivateTelekinesis();
         }
         else if (input.OnJumpPressed() && RoomTracker.current_room.mindBusStops.Count > 1)
         {
             Debug.Log("More than one bus stop");
             movementMode = !movementMode;
+            if(!movementMode)
+                telekinesis.ActivateTelekinesis();
 
             PickOptions();
         }

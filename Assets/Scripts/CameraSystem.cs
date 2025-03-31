@@ -116,9 +116,20 @@ public class CameraSystem : MonoBehaviour
     
     private void Update()
     {
-        if (!dialogueRunner.IsDialogueRunning)
+        //Determining Target:
+        //If not in dialogue
+        if (dialogueRunner != null && !dialogueRunner.IsDialogueRunning)
         {
-            changeTarget(characterSwitcher.activeCharacter == 2 ? characterSwitcher.mindObject : characterSwitcher.heartObject);
+            //if character switcher exists (relevant for acts 1 and 3)
+            if(characterSwitcher != null)
+            {
+                changeTarget(characterSwitcher.activeCharacter == 2 ? characterSwitcher.mindObject : characterSwitcher.heartObject);
+            }
+            else
+            {
+                //Default to first found player obj
+                changeTarget(GameObject.FindGameObjectWithTag("Player"));
+            }
         }
         if (target == null)
         {
