@@ -8,8 +8,8 @@ public class Switcher : MonoBehaviour
 {
     Controls input;
 
-    //1 is heart and 2 is mind
-    public int activeCharacter = 1; 
+    [Tooltip("1 is heart and 2 is mind")]
+    public int activeCharacter; 
 
     public GameObject mindObject;
     public GameObject heartObject;

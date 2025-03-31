@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 7020654500470741762}
   - component: {fileID: 4637877954988209167}
   m_Layer: 6
-  m_Name: Heart Player
+  m_Name: Heart
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
