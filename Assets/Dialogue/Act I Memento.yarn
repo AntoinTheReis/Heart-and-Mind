@@ -1,0 +1,29 @@
+﻿title: Act_I_Memento
+tags:
+---
+HEART: Jeez, this place has seen better days. What happened? I mean, it’s not like it was in great shape before. But this is just sad.
+
+MIND: When I left my palace, there was an intense storm. The damage from it must have left the neighborhood in this putrid state.
+
+HEART: I guess that makes sense. But it’s still a bummer. I mean, look at this place! It’s like a ghost town.
+
+MIND: What is that? I cannot make it out from where I am.
+<<pan to memento>>
+
+HEART: I think it’s a memento. It looks like a rook chess piece, I think.
+
+<<pan to mind>>
+
+<<wait  1.5s>>
+
+MIND: We need to get that rook. 
+
+HEART: Huh? What for?
+
+MIND: It seems to be a clue. I am not entirely sure, but it is… calling to me. 
+
+HEART: Well, alright. Do you have a plan to get up there?
+
+MIND: I’ve got some ideas. Here, stand by that block. We can use it for leverage.
+
+===
