@@ -8,13 +8,13 @@ MIND: When I left my palace, there was an intense storm. The damage from it must
 HEART: I guess that makes sense. But it’s still a bummer. I mean, look at this place! It’s like a ghost town.
 
 MIND: What is that? I cannot make it out from where I am.
-<<pan to memento>>
+<<pan Camera memento>>
 
-HEART: I think it’s a memento. It looks like a rook chess piece, I think.
+HEART:It looks like a rook chess piece, I think.
 
-<<pan to mind>>
+<<pan Camera Mind>> 
 
-<<wait  1.5s>>
+<<wait 1.5s>>
 
 MIND: We need to get that rook. 
 
