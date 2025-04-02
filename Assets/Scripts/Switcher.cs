@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -13,11 +14,15 @@ public class Switcher : MonoBehaviour
 
     public GameObject mindObject;
     public GameObject heartObject;
+    private Transform heartTransform;
+    private Transform mindtransform;
 
     private Movement heartMovement;
     private MindMovement mindMovement;
 
     private MindBlockTelekinesis mindBlockMechanic;
+
+    public float heightFromPlayer = 1.87f;
 
     private Transform cam;
     private bool movingAndLooking = false;
@@ -37,6 +42,9 @@ public class Switcher : MonoBehaviour
 
         heartMovement = heartObject.GetComponent<Movement>();
         mindMovement = mindObject.GetComponent<MindMovement>();
+
+        heartTransform = heartObject.transform;
+        mindtransform = mindObject.transform;
 
         cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
 
@@ -80,15 +88,15 @@ public class Switcher : MonoBehaviour
             }
         }
 
-        /*if(movingAndLooking && input.OnJumpPressed())
+        if(activeCharacter == 1)
         {
-            movingAndLooking = false;
+            transform.position = new Vector2(heartTransform.position.x, heartTransform.position.y + heightFromPlayer);
         }
-        else if (movingAndLooking && !mindObject.GetComponent<MindBlockTelekinesis>().active && !mindObject.GetComponent<MindTeleporting>().movementMode)
+        else
         {
-            Debug.Log("Checking for cube");
-            mindObject.GetComponent<MindBlockTelekinesis>().ActivateTelekinesis();
-        }*/
+            transform.position= new Vector2(mindtransform.position.x, mindtransform.position.y + heightFromPlayer);
+        }
+
     }
 
     IEnumerator MoveAndLook()

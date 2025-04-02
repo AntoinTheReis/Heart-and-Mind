@@ -157,7 +157,6 @@ public class Movement : MonoBehaviour
             {
                 if (!wallJumping && onWalls && ((wallSide == 1 && input.MoveInput().x > 0) || (wallSide == -1 && input.MoveInput().x < 0)))
                 {
-                    Debug.Log("Horizontal input: " + input.MoveInput().x + "| making horizontal movement 0");
                     horizontal_movement = 0;
                 }
                 else if (turnedOn)
@@ -216,11 +215,12 @@ public class Movement : MonoBehaviour
                 {
                     WallSlide();
                 }
-                else
+                else if (rb.velocity.y < 0)
                 {
                     rb.velocity = new Vector2(rb.velocity.x, 0);
                     wallTime += Time.deltaTime;
                 }
+                else rb.gravityScale = 5;
             }
             else if(!respawn.respawning)
             {
@@ -275,6 +275,8 @@ public class Movement : MonoBehaviour
 
     private void WallJump(float side)
     {
+        Debug.Log("Wall jumped");
+
         wallJumping = true;
         DOVirtual.Float(wallJumpAir, 1, wallJumpAirTime, CurrentWallJumpAir);
 
