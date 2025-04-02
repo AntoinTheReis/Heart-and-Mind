@@ -60,7 +60,7 @@ public class MindBlockTelekinesis : MonoBehaviour
             SelectionOverlay.transform.position = selectedBlock.transform.position;
             
             //Leaving the active state
-            if (input.OnJumpPressed() || selectedBlock.GetComponent<Block>().IsOffScreen() || GameObject.FindWithTag("Switcher").GetComponent<Switcher>().activeCharacter != 2)
+            if ((input.OnJumpPressed() && RoomTracker.current_room.mindBusStops.Count > 1) || selectedBlock.GetComponent<Block>().IsOffScreen() || GameObject.FindWithTag("Switcher").GetComponent<Switcher>().activeCharacter != 2)
             {
                 Debug.Log("Make active = false");
                 selectedBlock.GetComponent<Block>().DeselectBlock();
