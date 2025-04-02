@@ -89,6 +89,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b10e4593d9ed740b0372363ce61391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeCharacter: 1
+  activeCharacter: 2
   mindObject: {fileID: 0}
   heartObject: {fileID: 0}
+  heightFromPlayer: 1.87
+  telekinesisWaitTime: 0.55
+  sfx_switchM:
+    Guid:
+      Data1: 1031606126
+      Data2: 1199003671
+      Data3: -32429390
+      Data4: -1707445417
+    Path: event:/SFX_MindSwitch
+  sfx_switchH:
+    Guid:
+      Data1: -1973764511
+      Data2: 1094338324
+      Data3: 1370857653
+      Data4: -1467585653
+    Path: event:/SFX_HeartSwitch

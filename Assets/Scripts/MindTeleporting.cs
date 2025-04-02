@@ -34,10 +34,19 @@ public class MindTeleporting : MonoBehaviour
 
     private Transform currentBusStop;
 
+    #region Audio
+    public FMODUnity.EventReference sfx_teleport;
+    FMOD.Studio.EventInstance sfx_teleportInstance;
+    #endregion
+
     // Start is called before the first frame update
     void Awake()
     {
-        switcher  = GameObject.FindGameObjectWithTag("Switcher").GetComponent<Switcher>();
+        #region Audio EventInstances
+        sfx_teleportInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_teleport);
+        #endregion
+
+        switcher = GameObject.FindGameObjectWithTag("Switcher").GetComponent<Switcher>();
         telekinesis = GetComponent<MindBlockTelekinesis>();
 
         input = GetComponent<Controls>();
@@ -58,6 +67,13 @@ public class MindTeleporting : MonoBehaviour
             Transform goTo =  UseOptions(input.MoveInput().x, input.MoveInput().y);
             if (goTo != null)
             {
+                #region Teleport Audio
+                if (sfx_teleportInstance.isValid())
+                {
+                    sfx_teleportInstance.start();
+                }
+                #endregion
+
                 transform.position = goTo.position;
                 currentBusStop = goTo;
                 PickOptions();

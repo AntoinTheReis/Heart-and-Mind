@@ -53462,10 +53462,6 @@ PrefabInstance:
       propertyPath: heartObject
       value: 
       objectReference: {fileID: 1492682809}
-    - target: {fileID: 9100417986695489772, guid: 76f2d6841676b37409cfbd4faaa7c88a, type: 3}
-      propertyPath: activeCharacter
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -53521,10 +53517,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3930139759778371251, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556409655674295825, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

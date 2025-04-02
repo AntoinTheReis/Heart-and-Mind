@@ -79,6 +79,9 @@ public class Movement : MonoBehaviour
     public FMODUnity.EventReference sfx_jump;
     FMOD.Studio.EventInstance sfx_jumpInstance;
 
+    public FMODUnity.EventReference sfx_wallJump;
+    FMOD.Studio.EventInstance sfx_wallJumpInstance;
+
     public FMODUnity.EventReference sfx_dash;
     FMOD.Studio.EventInstance sfx_dashInstance;
 
@@ -86,6 +89,7 @@ public class Movement : MonoBehaviour
     FMOD.Studio.EventInstance sfx_dialogueInstance;
     FMOD.Studio.PARAMETER_ID sfx_dialogueCharacter;
     public int charVoice;
+
     #endregion
 
     private void Awake()
@@ -96,6 +100,8 @@ public class Movement : MonoBehaviour
 
         #region Audio EventInstances
         sfx_jumpInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_jump);
+
+        sfx_wallJumpInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_wallJump);
 
         sfx_dashInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_dash);
 
@@ -157,7 +163,6 @@ public class Movement : MonoBehaviour
             {
                 if (!wallJumping && onWalls && ((wallSide == 1 && input.MoveInput().x > 0) || (wallSide == -1 && input.MoveInput().x < 0)))
                 {
-                    Debug.Log("Horizontal input: " + input.MoveInput().x + "| making horizontal movement 0");
                     horizontal_movement = 0;
                 }
                 else if (turnedOn)
@@ -216,11 +221,12 @@ public class Movement : MonoBehaviour
                 {
                     WallSlide();
                 }
-                else
+                else if (rb.velocity.y < 0)
                 {
                     rb.velocity = new Vector2(rb.velocity.x, 0);
                     wallTime += Time.deltaTime;
                 }
+                else rb.gravityScale = 5;
             }
             else if(!respawn.respawning)
             {
@@ -275,6 +281,15 @@ public class Movement : MonoBehaviour
 
     private void WallJump(float side)
     {
+        Debug.Log("Wall jumped");
+
+        #region WallJump Audio
+        if (sfx_wallJumpInstance.isValid())
+        {
+            sfx_wallJumpInstance.start();
+        }
+        #endregion
+
         wallJumping = true;
         DOVirtual.Float(wallJumpAir, 1, wallJumpAirTime, CurrentWallJumpAir);
 
@@ -322,7 +337,7 @@ public class Movement : MonoBehaviour
         else if (Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer)) wallSide = -1;
         else wallSide = 0;
 
-        if (!isDashing && onFloor && !onWalls)
+        if (!isDashing && onFloor)
         {
             canDash = true;
         }

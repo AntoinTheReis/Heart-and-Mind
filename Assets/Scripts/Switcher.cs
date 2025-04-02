@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -13,11 +14,15 @@ public class Switcher : MonoBehaviour
 
     public GameObject mindObject;
     public GameObject heartObject;
+    private Transform heartTransform;
+    private Transform mindtransform;
 
     private Movement heartMovement;
     private MindMovement mindMovement;
 
     private MindBlockTelekinesis mindBlockMechanic;
+
+    public float heightFromPlayer = 1.87f;
 
     private Transform cam;
     private bool movingAndLooking = false;
@@ -25,8 +30,22 @@ public class Switcher : MonoBehaviour
 
     public float telekinesisWaitTime = 0.55f;
 
+    #region Audio
+    public FMODUnity.EventReference sfx_switchM;
+    FMOD.Studio.EventInstance sfx_switchMInstance;
+
+    public FMODUnity.EventReference sfx_switchH;
+    FMOD.Studio.EventInstance sfx_switchHInstance;
+    #endregion
+
     private void Awake()
     {
+        #region Audio EventInstances
+        sfx_switchMInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_switchM);
+
+        sfx_switchHInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_switchH);
+        #endregion
+
         input = GetComponent<Controls>();
     }
 
@@ -37,6 +56,9 @@ public class Switcher : MonoBehaviour
 
         heartMovement = heartObject.GetComponent<Movement>();
         mindMovement = mindObject.GetComponent<MindMovement>();
+
+        heartTransform = heartObject.transform;
+        mindtransform = mindObject.transform;
 
         cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
 
@@ -59,6 +81,13 @@ public class Switcher : MonoBehaviour
         {
             if(activeCharacter == 1)
             {
+                #region Switch Mind Audio
+                if (sfx_switchMInstance.isValid())
+                {
+                    sfx_switchMInstance.start();
+                }
+                #endregion
+
                 mindpos = mindObject.transform.position;
 
                 activeCharacter = 2;
@@ -71,6 +100,13 @@ public class Switcher : MonoBehaviour
             }
             else
             {
+                #region Switch Heart Audio
+                if (sfx_switchHInstance.isValid())
+                {
+                    sfx_switchHInstance.start();
+                }
+                #endregion
+
                 activeCharacter = 1;
                 movingAndLooking= false;
 
@@ -80,15 +116,15 @@ public class Switcher : MonoBehaviour
             }
         }
 
-        /*if(movingAndLooking && input.OnJumpPressed())
+        if(activeCharacter == 1)
         {
-            movingAndLooking = false;
+            transform.position = new Vector2(heartTransform.position.x, heartTransform.position.y + heightFromPlayer);
         }
-        else if (movingAndLooking && !mindObject.GetComponent<MindBlockTelekinesis>().active && !mindObject.GetComponent<MindTeleporting>().movementMode)
+        else
         {
-            Debug.Log("Checking for cube");
-            mindObject.GetComponent<MindBlockTelekinesis>().ActivateTelekinesis();
-        }*/
+            transform.position= new Vector2(mindtransform.position.x, mindtransform.position.y + heightFromPlayer);
+        }
+
     }
 
     IEnumerator MoveAndLook()
