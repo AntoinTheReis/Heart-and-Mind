@@ -79,6 +79,9 @@ public class Movement : MonoBehaviour
     public FMODUnity.EventReference sfx_jump;
     FMOD.Studio.EventInstance sfx_jumpInstance;
 
+    public FMODUnity.EventReference sfx_wallJump;
+    FMOD.Studio.EventInstance sfx_wallJumpInstance;
+
     public FMODUnity.EventReference sfx_dash;
     FMOD.Studio.EventInstance sfx_dashInstance;
 
@@ -86,6 +89,7 @@ public class Movement : MonoBehaviour
     FMOD.Studio.EventInstance sfx_dialogueInstance;
     FMOD.Studio.PARAMETER_ID sfx_dialogueCharacter;
     public int charVoice;
+
     #endregion
 
     private void Awake()
@@ -96,6 +100,8 @@ public class Movement : MonoBehaviour
 
         #region Audio EventInstances
         sfx_jumpInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_jump);
+
+        sfx_wallJumpInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_wallJump);
 
         sfx_dashInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_dash);
 
@@ -276,6 +282,13 @@ public class Movement : MonoBehaviour
     private void WallJump(float side)
     {
         Debug.Log("Wall jumped");
+
+        #region WallJump Audio
+        if (sfx_wallJumpInstance.isValid())
+        {
+            sfx_wallJumpInstance.start();
+        }
+        #endregion
 
         wallJumping = true;
         DOVirtual.Float(wallJumpAir, 1, wallJumpAirTime, CurrentWallJumpAir);

@@ -30,8 +30,22 @@ public class Switcher : MonoBehaviour
 
     public float telekinesisWaitTime = 0.55f;
 
+    #region Audio
+    public FMODUnity.EventReference sfx_switchM;
+    FMOD.Studio.EventInstance sfx_switchMInstance;
+
+    public FMODUnity.EventReference sfx_switchH;
+    FMOD.Studio.EventInstance sfx_switchHInstance;
+    #endregion
+
     private void Awake()
     {
+        #region Audio EventInstances
+        sfx_switchMInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_switchM);
+
+        sfx_switchHInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_switchH);
+        #endregion
+
         input = GetComponent<Controls>();
     }
 
@@ -67,6 +81,13 @@ public class Switcher : MonoBehaviour
         {
             if(activeCharacter == 1)
             {
+                #region Switch Mind Audio
+                if (sfx_switchMInstance.isValid())
+                {
+                    sfx_switchMInstance.start();
+                }
+                #endregion
+
                 mindpos = mindObject.transform.position;
 
                 activeCharacter = 2;
@@ -79,6 +100,13 @@ public class Switcher : MonoBehaviour
             }
             else
             {
+                #region Switch Heart Audio
+                if (sfx_switchHInstance.isValid())
+                {
+                    sfx_switchHInstance.start();
+                }
+                #endregion
+
                 activeCharacter = 1;
                 movingAndLooking= false;
 

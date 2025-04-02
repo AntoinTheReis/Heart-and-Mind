@@ -214,7 +214,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2046843607443177467}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed9df59bef16a1a4cb8697d5782b63ca, type: 3}
   m_Name: 
@@ -334,6 +334,14 @@ MonoBehaviour:
   southArrow: {fileID: 2230461748951762415}
   eastArrow: {fileID: 2468863475451819013}
   westArrow: {fileID: 1659855747265411002}
+  movementMode: 0
+  sfx_teleport:
+    Guid:
+      Data1: 219152212
+      Data2: 1331147608
+      Data3: 1100329395
+      Data4: -985501108
+    Path: event:/SFX_Teleport
 --- !u!1 &2166980037536431569
 GameObject:
   m_ObjectHideFlags: 0
