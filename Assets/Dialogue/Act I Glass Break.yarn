@@ -6,7 +6,7 @@ MIND: Aha! Another rose! Let’s grab it!
 HEART: I like your excitement, but this does seem like a trap or something… but I don’t care. I’m doing this for you after all. 
 
 MIND: Just.. 
-<<wait 3s>>
+<<wait 3>>
 be careful, ok? This is not worth it if you get hurt.
 
 HEART: Alright, alright. You worrywart.
