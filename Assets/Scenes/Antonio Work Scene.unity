@@ -859,6 +859,10 @@ PrefabInstance:
       propertyPath: bottomPoint.y
       value: -1.02
       objectReference: {fileID: 0}
+    - target: {fileID: 210528420843331964, guid: 6a7e67304dc879744aae9b0fb84e4037, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 384
+      objectReference: {fileID: 0}
     - target: {fileID: 444918310394211783, guid: 6a7e67304dc879744aae9b0fb84e4037, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.1
@@ -32427,7 +32431,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: fc7e09906dc864748bf0eff9113664d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -43003,11 +43007,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 328492572767240658, guid: 921423e7717d7ed4ba9fc30e5bb82ed3, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.25
+      value: 0.25187975
       objectReference: {fileID: 0}
     - target: {fileID: 328492572767240658, guid: 921423e7717d7ed4ba9fc30e5bb82ed3, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.2501831
+      value: 0.25206333
       objectReference: {fileID: 0}
     - target: {fileID: 2350796877737479951, guid: 921423e7717d7ed4ba9fc30e5bb82ed3, type: 3}
       propertyPath: m_Size.x

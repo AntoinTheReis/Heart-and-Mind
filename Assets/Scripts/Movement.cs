@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using DG.Tweening;
 using FMODUnity;
 using System.Drawing;
+using System.Xml.Linq;
 
 [RequireComponent(typeof(Controls))]
 public class Movement : MonoBehaviour
@@ -98,8 +99,8 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         respawn = GetComponent<DamageAndRespawn>();
 
-        #region Audio EventInstances
-        sfx_jumpInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_jump);
+    #region Audio EventInstances
+    sfx_jumpInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_jump);
 
         sfx_dashInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_dash);
 
@@ -319,22 +320,14 @@ public class Movement : MonoBehaviour
     //Platforms need to be added to the "Platforms" layer in the editor. 
     private void FloorAndWallsCheck()
     {
-        Collider2D hit = Physics2D.OverlapBox((Vector2)transform.position + bottomPoint, bottomSize, groundLayer);
-        /*Debug.Log(hit != null ? "On the ground" : "Not on the ground");
-        if (hit != null)
-        {
-            Debug.Log("Detected Object: " + hit.gameObject.name);
-        }*/
-        Debug.Log(groundLayer.value);
-
-        onFloor = Physics2D.OverlapBox((Vector2)transform.position + bottomPoint, bottomSize, groundLayer);
+        onFloor = Physics2D.OverlapBox((Vector2)transform.position + bottomPoint, bottomSize, 0, groundLayer);
         //onWalls = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer) || Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer);
 
-        if (Physics2D.OverlapBox((Vector2)transform.position + rightPoint, rightSize, groundLayer)) wallSide = 1;
-        else if (Physics2D.OverlapBox((Vector2)transform.position + leftPoint, leftSize, groundLayer)) wallSide = -1;
+        if (Physics2D.OverlapBox((Vector2)transform.position + rightPoint, rightSize, 0, groundLayer)) wallSide = 1;
+        else if (Physics2D.OverlapBox((Vector2)transform.position + leftPoint, leftSize, 0, groundLayer)) wallSide = -1;
         else wallSide = 0;
 
-        onWalls = wallSide == 0;
+        onWalls = wallSide != 0;
 
         if (!isDashing && onFloor)
         {
