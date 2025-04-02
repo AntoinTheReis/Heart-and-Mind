@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3647944325608513967}
   - component: {fileID: 7355749373901462257}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Act 1 Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 2350796877737479951}
   - component: {fileID: 328492572767240658}
   - component: {fileID: 1353440236103574966}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Layer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
