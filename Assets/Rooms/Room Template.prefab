@@ -41,7 +41,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622783530610154132}
   m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 1}
+  m_CellSize: {x: 1.5, y: 1.5, z: 1}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
@@ -397,6 +397,8 @@ MonoBehaviour:
   cover: {fileID: 0}
   mindBusStops:
   - {fileID: 2027506260500518925}
+  CamSizeInRoom: 7
+  isSubroom: 0
 --- !u!61 &2188319996702184336
 BoxCollider2D:
   m_ObjectHideFlags: 0
