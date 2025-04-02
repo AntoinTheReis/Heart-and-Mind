@@ -324,7 +324,7 @@ public class Movement : MonoBehaviour
         else if (Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer)) wallSide = -1;
         else wallSide = 0;
 
-        if (!isDashing && onFloor && !onWalls)
+        if (!isDashing && onFloor)
         {
             canDash = true;
         }
