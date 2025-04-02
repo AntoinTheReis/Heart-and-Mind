@@ -30,6 +30,7 @@ public class Movement : MonoBehaviour
     public float airMoveMultiplier = 0.2f;
     public float airDeaccelerator = 0.8f;
     public float airCruisingCap = 1f;
+    public float floorAccelerator;
     private float side = 1;
     public Vector2 maxActualSpeed;
 
@@ -142,9 +143,7 @@ public class Movement : MonoBehaviour
                 }
                 else if (turnedOn)
                 {
-                    if (input.MoveInput().x > 0) horizontal_movement = 1;
-                    else if (input.MoveInput().x < 0) horizontal_movement -= 1;
-                    else horizontal_movement = 0;
+                    CalculateFloorSpeed();
                 }
                 else horizontal_movement = 0;
             }
@@ -405,6 +404,25 @@ public class Movement : MonoBehaviour
         horizontal_movement = 0;
         vertical_movement = 0;
         rb.velocity = Vector2.zero;
+    }
+
+    private void CalculateFloorSpeed()
+    {
+        if (input.MoveInput().x > 0 && horizontal_movement < 1) horizontal_movement += floorAccelerator * Time.deltaTime;
+        else if (input.MoveInput().x < 0 && horizontal_movement > -1) horizontal_movement -= floorAccelerator * Time.deltaTime;
+        else if(horizontal_movement != 0)
+        {
+            if(horizontal_movement > 0)
+            {
+                horizontal_movement -= floorAccelerator * Time.deltaTime;
+                if (horizontal_movement < 0) horizontal_movement = 0;
+            }
+            else
+            {
+                horizontal_movement += floorAccelerator * Time.deltaTime;
+                if (horizontal_movement > 0) horizontal_movement = 0;
+            }
+        }
     }
 
 }
