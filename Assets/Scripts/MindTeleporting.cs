@@ -67,6 +67,13 @@ public class MindTeleporting : MonoBehaviour
             Transform goTo =  UseOptions(input.MoveInput().x, input.MoveInput().y);
             if (goTo != null)
             {
+                #region Teleport Audio
+                if (sfx_teleportInstance.isValid())
+                {
+                    sfx_teleportInstance.start();
+                }
+                #endregion
+
                 transform.position = goTo.position;
                 currentBusStop = goTo;
                 PickOptions();
@@ -248,13 +255,6 @@ public class MindTeleporting : MonoBehaviour
 
     void AdjustPosition(Transform arrowTransform, Vector2 targetPosition)
     {
-        #region Teleport Audio
-        if (sfx_teleportInstance.isValid())
-        {
-            sfx_teleportInstance.start();
-        }
-        #endregion
-
         // Get direction from axisPoint to targetPosition
         Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
 
