@@ -38,7 +38,7 @@ public class Movement : MonoBehaviour
     public float dashWait = 0.3f;
     public float dragDashDuration = 0.8f;
     public float dragDashMax = 14f;
-    private bool isDashing = false;
+    public bool isDashing = false;
     private bool canDash = true;
     private bool dashHitStop;
 
@@ -79,6 +79,9 @@ public class Movement : MonoBehaviour
     public FMODUnity.EventReference sfx_jump;
     FMOD.Studio.EventInstance sfx_jumpInstance;
 
+    public FMODUnity.EventReference sfx_dash;
+    FMOD.Studio.EventInstance sfx_dashInstance;
+
     public FMODUnity.EventReference sfx_dialogue;
     FMOD.Studio.EventInstance sfx_dialogueInstance;
     FMOD.Studio.PARAMETER_ID sfx_dialogueCharacter;
@@ -93,6 +96,8 @@ public class Movement : MonoBehaviour
 
         #region Audio EventInstances
         sfx_jumpInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_jump);
+
+        sfx_dashInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_dash);
 
         sfx_dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_dialogue);
         FMOD.Studio.EventDescription dialogueDescription;
@@ -325,6 +330,13 @@ public class Movement : MonoBehaviour
 
     private void Dash(float x, float y)
     {
+        #region DashAudio
+        if (sfx_dashInstance.isValid())
+        {
+            sfx_dashInstance.start();
+        }
+        #endregion
+
         dashHitStop = false;
 
         rb.gravityScale = 0;

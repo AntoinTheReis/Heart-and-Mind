@@ -28,7 +28,7 @@ public class MindTeleporting : MonoBehaviour
     private bool lateStart = false;
 
     private bool positionUpdated = false;
-    private bool movementMode = false;
+    public bool movementMode = false;
 
     private MindBlockTelekinesis telekinesis;
 
@@ -121,6 +121,8 @@ public class MindTeleporting : MonoBehaviour
         {
             Debug.Log("More than one bus stop");
             movementMode = !movementMode;
+            if(!movementMode)
+                telekinesis.ActivateTelekinesis();
 
             PickOptions();
         }
