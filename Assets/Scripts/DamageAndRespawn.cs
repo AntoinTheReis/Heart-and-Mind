@@ -10,6 +10,7 @@ public class DamageAndRespawn : MonoBehaviour
     public float materializationTime = 0.2f;
     public bool respawning = false;
     public float dragDashMax;
+    public GameObject prefabGlass;
 
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
@@ -18,10 +19,24 @@ public class DamageAndRespawn : MonoBehaviour
     private MindMovement mMovement;
     private Collider2D collider2d;
     private Room lastActualRoom;
+    private Animator curtain;
+
+    private List<GameObject> resetables;
+    private List<Vector3> resetableValues;
+    //X = transform.position.x
+    //Y = transform.position.y
+    //Z = type of object. 1) Block 2) Glass
+    private List<Vector3> resetableAngles;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        resetables = new List<GameObject>();
+        resetableAngles = new List<Vector3>();
+        resetableValues = new List<Vector3>();
+
+        curtain = GameObject.FindGameObjectWithTag("DeathCurtain").GetComponent<Animator>();
         collider2d = GetComponent<Collider2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
@@ -34,6 +49,26 @@ public class DamageAndRespawn : MonoBehaviour
         {
             mMovement = GetComponent<MindMovement>();
             heartOrMind = 2;
+        }
+
+        GameObject[] blocks = GameObject.FindGameObjectsWithTag("Blocks");
+        for (int i = 0; i < blocks.Length; i++)
+        {
+            resetables.Add(blocks[i]);
+        }
+        GameObject[] glasses = GameObject.FindGameObjectsWithTag("Platform");
+        for(int i = 0;i < glasses.Length; i++)
+        {
+            if(glasses[i].GetComponent<BreakableGlass>() != null) resetables.Add(glasses[i]);
+        }
+        Debug.Log("Resetables Count: " + resetables.Count);
+        int count = resetables.Count;
+        for(int i = 0; i < count; i++)
+        {
+            resetableValues.Add(new Vector3(resetables[i].transform.position.x, resetables[i].transform.position.y, 0));
+            resetableAngles.Add(resetables[i].transform.eulerAngles); 
+            if (resetables[i].GetComponent<Block>() != null) resetableValues[i] += new Vector3(0, 0, 1);
+            else resetableValues[i] += new Vector3(0, 0, 2);
         }
     }
 
@@ -100,6 +135,23 @@ public class DamageAndRespawn : MonoBehaviour
     IEnumerator Respawn()
     {
         yield return new WaitForSeconds(respawnTime);
+        curtain.SetTrigger("Died");
+        yield return new WaitForSeconds(0.3f);
+
+        GameObject[] shards = GameObject.FindGameObjectsWithTag("Broken Shards");
+        for (int i = 0; i < shards.Length; i++)
+        {
+            Destroy(shards[i]);
+        }
+        for (int i = 0; i < resetables.Count; i++)
+        {
+            if (resetableValues[i].z == 1) resetables[i].transform.position = new Vector2(resetableValues[i].x, resetableValues[i].y);
+            else if (resetables[i] == null)
+            {
+                resetables[i] = Instantiate(prefabGlass, new Vector3(resetableValues[i].x, resetableValues[i].y, 0), Quaternion.Euler(resetableAngles[i]));
+            }
+        }
+
         rb.velocity = Vector2.zero;
         Color tmp = spriteRenderer.color;   //Setting color to transparent
         tmp.a = 0f;
