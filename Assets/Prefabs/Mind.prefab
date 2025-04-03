@@ -214,7 +214,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2046843607443177467}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed9df59bef16a1a4cb8697d5782b63ca, type: 3}
   m_Name: 
@@ -289,7 +289,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2046843607443177467}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8984f19f78e00442b034a709bcbce13, type: 3}
   m_Name: 
@@ -299,6 +299,7 @@ MonoBehaviour:
   materializationTime: 0.5
   respawning: 0
   dragDashMax: 14
+  prefabGlass: {fileID: 0}
 --- !u!114 &7237773892070292257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,6 +335,7 @@ MonoBehaviour:
   southArrow: {fileID: 2230461748951762415}
   eastArrow: {fileID: 2468863475451819013}
   westArrow: {fileID: 1659855747265411002}
+  movementMode: 0
 --- !u!1 &2166980037536431569
 GameObject:
   m_ObjectHideFlags: 0

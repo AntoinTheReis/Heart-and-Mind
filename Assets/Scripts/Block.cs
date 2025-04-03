@@ -12,12 +12,16 @@ public class Block : MonoBehaviour
     private Color defaultColor;
     public bool selected = false;
 
+    private Vector3 startPoint;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
         defaultColor = sr.color;
+
+        startPoint = gameObject.transform.position;
     }
 
     public void SelectBlock()
@@ -74,6 +78,16 @@ public class Block : MonoBehaviour
         {
             //Debug.Log("BLock enters cloud");
             other.isTrigger = selected;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject.tag);
+        if(collision.gameObject.tag == "Death")
+        {
+            Debug.Log("Respawning block");
+            transform.position = startPoint;
         }
     }
 }

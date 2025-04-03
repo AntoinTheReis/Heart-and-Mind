@@ -379,7 +379,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8605797195479344478}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -451,6 +451,7 @@ MonoBehaviour:
   materializationTime: 0.5
   respawning: 0
   dragDashMax: 14
+  prefabGlass: {fileID: 7520791465317407285, guid: 72f621974c0e510458912d19f668a79a, type: 3}
 --- !u!61 &5155639377790522698
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -483,7 +484,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.24789238}
+  m_Offset: {x: 0, y: -0.08832502}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -494,5 +495,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.4957848}
+  m_Size: {x: 1, y: 1.8149195}
   m_EdgeRadius: 0
