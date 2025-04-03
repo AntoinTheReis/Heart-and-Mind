@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class MindBlockTelekinesis : MonoBehaviour
 {
+    private Animator anim;
+    private SpriteRenderer spriterenderer;
+
     [SerializeField] private GameObject SelectionOverlay;
 
     LinkedListNode<GameObject> selectedBlockNode = null;
@@ -19,6 +22,7 @@ public class MindBlockTelekinesis : MonoBehaviour
     {
         SelectionOverlay.GetComponent<SpriteRenderer>().enabled = false;
         input = GetComponent<Controls>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -63,11 +67,13 @@ public class MindBlockTelekinesis : MonoBehaviour
             if ((input.OnJumpPressed() && RoomTracker.current_room.mindBusStops.Count > 1) || selectedBlock.GetComponent<Block>().IsOffScreen() || GameObject.FindWithTag("Switcher").GetComponent<Switcher>().activeCharacter != 2)
             {
                 Debug.Log("Make active = false");
+                anim.SetTrigger("AbilityStop");
                 selectedBlock.GetComponent<Block>().DeselectBlock();
                 SelectionOverlay.GetComponent<SpriteRenderer>().enabled = false;
                 active = false;
             }
         }
+        anim = GetComponentInChildren<Animator>();
     }
 
 
@@ -91,6 +97,8 @@ public class MindBlockTelekinesis : MonoBehaviour
 
             //Select the first block on activation
             selectedBlockNode = BlockTracker.BlocksOnScreen.First;
+
+            anim.SetTrigger("Ability");
         }
     }
 }

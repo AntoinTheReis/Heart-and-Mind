@@ -18,6 +18,13 @@ public class Movement : MonoBehaviour
     private float horizontal_movement;
     private float vertical_movement;
 
+    //0 is right, 1 is up, 2 is down
+    private int dashDirection = 0;
+    private Animator anim;
+    private SpriteRenderer spriterenderer;
+    private bool floorLastFrame;
+    public float fallingThreshold;
+
     public bool onFloor;
     private bool onWalls;
     private float wallSide;
@@ -94,6 +101,9 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         respawn = GetComponent<DamageAndRespawn>();
 
+        anim = GetComponentInChildren<Animator>();
+        spriterenderer = GetComponentInChildren<SpriteRenderer>();
+
         #region Audio EventInstances
         sfx_jumpInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_jump);
 
@@ -112,7 +122,6 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         FloorAndWallsCheck();
 
         //Deactivat wallJumping bool
@@ -127,8 +136,18 @@ public class Movement : MonoBehaviour
         else jumpBufferCounter -= Time.deltaTime;
 
         //Keeping track of what side the player is facing
-        if (input.MoveInput().x > 0) side = 1;
-        else if (input.MoveInput().x < 0) side = -1;
+        if (input.MoveInput().x > 0)
+        {
+            
+            side = 1;
+            spriterenderer.flipX = false;
+        }
+        else if (input.MoveInput().x < 0)
+        {
+
+            side = -1;
+            spriterenderer.flipX = true;
+        }
 
         if (!isDashing) //Player can only influence movement with WASD if not Dashing
         {
@@ -242,6 +261,8 @@ public class Movement : MonoBehaviour
         leftWall = !onWalls && wallJumping && !onFloor;
 
         if (isDashing && rb.velocity == Vector2.zero) DashCancel();  //Cancel dash effects if player is still (hit a wall or floor)
+
+        AnimationCheck();
     }
 
     private void Jump()
@@ -271,6 +292,8 @@ public class Movement : MonoBehaviour
         coyoteTimeJumpCounter = 0;
         jumpBufferCounter = 0;
         DashCancel();
+
+        
     }
 
     private void WallJump(float side)
@@ -341,6 +364,19 @@ public class Movement : MonoBehaviour
 
         dashHitStop = false;
 
+        if (y == 0)
+        {
+            dashDirection = 0;
+        }
+        else if (y > 0)
+        {
+            dashDirection = 1;
+        }
+        else
+        {
+            dashDirection = -1;
+        }
+
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
         horizontal_movement = 0;
@@ -407,4 +443,38 @@ public class Movement : MonoBehaviour
         rb.velocity = Vector2.zero;
     }
 
+    private void AnimationCheck()
+    {
+        //anim.SetInteger("FacingParam", facing);
+
+        anim.SetBool("IsWalking", Mathf.Abs(input.MoveInput().x) > 0 && onFloor);
+        /*
+        if (anim.GetBool("IsWalking"))
+        {
+            //PUT WALKING SOUND HERE
+        }*/
+        anim.SetInteger("dashDirection", dashDirection);
+
+        anim.SetBool("Dashing", isDashing);
+
+        //else if (wallJumping)
+        //{
+        //    anim.SetTrigger("WallJumping");
+        //}
+
+        if (isDashing == false && rb.velocity.y > 0)
+        {
+            anim.SetTrigger("Jumping");
+        }
+        else if (isDashing == false && rb.velocity.y < fallingThreshold)
+        {
+            anim.SetTrigger("Falling");
+            Debug.Log(rb.velocity.y);
+        }
+
+        anim.SetBool("OnFloor", onFloor);
+        anim.SetBool("OnWall", onWalls);
+        
+        floorLastFrame = onFloor;
+    }
 }

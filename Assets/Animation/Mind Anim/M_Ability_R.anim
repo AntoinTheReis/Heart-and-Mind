@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: H_Dash_R
+  m_Name: M_Ability_R
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,19 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 1286248062, guid: f14ed648f6fc58d42a605beb3d9ea0c3, type: 3}
+      value: {fileID: 1798461501, guid: aeddc11c9f142bc4c8deb959fe0fae6f, type: 3}
+    - time: 0.1
+      value: {fileID: -750663243, guid: aeddc11c9f142bc4c8deb959fe0fae6f, type: 3}
+    - time: 0.21666667
+      value: {fileID: 1279125214, guid: aeddc11c9f142bc4c8deb959fe0fae6f, type: 3}
+    - time: 0.33333334
+      value: {fileID: -69671406, guid: aeddc11c9f142bc4c8deb959fe0fae6f, type: 3}
+    - time: 0.45
+      value: {fileID: 1667735760, guid: aeddc11c9f142bc4c8deb959fe0fae6f, type: 3}
+    - time: 0.56666666
+      value: {fileID: 814977602, guid: aeddc11c9f142bc4c8deb959fe0fae6f, type: 3}
+    - time: 0.7
+      value: {fileID: 1691489680, guid: aeddc11c9f142bc4c8deb959fe0fae6f, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,13 +56,19 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 1286248062, guid: f14ed648f6fc58d42a605beb3d9ea0c3, type: 3}
+    - {fileID: 1798461501, guid: aeddc11c9f142bc4c8deb959fe0fae6f, type: 3}
+    - {fileID: -750663243, guid: aeddc11c9f142bc4c8deb959fe0fae6f, type: 3}
+    - {fileID: 1279125214, guid: aeddc11c9f142bc4c8deb959fe0fae6f, type: 3}
+    - {fileID: -69671406, guid: aeddc11c9f142bc4c8deb959fe0fae6f, type: 3}
+    - {fileID: 1667735760, guid: aeddc11c9f142bc4c8deb959fe0fae6f, type: 3}
+    - {fileID: 814977602, guid: aeddc11c9f142bc4c8deb959fe0fae6f, type: 3}
+    - {fileID: 1691489680, guid: aeddc11c9f142bc4c8deb959fe0fae6f, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.016666668
+    m_StopTime: 0.71666664
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

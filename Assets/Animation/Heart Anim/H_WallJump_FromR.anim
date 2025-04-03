@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: H_Dash_R
+  m_Name: H_WallJump_FromR
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 1286248062, guid: f14ed648f6fc58d42a605beb3d9ea0c3, type: 3}
+      value: {fileID: 21300000, guid: 922974305ec7784419847fac67b0913e, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,7 +44,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 1286248062, guid: f14ed648f6fc58d42a605beb3d9ea0c3, type: 3}
+    - {fileID: 21300000, guid: 922974305ec7784419847fac67b0913e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
