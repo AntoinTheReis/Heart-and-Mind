@@ -1,7 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
+using UnityEngine.Events;
+using Yarn.Compiler;
 
 // if the room is currently not the "selected" one (the one the player is in), draw a rectangle to cover it.
 // addition: we could make this juicy and appear / disappear in fun ways
@@ -9,6 +13,7 @@ using System.Collections.Generic;
 
 public class Room : MonoBehaviour
 {
+    private bool isRoomDiscovered = false;
     // room width and height
     public int room_width;
     public int room_height;
@@ -17,9 +22,30 @@ public class Room : MonoBehaviour
     bool room_is_selected_last_state = false;
     [HideInInspector] public Transform cover;
     public List<Transform> mindBusStops;
+    
     public float CamSizeInRoom = 7f;
     public bool isSubroom = false;
-
+    
+    
+    [Serializable]
+    public class RoomEvent : UnityEvent<Room, Room> { }
+    [Header("Events:\n")]
+    /// <summary>
+    /// A Unity event that is called when the room is entered for the first time.
+    /// </summary>
+    [Tooltip("A Unity event that is called when the room is entered. ")]
+    public UnityEvent OnDiscovery;
+    /// <summary>
+    /// A Unity event that is called when the room is entered. 
+    /// </summary>
+    [Tooltip("A Unity event that is called when the room is entered. ")]
+    public UnityEvent OnEnter;
+    /// <summary>
+    /// A Unity event that is called when the room is exited. 
+    /// </summary>
+    [Tooltip("A Unity event that is called when the room is exited. ")]
+    public UnityEvent OnExit;
+    
     // Adding a trigger collider for checking if target is inside
     BoxCollider2D room_bounds;
 
@@ -80,6 +106,12 @@ public class Room : MonoBehaviour
 
     private void switchRoomToThis()
     {
+        OnEnter.Invoke();
+        if (!isRoomDiscovered)
+        {
+            isRoomDiscovered = true;
+            OnDiscovery.Invoke();
+        }
         Debug.Log("Entered room "+ this.name  + "."); 
         
         CameraSystem camSys = Camera.main.GetComponent<CameraSystem>();
@@ -91,7 +123,7 @@ public class Room : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (RoomTracker.current_room.isSubroom) return;
+        if (RoomTracker.current_room != null && RoomTracker.current_room.isSubroom) return;
         if (collision.transform == RoomTracker.target)
         {
             switchRoomToThis();
@@ -112,6 +144,7 @@ public class Room : MonoBehaviour
         {
             room_is_selected = false;
             RoomTracker.current_room = null;
+            OnExit.Invoke();
             //StartCoroutine(NullRoomTimer(0.1f));
         }
     }

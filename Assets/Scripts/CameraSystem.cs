@@ -57,6 +57,7 @@ public class CameraSystem : MonoBehaviour
         half_width = cam.aspect * half_height;
         lastActualRoom = RoomTracker.current_room;
         dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+        lastActualRoom = RoomTracker.current_room;
     }
     
     #region Yarnspinner Commands
@@ -153,17 +154,21 @@ public class CameraSystem : MonoBehaviour
             {
                 lastActualRoom = RoomTracker.current_room;
             }
-
-
+            
             if (RoomTracker.current_room != null)
             {
                 room_pos = RoomTracker.current_room.transform.position;
                 room_size = new Vector2(RoomTracker.current_room.room_width / 2, RoomTracker.current_room.room_height / 2);
             }
-            else
+            else if (lastActualRoom != null)
             {
                 room_pos = lastActualRoom.transform.position;
                 room_size = new Vector2(lastActualRoom.room_width / 2, lastActualRoom.room_height/ 2);
+            }
+            else
+            {
+                room_pos = transform.position;
+                room_size = new Vector2(40, 40);
             }
             
             
@@ -221,7 +226,11 @@ public class CameraSystem : MonoBehaviour
         {
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, new_size, zoomSpeed * Time.deltaTime);
             elapsedTime += Time.deltaTime;
-            if (elapsedTime > 1) yield break;
+            if (elapsedTime > 5)
+            {
+                cam.orthographicSize = new_size;
+                yield break;
+            }
             yield return null;
         }
         cam.orthographicSize = new_size;

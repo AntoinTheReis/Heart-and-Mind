@@ -2,28 +2,4 @@ title: Test
 tags: 
 ---
 This is a test of the implemented dialouge system!
-<<size Camera 7>>
-<<pan Camera Mind>>
-Mind: Wow look!
-<<pan Camera Heart>>
-Heart: Look at what?
-<<pan Camera Cloud>>
-Mind: At that cloud!
-<<pan Camera Heart>>
-Heart: Huh... weird how its just, you know.
-<<size Camera 10>>
-Heart: Existing there.
-<<startShaking Camera>>
-Heart: And now everything is shaking.
-<<pan Camera Mind>>
-Mind: Thinking doesn't suit you. Suits me though.
-Mind: I can totally get a cube on that cloud for you to use.
-Mind: But damn it does just keep shaking huh.
-<<stopShaking Camera>>
-<<pan Camera Heart>>
-Heart: Ok, its finally over.
-<<wait 0.2>>
-<<shake Camera>>
-<<wait 0.5>>
-Heart: That was sick. And cruel.
 ===

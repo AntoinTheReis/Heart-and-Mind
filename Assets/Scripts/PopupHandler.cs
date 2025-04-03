@@ -1,0 +1,134 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics.Tracing;
+using TMPro;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class PopupHandler : MonoBehaviour
+{
+    [SerializeField] GameObject container;
+    
+    [SerializeField] private float popupSpeed;
+    
+    private bool popupOpen = false;
+
+    public enum Recipient
+    {
+        NONE, HEART, MIND
+    }
+    
+    public Recipient recipient;
+    
+    [Header("Colors\n")] 
+    public Color heartBackgroundColor;
+    public Color heartTitleColor;
+    public Color mindBackgroundColor;
+    public Color mindTitleColor;
+
+    
+    [Header("\nText Fields")] 
+    public TextMeshProUGUI titleText;
+    public TextMeshProUGUI messageText;
+    [Header("\nThings that will be colorful")] 
+    //public Image[] outlines;
+    public Image background;
+
+    Vector2 originalPosition;
+    private void Start()
+    {
+        originalPosition = container.GetComponent<RectTransform>().anchoredPosition;
+        resetPosition();
+    }
+
+    private void resetPosition()
+    {
+        StopAllCoroutines();
+        popupOpen = false;
+        container.GetComponent<CanvasGroup>().alpha = 0;
+        container.GetComponent<RectTransform>().anchoredPosition = originalPosition;
+        container.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, -120f);
+    }
+    public void ShowPopup()
+    {
+        if (popupOpen) return;
+        resetPosition();
+        StartCoroutine(MovePopup());
+        StartCoroutine(FadePopupIn());
+    }
+
+    public void HidePopup()
+    {
+        if(!popupOpen) return;
+        StartCoroutine(MovePopup());
+        StartCoroutine(FadePopupOut());
+    }
+
+    IEnumerator MovePopup()
+    {
+        Vector2 targetPosition = new Vector2(container.GetComponent<RectTransform>().anchoredPosition.x,
+            container.GetComponent<RectTransform>().anchoredPosition.y + 120);
+        float t = 0f;
+        
+        Debug.Log("Moving popup!");
+        while (container.GetComponent<RectTransform>().anchoredPosition.y < targetPosition.y)
+        {
+            container.GetComponent<RectTransform>().anchoredPosition = Vector2.Lerp(container.GetComponent<RectTransform>().anchoredPosition, targetPosition, t);
+            t += Time.deltaTime * popupSpeed;
+            yield return null;
+        }
+        container.GetComponent<RectTransform>().anchoredPosition = targetPosition;
+        StopCoroutine(MovePopup());
+    }
+
+    IEnumerator FadePopupIn()
+    {
+        popupOpen = true;
+        container.GetComponent<CanvasGroup>().alpha = 0;
+        while (container.GetComponent<CanvasGroup>().alpha < 1)
+        {
+            container.GetComponent<CanvasGroup>().alpha += Time.deltaTime;
+            yield return null;
+        }
+        container.GetComponent<CanvasGroup>().alpha = 1;
+        StopCoroutine(FadePopupIn());
+    }
+
+    IEnumerator FadePopupOut()
+    {
+        popupOpen = false;
+        container.GetComponent<CanvasGroup>().alpha = 1;
+        while (container.GetComponent<CanvasGroup>().alpha > 0)
+        {
+            container.GetComponent<CanvasGroup>().alpha -= Time.deltaTime;
+            yield return null;
+        }
+        container.GetComponent<CanvasGroup>().alpha = 0;
+        resetPosition();
+        StopCoroutine(FadePopupOut());
+    }
+    
+    public void SetTitle(string title)
+    {
+        titleText.text = title;
+    }
+    public void SetMessage(string message)
+    {
+        messageText.text = message;
+    }
+    [Tooltip("0 = NONE, 1 = HEART, 2 = MIND")]
+    public void SetRecipient(int _recipient)
+    {
+        Recipient rec = (Recipient)_recipient;
+        this.recipient = rec;
+        // foreach (Image image in outlines)
+        // {
+        //     image.color = rec == Recipient.HEART ? heartOutlineColor : rec == Recipient.MIND ? mindOutlineColor : Color.black;
+        // }
+        background.color = background.color = rec == Recipient.HEART ? heartBackgroundColor : rec == Recipient.MIND ? mindBackgroundColor : Color.black;
+        titleText.color = rec == Recipient.HEART ? heartTitleColor : rec == Recipient.MIND ? mindTitleColor : Color.white;
+    }
+    
+}

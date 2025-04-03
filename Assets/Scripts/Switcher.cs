@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 public class Switcher : MonoBehaviour
 {
     Controls input;
+    public bool canSwitch;
 
     [Tooltip("1 is heart and 2 is mind")]
     public int activeCharacter; 
@@ -77,6 +78,7 @@ public class Switcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!canSwitch) return;
         if (input.OnInteractPressed())
         {
             if(activeCharacter == 1)
