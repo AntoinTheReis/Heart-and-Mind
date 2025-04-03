@@ -23,6 +23,7 @@ public class Switcher : MonoBehaviour
     private MindBlockTelekinesis mindBlockMechanic;
 
     public float heightFromPlayer = 1.87f;
+    public float heightFromMind = 3f;
 
     private Transform cam;
     private bool movingAndLooking = false;
@@ -94,7 +95,7 @@ public class Switcher : MonoBehaviour
         }
         else
         {
-            transform.position= new Vector2(mindtransform.position.x, mindtransform.position.y + heightFromPlayer);
+            transform.position= new Vector2(mindtransform.position.x, mindtransform.position.y + heightFromMind);
         }
 
     }

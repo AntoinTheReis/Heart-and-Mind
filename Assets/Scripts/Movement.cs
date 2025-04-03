@@ -23,6 +23,7 @@ public class Movement : MonoBehaviour
     private Animator anim;
     private SpriteRenderer spriterenderer;
     private bool floorLastFrame;
+    private float heightLastFrame;
     public float fallingThreshold;
 
     public bool onFloor;
@@ -140,13 +141,11 @@ public class Movement : MonoBehaviour
         {
             
             side = 1;
-            spriterenderer.flipX = false;
         }
         else if (input.MoveInput().x < 0)
         {
 
             side = -1;
-            spriterenderer.flipX = true;
         }
 
         if (!isDashing) //Player can only influence movement with WASD if not Dashing
@@ -204,7 +203,7 @@ public class Movement : MonoBehaviour
         
         //Speed and position calcs
         transform.position += Vector3.right * (horizontal_movement * speed * Time.deltaTime);
-        transform.position += new Vector3(0, vertical_movement * Time.deltaTime, 0);
+        //transform.position += new Vector3(0, vertical_movement * Time.deltaTime, 0);
 
 
         //Air time calculations
@@ -262,7 +261,13 @@ public class Movement : MonoBehaviour
 
         if (isDashing && rb.velocity == Vector2.zero) DashCancel();  //Cancel dash effects if player is still (hit a wall or floor)
 
+        if (turnedOn)
+        {
+            if (!onWalls && !isDashing) spriterenderer.flipX = (side == -1);
+            else if (onWalls && !onFloor) spriterenderer.flipX = (side == 1); 
+        }
         AnimationCheck();
+
     }
 
     private void Jump()
@@ -292,8 +297,6 @@ public class Movement : MonoBehaviour
         coyoteTimeJumpCounter = 0;
         jumpBufferCounter = 0;
         DashCancel();
-
-        
     }
 
     private void WallJump(float side)
@@ -447,7 +450,7 @@ public class Movement : MonoBehaviour
     {
         //anim.SetInteger("FacingParam", facing);
 
-        anim.SetBool("IsWalking", Mathf.Abs(input.MoveInput().x) > 0 && onFloor);
+        anim.SetBool("IsWalking", Mathf.Abs(input.MoveInput().x) > 0 && onFloor && turnedOn);
         /*
         if (anim.GetBool("IsWalking"))
         {
@@ -457,24 +460,20 @@ public class Movement : MonoBehaviour
 
         anim.SetBool("Dashing", isDashing);
 
-        //else if (wallJumping)
-        //{
-        //    anim.SetTrigger("WallJumping");
-        //}
+        float height = transform.position.y;
 
-        if (isDashing == false && rb.velocity.y > 0)
+        if (isDashing == false && height > heightLastFrame & Mathf.Abs(height - heightLastFrame) > fallingThreshold)
         {
             anim.SetTrigger("Jumping");
+            Debug.Log("Jumping" + height + " - " + heightLastFrame);
         }
-        else if (isDashing == false && rb.velocity.y < fallingThreshold)
-        {
-            anim.SetTrigger("Falling");
-            Debug.Log(rb.velocity.y);
-        }
+        anim.SetBool("Jumping", isDashing == false && height > heightLastFrame & Mathf.Abs(height - heightLastFrame) > fallingThreshold);
+        if (anim.GetBool("Jumping") == false) anim.SetBool("Falling", isDashing == false && height < heightLastFrame && Mathf.Abs(height - heightLastFrame) > fallingThreshold);
 
         anim.SetBool("OnFloor", onFloor);
         anim.SetBool("OnWall", onWalls);
         
         floorLastFrame = onFloor;
+        heightLastFrame = transform.position.y;
     }
 }
