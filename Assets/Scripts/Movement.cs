@@ -151,7 +151,7 @@ public class Movement : MonoBehaviour
                 }
                 else horizontal_movement = 0;
             }
-            else if (input.MoveInput().x == 0 && horizontal_movement != 0)  //speed changes if the player is in the air
+            else if (input.MoveInput().x == 0 && horizontal_movement != 0 && !wallJumping)  //speed changes if the player is in the air
             {
                 if (onWalls && !wallJumping) horizontal_movement = 0;
                 else Deaccelerate();
@@ -165,7 +165,11 @@ public class Movement : MonoBehaviour
                 else if (turnedOn)
                 {
                     if (!wallJumping) horizontal_movement += input.MoveInput().x * airMoveMultiplier * Time.deltaTime;
-                    else if (!(wallSide == input.MoveInput().x && onWalls)) horizontal_movement += input.MoveInput().x * airMoveMultiplier * currentWallJumpAir * Time.deltaTime;
+                    else if (!(wallSide == input.MoveInput().x && onWalls))
+                    {
+                        Debug.Log("This is the one happening rn");
+                        horizontal_movement += input.MoveInput().x * airMoveMultiplier * currentWallJumpAir * Time.deltaTime;
+                    }
                 }
             }
         }

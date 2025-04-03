@@ -323,8 +323,8 @@ MonoBehaviour:
   dragDashMax: 20
   isDashing: 0
   jump: 20
-  fallMultiplier: 8
-  lowJumpMultiplier: 20
+  fallMultiplier: 5
+  lowJumpMultiplier: 10
   maxXvelocity: 1.4
   coyoteTimeJump: 0.07
   jumpBufferTime: 0.07
@@ -333,8 +333,8 @@ MonoBehaviour:
   slideSpeed: 20
   wallAcceleration: 40
   wallJumpAir: 0.1
-  wallJumpAirTime: 2
-  wallJumpHorizontal: 7
+  wallJumpAirTime: 7
+  wallJumpHorizontal: 1.1
   wallJumpVertical: 1.1
   coyoteTimeWall: 0.07
   collisionRadius: 0.16
