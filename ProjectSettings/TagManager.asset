@@ -9,6 +9,9 @@ TagManager:
   - Damage
   - Death
   - Switcher
+  - DeathCurtain
+  - Blocks
+  - Broken Shards
   layers:
   - Default
   - TransparentFX

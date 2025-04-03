@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
 using FMODUnity;
+using System.Drawing;
+using System.Xml.Linq;
 
 [RequireComponent(typeof(Controls))]
 public class Movement : MonoBehaviour
@@ -30,6 +32,7 @@ public class Movement : MonoBehaviour
     public float airMoveMultiplier = 0.2f;
     public float airDeaccelerator = 0.8f;
     public float airCruisingCap = 1f;
+    public float floorAccelerator;
     private float side = 1;
     public Vector2 maxActualSpeed;
 
@@ -71,9 +74,11 @@ public class Movement : MonoBehaviour
     [Header("Floor and Wall Checks")]
     public float collisionRadius = 0.25f;
     public Vector2 bottomOffset, rightOffset, leftOffset;
-    private Color debugCollisionColor = Color.red;
+    private UnityEngine.Color debugCollisionColor = UnityEngine.Color.red;
     public LayerMask groundLayer;
 
+    [Header("Box overlap values")]
+    public Vector2 bottomPoint, bottomSize, rightPoint, rightSize, leftPoint, leftSize;
 
     #region Audio
     public FMODUnity.EventReference sfx_jump;
@@ -98,8 +103,8 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         respawn = GetComponent<DamageAndRespawn>();
 
-        #region Audio EventInstances
-        sfx_jumpInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_jump);
+    #region Audio EventInstances
+    sfx_jumpInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_jump);
 
         sfx_wallJumpInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_wallJump);
 
@@ -148,13 +153,11 @@ public class Movement : MonoBehaviour
                 }
                 else if (turnedOn)
                 {
-                    if (input.MoveInput().x > 0) horizontal_movement = 1;
-                    else if (input.MoveInput().x < 0) horizontal_movement -= 1;
-                    else horizontal_movement = 0;
+                    CalculateFloorSpeed();
                 }
                 else horizontal_movement = 0;
             }
-            else if (input.MoveInput().x == 0 && horizontal_movement != 0)  //speed changes if the player is in the air
+            else if (input.MoveInput().x == 0 && horizontal_movement != 0 && !wallJumping)  //speed changes if the player is in the air
             {
                 if (onWalls && !wallJumping) horizontal_movement = 0;
                 else Deaccelerate();
@@ -168,7 +171,11 @@ public class Movement : MonoBehaviour
                 else if (turnedOn)
                 {
                     if (!wallJumping) horizontal_movement += input.MoveInput().x * airMoveMultiplier * Time.deltaTime;
-                    else if (!(wallSide == input.MoveInput().x && onWalls)) horizontal_movement += input.MoveInput().x * airMoveMultiplier * currentWallJumpAir * Time.deltaTime;
+                    else if (!(wallSide == input.MoveInput().x && onWalls))
+                    {
+                        Debug.Log("This is the one happening rn");
+                        horizontal_movement += input.MoveInput().x * airMoveMultiplier * currentWallJumpAir * Time.deltaTime;
+                    }
                 }
             }
         }
@@ -330,12 +337,14 @@ public class Movement : MonoBehaviour
     //Platforms need to be added to the "Platforms" layer in the editor. 
     private void FloorAndWallsCheck()
     {
-        onFloor = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, collisionRadius, groundLayer);
-        onWalls = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer) || Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer);
+        onFloor = Physics2D.OverlapBox((Vector2)transform.position + bottomPoint, bottomSize, 0, groundLayer);
+        //onWalls = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer) || Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer);
 
-        if (Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer)) wallSide = 1;
-        else if (Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer)) wallSide = -1;
+        if (Physics2D.OverlapBox((Vector2)transform.position + rightPoint, rightSize, 0, groundLayer)) wallSide = 1;
+        else if (Physics2D.OverlapBox((Vector2)transform.position + leftPoint, leftSize, 0, groundLayer)) wallSide = -1;
         else wallSide = 0;
+
+        onWalls = wallSide != 0;
 
         if (!isDashing && onFloor)
         {
@@ -396,13 +405,17 @@ public class Movement : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = UnityEngine.Color.red;
 
         var positions = new Vector2[] { bottomOffset, rightOffset, leftOffset };
 
-        Gizmos.DrawWireSphere((Vector2)transform.position + bottomOffset, collisionRadius);
+        /*Gizmos.DrawWireSphere((Vector2)transform.position + bottomOffset, collisionRadius);
         Gizmos.DrawWireSphere((Vector2)transform.position + rightOffset, collisionRadius);
-        Gizmos.DrawWireSphere((Vector2)transform.position + leftOffset, collisionRadius);
+        Gizmos.DrawWireSphere((Vector2)transform.position + leftOffset, collisionRadius);*/
+
+        Gizmos.DrawWireCube((Vector2)transform.position + bottomPoint, bottomSize);
+        Gizmos.DrawWireCube((Vector2)transform.position + rightPoint, rightSize);
+        Gizmos.DrawWireCube((Vector2)transform.position + leftPoint, leftSize);
     }
 
     private void DashCancel()
@@ -418,6 +431,25 @@ public class Movement : MonoBehaviour
         horizontal_movement = 0;
         vertical_movement = 0;
         rb.velocity = Vector2.zero;
+    }
+
+    private void CalculateFloorSpeed()
+    {
+        if (input.MoveInput().x > 0 && horizontal_movement < 1) horizontal_movement += floorAccelerator * Time.deltaTime;
+        else if (input.MoveInput().x < 0 && horizontal_movement > -1) horizontal_movement -= floorAccelerator * Time.deltaTime;
+        else if(horizontal_movement != 0)
+        {
+            if(horizontal_movement > 0)
+            {
+                horizontal_movement -= floorAccelerator * Time.deltaTime;
+                if (horizontal_movement < 0) horizontal_movement = 0;
+            }
+            else
+            {
+                horizontal_movement += floorAccelerator * Time.deltaTime;
+                if (horizontal_movement > 0) horizontal_movement = 0;
+            }
+        }
     }
 
 }

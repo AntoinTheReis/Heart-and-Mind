@@ -1,0 +1,17 @@
+﻿title: Act_II_Mind
+tags:
+---
+Mind: Where am I? What is this place?
+
+<<pan Camera left>>
+<<pan Camera right>>
+
+Mind: That was a long fall. I hope I didn't break anything. Regardless, I think I can lift myself up. I just need to focus.
+
+<<wait 1.5>>
+<<pan Camera up>>
+
+<<startShaking Camera>>
+<<pan Camera down>>
+
+===
