@@ -12,6 +12,11 @@ public class Block : MonoBehaviour
     private Color defaultColor;
     public bool selected = false;
 
+    public Collider2D collider;
+    public Collider2D trigger;
+
+    public LayerMask excludeWhenSelected;
+    
     private Vector3 startPoint;
 
     private void Start()
@@ -26,7 +31,7 @@ public class Block : MonoBehaviour
 
     public void SelectBlock()
     {
-
+        
         rb.gravityScale = 0;
         rb.angularVelocity = 1;
         selected = true;

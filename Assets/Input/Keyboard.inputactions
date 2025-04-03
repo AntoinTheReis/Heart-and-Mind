@@ -296,55 +296,11 @@
                 },
                 {
                     "name": "",
-                    "id": "e8cf0f8b-eaec-4b68-bdc1-43b01c689671",
+                    "id": "25465025-f61b-4e46-b540-60f7f157d177",
                     "path": "<Keyboard>/anyKey",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
-                    "groups": "",
-                    "action": "AdvanceDialogue",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3fd4fad8-ee66-4eca-9654-f0588b45280e",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "AdvanceDialogue",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0b9d328c-7758-4aec-b2aa-60015a87ec1d",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "AdvanceDialogue",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "887d9df0-63bc-4547-a217-650bc2fbbe8a",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "AdvanceDialogue",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "81f045cf-5fd0-47a5-80c2-f0f51d181150",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "AdvanceDialogue",
                     "isComposite": false,
                     "isPartOfComposite": false

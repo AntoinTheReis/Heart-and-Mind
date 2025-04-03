@@ -458,11 +458,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444918310394211783, guid: 6a7e67304dc879744aae9b0fb84e4037, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.9
+      value: -17.2
       objectReference: {fileID: 0}
     - target: {fileID: 444918310394211783, guid: 6a7e67304dc879744aae9b0fb84e4037, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.02
+      value: -5.51
       objectReference: {fileID: 0}
     - target: {fileID: 444918310394211783, guid: 6a7e67304dc879744aae9b0fb84e4037, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1521,11 +1521,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 699286837812551186, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.25
+      value: 0.25187975
       objectReference: {fileID: 0}
     - target: {fileID: 699286837812551186, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.2501831
+      value: 0.25206333
       objectReference: {fileID: 0}
     - target: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19353,11 +19353,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7822082203024166460, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.25
+      value: 0.25187975
       objectReference: {fileID: 0}
     - target: {fileID: 7822082203024166460, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.2501831
+      value: 0.25206333
       objectReference: {fileID: 0}
     - target: {fileID: 8723337734164825098, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19759,7 +19759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9100417986695489772, guid: 76f2d6841676b37409cfbd4faaa7c88a, type: 3}
       propertyPath: canSwitch
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9100417986695489772, guid: 76f2d6841676b37409cfbd4faaa7c88a, type: 3}
       propertyPath: mindObject
@@ -23998,11 +23998,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7822082203024166460, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.25
+      value: 0.25187975
       objectReference: {fileID: 0}
     - target: {fileID: 7822082203024166460, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.2501831
+      value: 0.25206333
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24244,6 +24244,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3852347333413910637, guid: efa4d2fd1749f824db9de776b6ca2e6b, type: 3}
+      propertyPath: m_text
+      value: hit space to advance
+      objectReference: {fileID: 0}
     - target: {fileID: 3852347333413910638, guid: efa4d2fd1749f824db9de776b6ca2e6b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -24266,6 +24270,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3852347333413910638, guid: efa4d2fd1749f824db9de776b6ca2e6b, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3852347333921199105, guid: efa4d2fd1749f824db9de776b6ca2e6b, type: 3}
+      propertyPath: showUnavailableOptions
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3852347333921199133, guid: efa4d2fd1749f824db9de776b6ca2e6b, type: 3}

@@ -102,6 +102,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedColor: {r: 0.9084756, g: 0.9245283, b: 0.5974546, a: 1}
   selected: 0
+  collider: {fileID: -4594681738906803558}
+  trigger: {fileID: 8462593592721058201}
+  excludeWhenSelected:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!50 &6574169198173939630
 Rigidbody2D:
   serializedVersion: 4
