@@ -262,12 +262,7 @@ public class Movement : MonoBehaviour
         #region Jump Audio
         if (sfx_jumpInstance.isValid())
         {
-            FMOD.Studio.PLAYBACK_STATE playbackstate;
-            sfx_jumpInstance.getPlaybackState(out playbackstate);
-            if (playbackstate == FMOD.Studio.PLAYBACK_STATE.STOPPED)
-            {
-                sfx_jumpInstance.start();
-            }
+            sfx_jumpInstance.start();
         }
         //if (sfx_dialogueInstance.isValid())
         //{
