@@ -338,11 +338,11 @@ MonoBehaviour:
   movementMode: 0
   sfx_teleport:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 219152212
+      Data2: 1331147608
+      Data3: 1100329395
+      Data4: -985501108
+    Path: event:/SFX_Teleport
 --- !u!1 &2166980037536431569
 GameObject:
   m_ObjectHideFlags: 0
