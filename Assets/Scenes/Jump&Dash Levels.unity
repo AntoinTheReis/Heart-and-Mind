@@ -64831,6 +64831,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1193111388844499997, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
+      propertyPath: sfx_teleport.Path
+      value: event:/SFX_Teleport
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193111388844499997, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
+      propertyPath: sfx_teleport.Guid.Data1
+      value: 219152212
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193111388844499997, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
+      propertyPath: sfx_teleport.Guid.Data2
+      value: 1331147608
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193111388844499997, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
+      propertyPath: sfx_teleport.Guid.Data3
+      value: 1100329395
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193111388844499997, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
+      propertyPath: sfx_teleport.Guid.Data4
+      value: -985501108
+      objectReference: {fileID: 0}
     - target: {fileID: 2046843607443177467, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
       propertyPath: m_Name
       value: Mind Player
