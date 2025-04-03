@@ -5,6 +5,8 @@ using static UnityEngine.GraphicsBuffer;
 
 public class MindTeleporting : MonoBehaviour
 {
+    private Animator anim;
+    private SpriteRenderer spriterenderer;
 
     Controls input;
 
@@ -50,6 +52,9 @@ public class MindTeleporting : MonoBehaviour
         telekinesis = GetComponent<MindBlockTelekinesis>();
 
         input = GetComponent<Controls>();
+
+        spriterenderer = GetComponentInChildren<SpriteRenderer>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -146,6 +151,8 @@ public class MindTeleporting : MonoBehaviour
         {
             Debug.Log("Only one bus stop");
         }
+
+        anim = GetComponentInChildren<Animator>();
     }
 
     private Transform FindNearestTransformInDirection(Vector2 direction)
@@ -198,6 +205,7 @@ public class MindTeleporting : MonoBehaviour
                     {
                         northDistance = distanceTesting;
                         optionNorth = target;
+                        anim.SetTrigger("Teleporting");
                     }
                 }
                 else if (IsTransformBetween(transform, target.position, 45f, 135f) && transform.position.x > target.position.x)
@@ -207,6 +215,9 @@ public class MindTeleporting : MonoBehaviour
                     {
                         westDistacnce = distanceTesting;
                         optionWest = target;
+
+                        spriterenderer.flipX = true;
+                        anim.SetTrigger("Teleporting");
                     }
                 }
                 else if (IsTransformBetween(transform, target.position, 45f, 135f) && transform.position.x < target.position.x)
@@ -216,6 +227,9 @@ public class MindTeleporting : MonoBehaviour
                     {
                         eastDistacnce = distanceTesting;
                         optionEast = target;
+
+                        spriterenderer.flipX = false;
+                        anim.SetTrigger("Teleporting");
                     }
                 }
                 else if(IsTransformBetween(transform, target.position, 135f, 180))
@@ -225,8 +239,10 @@ public class MindTeleporting : MonoBehaviour
                     {
                         sotuthDistance = distanceTesting;
                         optionSouth = target;
+                        anim.SetTrigger("Teleporting");
                     }
-                }
+                } 
+                
             }
         }
     }

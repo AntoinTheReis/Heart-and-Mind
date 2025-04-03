@@ -5,8 +5,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
 using FMODUnity;
-using System.Drawing;
-using System.Xml.Linq;
 
 [RequireComponent(typeof(Controls))]
 public class Movement : MonoBehaviour
@@ -20,6 +18,14 @@ public class Movement : MonoBehaviour
     private float horizontal_movement;
     private float vertical_movement;
 
+    //0 is right, 1 is up, 2 is down
+    private int dashDirection = 0;
+    private Animator anim;
+    private SpriteRenderer spriterenderer;
+    private bool floorLastFrame;
+    private float heightLastFrame;
+    public float fallingThreshold;
+
     public bool onFloor;
     private bool onWalls;
     private float wallSide;
@@ -32,7 +38,6 @@ public class Movement : MonoBehaviour
     public float airMoveMultiplier = 0.2f;
     public float airDeaccelerator = 0.8f;
     public float airCruisingCap = 1f;
-    public float floorAccelerator;
     private float side = 1;
     public Vector2 maxActualSpeed;
 
@@ -74,18 +79,13 @@ public class Movement : MonoBehaviour
     [Header("Floor and Wall Checks")]
     public float collisionRadius = 0.25f;
     public Vector2 bottomOffset, rightOffset, leftOffset;
-    private UnityEngine.Color debugCollisionColor = UnityEngine.Color.red;
+    private Color debugCollisionColor = Color.red;
     public LayerMask groundLayer;
 
-    [Header("Box overlap values")]
-    public Vector2 bottomPoint, bottomSize, rightPoint, rightSize, leftPoint, leftSize;
 
     #region Audio
     public FMODUnity.EventReference sfx_jump;
     FMOD.Studio.EventInstance sfx_jumpInstance;
-
-    public FMODUnity.EventReference sfx_wallJump;
-    FMOD.Studio.EventInstance sfx_wallJumpInstance;
 
     public FMODUnity.EventReference sfx_dash;
     FMOD.Studio.EventInstance sfx_dashInstance;
@@ -94,7 +94,6 @@ public class Movement : MonoBehaviour
     FMOD.Studio.EventInstance sfx_dialogueInstance;
     FMOD.Studio.PARAMETER_ID sfx_dialogueCharacter;
     public int charVoice;
-
     #endregion
 
     private void Awake()
@@ -103,10 +102,11 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         respawn = GetComponent<DamageAndRespawn>();
 
-    #region Audio EventInstances
-    sfx_jumpInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_jump);
+        anim = GetComponentInChildren<Animator>();
+        spriterenderer = GetComponentInChildren<SpriteRenderer>();
 
-        sfx_wallJumpInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_wallJump);
+        #region Audio EventInstances
+        sfx_jumpInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_jump);
 
         sfx_dashInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_dash);
 
@@ -123,7 +123,6 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         FloorAndWallsCheck();
 
         //Deactivat wallJumping bool
@@ -138,8 +137,16 @@ public class Movement : MonoBehaviour
         else jumpBufferCounter -= Time.deltaTime;
 
         //Keeping track of what side the player is facing
-        if (input.MoveInput().x > 0) side = 1;
-        else if (input.MoveInput().x < 0) side = -1;
+        if (input.MoveInput().x > 0)
+        {
+            
+            side = 1;
+        }
+        else if (input.MoveInput().x < 0)
+        {
+
+            side = -1;
+        }
 
         if (!isDashing) //Player can only influence movement with WASD if not Dashing
         {
@@ -153,11 +160,13 @@ public class Movement : MonoBehaviour
                 }
                 else if (turnedOn)
                 {
-                    CalculateFloorSpeed();
+                    if (input.MoveInput().x > 0) horizontal_movement = 1;
+                    else if (input.MoveInput().x < 0) horizontal_movement -= 1;
+                    else horizontal_movement = 0;
                 }
                 else horizontal_movement = 0;
             }
-            else if (input.MoveInput().x == 0 && horizontal_movement != 0 && !wallJumping)  //speed changes if the player is in the air
+            else if (input.MoveInput().x == 0 && horizontal_movement != 0)  //speed changes if the player is in the air
             {
                 if (onWalls && !wallJumping) horizontal_movement = 0;
                 else Deaccelerate();
@@ -171,11 +180,7 @@ public class Movement : MonoBehaviour
                 else if (turnedOn)
                 {
                     if (!wallJumping) horizontal_movement += input.MoveInput().x * airMoveMultiplier * Time.deltaTime;
-                    else if (!(wallSide == input.MoveInput().x && onWalls))
-                    {
-                        Debug.Log("This is the one happening rn");
-                        horizontal_movement += input.MoveInput().x * airMoveMultiplier * currentWallJumpAir * Time.deltaTime;
-                    }
+                    else if (!(wallSide == input.MoveInput().x && onWalls)) horizontal_movement += input.MoveInput().x * airMoveMultiplier * currentWallJumpAir * Time.deltaTime;
                 }
             }
         }
@@ -198,7 +203,7 @@ public class Movement : MonoBehaviour
         
         //Speed and position calcs
         transform.position += Vector3.right * (horizontal_movement * speed * Time.deltaTime);
-        transform.position += new Vector3(0, vertical_movement * Time.deltaTime, 0);
+        //transform.position += new Vector3(0, vertical_movement * Time.deltaTime, 0);
 
 
         //Air time calculations
@@ -255,6 +260,14 @@ public class Movement : MonoBehaviour
         leftWall = !onWalls && wallJumping && !onFloor;
 
         if (isDashing && rb.velocity == Vector2.zero) DashCancel();  //Cancel dash effects if player is still (hit a wall or floor)
+
+        if (turnedOn)
+        {
+            if (!onWalls && !isDashing) spriterenderer.flipX = (side == -1);
+            else if (onWalls && !onFloor) spriterenderer.flipX = (side == 1); 
+        }
+        AnimationCheck();
+
     }
 
     private void Jump()
@@ -262,7 +275,12 @@ public class Movement : MonoBehaviour
         #region Jump Audio
         if (sfx_jumpInstance.isValid())
         {
-            sfx_jumpInstance.start();
+            FMOD.Studio.PLAYBACK_STATE playbackstate;
+            sfx_jumpInstance.getPlaybackState(out playbackstate);
+            if (playbackstate == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+            {
+                sfx_jumpInstance.start();
+            }
         }
         //if (sfx_dialogueInstance.isValid())
         //{
@@ -284,13 +302,6 @@ public class Movement : MonoBehaviour
     private void WallJump(float side)
     {
         Debug.Log("Wall jumped");
-
-        #region WallJump Audio
-        if (sfx_wallJumpInstance.isValid())
-        {
-            sfx_wallJumpInstance.start();
-        }
-        #endregion
 
         wallJumping = true;
         DOVirtual.Float(wallJumpAir, 1, wallJumpAirTime, CurrentWallJumpAir);
@@ -332,16 +343,14 @@ public class Movement : MonoBehaviour
     //Platforms need to be added to the "Platforms" layer in the editor. 
     private void FloorAndWallsCheck()
     {
-        onFloor = Physics2D.OverlapBox((Vector2)transform.position + bottomPoint, bottomSize, 0, groundLayer);
-        //onWalls = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer) || Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer);
+        onFloor = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, collisionRadius, groundLayer);
+        onWalls = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer) || Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer);
 
-        if (Physics2D.OverlapBox((Vector2)transform.position + rightPoint, rightSize, 0, groundLayer)) wallSide = 1;
-        else if (Physics2D.OverlapBox((Vector2)transform.position + leftPoint, leftSize, 0, groundLayer)) wallSide = -1;
+        if (Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer)) wallSide = 1;
+        else if (Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer)) wallSide = -1;
         else wallSide = 0;
 
-        onWalls = wallSide != 0;
-
-        if (!isDashing && onFloor)
+        if (!isDashing && onFloor && !onWalls)
         {
             canDash = true;
         }
@@ -357,6 +366,19 @@ public class Movement : MonoBehaviour
         #endregion
 
         dashHitStop = false;
+
+        if (y == 0)
+        {
+            dashDirection = 0;
+        }
+        else if (y > 0)
+        {
+            dashDirection = 1;
+        }
+        else
+        {
+            dashDirection = -1;
+        }
 
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
@@ -400,17 +422,13 @@ public class Movement : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.color = UnityEngine.Color.red;
+        Gizmos.color = Color.red;
 
         var positions = new Vector2[] { bottomOffset, rightOffset, leftOffset };
 
-        /*Gizmos.DrawWireSphere((Vector2)transform.position + bottomOffset, collisionRadius);
+        Gizmos.DrawWireSphere((Vector2)transform.position + bottomOffset, collisionRadius);
         Gizmos.DrawWireSphere((Vector2)transform.position + rightOffset, collisionRadius);
-        Gizmos.DrawWireSphere((Vector2)transform.position + leftOffset, collisionRadius);*/
-
-        Gizmos.DrawWireCube((Vector2)transform.position + bottomPoint, bottomSize);
-        Gizmos.DrawWireCube((Vector2)transform.position + rightPoint, rightSize);
-        Gizmos.DrawWireCube((Vector2)transform.position + leftPoint, leftSize);
+        Gizmos.DrawWireSphere((Vector2)transform.position + leftOffset, collisionRadius);
     }
 
     private void DashCancel()
@@ -428,23 +446,34 @@ public class Movement : MonoBehaviour
         rb.velocity = Vector2.zero;
     }
 
-    private void CalculateFloorSpeed()
+    private void AnimationCheck()
     {
-        if (input.MoveInput().x > 0 && horizontal_movement < 1) horizontal_movement += floorAccelerator * Time.deltaTime;
-        else if (input.MoveInput().x < 0 && horizontal_movement > -1) horizontal_movement -= floorAccelerator * Time.deltaTime;
-        else if(horizontal_movement != 0)
-        {
-            if(horizontal_movement > 0)
-            {
-                horizontal_movement -= floorAccelerator * Time.deltaTime;
-                if (horizontal_movement < 0) horizontal_movement = 0;
-            }
-            else
-            {
-                horizontal_movement += floorAccelerator * Time.deltaTime;
-                if (horizontal_movement > 0) horizontal_movement = 0;
-            }
-        }
-    }
+        //anim.SetInteger("FacingParam", facing);
 
+        anim.SetBool("IsWalking", Mathf.Abs(input.MoveInput().x) > 0 && onFloor && turnedOn);
+        /*
+        if (anim.GetBool("IsWalking"))
+        {
+            //PUT WALKING SOUND HERE
+        }*/
+        anim.SetInteger("dashDirection", dashDirection);
+
+        anim.SetBool("Dashing", isDashing);
+
+        float height = transform.position.y;
+
+        if (isDashing == false && height > heightLastFrame & Mathf.Abs(height - heightLastFrame) > fallingThreshold)
+        {
+            anim.SetTrigger("Jumping");
+            Debug.Log("Jumping" + height + " - " + heightLastFrame);
+        }
+        anim.SetBool("Jumping", isDashing == false && height > heightLastFrame & Mathf.Abs(height - heightLastFrame) > fallingThreshold);
+        if (anim.GetBool("Jumping") == false) anim.SetBool("Falling", isDashing == false && height < heightLastFrame && Mathf.Abs(height - heightLastFrame) > fallingThreshold);
+
+        anim.SetBool("OnFloor", onFloor);
+        anim.SetBool("OnWall", onWalls);
+        
+        floorLastFrame = onFloor;
+        heightLastFrame = transform.position.y;
+    }
 }
