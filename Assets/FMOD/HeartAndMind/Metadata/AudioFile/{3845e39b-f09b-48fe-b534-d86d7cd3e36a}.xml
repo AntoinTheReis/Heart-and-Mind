@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3845e39b-f09b-48fe-b534-d86d7cd3e36a}">
+		<property name="assetPath">
+			<value>Jump Wall Supplement.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.8701814058956916</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b68a2418-38d4-4045-be64-28ac98ce7f22}</destination>
+		</relationship>
+	</object>
+</objects>

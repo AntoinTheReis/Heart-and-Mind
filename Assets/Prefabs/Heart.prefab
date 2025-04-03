@@ -357,6 +357,13 @@ MonoBehaviour:
       Data3: -641093699
       Data4: -2011441781
     Path: event:/SFX_Jump
+  sfx_wallJump:
+    Guid:
+      Data1: -526616461
+      Data2: 1315847599
+      Data3: 1704968084
+      Data4: 1853784170
+    Path: event:/SFX_WallJump
   sfx_dash:
     Guid:
       Data1: 1889981279

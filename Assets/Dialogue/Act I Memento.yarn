@@ -14,7 +14,7 @@ HEART:It looks like a rook chess piece, I think.
 
 <<pan Camera Mind>> 
 
-<<wait 1.5s>>
+<<wait 1.5>>
 
 MIND: We need to get that rook. 
 

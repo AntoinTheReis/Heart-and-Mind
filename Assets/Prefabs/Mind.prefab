@@ -336,6 +336,13 @@ MonoBehaviour:
   eastArrow: {fileID: 2468863475451819013}
   westArrow: {fileID: 1659855747265411002}
   movementMode: 0
+  sfx_teleport:
+    Guid:
+      Data1: 219152212
+      Data2: 1331147608
+      Data3: 1100329395
+      Data4: -985501108
+    Path: event:/SFX_Teleport
 --- !u!1 &2166980037536431569
 GameObject:
   m_ObjectHideFlags: 0
