@@ -9,11 +9,17 @@ using UnityEngine.UI;
 
 public class PopupHandler : MonoBehaviour
 {
+    
+    //Website w/ char to glyph map for keyboard font https://www.fontspace.com/212-keyboard-font-f34592#action=charmap&id=lmRZ
+    
     [SerializeField] GameObject container;
     
     [SerializeField] private float popupSpeed;
     
     private bool popupOpen = false;
+
+    private TMP_FontAsset messageFont;
+    private TMP_FontAsset titleFont;
 
     public enum Recipient
     {
@@ -40,16 +46,21 @@ public class PopupHandler : MonoBehaviour
     private void Start()
     {
         originalPosition = container.GetComponent<RectTransform>().anchoredPosition;
+        messageFont = messageText.font;
+        titleFont = titleText.font;
         resetPosition();
     }
 
     private void resetPosition()
     {
+        //halt all current routines
         StopAllCoroutines();
         popupOpen = false;
+        //hide canvas container and get ready to show
         container.GetComponent<CanvasGroup>().alpha = 0;
         container.GetComponent<RectTransform>().anchoredPosition = originalPosition;
         container.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, -120f);
+        
     }
     public void ShowPopup()
     {
@@ -106,6 +117,9 @@ public class PopupHandler : MonoBehaviour
             yield return null;
         }
         container.GetComponent<CanvasGroup>().alpha = 0;
+        //Set fonts to default
+        messageText.font = messageFont;
+        titleText.font = titleFont;
         resetPosition();
         StopCoroutine(FadePopupOut());
     }
@@ -129,6 +143,27 @@ public class PopupHandler : MonoBehaviour
         // }
         background.color = background.color = rec == Recipient.HEART ? heartBackgroundColor : rec == Recipient.MIND ? mindBackgroundColor : Color.black;
         titleText.color = rec == Recipient.HEART ? heartTitleColor : rec == Recipient.MIND ? mindTitleColor : Color.white;
+    }
+
+    public void SetTitleFont(TMP_FontAsset font)
+    {
+        titleText.font = font;
+    }
+
+    public void SetMessageFont(TMP_FontAsset font)
+    {
+        messageText.font = font;
+    }
+
+    public void HidePopupAfterSeconds(float seconds)
+    {
+        StartCoroutine(WaitToHidePopup(seconds));
+    }
+
+    private IEnumerator WaitToHidePopup(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        HidePopup();
     }
     
 }

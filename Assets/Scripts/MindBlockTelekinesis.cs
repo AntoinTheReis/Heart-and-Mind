@@ -11,6 +11,7 @@ public class MindBlockTelekinesis : MonoBehaviour
     private SpriteRenderer spriterenderer;
 
     [SerializeField] private GameObject SelectionOverlay;
+    [SerializeField] private float blockSpeed;
 
     LinkedListNode<GameObject> selectedBlockNode = null;
     GameObject selectedBlock = null;
@@ -53,7 +54,7 @@ public class MindBlockTelekinesis : MonoBehaviour
             selectedBlock = selectedBlockNode.Value;
             selectedBlock.GetComponent<Block>().SelectBlock();
             Rigidbody2D blockRb = selectedBlock.GetComponent<Rigidbody2D>();
-            Vector3 newBlockPos = selectedBlock.transform.position + (Vector3)input.MoveInput() * (4 * Time.deltaTime);
+            Vector3 newBlockPos = selectedBlock.transform.position + (Vector3)input.MoveInput() * (blockSpeed * Time.deltaTime);
             //make the selected block's velocity approach zero (to push back against any external forces to give the feeling of catching the block)
             blockRb.velocity = Vector2.Lerp(blockRb.velocity, Vector2.zero,  Time.deltaTime);
             //Fully sets it to zero if the player starts moving it in the opposite direction

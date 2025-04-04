@@ -47,6 +47,8 @@ public class CameraSystem : MonoBehaviour
     float half_width;
     private Room previousRoom;
     private Room lastActualRoom;
+
+    private float target_size;
     
     DialogueRunner dialogueRunner;
 
@@ -111,7 +113,8 @@ public class CameraSystem : MonoBehaviour
     [YarnCommand("size")]
     public void ChangeCameraSize(float new_size)
     {
-        StartCoroutine(LerpCamSize(new_size));
+        //StartCoroutine(LerpCamSize(new_size));
+        target_size = new_size;
     }
     #endregion
     
@@ -217,8 +220,11 @@ public class CameraSystem : MonoBehaviour
         
         #endregion
         
+        
+        cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, target_size, zoomSpeed * Time.deltaTime);
     }
 
+    
     IEnumerator LerpCamSize(float new_size)
     {
         float elapsedTime = 0f;

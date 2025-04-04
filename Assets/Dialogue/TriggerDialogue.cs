@@ -1,7 +1,8 @@
-using System;
+    using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Yarn.Unity;
 
 public class TriggerDialogue : MonoBehaviour
@@ -10,9 +11,24 @@ public class TriggerDialogue : MonoBehaviour
     private bool triggered = false;
     private DialogueRunner dialogueRunner;
 
+    public UnityEvent OnDialogueFinished;
+    
     private void Awake()
     {
         dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+    }
+
+    private void Start()
+    {
+        dialogueRunner.onNodeComplete.AddListener(OnNodeCompleteHandler);
+    }
+
+    void OnNodeCompleteHandler(string nodeName)
+    {
+        if (nodeName == startNode)
+        {
+            OnDialogueFinished.Invoke();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,5 +40,7 @@ public class TriggerDialogue : MonoBehaviour
             dialogueRunner.StartDialogue(startNode);
         }
     }
+    
+    
 
 }

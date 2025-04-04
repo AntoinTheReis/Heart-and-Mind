@@ -41,15 +41,20 @@ public class FMODSpeaker : MonoBehaviour
         {
             if (other.CompareTag(triggerTag)) // Only trigger if the object has the associate tag
             {
-                if (eventInstance.isValid())
-                {
-                    FMOD.Studio.PLAYBACK_STATE playbackState;
-                    eventInstance.getPlaybackState(out playbackState);
-                    if (playbackState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
-                    {
-                        eventInstance.start();
-                    }
-                }
+               PlaySound();
+            }
+        }
+    }
+
+    public void PlaySound()
+    {
+        if (eventInstance.isValid())
+        {
+            FMOD.Studio.PLAYBACK_STATE playbackState;
+            eventInstance.getPlaybackState(out playbackState);
+            if (playbackState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+            {
+                eventInstance.start();
             }
         }
     }
