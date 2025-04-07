@@ -5,11 +5,15 @@ Heart: Oh... oh no... what have I done? Why wasn't I  more careful?! I shouldn't
 
 <<pan Camera down>>   
 
-Heart: I need to get out of here. I need to find Mind. I can't let them down. I can't let *myself* down. That tunnel has to let out somewhere. 
+Heart: I need to get out of here. I need to find Mind. I can't let them down. I can't let <b> myself <b> down. That tunnel has to let out somewhere. //make myself bold
 
 <<pan Camera right 4.2>>
 
 Heart: I just need to keep moving. I can do this. I can get out of here. I can find Mind. I can save them.
 
-Heart: That memento... what caused it to make the floor collapse? 
+Heart: That memento... what caused it to make the floor collapse? Think man, think!
+
+<<wait  5>>
+
+Heart: I remember now... it was the heartbreak from the memory inside the rose. It must have what have weakened the floor to the point of breaking. 
 ===
