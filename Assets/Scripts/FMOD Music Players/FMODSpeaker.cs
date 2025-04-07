@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
+using Yarn.Unity;
 
 public class FMODSpeaker : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class FMODSpeaker : MonoBehaviour
             }
         }
     }
-
+    [YarnCommand("play")]
     public void PlaySound()
     {
         if (eventInstance.isValid())
@@ -57,6 +58,12 @@ public class FMODSpeaker : MonoBehaviour
                 eventInstance.start();
             }
         }
+    }
+
+    [YarnCommand("mute")]
+    public void StopSound()
+    {
+        eventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     public void SetTargetParameter(float newValue)

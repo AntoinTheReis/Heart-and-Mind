@@ -2363,6 +2363,10 @@ PrefabInstance:
       value: Broken Promises Trigger (5)
       objectReference: {fileID: 0}
     - target: {fileID: 6661745970894550412, guid: 4cce2aa67e311f140b3c118d1f027684, type: 3}
+      propertyPath: pause
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6661745970894550412, guid: 4cce2aa67e311f140b3c118d1f027684, type: 3}
       propertyPath: speaker
       value: 
       objectReference: {fileID: 2049384363}
@@ -2440,7 +2444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7373685036282754441, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
       propertyPath: m_Name
-      value: Broken Promises Speaker
+      value: Music
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
