@@ -313,6 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectionOverlay: {fileID: 5131291680487559466}
+  blockSpeed: 6
   input: {fileID: 5872171845495467708}
   active: 0
 --- !u!114 &1193111388844499997
