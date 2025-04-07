@@ -366,6 +366,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 384
+  collider: {fileID: 5155639377790522698}
   sfx_jump:
     Guid:
       Data1: -1349432866

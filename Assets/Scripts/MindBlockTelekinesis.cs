@@ -15,6 +15,7 @@ public class MindBlockTelekinesis : MonoBehaviour
 
     LinkedListNode<GameObject> selectedBlockNode = null;
     GameObject selectedBlock = null;
+    private Switcher switcher;
 
     public Controls input;
     public bool active = false;
@@ -24,13 +25,12 @@ public class MindBlockTelekinesis : MonoBehaviour
         SelectionOverlay.GetComponent<SpriteRenderer>().enabled = false;
         input = GetComponent<Controls>();
         anim = GetComponentInChildren<Animator>();
+        switcher = GameObject.FindGameObjectWithTag("Switcher").GetComponent<Switcher>();
     }
 
     private void Update()
-    {
-        //GetComponent<MindMovement>().canMove = !active;
-        
-        if (input.OnPrimaryPressed() && !active)
+    {        
+        if (switcher.activeCharacter == 2 && input.OnPrimaryPressed() && !active)
         {
             ActivateTelekinesis();
         }
@@ -60,7 +60,8 @@ public class MindBlockTelekinesis : MonoBehaviour
             //Fully sets it to zero if the player starts moving it in the opposite direction
             if (Vector2.Dot(blockRb.velocity, input.MoveInput()) < 0) blockRb.velocity = Vector2.zero;
             //probably need some checks here for bugs
-            selectedBlock.transform.position = newBlockPos;
+
+            selectedBlock.transform.position = IsPositionOnScreen(newBlockPos) ? newBlockPos : selectedBlock.transform.position;
             
             SelectionOverlay.transform.position = selectedBlock.transform.position;
             
@@ -102,4 +103,11 @@ public class MindBlockTelekinesis : MonoBehaviour
             anim.SetTrigger("Ability");
         }
     }
+
+    public bool IsPositionOnScreen(Vector3 position)
+    {
+        Vector3 viewportPoint = Camera.main.WorldToViewportPoint(position);
+        return viewportPoint.x >= 0 && viewportPoint.x <= 1 && viewportPoint.y >= 0 && viewportPoint.y <= 1 && viewportPoint.z > 0;
+    }
+
 }
