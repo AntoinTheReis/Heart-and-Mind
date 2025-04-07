@@ -32,6 +32,9 @@ public class Switcher : MonoBehaviour
 
     public float telekinesisWaitTime = 0.55f;
 
+    public Vector3 sizeMind;
+    public Vector3 sizeHeart;
+
     #region Audio
     public FMODUnity.EventReference sfx_switchM;
     FMOD.Studio.EventInstance sfx_switchMInstance;
@@ -74,6 +77,8 @@ public class Switcher : MonoBehaviour
             activeCharacter = 1;
             //heartMovement.turnedOn = true;
         }
+
+        transform.localScale = sizeHeart;
     }
 
     // Update is called once per frame
@@ -119,6 +124,8 @@ public class Switcher : MonoBehaviour
             mindMovement.turnedOn = true;
             heartMovement.turnedOn = false;
 
+            transform.localScale = sizeMind;
+
             //movingAndLooking = true;
             StartCoroutine(MoveAndLook());
         }
@@ -133,6 +140,8 @@ public class Switcher : MonoBehaviour
 
             activeCharacter = 1;
             movingAndLooking= false;
+
+            transform.localScale = sizeHeart;
 
             //mindBlockMechanic.enabled = false;
             mindMovement.turnedOn = false;

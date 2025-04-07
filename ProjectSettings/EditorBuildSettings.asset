@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Jump&Dash Levels.unity
-    guid: 4ecad7cd79653ae4fa0af8602888bc08
+    path: Assets/Scenes/TutorialTesting.unity
+    guid: f33c5e1d02025264ab715e44a0da4b07
   m_configObjects: {}

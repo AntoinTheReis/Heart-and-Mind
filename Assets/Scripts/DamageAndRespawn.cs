@@ -40,7 +40,7 @@ public class DamageAndRespawn : MonoBehaviour
         collider2d = GetComponent<Collider2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        if(gameObject.name == "Heart Player")
+        if (GetComponent<Movement>() != null)
         {
             movement = GetComponent<Movement>();
             heartOrMind = 1;
@@ -91,8 +91,8 @@ public class DamageAndRespawn : MonoBehaviour
             }
             else
             {
-                mMovement.ZeroMovement();
-                mMovement.enabled = false;
+                //mMovement.ZeroMovement();
+                //mMovement.enabled = false;
                 GetComponent<MindBlockTelekinesis>().enabled = false;
             }
             respawning = true;
