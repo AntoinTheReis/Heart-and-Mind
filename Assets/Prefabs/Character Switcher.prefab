@@ -97,6 +97,8 @@ MonoBehaviour:
   heightFromPlayer: 1.87
   heightFromMind: 3
   telekinesisWaitTime: 0.55
+  sizeMind: {x: 0.125, y: 0.125, z: 0.125}
+  sizeHeart: {x: 0.1, y: 0.1, z: 0.1}
   sfx_switchM:
     Guid:
       Data1: 1031606126
