@@ -338,7 +338,6 @@ MonoBehaviour:
   airMoveMultiplier: 10
   airDeaccelerator: 3.5
   airCruisingCap: 0.05
-  floorAccelerator: 18
   maxActualSpeed: {x: 7, y: 7}
   dashSpeed: 120
   dashWait: 0.2
@@ -367,12 +366,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 384
-  bottomPoint: {x: 0, y: -1.02}
-  bottomSize: {x: 0.7, y: 0.12}
-  rightPoint: {x: 0.46, y: -0.06}
-  rightSize: {x: 0.21, y: 1.41}
-  leftPoint: {x: -0.46, y: -0.06}
-  leftSize: {x: 0.21, y: 1.41}
   sfx_jump:
     Guid:
       Data1: -1349432866
@@ -394,6 +387,13 @@ MonoBehaviour:
       Data3: 720187318
       Data4: -2120728174
     Path: event:/SFX_Dash
+  sfx_walk:
+    Guid:
+      Data1: -1611535607
+      Data2: 1188498312
+      Data3: 1887673497
+      Data4: 1663020063
+    Path: event:/SFX_Walk
   sfx_dialogue:
     Guid:
       Data1: -576654384

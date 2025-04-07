@@ -93,6 +93,9 @@ public class Movement : MonoBehaviour
     public FMODUnity.EventReference sfx_dash;
     FMOD.Studio.EventInstance sfx_dashInstance;
 
+    public FMODUnity.EventReference sfx_walk;
+    FMOD.Studio.EventInstance sfx_walkInstance;
+
     public FMODUnity.EventReference sfx_dialogue;
     FMOD.Studio.EventInstance sfx_dialogueInstance;
     FMOD.Studio.PARAMETER_ID sfx_dialogueCharacter;
@@ -114,6 +117,8 @@ public class Movement : MonoBehaviour
         sfx_wallJumpInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_wallJump);
 
         sfx_dashInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_dash);
+
+        sfx_walkInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_walk);
 
         sfx_dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_dialogue);
         FMOD.Studio.EventDescription dialogueDescription;
@@ -458,11 +463,23 @@ public class Movement : MonoBehaviour
         //anim.SetInteger("FacingParam", facing);
 
         anim.SetBool("IsWalking", Mathf.Abs(input.MoveInput().x) > 0 && onFloor && turnedOn);
-        /*
         if (anim.GetBool("IsWalking"))
         {
             //PUT WALKING SOUND HERE
-        }*/
+            if (sfx_walkInstance.isValid())
+            {
+                FMOD.Studio.PLAYBACK_STATE playbackState;
+                sfx_walkInstance.getPlaybackState(out playbackState);
+                if (playbackState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+                {
+                    sfx_walkInstance.start();
+                }
+            }
+        }
+        else
+        {
+            sfx_walkInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
         anim.SetInteger("dashDirection", dashDirection);
 
         anim.SetBool("Dashing", isDashing);
