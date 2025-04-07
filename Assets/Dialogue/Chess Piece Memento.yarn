@@ -1,20 +1,25 @@
 ﻿title: Chess_Piece_Memento
 tags:
 ---
-???: <b> Should I capture this rook or force the king to move first? <b>//make this bold
+Madiline: <b> Should I capture this rook or force the king to move first? <b>//make this bold
 
 <<wait 7>>
 
-???: <b> I think I will capture the rook. It will force the king to move. <b>
+Madiline: <b> I think I will capture the rook. It will force the king to move. <b>
 
 
 <<wait 3.5>>
 
-???: <b>Your turn.<b>
+Madiline: <b>Your turn.<b>
 
 <<wait 6.2>>
 
-???: <b> <I> Why?! I will defeat him! <I> <b>//make this italic and bold
+Madiline: <b> <I> Why?! I will defeat him! <I> <b>//make this italic and bold
+
+<<wait 3.5>>
+
+Madiline: <b> <I> I will not lose to him! <I> <b>//make this italic and bold
+ 
 
 
 ===
