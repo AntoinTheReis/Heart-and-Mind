@@ -25,6 +25,7 @@ public class Movement : MonoBehaviour
     private SpriteRenderer spriterenderer;
     private bool floorLastFrame;
     private float heightLastFrame;
+    private float heightLastFrameWall;
     public float fallingThreshold;
 
     public bool onFloor;
@@ -70,6 +71,7 @@ public class Movement : MonoBehaviour
     public float wallJumpHorizontal = 1;
     public float wallJumpVertical = 1;
     public float coyoteTimeWall = 0.2f;
+    public float nudgeWall = 0.01f;
     private float coyoteTimeWallCounter;
     private float wallTime;
     private float currentWallSpeed;
@@ -135,6 +137,8 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("Y Velocity: " + rb.velocity.y);
+
         FloorAndWallsCheck();
 
         //Deactivat wallJumping bool
@@ -238,23 +242,29 @@ public class Movement : MonoBehaviour
             wallJumping = false;
             coyoteTimeWallCounter = coyoteTimeWall;
             side = wallSide * -1;
-            if(input.MoveInput().x == wallSide)
+            if((input.MoveInput().x > 0 && wallSide == 1) || (input.MoveInput().x < 0 && wallSide == -1))
             {
                 rb.gravityScale = 0;
                 if (wallTime >= wallSticky)
                 {
                     WallSlide();
                 }
-                else if (rb.velocity.y < 0)
+                else if (rb.velocity.y <= 0)
                 {
                     rb.velocity = new Vector2(rb.velocity.x, 0);
                     wallTime += Time.deltaTime;
                 }
                 else rb.gravityScale = 5;
+                heightLastFrameWall = transform.position.y;
             }
             else if(!respawn.respawning)
             {
                 rb.gravityScale = 5;
+                /*if(rb.velocity.y == 0)
+                {
+                    float direction =  wallSide * -1;
+                    transform.position = new Vector2(nudgeWall * direction * Time.timeScale + transform.position.x, transform.position.y);
+                }*/
             }
         } 
         else if (!isDashing)
@@ -453,9 +463,17 @@ public class Movement : MonoBehaviour
 
     private void DashCancel()
     {
+        Debug.Log("Dash Cancel");
         dashHitStop = true;
         rb.drag = 0;
         isDashing = false;
+
+        if(onWalls && !onFloor)
+        {
+            float direction = wallSide * -1;
+            transform.position = new Vector2(nudgeWall * direction * Time.timeScale + transform.position.x, transform.position.y);
+        }
+
         if (!respawn.respawning) rb.gravityScale = 5;
     }
 
@@ -507,5 +525,11 @@ public class Movement : MonoBehaviour
         
         floorLastFrame = onFloor;
         heightLastFrame = transform.position.y;
+    }
+
+    private bool GoingDown()
+    {
+        float height = transform.position.y;
+        return height <= heightLastFrame;
     }
 }
