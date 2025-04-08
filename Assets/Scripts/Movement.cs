@@ -40,7 +40,9 @@ public class Movement : MonoBehaviour
     public float airMoveMultiplier = 0.2f;
     public float airDeaccelerator = 0.8f;
     public float airCruisingCap = 1f;
+    public float floorAcceleration;
     private float side = 1;
+    private float currentFloorSpeed;
     public Vector2 maxActualSpeed;
 
     [Header("Dash variables")]
@@ -176,9 +178,7 @@ public class Movement : MonoBehaviour
                 }
                 else if (turnedOn)
                 {
-                    if (input.MoveInput().x > 0) horizontal_movement = 1;
-                    else if (input.MoveInput().x < 0) horizontal_movement -= 1;
-                    else horizontal_movement = 0;
+                    FloorMovement();
                 }
                 else horizontal_movement = 0;
             }
@@ -286,7 +286,7 @@ public class Movement : MonoBehaviour
         if (turnedOn)
         {
             if (!onWalls && !isDashing) spriterenderer.flipX = (side == -1);
-            else if (onWalls && !onFloor) spriterenderer.flipX = (side == 1); 
+            if ((onWalls && !onFloor) || anim.GetCurrentAnimatorStateInfo(0).IsName("H_WallJump_FromR")) spriterenderer.flipX = (side == 1); 
         }
         AnimationCheck();
 
@@ -531,5 +531,16 @@ public class Movement : MonoBehaviour
     {
         float height = transform.position.y;
         return height <= heightLastFrame;
+    }
+
+    private void FloorMovement()
+    {
+        if (input.MoveInput().x > 0 && currentFloorSpeed <= 1) currentFloorSpeed += floorAcceleration *Time.deltaTime;
+        else if (input.MoveInput().x < 0 && currentFloorSpeed >= -1) currentFloorSpeed -= floorAcceleration * Time.deltaTime;
+        else if (Mathf.Abs(currentFloorSpeed) - floorAcceleration * Time.deltaTime < 0) currentFloorSpeed = 0;
+        else if (currentFloorSpeed > 0) currentFloorSpeed -= floorAcceleration * Time.deltaTime;
+        else if (currentFloorSpeed < 0) currentFloorSpeed += floorAcceleration *Time.deltaTime;
+
+        horizontal_movement = currentFloorSpeed;
     }
 }
