@@ -33,17 +33,6 @@ public class Block : MonoBehaviour
     {
         delta_y = transform.position.y - previous_y;
 
-        /*
-        if (delta_y <= 0) sr.color = Color.red;
-        else sr.color = selected ? selectedColor : defaultColor;
-        */
-
-        //if falling and deselected
-        if(delta_y < 0 && !selected)
-        {
-            
-        }
-
         previous_y = transform.position.y;
     }
 
@@ -94,7 +83,6 @@ public class Block : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject == null) return;
         switch (collision.gameObject.layer)
         {
             case 6: //player
