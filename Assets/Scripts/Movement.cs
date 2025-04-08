@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
 using FMODUnity;
+using System.Drawing;
 
 [RequireComponent(typeof(Controls))]
 public class Movement : MonoBehaviour
@@ -79,7 +80,8 @@ public class Movement : MonoBehaviour
     [Header("Floor and Wall Checks")]
     public float collisionRadius = 0.25f;
     public Vector2 bottomOffset, rightOffset, leftOffset;
-    private Color debugCollisionColor = Color.red;
+    public Vector3 wallOverlapSize, floorOverlapSize;
+    private UnityEngine.Color debugCollisionColor = UnityEngine.Color.red;
     public LayerMask groundLayer;
 
 
@@ -355,11 +357,12 @@ public class Movement : MonoBehaviour
     //Platforms need to be added to the "Platforms" layer in the editor. 
     private void FloorAndWallsCheck()
     {
-        onFloor = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, collisionRadius, groundLayer);
-        onWalls = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer) || Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer);
+        onFloor = Physics2D.OverlapBox((Vector2)transform.position + bottomOffset, floorOverlapSize, 0, groundLayer);
 
-        if (Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer)) wallSide = 1;
-        else if (Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer)) wallSide = -1;
+        onWalls = Physics2D.OverlapBox((Vector2)transform.position + leftOffset, wallOverlapSize, 0, groundLayer) || Physics2D.OverlapBox((Vector2)transform.position + rightOffset, wallOverlapSize, 0, groundLayer);
+
+        if (Physics2D.OverlapBox((Vector2)transform.position + rightOffset, wallOverlapSize, 0, groundLayer)) wallSide = 1;
+        else if (Physics2D.OverlapBox((Vector2)transform.position + leftOffset, wallOverlapSize, 0, groundLayer)) wallSide = -1;
         else wallSide = 0;
 
         if (!isDashing && onFloor)
@@ -434,13 +437,18 @@ public class Movement : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = UnityEngine.Color.red;
 
         var positions = new Vector2[] { bottomOffset, rightOffset, leftOffset };
 
         Gizmos.DrawWireSphere((Vector2)transform.position + bottomOffset, collisionRadius);
         Gizmos.DrawWireSphere((Vector2)transform.position + rightOffset, collisionRadius);
         Gizmos.DrawWireSphere((Vector2)transform.position + leftOffset, collisionRadius);
+
+        Gizmos.DrawWireCube((Vector2)transform.position + bottomOffset, floorOverlapSize);
+        Gizmos.DrawWireCube((Vector2)transform.position + rightOffset, wallOverlapSize);
+        Gizmos.DrawWireCube((Vector2)transform.position + leftOffset, wallOverlapSize);
+
     }
 
     private void DashCancel()

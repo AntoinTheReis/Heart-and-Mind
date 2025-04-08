@@ -361,12 +361,13 @@ MonoBehaviour:
   coyoteTimeWall: 0.07
   collisionRadius: 0.16
   bottomOffset: {x: 0, y: -0.86}
-  rightOffset: {x: 0.43, y: 0}
-  leftOffset: {x: -0.43, y: 0}
+  rightOffset: {x: 0.43, y: -0.09}
+  leftOffset: {x: -0.43, y: -0.09}
+  wallOverlapSize: {x: 0.29, y: 1.73, z: 0}
+  floorOverlapSize: {x: 0.96, y: 0.42, z: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 384
-  collider: {fileID: 5155639377790522698}
   sfx_jump:
     Guid:
       Data1: -1349432866
