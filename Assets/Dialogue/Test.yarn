@@ -2,7 +2,7 @@ title: Test
 tags: 
 ---
 This is a test of the implemented dialouge system!
-Wow look at how cool this dialouge system is!
-This text turns red
-This text <i><s>is bold and brash
+Wow look at how <i>cool<i> this dialouge system is!
+<color="red">This text turns red
+This text <b>is bold and <i><s>brash!</b>
 ===

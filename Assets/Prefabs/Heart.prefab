@@ -336,8 +336,9 @@ MonoBehaviour:
   turnedOn: 1
   speed: 10
   airMoveMultiplier: 10
-  airDeaccelerator: 3.5
+  airDeaccelerator: 7
   airCruisingCap: 0.05
+  floorAcceleration: 12
   maxActualSpeed: {x: 7, y: 7}
   dashSpeed: 120
   dashWait: 0.2
@@ -355,10 +356,11 @@ MonoBehaviour:
   slideSpeed: 20
   wallAcceleration: 40
   wallJumpAir: 0.1
-  wallJumpAirTime: 7
-  wallJumpHorizontal: 1.1
+  wallJumpAirTime: 3
+  wallJumpHorizontal: 1.6
   wallJumpVertical: 1.1
   coyoteTimeWall: 0.07
+  nudgeWall: 0.1
   collisionRadius: 0.16
   bottomOffset: {x: 0, y: -0.86}
   rightOffset: {x: 0.43, y: -0.09}
