@@ -605,11 +605,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterSwitcher: {fileID: 117654435}
+  target: {fileID: 0}
   followSpeed: 5
-  maxDistance: 8
+  zoomSpeed: 2
   timeToSetFollowSpawn: 0.25
   characterMaterialization: 0.5
-  bounded: 1
+  shakeDuration: 0.2
+  shakeAmount: 0.2
+  shakeRate: 0.2
   roomNameUI: {fileID: 0}
 --- !u!114 &720449395
 MonoBehaviour:
