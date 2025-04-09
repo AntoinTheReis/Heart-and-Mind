@@ -27,6 +27,8 @@ public class Block : MonoBehaviour
 
     private bool lingering;
 
+    private Room lastActualRoom;
+
     #region Audio
     public FMODUnity.EventReference select;
     FMOD.Studio.EventInstance sfx_selectInstance;
@@ -51,6 +53,11 @@ public class Block : MonoBehaviour
 
         overlappingColliders = new List<Collider2D>();
 
+    }
+
+    private void Update()
+    {
+        if(RoomTracker.current_room != null) lastActualRoom = RoomTracker.current_room;
     }
 
     public Block SelectBlock()
@@ -177,8 +184,15 @@ public class Block : MonoBehaviour
         Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "Death")
         {
-            Debug.Log("Respawning block");
-            transform.position = startPoint;
+            if(gameObject.name == "Player Block")
+            {
+                transform.position = lastActualRoom.checkpoint.position;
+            }
+            else
+            {
+                Debug.Log("Respawning block");
+                transform.position = startPoint;
+            }
         }
     }
 
