@@ -16,25 +16,20 @@ public class Block : MonoBehaviour
 
     public LayerMask excludeWhenSelected;
     List<Collider2D> overlappingColliders;
+
+    public float lingerDuration;
+    public float lingerFlashingFrequency;
     
     private Vector3 startPoint;
+    private bool hasMovedDuringSelection;
 
-    private float previous_y;
-    private float delta_y;
+    public LayerMask groundLayer;
 
-    private void OnDrawGizmos()
-    {
-        
-    }
+    private bool lingering;
+
 
     //this is the most unoptimized pile of dogshit iv ever written but it works so well
-
-    private void Update()
-    {
-        delta_y = transform.position.y - previous_y;
-
-        previous_y = transform.position.y;
-    }
+    //so real past me
 
     private void Start()
     {
@@ -42,51 +37,107 @@ public class Block : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         defaultColor = sr.color;
         startPoint = gameObject.transform.position;
-        previous_y = startPoint.y;
 
         overlappingColliders = new List<Collider2D>();
 
     }
 
-    public void SelectBlock()
+    public Block SelectBlock()
     {   
+        StopAllCoroutines();
+        lingering = false;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.gravityScale = 0;
         rb.angularVelocity = 1;
         selected = true;
         sr.color = selectedColor;
 
+        return this;
+    }
+
+    //will be called if the block is moved due to telekenisis (lets the mind cycle between blocks without the player falling through)
+    public void OnMove()
+    {
         collider.excludeLayers = excludeWhenSelected;
     }
 
-    public void DeselectBlock()
+    public bool IsUnderneathGround()
+    {
+        Bounds b = collider.bounds;
+        return (Physics2D.OverlapBox(new Vector2(b.center.x, b.max.y + 0.1f), new Vector2(b.size.x, 0.05f), 0f, groundLayer));
+    }
+
+    public Block DropBlock()
+    {
+        StartCoroutine(BlockLinger());
+        return DeselectBlock();
+    }
+    
+    Block DropAndWait(Block block, float lingerTime)
+    {
+        StartCoroutine(BlockLinger());
+        return block.DeselectBlock();
+    }
+    IEnumerator BlockLinger()
+    {
+        //Won't linger if grounded
+        Bounds b = collider.bounds;
+        if(Physics2D.OverlapBox(new Vector2(b.center.x, b.min.y - 0.1f), new Vector2(b.size.x, 0.05f), 0f,groundLayer)) yield break;
+        lingering = true;
+        
+        //freeze block in place
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        
+        //fuck `yield return new WaitForSeconds(seconds)`, we're real men
+        for (float i = 0; i < lingerDuration; i+= Time.deltaTime)
+        {
+            Color c = sr.color;
+            if (Mathf.Floor(i * lingerFlashingFrequency) % 2 == 0)
+                c.a = 0.8f;
+            else c.a = 1;
+            sr.color = c; //have to do this since sr returns color by value not reference. "Property 'color' access returns temporary value. Cannot modify struct member when accessed struct is not classified as a variable"
+            
+            yield return null;
+        }
+        //unfreeze block
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        lingering = false;
+        //I FOUND A BUG IN THE UNITY PHYSICS ENGINE!!! That's like, a boyscout badge, right?
+        rb.gravityScale = 1.01f; //So I have to put this here to update the physics object, since it stays in sleep for some reason otherwise. Can't even just set it to 1f.
+    }
+
+    private Block DeselectBlock()
     {
         rb.gravityScale = 1;
         rb.angularDrag = 0.05f;
         selected = false;
         sr.color = defaultColor;
 
-        collider.excludeLayers &= ~(excludeWhenSelected); //im so bit pilled, and not core
         ContactFilter2D contactFilter = new ContactFilter2D();
-        contactFilter.layerMask = excludeWhenSelected;
+        contactFilter.layerMask = collider.excludeLayers;
         trigger.OverlapCollider(contactFilter, overlappingColliders);
         Debug.Log(contactFilter);
         foreach (Collider2D col in overlappingColliders)
         {
-            if (excludeWhenSelected == (excludeWhenSelected | (1 << col.gameObject.layer)))
+            if (collider.excludeLayers == (collider.excludeLayers | (1 << col.gameObject.layer)))
             {
-                if(col.gameObject.layer == 6 || transform.position.y < col.transform.position.y)
+                //ignore if block is below overlap, or you're the player
+                if(transform.position.y < col.transform.position.y || col.gameObject.layer == 6)
                     Physics2D.IgnoreCollision(collider, col);
             }
         }
+        
+        collider.excludeLayers &= ~(collider.excludeLayers); //set excludeLayers to nothing in the bit-pilled way
 
+        return this;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         switch (collision.gameObject.layer)
         {
-            case 6: //player
-                Physics2D.IgnoreCollision(collider, collision.collider, transform.position.y > collision.transform.position.y && delta_y <= 0 && collision.gameObject.GetComponent<Movement>().onFloor);
+            case 6: //player: ignore collision if the bottom of the block is above the top of the player
+                Physics2D.IgnoreCollision(collider, collision.collider, collider.bounds.min.y > collision.collider.bounds.max.y);// && delta_y <= 0 && collision.gameObject.GetComponent<Movement>().onFloor);
                 return;
 
             case 9: //cloud
