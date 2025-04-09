@@ -27,12 +27,23 @@ public class Block : MonoBehaviour
 
     private bool lingering;
 
+    #region Audio
+    public FMODUnity.EventReference select;
+    FMOD.Studio.EventInstance sfx_selectInstance;
+    public FMODUnity.EventReference deselect;
+    FMOD.Studio.EventInstance sfx_deselectInstance;
+    #endregion
 
     //this is the most unoptimized pile of dogshit iv ever written but it works so well
     //so real past me
 
     private void Start()
     {
+        #region Audio EventInstances
+        sfx_selectInstance = FMODUnity.RuntimeManager.CreateInstance(select);
+        sfx_deselectInstance = FMODUnity.RuntimeManager.CreateInstance(deselect);
+        #endregion
+
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         defaultColor = sr.color;
@@ -43,7 +54,14 @@ public class Block : MonoBehaviour
     }
 
     public Block SelectBlock()
-    {   
+    {
+        #region Block Select Audio
+        if (sfx_selectInstance.isValid())
+        {
+            sfx_selectInstance.start();
+        }
+        #endregion
+
         StopAllCoroutines();
         lingering = false;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -108,6 +126,13 @@ public class Block : MonoBehaviour
 
     private Block DeselectBlock()
     {
+        #region Block Select Audio
+        if (sfx_deselectInstance.isValid())
+        {
+            sfx_deselectInstance.start();
+        }
+        #endregion
+
         rb.gravityScale = 1;
         rb.angularDrag = 0.05f;
         selected = false;
