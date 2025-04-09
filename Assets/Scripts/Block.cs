@@ -6,7 +6,6 @@ using UnityEngine;
 public class Block : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private Collider2D col;
     private SpriteRenderer sr;
     public Color selectedColor;
     private Color defaultColor;
@@ -16,37 +15,155 @@ public class Block : MonoBehaviour
     public Collider2D trigger;
 
     public LayerMask excludeWhenSelected;
+    List<Collider2D> overlappingColliders;
+
+    public float lingerDuration;
+    public float lingerFlashingFrequency;
     
     private Vector3 startPoint;
+    private bool hasMovedDuringSelection;
+
+    public LayerMask groundLayer;
+
+    private bool lingering;
+
+
+    //this is the most unoptimized pile of dogshit iv ever written but it works so well
+    //so real past me
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        col = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
         defaultColor = sr.color;
-
         startPoint = gameObject.transform.position;
+
+        overlappingColliders = new List<Collider2D>();
+
     }
 
-    public void SelectBlock()
-    {
-        
+    public Block SelectBlock()
+    {   
+        StopAllCoroutines();
+        lingering = false;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.gravityScale = 0;
         rb.angularVelocity = 1;
         selected = true;
         sr.color = selectedColor;
 
+        return this;
     }
 
-    public void DeselectBlock()
+    //will be called if the block is moved due to telekenisis (lets the mind cycle between blocks without the player falling through)
+    public void OnMove()
     {
-        //col.excludeLayers &= ~(1 << ignoreWhenSelected);
-        //col.excludeLayers = 0;
+        collider.excludeLayers = excludeWhenSelected;
+    }
+
+    public bool IsUnderneathGround()
+    {
+        Bounds b = collider.bounds;
+        return (Physics2D.OverlapBox(new Vector2(b.center.x, b.max.y + 0.1f), new Vector2(b.size.x, 0.05f), 0f, groundLayer));
+    }
+
+    public Block DropBlock()
+    {
+        StartCoroutine(BlockLinger());
+        return DeselectBlock();
+    }
+    
+    Block DropAndWait(Block block, float lingerTime)
+    {
+        StartCoroutine(BlockLinger());
+        return block.DeselectBlock();
+    }
+    IEnumerator BlockLinger()
+    {
+        //Won't linger if grounded
+        Bounds b = collider.bounds;
+        if(Physics2D.OverlapBox(new Vector2(b.center.x, b.min.y - 0.1f), new Vector2(b.size.x, 0.05f), 0f,groundLayer)) yield break;
+        lingering = true;
+        
+        //freeze block in place
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        
+        //fuck `yield return new WaitForSeconds(seconds)`, we're real men
+        for (float i = 0; i < lingerDuration; i+= Time.deltaTime)
+        {
+            Color c = sr.color;
+            if (Mathf.Floor(i * lingerFlashingFrequency) % 2 == 0)
+                c.a = 0.8f;
+            else c.a = 1;
+            sr.color = c; //have to do this since sr returns color by value not reference. "Property 'color' access returns temporary value. Cannot modify struct member when accessed struct is not classified as a variable"
+            
+            yield return null;
+        }
+        //unfreeze block
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        lingering = false;
+        //I FOUND A BUG IN THE UNITY PHYSICS ENGINE!!! That's like, a boyscout badge, right?
+        rb.gravityScale = 1.01f; //So I have to put this here to update the physics object, since it stays in sleep for some reason otherwise. Can't even just set it to 1f.
+    }
+
+    private Block DeselectBlock()
+    {
         rb.gravityScale = 1;
         rb.angularDrag = 0.05f;
         selected = false;
         sr.color = defaultColor;
+
+        ContactFilter2D contactFilter = new ContactFilter2D();
+        contactFilter.layerMask = collider.excludeLayers;
+        trigger.OverlapCollider(contactFilter, overlappingColliders);
+        Debug.Log(contactFilter);
+        foreach (Collider2D col in overlappingColliders)
+        {
+            if (collider.excludeLayers == (collider.excludeLayers | (1 << col.gameObject.layer)))
+            {
+                //ignore if block is below overlap, or you're the player
+                if(transform.position.y < col.transform.position.y || col.gameObject.layer == 6)
+                    Physics2D.IgnoreCollision(collider, col);
+            }
+        }
+        
+        collider.excludeLayers &= ~(collider.excludeLayers); //set excludeLayers to nothing in the bit-pilled way
+
+        return this;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        switch (collision.gameObject.layer)
+        {
+            case 6: //player: ignore collision if the bottom of the block is above the top of the player
+                Physics2D.IgnoreCollision(collider, collision.collider, collider.bounds.min.y > collision.collider.bounds.max.y);// && delta_y <= 0 && collision.gameObject.GetComponent<Movement>().onFloor);
+                return;
+
+            case 9: //cloud
+                Physics2D.IgnoreCollision(collider, collision.collider, transform.position.y < collision.transform.position.y);
+                return;
+
+
+            default:
+                break;
+        }
+
+        Debug.Log(collision.gameObject.tag);
+        if (collision.gameObject.tag == "Death")
+        {
+            Debug.Log("Respawning block");
+            transform.position = startPoint;
+        }
+    }
+
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(Physics2D.GetIgnoreCollision(collider, collision))
+        {
+            Physics2D.IgnoreCollision(collider, collision, false);
+        }
     }
 
     private void OnBecameVisible()
@@ -66,33 +183,4 @@ public class Block : MonoBehaviour
         return !GetComponent<Renderer>().isVisible;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-
-        if (collision.gameObject.layer == 9)
-        {
-            //Debug.Log("Block hits cloud");
-            collision.collider.isTrigger = selected;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        //On trigger enter here will only trigger when a deselected block enters from the outside
-        if (other.gameObject.layer == 9)
-        {
-            //Debug.Log("BLock enters cloud");
-            other.isTrigger = selected;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log(collision.gameObject.tag);
-        if(collision.gameObject.tag == "Death")
-        {
-            Debug.Log("Respawning block");
-            transform.position = startPoint;
-        }
-    }
 }

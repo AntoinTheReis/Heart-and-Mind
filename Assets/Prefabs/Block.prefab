@@ -106,7 +106,12 @@ MonoBehaviour:
   trigger: {fileID: 8462593592721058201}
   excludeWhenSelected:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 576
+  lingerDuration: 3
+  lingerFlashingFrequency: 6
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 896
 --- !u!50 &6574169198173939630
 Rigidbody2D:
   serializedVersion: 4
@@ -146,7 +151,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -177,7 +182,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.97, y: 0.97}
   m_EdgeRadius: 0
 --- !u!61 &8462593592721058201
 BoxCollider2D:

@@ -336,9 +336,9 @@ MonoBehaviour:
   turnedOn: 1
   speed: 10
   airMoveMultiplier: 10
-  airDeaccelerator: 3.5
+  airDeaccelerator: 7
   airCruisingCap: 0.05
-  floorAccelerator: 18
+  floorAcceleration: 12
   maxActualSpeed: {x: 7, y: 7}
   dashSpeed: 120
   dashWait: 0.2
@@ -356,23 +356,20 @@ MonoBehaviour:
   slideSpeed: 20
   wallAcceleration: 40
   wallJumpAir: 0.1
-  wallJumpAirTime: 7
-  wallJumpHorizontal: 1.1
+  wallJumpAirTime: 3
+  wallJumpHorizontal: 1.6
   wallJumpVertical: 1.1
   coyoteTimeWall: 0.07
+  nudgeWall: 0.1
   collisionRadius: 0.16
   bottomOffset: {x: 0, y: -0.86}
-  rightOffset: {x: 0.43, y: 0}
-  leftOffset: {x: -0.43, y: 0}
+  rightOffset: {x: 0.43, y: -0.09}
+  leftOffset: {x: -0.43, y: -0.09}
+  wallOverlapSize: {x: 0.29, y: 1.73, z: 0}
+  floorOverlapSize: {x: 0.96, y: 0.42, z: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 384
-  bottomPoint: {x: 0, y: -1.02}
-  bottomSize: {x: 0.7, y: 0.12}
-  rightPoint: {x: 0.46, y: -0.06}
-  rightSize: {x: 0.21, y: 1.41}
-  leftPoint: {x: -0.46, y: -0.06}
-  leftSize: {x: 0.21, y: 1.41}
   sfx_jump:
     Guid:
       Data1: -1349432866
@@ -394,6 +391,13 @@ MonoBehaviour:
       Data3: 720187318
       Data4: -2120728174
     Path: event:/SFX_Dash
+  sfx_walk:
+    Guid:
+      Data1: -1611535607
+      Data2: 1188498312
+      Data3: 1887673497
+      Data4: 1663020063
+    Path: event:/SFX_Walk
   sfx_dialogue:
     Guid:
       Data1: -576654384

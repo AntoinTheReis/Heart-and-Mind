@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
 using FMODUnity;
+using System.Drawing;
 
 [RequireComponent(typeof(Controls))]
 public class Movement : MonoBehaviour
@@ -24,6 +25,7 @@ public class Movement : MonoBehaviour
     private SpriteRenderer spriterenderer;
     private bool floorLastFrame;
     private float heightLastFrame;
+    private float heightLastFrameWall;
     public float fallingThreshold;
 
     public bool onFloor;
@@ -38,7 +40,9 @@ public class Movement : MonoBehaviour
     public float airMoveMultiplier = 0.2f;
     public float airDeaccelerator = 0.8f;
     public float airCruisingCap = 1f;
+    public float floorAcceleration;
     private float side = 1;
+    private float currentFloorSpeed;
     public Vector2 maxActualSpeed;
 
     [Header("Dash variables")]
@@ -69,6 +73,7 @@ public class Movement : MonoBehaviour
     public float wallJumpHorizontal = 1;
     public float wallJumpVertical = 1;
     public float coyoteTimeWall = 0.2f;
+    public float nudgeWall = 0.01f;
     private float coyoteTimeWallCounter;
     private float wallTime;
     private float currentWallSpeed;
@@ -79,7 +84,8 @@ public class Movement : MonoBehaviour
     [Header("Floor and Wall Checks")]
     public float collisionRadius = 0.25f;
     public Vector2 bottomOffset, rightOffset, leftOffset;
-    private Color debugCollisionColor = Color.red;
+    public Vector3 wallOverlapSize, floorOverlapSize;
+    private UnityEngine.Color debugCollisionColor = UnityEngine.Color.red;
     public LayerMask groundLayer;
 
 
@@ -92,6 +98,9 @@ public class Movement : MonoBehaviour
 
     public FMODUnity.EventReference sfx_dash;
     FMOD.Studio.EventInstance sfx_dashInstance;
+
+    public FMODUnity.EventReference sfx_walk;
+    FMOD.Studio.EventInstance sfx_walkInstance;
 
     public FMODUnity.EventReference sfx_dialogue;
     FMOD.Studio.EventInstance sfx_dialogueInstance;
@@ -115,6 +124,8 @@ public class Movement : MonoBehaviour
 
         sfx_dashInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_dash);
 
+        sfx_walkInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_walk);
+
         sfx_dialogueInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_dialogue);
         FMOD.Studio.EventDescription dialogueDescription;
         sfx_dialogueInstance.getDescription(out dialogueDescription);
@@ -128,6 +139,8 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("Y Velocity: " + rb.velocity.y);
+
         FloorAndWallsCheck();
 
         //Deactivat wallJumping bool
@@ -165,9 +178,7 @@ public class Movement : MonoBehaviour
                 }
                 else if (turnedOn)
                 {
-                    if (input.MoveInput().x > 0) horizontal_movement = 1;
-                    else if (input.MoveInput().x < 0) horizontal_movement -= 1;
-                    else horizontal_movement = 0;
+                    FloorMovement();
                 }
                 else horizontal_movement = 0;
             }
@@ -231,23 +242,29 @@ public class Movement : MonoBehaviour
             wallJumping = false;
             coyoteTimeWallCounter = coyoteTimeWall;
             side = wallSide * -1;
-            if(input.MoveInput().x == wallSide)
+            if((input.MoveInput().x > 0 && wallSide == 1) || (input.MoveInput().x < 0 && wallSide == -1))
             {
                 rb.gravityScale = 0;
                 if (wallTime >= wallSticky)
                 {
                     WallSlide();
                 }
-                else if (rb.velocity.y < 0)
+                else if (rb.velocity.y <= 0)
                 {
                     rb.velocity = new Vector2(rb.velocity.x, 0);
                     wallTime += Time.deltaTime;
                 }
                 else rb.gravityScale = 5;
+                heightLastFrameWall = transform.position.y;
             }
             else if(!respawn.respawning)
             {
                 rb.gravityScale = 5;
+                /*if(rb.velocity.y == 0)
+                {
+                    float direction =  wallSide * -1;
+                    transform.position = new Vector2(nudgeWall * direction * Time.timeScale + transform.position.x, transform.position.y);
+                }*/
             }
         } 
         else if (!isDashing)
@@ -269,7 +286,7 @@ public class Movement : MonoBehaviour
         if (turnedOn)
         {
             if (!onWalls && !isDashing) spriterenderer.flipX = (side == -1);
-            else if (onWalls && !onFloor) spriterenderer.flipX = (side == 1); 
+            if ((onWalls && !onFloor) || anim.GetCurrentAnimatorStateInfo(0).IsName("H_WallJump_FromR")) spriterenderer.flipX = (side == 1); 
         }
         AnimationCheck();
 
@@ -350,14 +367,15 @@ public class Movement : MonoBehaviour
     //Platforms need to be added to the "Platforms" layer in the editor. 
     private void FloorAndWallsCheck()
     {
-        onFloor = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, collisionRadius, groundLayer);
-        onWalls = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer) || Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer);
+        onFloor = Physics2D.OverlapBox((Vector2)transform.position + bottomOffset, floorOverlapSize, 0, groundLayer);
 
-        if (Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer)) wallSide = 1;
-        else if (Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer)) wallSide = -1;
+        onWalls = Physics2D.OverlapBox((Vector2)transform.position + leftOffset, wallOverlapSize, 0, groundLayer) || Physics2D.OverlapBox((Vector2)transform.position + rightOffset, wallOverlapSize, 0, groundLayer);
+
+        if (Physics2D.OverlapBox((Vector2)transform.position + rightOffset, wallOverlapSize, 0, groundLayer)) wallSide = 1;
+        else if (Physics2D.OverlapBox((Vector2)transform.position + leftOffset, wallOverlapSize, 0, groundLayer)) wallSide = -1;
         else wallSide = 0;
 
-        if (!isDashing && onFloor && !onWalls)
+        if (!isDashing && onFloor)
         {
             canDash = true;
         }
@@ -429,20 +447,33 @@ public class Movement : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = UnityEngine.Color.red;
 
         var positions = new Vector2[] { bottomOffset, rightOffset, leftOffset };
 
         Gizmos.DrawWireSphere((Vector2)transform.position + bottomOffset, collisionRadius);
         Gizmos.DrawWireSphere((Vector2)transform.position + rightOffset, collisionRadius);
         Gizmos.DrawWireSphere((Vector2)transform.position + leftOffset, collisionRadius);
+
+        Gizmos.DrawWireCube((Vector2)transform.position + bottomOffset, floorOverlapSize);
+        Gizmos.DrawWireCube((Vector2)transform.position + rightOffset, wallOverlapSize);
+        Gizmos.DrawWireCube((Vector2)transform.position + leftOffset, wallOverlapSize);
+
     }
 
     private void DashCancel()
     {
+        Debug.Log("Dash Cancel");
         dashHitStop = true;
         rb.drag = 0;
         isDashing = false;
+
+        if(onWalls && !onFloor)
+        {
+            float direction = wallSide * -1;
+            transform.position = new Vector2(nudgeWall * direction * Time.timeScale + transform.position.x, transform.position.y);
+        }
+
         if (!respawn.respawning) rb.gravityScale = 5;
     }
 
@@ -458,11 +489,23 @@ public class Movement : MonoBehaviour
         //anim.SetInteger("FacingParam", facing);
 
         anim.SetBool("IsWalking", Mathf.Abs(input.MoveInput().x) > 0 && onFloor && turnedOn);
-        /*
         if (anim.GetBool("IsWalking"))
         {
             //PUT WALKING SOUND HERE
-        }*/
+            if (sfx_walkInstance.isValid())
+            {
+                FMOD.Studio.PLAYBACK_STATE playbackState;
+                sfx_walkInstance.getPlaybackState(out playbackState);
+                if (playbackState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+                {
+                    sfx_walkInstance.start();
+                }
+            }
+        }
+        else
+        {
+            sfx_walkInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
         anim.SetInteger("dashDirection", dashDirection);
 
         anim.SetBool("Dashing", isDashing);
@@ -482,5 +525,22 @@ public class Movement : MonoBehaviour
         
         floorLastFrame = onFloor;
         heightLastFrame = transform.position.y;
+    }
+
+    private bool GoingDown()
+    {
+        float height = transform.position.y;
+        return height <= heightLastFrame;
+    }
+
+    private void FloorMovement()
+    {
+        if (input.MoveInput().x > 0 && currentFloorSpeed <= 1) currentFloorSpeed += floorAcceleration *Time.deltaTime;
+        else if (input.MoveInput().x < 0 && currentFloorSpeed >= -1) currentFloorSpeed -= floorAcceleration * Time.deltaTime;
+        else if (Mathf.Abs(currentFloorSpeed) - floorAcceleration * Time.deltaTime < 0) currentFloorSpeed = 0;
+        else if (currentFloorSpeed > 0) currentFloorSpeed -= floorAcceleration * Time.deltaTime;
+        else if (currentFloorSpeed < 0) currentFloorSpeed += floorAcceleration *Time.deltaTime;
+
+        horizontal_movement = currentFloorSpeed;
     }
 }
