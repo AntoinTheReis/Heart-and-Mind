@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1334667a69dae24aa3c147b42e82083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDecay: 1
+  timeToDecay: 0.5
   timeToReset: 2
   colorFade: 0.2
   onFlooorCheckWait: 0.01
