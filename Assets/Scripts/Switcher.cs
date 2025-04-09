@@ -35,6 +35,8 @@ public class Switcher : MonoBehaviour
     public Vector3 sizeMind;
     public Vector3 sizeHeart;
 
+    public bool mindOnlyLevel;
+
     #region Audio
     public FMODUnity.EventReference sfx_switchM;
     FMOD.Studio.EventInstance sfx_switchMInstance;
@@ -57,45 +59,58 @@ public class Switcher : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mindBlockMechanic = mindObject.GetComponent<MindBlockTelekinesis>();
-
-        heartMovement = heartObject.GetComponent<Movement>();
-        mindMovement = mindObject.GetComponent<MindMovement>();
-
-        heartTransform = heartObject.transform;
-        mindtransform = mindObject.transform;
-
-        cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
-
-        if (heartMovement.turnedOn)  //Checking what character is active and making sure one is active and one is inactive
+        if (!mindOnlyLevel)
         {
-            activeCharacter = 1;    //Mind character takes priority
-            //heartMovement.turnedOn = false;
+            mindBlockMechanic = mindObject.GetComponent<MindBlockTelekinesis>();
+
+            heartMovement = heartObject.GetComponent<Movement>();
+            mindMovement = mindObject.GetComponent<MindMovement>();
+
+            heartTransform = heartObject.transform;
+            mindtransform = mindObject.transform;
+
+            cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
+
+            if (heartMovement.turnedOn)  //Checking what character is active and making sure one is active and one is inactive
+            {
+                activeCharacter = 1;    //Mind character takes priority
+                                        //heartMovement.turnedOn = false;
+            }
+            else
+            {
+                activeCharacter = 1;
+                //heartMovement.turnedOn = true;
+            }
+
+            transform.localScale = sizeHeart;
         }
         else
         {
-            activeCharacter = 1;
-            //heartMovement.turnedOn = true;
+            mindBlockMechanic = mindObject.GetComponent<MindBlockTelekinesis>();
+            mindMovement = mindObject.GetComponent<MindMovement>();
+            mindtransform = mindObject.transform;
+            activeCharacter = 2;
         }
-
-        transform.localScale = sizeHeart;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (input.OnInteractPressed())
+        if (!mindOnlyLevel)
         {
-            switchCharacter();
-        }
+            if (input.OnInteractPressed())
+            {
+                switchCharacter();
+            }
 
-        if(activeCharacter == 1)
-        {
-            transform.position = new Vector2(heartTransform.position.x, heartTransform.position.y + heightFromPlayer);
-        }
-        else
-        {
-            transform.position= new Vector2(mindtransform.position.x, mindtransform.position.y + heightFromMind);
+            if (activeCharacter == 1)
+            {
+                transform.position = new Vector2(heartTransform.position.x, heartTransform.position.y + heightFromPlayer);
+            }
+            else
+            {
+                transform.position = new Vector2(mindtransform.position.x, mindtransform.position.y + heightFromMind);
+            }
         }
 
     }
