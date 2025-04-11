@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Block : MonoBehaviour
@@ -29,6 +30,8 @@ public class Block : MonoBehaviour
 
     private Room lastActualRoom;
 
+    private Animator curtain;
+
     #region Audio
     public FMODUnity.EventReference select;
     FMOD.Studio.EventInstance sfx_selectInstance;
@@ -53,11 +56,13 @@ public class Block : MonoBehaviour
 
         overlappingColliders = new List<Collider2D>();
 
+        curtain = GameObject.FindGameObjectWithTag("DeathCurtain").GetComponent<Animator>();
     }
 
     private void Update()
     {
         if(RoomTracker.current_room != null) lastActualRoom = RoomTracker.current_room;
+
     }
 
     public Block SelectBlock()
@@ -186,7 +191,7 @@ public class Block : MonoBehaviour
         {
             if(gameObject.name == "Player Block")
             {
-                transform.position = lastActualRoom.checkpoint.position;
+                StartCoroutine(PlayerBlockRespawn());
             }
             else
             {
@@ -199,6 +204,13 @@ public class Block : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+
+        /*if(collision.gameObject.GetComponent<Room>() != null)
+        {
+            Debug.Log("Block exited a room");
+            transform.position = startPoint;
+        }*/
+
         if(Physics2D.GetIgnoreCollision(collider, collision))
         {
             Physics2D.IgnoreCollision(collider, collision, false);
@@ -220,6 +232,13 @@ public class Block : MonoBehaviour
     public bool IsOffScreen()
     {
         return !GetComponent<Renderer>().isVisible;
+    }
+
+    IEnumerator PlayerBlockRespawn()
+    {
+        curtain.SetTrigger("Died");
+        yield return new WaitForSecondsRealtime(0.2f);
+        transform.position = lastActualRoom.checkpoint.position;
     }
 
 }
