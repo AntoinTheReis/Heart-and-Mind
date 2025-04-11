@@ -5,7 +5,7 @@ Heart: Oh... oh no... what have I done? Why wasn't I  more careful?! I shouldn't
 
 <<pan Camera Down>>   
 
-Heart: I need to get out of here. I need to find Mind. I can't let them down. I can't let <b> myself <b> down. That tunnel has to let out somewhere. //make myself bold
+Heart: I need to get out of here. I need to find Mind. I can't let them down. I can't let <b> myself </b> down. That tunnel has to let out somewhere. //make myself bold
 
 <<pan Camera Right>> //have camera move at speed of 4.2
 
