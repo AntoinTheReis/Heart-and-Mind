@@ -1119,7 +1119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: OnDiscovery.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: JKNM
+      value: J
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: OnDiscovery.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
