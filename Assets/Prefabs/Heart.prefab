@@ -303,7 +303,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Keyboard
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &635923912904685221
@@ -486,6 +486,13 @@ MonoBehaviour:
   respawning: 0
   dragDashMax: 14
   prefabGlass: {fileID: 7520791465317407285, guid: 72f621974c0e510458912d19f668a79a, type: 3}
+  sfx_death:
+    Guid:
+      Data1: -2019866892
+      Data2: 1111637155
+      Data3: 236896136
+      Data4: 1534486891
+    Path: event:/SFX_HeartDeath
 --- !u!61 &5155639377790522698
 BoxCollider2D:
   m_ObjectHideFlags: 0

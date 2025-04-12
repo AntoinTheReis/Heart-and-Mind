@@ -139,7 +139,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Y Velocity: " + rb.velocity.y);
+        //Debug.Log("Y Velocity: " + rb.velocity.y);
 
         FloorAndWallsCheck();
 
