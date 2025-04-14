@@ -20,6 +20,7 @@ public class Block : MonoBehaviour
 
     public float lingerDuration;
     public float lingerFlashingFrequency;
+    public float heavyBlockMassThreshold = 999;
     
     private Vector3 startPoint;
     private bool hasMovedDuringSelection;
@@ -31,6 +32,8 @@ public class Block : MonoBehaviour
     private Room lastActualRoom;
 
     private Animator curtain;
+
+    public bool heavy;
 
     #region Audio
     public FMODUnity.EventReference select;
@@ -55,6 +58,7 @@ public class Block : MonoBehaviour
         startPoint = gameObject.transform.position;
 
         overlappingColliders = new List<Collider2D>();
+
 
         curtain = GameObject.FindGameObjectWithTag("DeathCurtain").GetComponent<Animator>();
     }
@@ -187,6 +191,7 @@ public class Block : MonoBehaviour
         }
 
         Debug.Log(collision.gameObject.tag);
+
         if (collision.gameObject.tag == "Death")
         {
             if(gameObject.name == "Player Block")
@@ -198,6 +203,21 @@ public class Block : MonoBehaviour
                 Debug.Log("Respawning block");
                 transform.position = startPoint;
             }
+        }
+
+        if(heavy && rb.velocity == Vector2.zero && !selected)
+        {
+            if ((collision.gameObject.name == "Player Block" || collision.gameObject.tag == "Player")) rb.bodyType = RigidbodyType2D.Static;  //Heavy block cannot be pushed by players
+            else if (collision.gameObject.tag == "Blocks" && !collision.gameObject.GetComponent<Block>().heavy) rb.bodyType = RigidbodyType2D.Static;  ////Heavy block cannot be pushed by light block
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if(heavy && rb.velocity == Vector2.zero && !selected)
+        {
+            if ((collision.gameObject.name == "Player Block" || collision.gameObject.tag == "Player")) rb.bodyType = RigidbodyType2D.Dynamic;  //Heavy block cannot be pushed by players
+            else if (collision.gameObject.tag == "Blocks" && !collision.gameObject.GetComponent<Block>().heavy) rb.bodyType = RigidbodyType2D.Dynamic;  ////Heavy block cannot be pushed by light block
         }
     }
 
@@ -214,6 +234,11 @@ public class Block : MonoBehaviour
         if(Physics2D.GetIgnoreCollision(collider, collision))
         {
             Physics2D.IgnoreCollision(collider, collision, false);
+        }
+
+        if(rb.mass < heavyBlockMassThreshold && collision.gameObject.tag == "Blocks")
+        {
+
         }
     }
 
@@ -239,6 +264,11 @@ public class Block : MonoBehaviour
         curtain.SetTrigger("Died");
         yield return new WaitForSecondsRealtime(0.2f);
         transform.position = lastActualRoom.checkpoint.position;
+    }
+
+    private void OnDrawGizmos()
+    {
+
     }
 
 }

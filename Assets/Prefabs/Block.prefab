@@ -109,9 +109,11 @@ MonoBehaviour:
     m_Bits: 576
   lingerDuration: 3
   lingerFlashingFrequency: 6
+  heavyBlockMassThreshold: 190
   groundLayer:
     serializedVersion: 2
     m_Bits: 896
+  heavy: 0
   select:
     Guid:
       Data1: 1098222500
@@ -138,7 +140,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 50
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -151,7 +153,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &-4594681738906803558
 BoxCollider2D:
