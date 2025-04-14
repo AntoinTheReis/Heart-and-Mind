@@ -500,7 +500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4605729041515664850, guid: 9883322c3734a3e4a9da4ec777d5cf7e, type: 3}
       propertyPath: m_Name
-      value: Block
+      value: Player Block
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
