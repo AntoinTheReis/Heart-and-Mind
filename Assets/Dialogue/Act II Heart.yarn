@@ -5,7 +5,7 @@ Heart: Oh... oh no... what have I done? Why wasn't I  more careful?! I shouldn't
 
 <<pan Camera Down>>   
 
-Heart: I need to get out of here. I need to find Mind. I can't let them down. I can't let <b> myself <b> down. That tunnel has to let out somewhere. //make myself bold
+Heart: I need to get out of here. I need to find Mind. I can't let them down. I can't let <b> myself </b> down. That tunnel has to let out somewhere. //make myself bold
 
 <<pan Camera Right>> //have camera move at speed of 4.2
 
@@ -15,5 +15,11 @@ Heart: That memento... what caused it to make the floor collapse? Think man, thi
 
 <<wait  5>>
 
-Heart: I remember now... it was the heartbreak from the memory inside the rose. It must have what have weakened the floor to the point of breaking. 
+Heart: I remember now... it was the heartbreak from the memory inside the rose. It must have what have weakened the floor to the point of breaking... is everything here a metaphor?! 
+
+<<wait 3>>
+
+Heart: ...
+
+Heart: Nevermind. Right now, I have to find a way to Mind.
 ===

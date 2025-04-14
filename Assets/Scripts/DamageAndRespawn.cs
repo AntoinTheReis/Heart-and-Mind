@@ -28,10 +28,19 @@ public class DamageAndRespawn : MonoBehaviour
     //Z = type of object. 1) Block 2) Glass
     private List<Vector3> resetableAngles;
 
+    #region Audio
+    public FMODUnity.EventReference sfx_death;
+    FMOD.Studio.EventInstance sfx_deathInstance;
+    #endregion
+
 
     // Start is called before the first frame update
     void Start()
     {
+        #region Audio EventInstances
+        sfx_deathInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_death);
+        #endregion
+
         resetables = new List<GameObject>();
         resetableAngles = new List<Vector3>();
         resetableValues = new List<Vector3>();
@@ -84,6 +93,13 @@ public class DamageAndRespawn : MonoBehaviour
     {
         if(collision.gameObject.tag == "Damage")  //For spikes and stuff !Death with knockback!
         {
+            #region Death Audio
+            if (sfx_deathInstance.isValid())
+            {
+                sfx_deathInstance.start();
+            }
+            #endregion
+
             if (heartOrMind == 1)
             {
                 movement.ZeroMovement();
