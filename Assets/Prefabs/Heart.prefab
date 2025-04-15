@@ -338,23 +338,23 @@ MonoBehaviour:
   airMoveMultiplier: 10
   airDeaccelerator: 7
   airCruisingCap: 0.05
-  floorAcceleration: 12
+  floorAcceleration: 11
   maxActualSpeed: {x: 7, y: 7}
-  dashSpeed: 120
+  dashSpeed: 90
   dashWait: 0.2
   dragDashDuration: 0.9
   dragDashMax: 20
   isDashing: 0
   jump: 20
-  fallMultiplier: 5
-  lowJumpMultiplier: 10
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2.5
   maxXvelocity: 1.4
   coyoteTimeJump: 0.07
   jumpBufferTime: 0.07
   jumpBufferCounter: 0
   wallSticky: 0.1
-  slideSpeed: 20
-  wallAcceleration: 40
+  slideSpeed: 11
+  wallAcceleration: 25
   wallJumpAir: 0.1
   wallJumpAirTime: 3
   wallJumpHorizontal: 1.6

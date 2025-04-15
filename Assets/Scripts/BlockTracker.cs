@@ -7,6 +7,9 @@ using UnityEditor;
 public static class BlockTracker
 {
     public static LinkedList<GameObject> BlocksOnScreen = new LinkedList<GameObject>();
+
+    public static Block lastBlockSelected;
+    public static Block lingeringBlock;
     
     public static void SortByDistance(ref LinkedList<GameObject> gameObjects, Vector3 position)
     {

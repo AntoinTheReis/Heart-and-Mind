@@ -100,7 +100,22 @@ public class MindBlockTelekinesis : MonoBehaviour
             Debug.Log("There was a block on screen");
 
             //Select the first block on activation
-            selectedBlockNode = BlockTracker.BlocksOnScreen.First;
+            if (BlockTracker.lastBlockSelected == null || BlockTracker.lastBlockSelected.IsOffScreen())
+            {
+                Debug.Log("Last block selected was: " + BlockTracker.lastBlockSelected);
+                Debug.Log("Last block was offscreen is: " + BlockTracker.lastBlockSelected.IsOffScreen());
+
+                selectedBlockNode = BlockTracker.BlocksOnScreen.First;
+                BlockTracker.lastBlockSelected = selectedBlockNode.Value.GetComponent<Block>();
+            }
+            else
+            {
+                LinkedList<GameObject> newList = new LinkedList<GameObject>();
+                newList.AddLast(BlockTracker.lastBlockSelected.gameObject);
+
+                selectedBlockNode = newList.First;
+
+            }
 
             anim.SetTrigger("Ability");
         }
@@ -113,5 +128,18 @@ public class MindBlockTelekinesis : MonoBehaviour
         Vector3 viewportPoint = Camera.main.WorldToViewportPoint(position);
         return viewportPoint.x >= 0 && viewportPoint.x <= 1 && viewportPoint.y >= 0 && viewportPoint.y <= 1 && viewportPoint.z > 0;
     }
+
+    void ReplaceLinkedListNodeValue(LinkedList<GameObject> linkedList, LinkedListNode<GameObject> node, GameObject newValue)
+    {
+        if (node == null) return;
+
+        // Create a new node and insert it after the current node
+        LinkedListNode<GameObject> newNode = new LinkedListNode<GameObject>(newValue);
+        linkedList.AddAfter(node, newNode);
+
+        // Remove the old node
+        linkedList.Remove(node);
+    }
+
 
 }

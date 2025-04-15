@@ -1,5 +1,5 @@
 {
-    "name": "Keyboard",
+    "name": "Inputs",
     "maps": [
         {
             "name": "Player",
@@ -230,30 +230,19 @@
                 },
                 {
                     "name": "",
+                    "id": "46637b06-6ade-4d07-b892-567e3541810f",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "92f3dfc9-0d56-4054-9500-59d9a5a3ef4e",
                     "path": "<Keyboard>/j",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Primary",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e794525f-2b81-4ecc-8ed4-e816d7ba4cd4",
-                    "path": "<Keyboard>/k",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Primary",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7e60fed8-0711-4889-9388-e6fb8ae18a34",
-                    "path": "<Keyboard>/l",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",

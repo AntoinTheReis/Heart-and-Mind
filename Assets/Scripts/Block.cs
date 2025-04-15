@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Block : MonoBehaviour
 {
@@ -85,6 +86,7 @@ public class Block : MonoBehaviour
         rb.angularVelocity = 1;
         selected = true;
         sr.color = selectedColor;
+        BlockTracker.lastBlockSelected = gameObject.GetComponent<Block>();
 
         return this;
     }
@@ -117,6 +119,10 @@ public class Block : MonoBehaviour
         //Won't linger if grounded
         Bounds b = collider.bounds;
         if(Physics2D.OverlapBox(new Vector2(b.center.x, b.min.y - 0.1f), new Vector2(b.size.x, 0.05f), 0f,groundLayer)) yield break;
+
+        if(BlockTracker.lingeringBlock != null) BlockTracker.lingeringBlock.StopLinger();
+        BlockTracker.lingeringBlock = gameObject.GetComponent<Block>();
+
         lingering = true;
         
         //freeze block in place
@@ -133,11 +139,9 @@ public class Block : MonoBehaviour
             
             yield return null;
         }
-        //unfreeze block
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        lingering = false;
-        //I FOUND A BUG IN THE UNITY PHYSICS ENGINE!!! That's like, a boyscout badge, right?
-        rb.gravityScale = 1.01f; //So I have to put this here to update the physics object, since it stays in sleep for some reason otherwise. Can't even just set it to 1f.
+
+        if(lingering) StopLinger();
+
     }
 
     private Block DeselectBlock()
@@ -205,19 +209,38 @@ public class Block : MonoBehaviour
             }
         }
 
-        if(heavy && rb.velocity == Vector2.zero && !selected)
+        
+        /*else if(heavy && !selected)
         {
-            if ((collision.gameObject.name == "Player Block" || collision.gameObject.tag == "Player")) rb.bodyType = RigidbodyType2D.Static;  //Heavy block cannot be pushed by players
-            else if (collision.gameObject.tag == "Blocks" && !collision.gameObject.GetComponent<Block>().heavy) rb.bodyType = RigidbodyType2D.Static;  ////Heavy block cannot be pushed by light block
-        }
+            if ((collision.gameObject.name == "Player Block" || collision.gameObject.tag == "Player")) collision.gameObject.GetComponent<Rigidbody2D>().velocity = rb.velocity;
+            else if (collision.gameObject.tag == "Blocks" && !collision.gameObject.GetComponent<Block>().heavy) collision.gameObject.GetComponent<Rigidbody2D>().velocity = rb.velocity;
+        }*/
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if(heavy && rb.velocity == Vector2.zero && !selected)
+        if(heavy)
         {
-            if ((collision.gameObject.name == "Player Block" || collision.gameObject.tag == "Player")) rb.bodyType = RigidbodyType2D.Dynamic;  //Heavy block cannot be pushed by players
-            else if (collision.gameObject.tag == "Blocks" && !collision.gameObject.GetComponent<Block>().heavy) rb.bodyType = RigidbodyType2D.Dynamic;  ////Heavy block cannot be pushed by light block
+            if ((collision.gameObject.name == "Player Block" || collision.gameObject.tag == "Player"))
+            {
+                rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+                rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX;//Heavy block cannot be pushed by players
+            }
+            else if (collision.gameObject.tag == "Blocks" && !collision.gameObject.GetComponent<Block>().heavy)
+            {
+                rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX;  ////Heavy block cannot be pushed by light block
+                rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+                Debug.Log("Deactivating heavy status");
+            }
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (heavy && !selected)
+        {
+            if ((collision.gameObject.name == "Player Block" || collision.gameObject.tag == "Player")) rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;  //Heavy block cannot be pushed by players
+            else if (collision.gameObject.tag == "Blocks" && !collision.gameObject.GetComponent<Block>().heavy) rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;  ////Heavy block cannot be pushed by light block
         }
     }
 
@@ -235,11 +258,6 @@ public class Block : MonoBehaviour
         {
             Physics2D.IgnoreCollision(collider, collision, false);
         }
-
-        if(rb.mass < heavyBlockMassThreshold && collision.gameObject.tag == "Blocks")
-        {
-
-        }
     }
 
     private void OnBecameVisible()
@@ -252,6 +270,7 @@ public class Block : MonoBehaviour
     {
         Debug.Log("Removed block to list!");
         BlockTracker.BlocksOnScreen.Remove(gameObject);
+        if(BlockTracker.lastBlockSelected = gameObject.GetComponent<Block>()) BlockTracker.lastBlockSelected = null;
     }
 
     public bool IsOffScreen()
@@ -269,6 +288,17 @@ public class Block : MonoBehaviour
     private void OnDrawGizmos()
     {
 
+    }
+
+    public void StopLinger()
+    {
+        //unfreeze block
+        Debug.Log("Cancel linger");
+        BlockTracker.lingeringBlock = null;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        lingering = false;
+        //I FOUND A BUG IN THE UNITY PHYSICS ENGINE!!! That's like, a boyscout badge, right?
+        rb.gravityScale = 1.01f; //So I have to put this here to update the physics object, since it stays in sleep for some reason otherwise. Can't even just set it to 1f.
     }
 
 }
