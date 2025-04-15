@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using DG.Tweening;
 using FMODUnity;
 using System.Drawing;
+using UnityEditor.Experimental.GraphView;
 
 [RequireComponent(typeof(Controls))]
 public class Movement : MonoBehaviour
@@ -18,6 +19,7 @@ public class Movement : MonoBehaviour
 
     private float horizontal_movement;
     private float vertical_movement;
+    private float inputDirection;
 
     //0 is right, 1 is up, 2 is down
     private int dashDirection = 0;
@@ -182,7 +184,7 @@ public class Movement : MonoBehaviour
                 }
                 else horizontal_movement = 0;
             }
-            else if (input.MoveInput().x == 0 && horizontal_movement != 0)  //speed changes if the player is in the air
+            else if (input.MoveInput().x == 0 && horizontal_movement != 0 && !wallJumping)  //speed changes if the player is in the air
             {
                 if (onWalls && !wallJumping) horizontal_movement = 0;
                 else Deaccelerate();
@@ -195,8 +197,15 @@ public class Movement : MonoBehaviour
                 }
                 else if (turnedOn)
                 {
-                    if (!wallJumping) horizontal_movement += input.MoveInput().x * airMoveMultiplier * Time.deltaTime;
-                    else if (!(wallSide == input.MoveInput().x && onWalls)) horizontal_movement += input.MoveInput().x * airMoveMultiplier * currentWallJumpAir * Time.deltaTime;
+                    if (input.MoveInput().x > 0) inputDirection = 1;
+                    else if (input.MoveInput().x < 0) inputDirection = -1;
+                    else inputDirection = 0;
+                    if (!wallJumping) horizontal_movement += inputDirection * airMoveMultiplier * Time.deltaTime;
+                    else if (!(wallSide == input.MoveInput().x && onWalls))
+                    {
+                        Debug.Log("This is what is happening when you wall jumo");
+                        horizontal_movement += inputDirection * airMoveMultiplier * currentWallJumpAir * Time.deltaTime;
+                    }
                 }
             }
         }
