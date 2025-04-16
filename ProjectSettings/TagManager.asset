@@ -12,6 +12,7 @@ TagManager:
   - DeathCurtain
   - Blocks
   - Broken Shards
+  - Speaker
   layers:
   - Default
   - TransparentFX

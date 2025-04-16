@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{3f7996e9-f23b-43d6-b191-26a939e163b7}">
+		<property name="name">
+			<value>BrokenPromisesPause</value>
+		</property>
+		<relationship name="folder">
+			<destination>{819c19c0-210f-4012-888e-0be1d600e704}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{46c26bc1-a893-48de-91f7-dd3d23ef2937}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{46c26bc1-a893-48de-91f7-dd3d23ef2937}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
