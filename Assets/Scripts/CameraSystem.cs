@@ -255,6 +255,9 @@ public class CameraSystem : MonoBehaviour
 
     IEnumerator IdleFollow()  //Transporting other character into new Room
     {
+        //case where room is either null or has no bus stops (we dont want to move the mind in this case)
+        if (RoomTracker.current_room == null || RoomTracker.current_room.mindBusStops.Count == 0) yield break;
+        
         GameObject otherCharacter;
 
         /*if (characterSwitcher.activeCharacter == 1) otherCharacter = characterSwitcher.mindObject;
