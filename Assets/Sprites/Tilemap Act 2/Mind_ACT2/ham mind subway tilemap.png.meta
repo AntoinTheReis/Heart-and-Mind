@@ -1,0 +1,875 @@
+fileFormatVersion: 2
+guid: eb334d4fd436f464d95ea700f31532d3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 399
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ham mind subway tilemap_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3022.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbd633d7ee0842b6972af9aefc306c4
+      internalID: 849497033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_1
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 3022.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d353403c1304436782f50a670c12596
+      internalID: 483975813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_2
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 3022.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b838456cde94b39848c736f9f71a44
+      internalID: -1485517516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_3
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 3022.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e69f7779aae34a45ba40a077f3efd4f
+      internalID: -765493212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_4
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 3022.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259f8635bc77549959f666b63db971c7
+      internalID: 1921457611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_5
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 3022.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e673e476cc9fb439b9b776185bcf5472
+      internalID: -1053342400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2419.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2dea13a8d63b4ddb91c70483cffe37c
+      internalID: 1707767245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_7
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 2419.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da24ea69257f245d0a47592ac3ab7986
+      internalID: -437701425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_8
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 2419.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287f2faa5cfc94b4f87d858bffe52a1c
+      internalID: -689346349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_9
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 2419.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12cf7d5932ba34548b7294a18021a936
+      internalID: 501115326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_10
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 2419.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab257bc31175474ba6e4de28785d50b
+      internalID: -1179120816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_11
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 2419.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f1e7c58d2a846edbc2ba0f1b62ebb8
+      internalID: 2031452305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1816.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd400850d665418f816e4bd8dbe40a0
+      internalID: 927633717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_13
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1816.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7f7082deb91414a8033ffbad297640
+      internalID: 524830775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_14
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 1816.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3cc327defefa4a88b84435ba4e6afb5
+      internalID: 1356457728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_15
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 1816.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2e5b055d9914d2d9adcc223c3d7823
+      internalID: 995276601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_16
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 1816.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7292ea2bc354cd9b47603530ccab81
+      internalID: 559329912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_17
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 1816.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2fbf78c41724910bab3c0a8d04151e
+      internalID: 1980794146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1213.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8206799112248d382df59ba89567fc
+      internalID: -1129130002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_19
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1213.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1f711f1a8cf48089eb40dca8c89c0a
+      internalID: 61224465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_20
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 1213.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c1214036be74b769fe824f47f1fdcf
+      internalID: -586769400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_21
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 1213.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f484c182a1f3e4dda8a66c1fce9eacc0
+      internalID: 2143139055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_22
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 1213.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e71857ece1bb4441acd9e4592597979
+      internalID: -1156176547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_23
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 1213.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef369a1c4661545fba5489e33417413c
+      internalID: -971897666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 610.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a2a5d4a4fb0e4a728e661ffc6eb4058
+      internalID: -189878501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_25
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 610.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c18e14e01eff4244b88406368034cef
+      internalID: -332949417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_26
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 610.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974de40b9098648a0bc7222d172288cb
+      internalID: -1198566163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_27
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 610.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f78be89cb3c4eb1b7c0607e53fd690
+      internalID: -1925449173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_28
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 610.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff6e6381598a487f9a999820454523a
+      internalID: 1679945058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_29
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 610.3333
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290f1717296f84f1cb0eea30681f9629
+      internalID: -317691310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_30
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 7.333313
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a5a492fce0d46bdb772b4610fd96f8
+      internalID: 667539547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_31
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 7.333313
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d76a7321ea3449db89968b0d20cd5a
+      internalID: 1315630886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_32
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 7.333313
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8196c007440492cac7a851979c3efe
+      internalID: 910083386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham mind subway tilemap_33
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 7.333313
+        width: 599.6667
+        height: 599.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba554a5742e6145e3addfc91be783398
+      internalID: -1284745897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ham mind subway tilemap_0: 849497033
+      ham mind subway tilemap_1: 483975813
+      ham mind subway tilemap_10: -1179120816
+      ham mind subway tilemap_11: 2031452305
+      ham mind subway tilemap_12: 927633717
+      ham mind subway tilemap_13: 524830775
+      ham mind subway tilemap_14: 1356457728
+      ham mind subway tilemap_15: 995276601
+      ham mind subway tilemap_16: 559329912
+      ham mind subway tilemap_17: 1980794146
+      ham mind subway tilemap_18: -1129130002
+      ham mind subway tilemap_19: 61224465
+      ham mind subway tilemap_2: -1485517516
+      ham mind subway tilemap_20: -586769400
+      ham mind subway tilemap_21: 2143139055
+      ham mind subway tilemap_22: -1156176547
+      ham mind subway tilemap_23: -971897666
+      ham mind subway tilemap_24: -189878501
+      ham mind subway tilemap_25: -332949417
+      ham mind subway tilemap_26: -1198566163
+      ham mind subway tilemap_27: -1925449173
+      ham mind subway tilemap_28: 1679945058
+      ham mind subway tilemap_29: -317691310
+      ham mind subway tilemap_3: -765493212
+      ham mind subway tilemap_30: 667539547
+      ham mind subway tilemap_31: 1315630886
+      ham mind subway tilemap_32: 910083386
+      ham mind subway tilemap_33: -1284745897
+      ham mind subway tilemap_4: 1921457611
+      ham mind subway tilemap_5: -1053342400
+      ham mind subway tilemap_6: 1707767245
+      ham mind subway tilemap_7: -437701425
+      ham mind subway tilemap_8: -689346349
+      ham mind subway tilemap_9: 501115326
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
