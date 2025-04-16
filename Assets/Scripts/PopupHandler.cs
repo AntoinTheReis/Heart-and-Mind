@@ -5,6 +5,7 @@ using System.Diagnostics.Tracing;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class PopupHandler : MonoBehaviour
@@ -15,19 +16,56 @@ public class PopupHandler : MonoBehaviour
     [SerializeField] GameObject container;
     
     [SerializeField] private float popupSpeed;
+
+    [SerializeField] private InputActionAsset inputActions;
+
+    private InputAction ExitInputAction;
+
+    private PopupScriptableObject followupPopup;
     
     private bool popupOpen = false;
 
     private TMP_FontAsset messageFont;
     private TMP_FontAsset titleFont;
 
+    public enum Location
+    {
+        LEFT, RIGHT, TOP, TOP_LEFT, TOP_RIGHT
+    }
+
     public enum Recipient
     {
         NONE, HEART, MIND
     }
-    
+
+    private void Update()
+    {
+        if (ExitInputAction != null && ExitInputAction.triggered)
+        {
+            ExitInputAction = null;
+            HidePopup();
+        }
+    }
+
     public Recipient recipient;
-    
+
+    public void setPopup(PopupScriptableObject popupData)
+    {
+        SetRecipient((int)popupData.recipient);
+        titleFont = popupData.titleFont;
+        messageFont = popupData.messageFont;
+        SetTitle(popupData.title);
+        SetMessage(popupData.message);
+        SetInputAction(popupData.exitAction);
+        StoreFollowupPopup(popupData.followupPopup);
+        SetLocation((int)popupData.location);
+    }
+
+    public void StoreFollowupPopup(PopupScriptableObject followupData)
+    {
+        followupPopup = followupData;
+    }
+
     [Header("Colors\n")] 
     public Color heartBackgroundColor;
     public Color heartTitleColor;
@@ -51,6 +89,45 @@ public class PopupHandler : MonoBehaviour
         resetPosition();
     }
 
+    public void SetLocation(int local)
+    {
+        Vector2 position;
+        switch ((Location)local)
+        {
+            case Location.LEFT:
+                position = new Vector2(680, 0);
+                break;
+            case Location.RIGHT:
+                position = new Vector2(-680, 0);
+                break;
+            case Location.TOP:
+                position = new Vector2(0, 330);
+                break;
+            case Location.TOP_LEFT:
+                position = new Vector2(680, 330);
+                break;
+            case Location.TOP_RIGHT:
+                position = new Vector2(-680, 330);
+                break;
+            default:
+                position = new Vector2(680, 0);
+                break;
+        }
+        container.GetComponent<RectTransform>().anchoredPosition = position;
+        originalPosition = container.GetComponent<RectTransform>().anchoredPosition;
+        
+    }
+
+    public void SetInputAction(string input_name)
+    {
+        ExitInputAction = inputActions.FindAction(input_name);
+    }
+
+    public void SetPosition(Vector2 position)
+    {
+        container.GetComponent<RectTransform>().anchoredPosition = position;
+    }
+
     private void resetPosition()
     {
         //halt all current routines
@@ -64,7 +141,7 @@ public class PopupHandler : MonoBehaviour
     }
     public void ShowPopup()
     {
-        if (popupOpen) return;
+        if (popupOpen) HidePopup();
         resetPosition();
         StartCoroutine(MovePopup());
         StartCoroutine(FadePopupIn());
@@ -72,9 +149,19 @@ public class PopupHandler : MonoBehaviour
 
     public void HidePopup()
     {
+        StopAllCoroutines(); //avoids the edge case of a sequencial call of show then  where both coroutines are coexisting and fighting against eachother 
         if(!popupOpen) return;
-        StartCoroutine(MovePopup());
-        StartCoroutine(FadePopupOut());
+        if (followupPopup != null) //if we have a followup popup stored
+        {
+            popupOpen = false; //avoid loop
+            ShowPopup(); //resets position, starts playing animation to show popup (must do this first before setting values)
+            setPopup(followupPopup); //set our values to that temporary stored popup
+        }
+        else //otherwise do normal behavior
+        {
+            StartCoroutine(MovePopup());
+            StartCoroutine(FadePopupOut());
+        }
     }
 
     IEnumerator MovePopup()

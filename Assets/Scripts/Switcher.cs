@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class Switcher : MonoBehaviour
 {
     Controls input;
     public bool canSwitch;
+
+    public UnityEvent<int> onSwitch;
 
     [Tooltip("1 is heart and 2 is mind")]
     public int activeCharacter; 
@@ -122,6 +125,7 @@ public class Switcher : MonoBehaviour
 
     public void switchCharacter()
     {
+
         if (!canSwitch) return;
         if(activeCharacter == 1)
         {
@@ -162,6 +166,8 @@ public class Switcher : MonoBehaviour
             mindMovement.turnedOn = false;
             heartMovement.turnedOn = true;
         }
+
+        onSwitch.Invoke(activeCharacter);
     }
     IEnumerator MoveAndLook()
     {

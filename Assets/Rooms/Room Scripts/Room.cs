@@ -9,11 +9,9 @@ using Yarn.Compiler;
 
 // if the room is currently not the "selected" one (the one the player is in), draw a rectangle to cover it.
 // addition: we could make this juicy and appear / disappear in fun ways
-
-
 public class Room : MonoBehaviour
 {
-    private bool isRoomDiscovered = false;
+    private bool isRoomDiscovered = false; 
     // room width and height
     public int room_width;
     public int room_height;
@@ -143,7 +141,7 @@ public class Room : MonoBehaviour
         if(collision.transform == RoomTracker.target )
         {
             room_is_selected = false;
-            RoomTracker.current_room = null;
+            if(RoomTracker.current_room == this) RoomTracker.current_room = null;
             OnExit.Invoke();
             //StartCoroutine(NullRoomTimer(0.1f));
         }
