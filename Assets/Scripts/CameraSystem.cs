@@ -272,6 +272,7 @@ public class CameraSystem : MonoBehaviour
         Vector2 spawnPos = target.transform.position;
 
         otherCharacter.transform.position = RoomTracker.current_room.mindBusStops[0].position;
+        otherCharacter.GetComponent<MindTeleporting>().currentBusStop = RoomTracker.current_room.mindBusStops[0];
         otherCharacter.GetComponent<MindTeleporting>().busStops = RoomTracker.current_room.mindBusStops;
         otherCharacter.GetComponent<MindTeleporting>();
         DOVirtual.Float(0, 1, characterMaterialization, SpriteAlpha);

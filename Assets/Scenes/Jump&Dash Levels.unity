@@ -1048,11 +1048,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 444918310394211783, guid: 6a7e67304dc879744aae9b0fb84e4037, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.4
+      value: -12.5
       objectReference: {fileID: 0}
     - target: {fileID: 444918310394211783, guid: 6a7e67304dc879744aae9b0fb84e4037, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.7
+      value: -8.7
       objectReference: {fileID: 0}
     - target: {fileID: 444918310394211783, guid: 6a7e67304dc879744aae9b0fb84e4037, type: 3}
       propertyPath: m_LocalPosition.z
@@ -171081,9 +171081,33 @@ PrefabInstance:
       propertyPath: sfx_teleport.Guid.Data4
       value: -985501108
       objectReference: {fileID: 0}
+    - target: {fileID: 1335169178527859782, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335169178527859782, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2046843607443177467, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
       propertyPath: m_Name
       value: Mind Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561311601825996540, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2561311601825996540, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915201256279456324, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915201256279456324, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3930139759778371251, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -171124,6 +171148,14 @@ PrefabInstance:
     - target: {fileID: 3930139759778371251, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008041054483063837, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008041054483063837, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

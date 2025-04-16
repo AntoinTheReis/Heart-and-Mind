@@ -28,6 +28,8 @@ public class DamageAndRespawn : MonoBehaviour
     //Z = type of object. 1) Block 2) Glass
     private List<Vector3> resetableAngles;
 
+    private Animator characterAnimator;
+
     #region Audio
     public FMODUnity.EventReference sfx_death;
     FMOD.Studio.EventInstance sfx_deathInstance;
@@ -44,6 +46,8 @@ public class DamageAndRespawn : MonoBehaviour
         resetables = new List<GameObject>();
         resetableAngles = new List<Vector3>();
         resetableValues = new List<Vector3>();
+
+        characterAnimator = GetComponentInChildren<Animator>();
 
         curtain = GameObject.FindGameObjectWithTag("DeathCurtain").GetComponent<Animator>();
         collider2d = GetComponent<Collider2D>();
@@ -123,6 +127,8 @@ public class DamageAndRespawn : MonoBehaviour
             DOVirtual.Float(dragDashMax, 0, respawnTime, RigidbodyDrag);
             rb.AddForce(dir * damagePush);
 
+            characterAnimator.SetBool("Dead", true);
+
             StartCoroutine(Respawn());
         }
 
@@ -153,6 +159,8 @@ public class DamageAndRespawn : MonoBehaviour
         yield return new WaitForSeconds(respawnTime);
         curtain.SetTrigger("Died");
         yield return new WaitForSeconds(0.3f);
+
+        characterAnimator.SetBool("Dead", false);
 
         GameObject[] shards = GameObject.FindGameObjectsWithTag("Broken Shards");
         for (int i = 0; i < shards.Length; i++)
