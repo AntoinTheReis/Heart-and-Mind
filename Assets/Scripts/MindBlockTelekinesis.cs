@@ -103,7 +103,7 @@ public class MindBlockTelekinesis : MonoBehaviour
             if (BlockTracker.lastBlockSelected == null || BlockTracker.lastBlockSelected.IsOffScreen())
             {
                 Debug.Log("Last block selected was: " + BlockTracker.lastBlockSelected);
-                Debug.Log("Last block was offscreen is: " + BlockTracker.lastBlockSelected.IsOffScreen());
+                if(BlockTracker.lastBlockSelected != null) Debug.Log("Last block was offscreen is: " + BlockTracker.lastBlockSelected.IsOffScreen());
 
                 selectedBlockNode = BlockTracker.BlocksOnScreen.First;
                 BlockTracker.lastBlockSelected = selectedBlockNode.Value.GetComponent<Block>();
