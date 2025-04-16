@@ -34,7 +34,7 @@ public class MindTeleporting : MonoBehaviour
 
     private MindBlockTelekinesis telekinesis;
 
-    private Transform currentBusStop;
+    public Transform currentBusStop;
 
     #region Audio
     public FMODUnity.EventReference sfx_teleport;
@@ -91,7 +91,7 @@ public class MindTeleporting : MonoBehaviour
         }
 
         if (optionNorth != null && movementMode)
-        {
+        { 
             AdjustPosition(northArrow.transform, optionNorth.transform.position);
             PointAt(northArrow.transform, optionNorth.transform.position);
             northArrow.GetComponent<SpriteRenderer>().enabled = true;
