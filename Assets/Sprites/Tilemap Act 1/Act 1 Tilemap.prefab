@@ -1104,6 +1104,24 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
+  - m_RefCount: 0
+    m_Data:
+      e00: 1.19138225e+20
+      e01: 1e-44
+      e02: -1.0897562e+11
+      e03: 0
+      e10: 1.88e-43
+      e11: NaN
+      e12: 4.5904e-41
+      e13: 0
+      e20: 5.7879e-41
+      e21: 0
+      e22: 1.1913808e+20
+      e23: 0
+      e30: 0
+      e31: 7.34684e-40
+      e32: 1.88e-43
+      e33: 1
   m_TileColorArray:
   - m_RefCount: 71
     m_Data: {r: 1, g: 1, b: 1, a: 1}
@@ -1111,7 +1129,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -1, y: -8, z: 0}
-  m_Size: {x: 8, y: 9, z: 1}
+  m_Size: {x: 9, y: 9, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -1173,7 +1191,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.25, y: 0.2501831, z: 0}
+  m_ChunkCullingBounds: {x: 0.25187975, y: 0.25206333, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0

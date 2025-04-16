@@ -5,6 +5,7 @@ using System.Diagnostics.Tracing;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class PopupHandler : MonoBehaviour
@@ -15,6 +16,10 @@ public class PopupHandler : MonoBehaviour
     [SerializeField] GameObject container;
     
     [SerializeField] private float popupSpeed;
+
+    [SerializeField] private InputActionAsset inputActions;
+
+    private InputAction ExitInputAction;
     
     private bool popupOpen = false;
 
@@ -25,7 +30,12 @@ public class PopupHandler : MonoBehaviour
     {
         NONE, HEART, MIND
     }
-    
+
+    private void Update()
+    {
+        if (ExitInputAction != null && ExitInputAction.triggered) HidePopup();
+    }
+
     public Recipient recipient;
     
     [Header("Colors\n")] 
@@ -51,11 +61,22 @@ public class PopupHandler : MonoBehaviour
         resetPosition();
     }
 
+    public void setInputAction(string input_name)
+    {
+        ExitInputAction = inputActions.FindAction(input_name);
+    }
+
+    public void setPosition(Vector2 position)
+    {
+        container.GetComponent<RectTransform>().anchoredPosition = position;
+    }
+
     private void resetPosition()
     {
         //halt all current routines
         StopAllCoroutines();
         popupOpen = false;
+        ExitInputAction = null;
         //hide canvas container and get ready to show
         container.GetComponent<CanvasGroup>().alpha = 0;
         container.GetComponent<RectTransform>().anchoredPosition = originalPosition;
@@ -64,7 +85,7 @@ public class PopupHandler : MonoBehaviour
     }
     public void ShowPopup()
     {
-        if (popupOpen) return;
+        if (popupOpen) HidePopup();
         resetPosition();
         StartCoroutine(MovePopup());
         StartCoroutine(FadePopupIn());
