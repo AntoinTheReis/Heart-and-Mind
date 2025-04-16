@@ -301,7 +301,6 @@ public class Movement : MonoBehaviour
         AnimationCheck();
 
     }
-
     private void Jump()
     {
         #region Jump Audio
@@ -424,7 +423,7 @@ public class Movement : MonoBehaviour
         Vector2 dir = new Vector2(x, y);
         DOVirtual.Float(dragDashMax, 0, dragDashDuration, RigidbodyDrag);
 
-        rb.velocity += dir.normalized * dashSpeed;
+        rb.velocity = dir.normalized * dashSpeed;
         StartCoroutine(DashWait());
     }
 
