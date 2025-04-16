@@ -1,13 +1,13 @@
 ﻿title: EndOfTutorial
 tags:
 ---
-<<Camera pan Heart>>
+<<pan Camera Heart>>
 HEART: Wow, you're actually useful!
-<<Camera pan Mind>>
+<<pan Camera Mind>>
 <<wait 0.2>>
 MIND: Can it, biggie.
 HEART: WHY ARE YOU SO MEAN TO ME
 MIND: We don't have time to waste. Let's go.
-<<Camera pan Heart>>
+<<pan Camera Heart>>
 HEART: THATS SO EXCUSE TO CALL ME BIGGIE
 ===
