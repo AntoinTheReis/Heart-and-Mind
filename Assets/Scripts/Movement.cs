@@ -52,6 +52,7 @@ public class Movement : MonoBehaviour
     public float dashWait = 0.3f;
     public float dragDashDuration = 0.8f;
     public float dragDashMax = 14f;
+    public float dashGray = 0.66f;
     public bool isDashing = false;
     private bool canDash = true;
     private bool dashHitStop;
@@ -387,6 +388,7 @@ public class Movement : MonoBehaviour
         if (!isDashing && onFloor)
         {
             canDash = true;
+            spriterenderer.color = new UnityEngine.Color(1, 1, 1, 1);
         }
     }
 
@@ -414,6 +416,7 @@ public class Movement : MonoBehaviour
             dashDirection = -1;
         }
 
+        spriterenderer.color = new UnityEngine.Color(dashGray, dashGray, dashGray, 1);
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
         horizontal_movement = 0;
@@ -433,6 +436,7 @@ public class Movement : MonoBehaviour
         yield return new WaitForSeconds(dashWait);
 
         if (!respawn.respawning) rb.gravityScale = 5;
+
         isDashing = false;
     }
 
@@ -477,7 +481,7 @@ public class Movement : MonoBehaviour
         rb.drag = 0;
         isDashing = false;
 
-        if(onWalls && !onFloor)
+        if (onWalls && !onFloor)
         {
             float direction = wallSide * -1;
             transform.position = new Vector2(nudgeWall * direction * Time.timeScale + transform.position.x, transform.position.y);
