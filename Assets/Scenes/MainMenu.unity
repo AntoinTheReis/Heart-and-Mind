@@ -174,6 +174,7 @@ MonoBehaviour:
       Data3: -1560931447
       Data4: 2122768389
     Path: event:/MX_WhereYouAre
+  fadeValue: 0
   fmodEvent1:
     Guid:
       Data1: -951741740
@@ -188,6 +189,8 @@ MonoBehaviour:
       Data3: 2077444775
       Data4: 1183154189
     Path: event:/SFX_UIConfirm
+  currentValue1: 0
+  targetValue1: 0
 --- !u!1 &95707307
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,10 +250,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: b9b9718491f43cc42ad6a8db4f44d465, type: 3}
-    m_FontSize: 42
+    m_FontSize: 0
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 42
     m_Alignment: 7
     m_AlignByGeometry: 0
@@ -302,8 +305,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -402, y: 123.63635}
-  m_SizeDelta: {x: 826.56665, y: 312.2353}
+  m_AnchoredPosition: {x: -228, y: 53}
+  m_SizeDelta: {x: 331.0834, y: 125.0666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &317114696
 MonoBehaviour:
@@ -352,8 +355,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 120
-  m_fontSizeBase: 120
+  m_fontSize: 59.1
+  m_fontSizeBase: 59.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -436,7 +439,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 2, y: -89}
   m_SizeDelta: {x: 826.56665, y: 312.2353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &419902819
@@ -486,8 +489,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 120
-  m_fontSizeBase: 120
+  m_fontSize: 59.1
+  m_fontSizeBase: 59.1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -573,8 +576,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -528, y: -78.142}
-  m_SizeDelta: {x: 414.4887, y: 77.7163}
+  m_AnchoredPosition: {x: -200.57028, y: -43.553116}
+  m_SizeDelta: {x: 166.0245, y: 31.1295}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &457315588
 MonoBehaviour:
@@ -755,10 +758,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: b9b9718491f43cc42ad6a8db4f44d465, type: 3}
-    m_FontSize: 42
+    m_FontSize: 0
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 42
     m_Alignment: 7
     m_AlignByGeometry: 0
@@ -809,8 +812,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000076294, y: -11.007}
-  m_SizeDelta: {x: 2009.4314, y: 1102.0139}
+  m_AnchoredPosition: {x: 10.9214, y: -16.662}
+  m_SizeDelta: {x: 804.8828, y: 441.4144}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &947198290
 MonoBehaviour:
@@ -884,8 +887,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -528, y: 44}
-  m_SizeDelta: {x: 414.4887, y: 77.7163}
+  m_AnchoredPosition: {x: -200.5703, y: 5.3711}
+  m_SizeDelta: {x: 166.0245, y: 31.1295}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1058061074
 MonoBehaviour:
@@ -1042,8 +1045,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000022888, y: -12.201}
-  m_SizeDelta: {x: 2128.309, y: 1099.6263}
+  m_AnchoredPosition: {x: -14.2557, y: -4.1321}
+  m_SizeDelta: {x: 902.8538, y: 466.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1512403871
 MonoBehaviour:
@@ -1333,7 +1336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
