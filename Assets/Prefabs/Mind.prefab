@@ -302,11 +302,11 @@ MonoBehaviour:
   prefabGlass: {fileID: 0}
   sfx_death:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2019866892
+      Data2: 1111637155
+      Data3: 236896136
+      Data4: 1534486891
+    Path: event:/SFX_HeartDeath
 --- !u!114 &7237773892070292257
 MonoBehaviour:
   m_ObjectHideFlags: 0
