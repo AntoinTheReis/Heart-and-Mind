@@ -6,7 +6,7 @@ Madaline: I’m sorry! I…did that… you…
 <<wait  1>>
 Madaline: …Can I kiss you again, Lana?
 
-<<wait  6>>
+<<wait  2>>
 
 Lana's Mom: Girls! Come down and help set the table! Lana!
 
@@ -14,61 +14,58 @@ Lana: We’re coming, Mom!
 
 Lana: Come on, let’s go.
 
-<<wait  6>>
+<<wait  2>>
 
 Madaline: Can we go to your place?
 
 Lana: ...Sure.
 
-“Lana…” You say her name, nerves tightening in your chest like before an exam.
-She’s nervous too—you can feel it in the slight dampness of her palm.
-“What is it, Mad…”
-“Can you… be my girlfriend?”
-…
-Silence. Suffocating silence.
-“Please, Lana, say something…”
-“We shouldn’t. We are both—”
-You cut her off.
-“Do you not feel anything for me at all?”
-Anger. Frustration. The sting of rejection swallows you whole.
-You leave Lana behind and run.
-Lana’s quietness always infuriated you. You wanted her to chase after you, to yell at you, to feel something—anything. But she just kept attending class, saying her prayers, even getting closer to other guys.
-Whatever. It’s not like you didn’t have admirers too.
-So you played along, going out with the boys who pursued you.
-Of course, Lana never came looking for you.
-The night before prom, you went to find her, a bouquet of roses in hand.
-But what you saw was her, eyes closed, kissing another guy.
-Your Lana. Sweet, shy Lana. Your Lana.
-How does a kiss feel like?
- Bitter. Like the taste of your own tears slipping past your lips.
-That semester, Lana moved away.
-When you saw her again, she had changed.
-Vibrant red hair. Smudged smoky eyeliner. Those green eyes—still pulling you back to that scorching summer when you were fourteen.
-But the dark circles under them, barely concealed by foundation, told another story. She was more beautiful. More exhausted.
-You didn’t know why Lana chose to return to Crown Heights, or why she came to see you.
-You had changed too. The curve of your belly. The absence of a ring on your finger.
-Lana was always busy—traveling for work, never staying long.
-You two just had coffee. You didn’t even order coffee, opting for hot tea instead—because you wanted only the best for the child growing inside you.
-“Lana.”
-Before she left, you stopped her.
-“If you’re free this weekend, would you come over?” You fidgeted nervously. “There’s… more I want to say.”
-Lana hesitated, then nodded. And left.
-That weekend, as you waited—anxious, expectant—in your tiny apartment, you hit your stomach against the counter.
-Your water broke early.
-By the time the ambulance arrived, you were biting down on your pain, forcing yourself to leave a note. God, you regretted not asking for Lana’s number.
-You told them to write down the hospital name and your condition—before the agony swallowed you whole, and you blacked out.
-Lana found the note.
-She had never pressed the gas pedal so hard in her life.
-Her Mad. The brightest star of her youth.
-And in the final moment of her life, as the car flipped over, time seemed to freeze.
-The bouquet of roses in her backseat tumbled, torn apart by the violent crash, petals scattering into the air and drop to the ground. 
-<<wait  7>>
-Your hospital door opened.
-Your family surrounded you, stroking your sweat-soaked hair.
-The baby cried softly beside you.
-She never showed up.
-You sighed.
-Maybe it was time to finally let go.
+// “Lana…” You say her name, nerves tightening in your chest like before an exam.
+// She’s nervous too—you can feel it in the slight dampness of her palm.
+// “What is it, Mad…”
+// “Can you… be my girlfriend?”
+// “Please, Lana, say something…”
+// “We shouldn’t. We are both—”
+// “Do you not feel anything for me at all?”
+// Anger. Frustration. The sting of rejection swallows you whole.
+// You leave Lana behind and run.
+// Lana’s quietness always infuriated you. You wanted her to chase after you, to yell at you, to feel something—anything. But she just kept attending class, saying her prayers, even getting closer to other guys.
+// Whatever. It’s not like you didn’t have admirers too.
+// So you played along, going out with the boys who pursued you.
+// Of course, Lana never came looking for you.
+// The night before prom, you went to find her, a bouquet of roses in hand.
+// But what you saw was her, eyes closed, kissing another guy.
+// Your Lana. Sweet, shy Lana. Your Lana.
+// How does a kiss feel like?
+//  Bitter. Like the taste of your own tears slipping past your lips.
+// That semester, Lana moved away.
+// When you saw her again, she had changed.
+// Vibrant red hair. Smudged smoky eyeliner. Those green eyes—still pulling you back to that scorching summer when you were fourteen.
+// But the dark circles under them, barely concealed by foundation, told another story. She was more beautiful. More exhausted.
+// You didn’t know why Lana chose to return to Crown Heights, or why she came to see you.
+// You had changed too. The curve of your belly. The absence of a ring on your finger.
+// Lana was always busy—traveling for work, never staying long.
+// You two just had coffee. You didn’t even order coffee, opting for hot tea instead—because you wanted only the best for the child growing inside you.
+// “Lana.”
+// Before she left, you stopped her.
+// “If you’re free this weekend, would you come over?” You fidgeted nervously. “There’s… more I want to say.”
+// Lana hesitated, then nodded. And left.
+// That weekend, as you waited—anxious, expectant—in your tiny apartment, you hit your stomach against the counter.
+// Your water broke early.
+// By the time the ambulance arrived, you were biting down on your pain, forcing yourself to leave a note. God, you regretted not asking for Lana’s number.
+// You told them to write down the hospital name and your condition—before the agony swallowed you whole, and you blacked out.
+// Lana found the note.
+// She had never pressed the gas pedal so hard in her life.
+// Her Mad. The brightest star of her youth.
+// And in the final moment of her life, as the car flipped over, time seemed to freeze.
+// The bouquet of roses in her backseat tumbled, torn apart by the violent crash, petals scattering into the air and drop to the ground. 
+// <<wait  7>>
+// Your hospital door opened.
+// Your family surrounded you, stroking your sweat-soaked hair.
+// The baby cried softly beside you.
+// She never showed up.
+// You sighed.
+// Maybe it was time to finally let go.
 
 <<NextScene SceneScriptHolder>>
 

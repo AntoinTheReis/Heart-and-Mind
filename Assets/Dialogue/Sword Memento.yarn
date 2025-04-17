@@ -9,7 +9,7 @@ Leon: <i> Ich bin Lohengrin!! (I am Lohengrin) </i>
 <<wait  3>>
 
 Leon: Oma… 
-<<wait  4>>
+<<wait  2>>
 
 Leon: ich mag die Geschichte nicht. Warum ist Lohengrin gegangen..? (Grandma, I don't like the story. why lohengrin left)
 
@@ -24,39 +24,37 @@ Madiline: Learn English, kiddo.
 
 Leon: I speak English, I know.
 
-<<wait  5>>
+// <<wait  2>>
 
-Leon: Oma, read story by me.
+// Leon: Oma, read story by me.
 
-Madiline: Lohengrin? Of course!
+// Madiline: Lohengrin? Of course!
 
-<<wait  6>>
+// <<wait 3>>
 
-Daughter: Mom, we can’t let him take this on the flight.
+// Daughter: Mom, we can’t let him take this on the flight.
 
-Madiline: Grandma will take care of it, alright? Next time you come, I promise it will be just as sharp.
+// Madiline: Grandma will take care of it, alright? Next time you come, I promise it will be just as sharp.
 
-<<wait  4>>
+// <<wait  1.5>>
 
-Madiline: When will you come next?
+// Madiline: When will you come next?
 
-Daughter: I’m sorry, Mom, you know his job.
+// Daughter: I’m sorry, Mom, you know his job.
 
-???: Mad, we’ll try to visit more often.
-<<wait  7>>
+// ???: Mad, we’ll try to visit more often.
 
-???: Du solltest Leon nicht alleine mit der alten Dame lassen." (You shouldn’t have let Leon alone with her)
+// <<wait  1.5>>
 
-Daughter: Mom, I’m taking Leon back.
+// ???: Du solltest Leon nicht alleine mit der alten Dame lassen." (You shouldn’t have let Leon alone with her)
 
-<<wait  3>>
+// Daughter: Mom, I’m taking Leon back.
 
-Daughter: Take care of yourself, Mom. He’s… busy. We gotta get back.”
-<<wait  3>>
+// <<wait 1>>
 
-Madiline: I’m sorry.
+// Daughter: Take care of yourself, Mom. He’s… busy. We gotta get back.”
+// <<wait 2>>
 
+// Madiline: I’m sorry.
 
-
-
-===
+ ===
