@@ -8,21 +8,21 @@ Madiline: <b> Should I capture this rook or force the king to move first? <b>//m
 Madiline: <b> I think I will capture the rook. It will force the king to move. <b>
 
 
-<<wait 3.5>>
+// <<wait 3.5>>
 
-Madiline: <b>Your turn.<b>
+// Madiline: <b>Your turn.<b>
 
-<<wait 3.2>>
+// <<wait 3.2>>
 
-Madiline: <b> <I> Why?! I will defeat him! <I> <b>//make this italic and bold
+// Madiline: <b> <I> Why?! I will defeat him! <I> <b>//make this italic and bold
 
-<<wait 3.5>>
+// <<wait 3.5>>
 
-Madiline: <b> <I> I will not lose to him! <I> <b>//make this italic and bold
+// Madiline: <b> <I> I will not lose to him! <I> <b>//make this italic and bold
  
-<<wait 1>>
+// <<wait 1>>
 
-Lana: <b> Mad, want to play a game? <b>
+// Lana: <b> Mad, want to play a game? <b>
 
-Madiline: <b> I don’t play anymore. <b>
+// Madiline: <b> I don’t play anymore. <b>
 ===
