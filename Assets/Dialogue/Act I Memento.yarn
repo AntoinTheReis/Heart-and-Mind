@@ -8,7 +8,7 @@ MIND: When I left my palace, there was an intense storm. The damage from it must
 HEART: I guess that makes sense. But it’s still a bummer. I mean, look at this place! It’s like a ghost town.
 
 MIND: What is that? I cannot make it out from where I am.
-<<pan Camera memento>>
+<<pan Camera Memento_Prefab(Chess)>>
 
 HEART:It looks like a rook chess piece, I think.
 
