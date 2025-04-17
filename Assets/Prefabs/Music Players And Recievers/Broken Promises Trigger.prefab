@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameterValue: 0
+  pause: 0
   speaker: {fileID: 7373685036282754441, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
 --- !u!61 &1873654366662151934
 BoxCollider2D:

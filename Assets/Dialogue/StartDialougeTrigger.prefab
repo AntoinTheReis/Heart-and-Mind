@@ -46,6 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startNode: Test
+  OnDialogueFinished:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &5560352413809619805
 BoxCollider2D:
   m_ObjectHideFlags: 0

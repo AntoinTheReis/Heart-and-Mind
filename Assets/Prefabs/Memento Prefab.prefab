@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 57958b6a20cf6e8458d1462910fb0610, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 44ad8abc57afc864689ed6b102f198bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 5351063134268076577}
   - component: {fileID: 4545891297010974569}
   - component: {fileID: 8476539242747674280}
+  - component: {fileID: 7142590554564481759}
   - component: {fileID: 6140961080312903145}
   m_Layer: 0
   m_Name: Memento Prefab
@@ -228,6 +229,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7142590554564481759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2908399795424701684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7785a20f8c98ddf43a6d45ad8b024a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startNode: Rose_Memento
+  OnDialogueFinished:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6140961080312903145
 MonoBehaviour:
   m_ObjectHideFlags: 0
