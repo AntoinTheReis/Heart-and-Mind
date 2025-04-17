@@ -193,6 +193,13 @@ MonoBehaviour:
   brokenPrefab: {fileID: 9039299979800841926, guid: f97cc00ad7d127d448a937791b25f6d1, type: 3}
   thisCollider: {fileID: 5267124200096289238}
   heart: {fileID: 0}
+  glassBreak:
+    Guid:
+      Data1: 224271910
+      Data2: 1178769310
+      Data3: -5331324
+      Data4: -806386337
+    Path: event:/SFX_GlassBreak
 --- !u!61 &7181382133653209190
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -9,10 +9,20 @@ public class BreakableGlass : MonoBehaviour
     [SerializeField] Collider2D thisCollider;
     public GameObject heart;
 
+
+    #region Audio
+    public FMODUnity.EventReference glassBreak;
+    FMOD.Studio.EventInstance sfx_glassBreakInstance;
+    #endregion
+
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i < 2; i++)
+        #region Audio EventInstances
+        sfx_glassBreakInstance = FMODUnity.RuntimeManager.CreateInstance(glassBreak);
+        #endregion
+
+        for (int i = 0; i < 2; i++)
         {
             if(GameObject.FindGameObjectsWithTag("Player")[i].GetComponent<Movement>() != null)
             {
@@ -36,6 +46,7 @@ public class BreakableGlass : MonoBehaviour
         if (collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<Movement>().isDashing)
         {   
             Instantiate(brokenPrefab, transform.position, transform.rotation);
+            sfx_glassBreakInstance.start();
             Destroy(gameObject);
         }
     }

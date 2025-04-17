@@ -128,6 +128,13 @@ MonoBehaviour:
       Data3: -1932107646
       Data4: -537073889
     Path: event:/SFX_MindDeselect
+  cloud:
+    Guid:
+      Data1: -1223604913
+      Data2: 1196671221
+      Data3: 826369980
+      Data4: 923866249
+    Path: event:/SFX_BlockPlace Cloud
 --- !u!50 &6574169198173939630
 Rigidbody2D:
   serializedVersion: 4
@@ -140,7 +147,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 50
+  m_Mass: 47.19
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1

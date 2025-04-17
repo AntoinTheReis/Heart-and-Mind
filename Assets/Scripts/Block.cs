@@ -41,6 +41,8 @@ public class Block : MonoBehaviour
     FMOD.Studio.EventInstance sfx_selectInstance;
     public FMODUnity.EventReference deselect;
     FMOD.Studio.EventInstance sfx_deselectInstance;
+    public FMODUnity.EventReference cloud;
+    FMOD.Studio.EventInstance sfx_cloudInstance;
     #endregion
 
     //this is the most unoptimized pile of dogshit iv ever written but it works so well
@@ -51,6 +53,7 @@ public class Block : MonoBehaviour
         #region Audio EventInstances
         sfx_selectInstance = FMODUnity.RuntimeManager.CreateInstance(select);
         sfx_deselectInstance = FMODUnity.RuntimeManager.CreateInstance(deselect);
+        sfx_cloudInstance = FMODUnity.RuntimeManager.CreateInstance(cloud);
         #endregion
 
         rb = GetComponent<Rigidbody2D>();
@@ -186,6 +189,12 @@ public class Block : MonoBehaviour
                 return;
 
             case 9: //cloud
+                #region Block Select Audio
+                if (sfx_cloudInstance.isValid())
+                {
+                    sfx_cloudInstance.start();
+                }
+                #endregion
                 Physics2D.IgnoreCollision(collider, collision.collider, transform.position.y < collision.transform.position.y);
                 return;
 

@@ -214,6 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameterValue: 0.6
+  pause: 0
   speaker: {fileID: 712107033}
 --- !u!1 &132277919
 GameObject:
@@ -311,10 +312,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -4594681738906803558, guid: 9883322c3734a3e4a9da4ec777d5cf7e, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3709767019843197429, guid: 9883322c3734a3e4a9da4ec777d5cf7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.27
@@ -455,6 +452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameterValue: 0.6
+  pause: 0
   speaker: {fileID: 712107033}
 --- !u!4 &226049972 stripped
 Transform:
@@ -802,6 +800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameterValue: 0.3
+  pause: 0
   speaker: {fileID: 712107033}
 --- !u!1001 &410528446
 PrefabInstance:
@@ -6789,6 +6788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameterValue: 1.3
+  pause: 0
   speaker: {fileID: 712107033}
 --- !u!1 &519420028
 GameObject:
@@ -7232,6 +7232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameterValue: 0.9
+  pause: 0
   speaker: {fileID: 712107033}
 --- !u!1 &712107033 stripped
 GameObject:
@@ -32203,6 +32204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameterValue: 1.01
+  pause: 0
   speaker: {fileID: 712107033}
 --- !u!1 &1437909842
 GameObject:
@@ -32295,6 +32297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parameterValue: 0
+  pause: 0
   speaker: {fileID: 712107033}
 --- !u!1001 &1477510502
 PrefabInstance:
@@ -43223,10 +43226,6 @@ PrefabInstance:
     - target: {fileID: 4605729041515664850, guid: 9883322c3734a3e4a9da4ec777d5cf7e, type: 3}
       propertyPath: m_Name
       value: Block
-      objectReference: {fileID: 0}
-    - target: {fileID: 6574169198173939630, guid: 9883322c3734a3e4a9da4ec777d5cf7e, type: 3}
-      propertyPath: m_Mass
-      value: 47.19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
