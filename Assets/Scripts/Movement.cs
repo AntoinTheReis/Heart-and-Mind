@@ -555,4 +555,9 @@ public class Movement : MonoBehaviour
 
         horizontal_movement = currentFloorSpeed;
     }
+
+    public void StopWalkSound()
+    {
+        sfx_walkInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
 }
