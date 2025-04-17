@@ -129,9 +129,12 @@ public class MindTeleporting : MonoBehaviour
             lateStart = true;
 
             busStops = RoomTracker.current_room.mindBusStops;
-            transform.position = busStops[0].position;
+            if(busStops.Count > 0)
+            {
+                transform.position = busStops[0].position;
 
-            currentBusStop = busStops[0];
+                currentBusStop = busStops[0];
+            }
         }
 
         if (switcher.activeCharacter == 1 || telekinesis.active)
