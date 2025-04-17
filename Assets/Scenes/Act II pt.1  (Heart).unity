@@ -171172,6 +171172,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9100417986695489772, guid: 76f2d6841676b37409cfbd4faaa7c88a, type: 3}
+      propertyPath: canSwitch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100417986695489772, guid: 76f2d6841676b37409cfbd4faaa7c88a, type: 3}
       propertyPath: mindObject
       value: 
       objectReference: {fileID: 1783242380}
