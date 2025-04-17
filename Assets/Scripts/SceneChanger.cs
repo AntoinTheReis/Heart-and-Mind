@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Yarn.Unity;
 
 
 public class SceneChanger : MonoBehaviour
@@ -31,6 +32,8 @@ public class SceneChanger : MonoBehaviour
         
     }
 
+
+    [YarnCommand("NextScene")]
     public void NextScene()
     {
         FadeOut();
