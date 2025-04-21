@@ -1,60 +1,18 @@
 ﻿title: Sword_Memento
 tags:
 ---
-Leon: Let me save you, Elsa! Meine Prinzessin…!”
-Madiline: My princess. 
+??? 1: Let me save you!
 
-Leon: <i> Ich bin Lohengrin!! (I am Lohengrin) </i>
+??? 2: Learn English, kiddo.
 
-<<wait  3>>
+??? 1: I speak English, I know.
 
-Leon: Oma… 
-<<wait  2>>
+<<wait  0.5>>
 
-Leon: ich mag die Geschichte nicht. Warum ist Lohengrin gegangen..? (Grandma, I don't like the story. why lohengrin left)
+??? 3: Take care of yourself, Mom. He’s… busy. We gotta get back.
 
-Daughter: Leon, speak English! Oma spricht kein Deutsch. (Grandma doesn’t speak German)
+<<wait 1>>
 
-Leon: Why… why Lohengrin go from Prinzessin?
-
-Madiline: Because we all have our own futures. We don’t stop for each other. But that doesn’t mean we don’t love each other.
-<<wait  3>>
-
-Madiline: Learn English, kiddo.
-
-Leon: I speak English, I know.
-
-// <<wait  2>>
-
-// Leon: Oma, read story by me.
-
-// Madiline: Lohengrin? Of course!
-
-// <<wait 3>>
-
-// Daughter: Mom, we can’t let him take this on the flight.
-
-// Madiline: Grandma will take care of it, alright? Next time you come, I promise it will be just as sharp.
-
-// <<wait  1.5>>
-
-// Madiline: When will you come next?
-
-// Daughter: I’m sorry, Mom, you know his job.
-
-// ???: Mad, we’ll try to visit more often.
-
-// <<wait  1.5>>
-
-// ???: Du solltest Leon nicht alleine mit der alten Dame lassen." (You shouldn’t have let Leon alone with her)
-
-// Daughter: Mom, I’m taking Leon back.
-
-// <<wait 1>>
-
-// Daughter: Take care of yourself, Mom. He’s… busy. We gotta get back.”
-// <<wait 2>>
-
-// Madiline: I’m sorry.
+??? 2: I’m sorry.
 
  ===

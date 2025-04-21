@@ -1,11 +1,11 @@
 ﻿title: Chess_Piece_Memento
 tags:
 ---
-Madiline: <b> Should I capture this rook or force the king to move first? <b>//make this bold
+???: <b> Should I capture this rook or force the king to move first? <b>//make this bold
 
 <<wait 2.5>>
 
-Madiline: <b> I think I will capture the rook. It will force the king to move. <b>
+???: <b> I think I will capture the rook. It will force the king to move. <b>
 
 
 // <<wait 3.5>>
