@@ -381,7 +381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterSwitcher: {fileID: 0}
   target: {fileID: 0}
-  followSpeed: 2
+  followSpeed: 3
   zoomSpeed: 2
   timeToSetFollowSpawn: 0.2
   characterMaterialization: 0.4
