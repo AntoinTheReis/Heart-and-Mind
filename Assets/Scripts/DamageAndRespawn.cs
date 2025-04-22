@@ -134,6 +134,13 @@ public class DamageAndRespawn : MonoBehaviour
 
         if(collision.gameObject.tag == "Death")  //For deaths without knockback, such as falling in a pit
         {
+            #region Death Audio
+            if (sfx_deathInstance.isValid())
+            {
+                sfx_deathInstance.start();
+            }
+            #endregion
+
             if (heartOrMind == 1)
             {
                 movement.ZeroMovement();
