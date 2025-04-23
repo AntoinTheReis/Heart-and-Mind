@@ -2301,7 +2301,7 @@ Transform:
   m_GameObject: {fileID: 892315835}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: -16.529995, z: 0}
+  m_LocalPosition: {x: -0.40000153, y: -16.529995, z: 0}
   m_LocalScale: {x: 0.4518, y: 4.3988, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4853,7 +4853,7 @@ Transform:
   m_GameObject: {fileID: 1496307517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40, y: -16.529995, z: 0}
+  m_LocalPosition: {x: 34.6, y: -16.529995, z: 0}
   m_LocalScale: {x: 0.4518, y: 4.3988, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20238,7 +20238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.2
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20278,7 +20278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1933416818812703427, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -44.78
+      value: -25.2
       objectReference: {fileID: 0}
     - target: {fileID: 1933416818812703427, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20294,7 +20294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2027506260500518925, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.019999
+      value: -36.42
       objectReference: {fileID: 0}
     - target: {fileID: 2027506260500518925, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20314,7 +20314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: room_width
-      value: 95
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: room_height
