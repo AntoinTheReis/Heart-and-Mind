@@ -1568,7 +1568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8605797195479344478, guid: 6a7e67304dc879744aae9b0fb84e4037, type: 3}
       propertyPath: m_Name
-      value: Heart Player
+      value: Heart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
