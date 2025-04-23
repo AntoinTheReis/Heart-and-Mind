@@ -176,7 +176,10 @@ public class DamageAndRespawn : MonoBehaviour
         }
         for (int i = 0; i < resetables.Count; i++)
         {
-            if (resetableValues[i].z == 1) resetables[i].transform.position = new Vector2(resetableValues[i].x, resetableValues[i].y);
+            if (resetableValues[i].z == 1)
+            {
+                //resetables[i].transform.position = new Vector2(resetableValues[i].x, resetableValues[i].y);
+            }
             else if (resetables[i] == null)
             {
                 resetables[i] = Instantiate(prefabGlass, new Vector3(resetableValues[i].x, resetableValues[i].y, 0), Quaternion.Euler(resetableAngles[i]));

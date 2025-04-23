@@ -72,7 +72,7 @@ public class FallingPlatform : MonoBehaviour
         if (!decaying)
         {
             Debug.Log("Decaying");
-            if (collision.gameObject.name == "Heart Player")
+            if (collision.gameObject.name == "Heart")
             {
                 //Debug.Log("Got a heart");
                 StartCoroutine(HeartCheck());
@@ -98,6 +98,7 @@ public class FallingPlatform : MonoBehaviour
         startPos.x = 0;
         startPos.y = 0;
         decaying = true;
+        Debug.Log("Decay Start");
 
         yield return new WaitForSecondsRealtime(timeToDecay);
         if(decaying) StartCoroutine(Disappear());
@@ -119,9 +120,9 @@ public class FallingPlatform : MonoBehaviour
         if (targetPlayer.GetComponent<Movement>().onFloor)
         {
             StartCoroutine(DecayStart());
-            //Debug.Log("Was on floor");
+            Debug.Log("Was on floor");
         }
-        //else Debug.Log("Not on floor");
+        else Debug.Log("Not on floor");
     }
 
     IEnumerator MindCheck()
