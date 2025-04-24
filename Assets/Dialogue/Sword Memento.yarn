@@ -1,6 +1,8 @@
 ﻿title: Sword_Memento
 tags:
 ---
+<<AddBlur SceneScriptHolder>>
+
 ??? 1: Let me save you!
 
 ??? 2: Learn English, kiddo.
@@ -14,5 +16,7 @@ tags:
 <<wait 1>>
 
 ??? 2: I’m sorry.
+
+<<RemoveBlur SceneScriptHolder>>
 
  ===

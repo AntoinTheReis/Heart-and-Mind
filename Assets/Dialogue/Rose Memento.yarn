@@ -1,12 +1,22 @@
 ﻿title: Rose_Memento
 tags:
 ---
+<<AddBlur SceneScriptHolder>>
 
 ???: I’m sorry! I…did that… you…
 <<wait  1>>
 ???: …Can I kiss you again, Lana?
 
 ???: There’s… more I want to say.
+
+<<RemoveBlur SceneScriptHolder>>
+<<wait  1>>
+<<CamShake SceneScriptHolder>>
+<<wait 1.2>>
+
+HEART: ...
+HEART: What was that?
+HEART: Mind?
 
 <<NextScene SceneScriptHolder>>
 

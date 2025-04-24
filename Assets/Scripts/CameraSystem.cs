@@ -32,6 +32,8 @@ public class CameraSystem : MonoBehaviour
     [Tooltip("Number of seconds until a call of screenShake() ends")] [SerializeField] float shakeDuration = 0.2f;
     [Tooltip("The magnitude of each shake")] [SerializeField] float shakeAmount = 0.2f;
     [Tooltip("Repeat shake every n seconds. (The lower, the faster)")] [SerializeField] float shakeRate = 0.2f;
+
+    public Vector3 target_position;
     
     
     private SpriteRenderer followerSprite;
@@ -140,7 +142,7 @@ public class CameraSystem : MonoBehaviour
             Debug.LogError("No Camera target found");
             return;
         }
-        Vector3 target_position = target.transform.position;
+        target_position = target.transform.position;
 
         #region Clamping Camera's Target to Room Bounds
         if (bounded)
