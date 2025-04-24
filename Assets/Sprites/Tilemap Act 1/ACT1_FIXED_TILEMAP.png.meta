@@ -1,0 +1,1359 @@
+fileFormatVersion: 2
+guid: f296c6a0706354d899b95c37be327a6b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 399
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ham act1 tile fixed_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4230.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16bc3ed8c0dbb477db989263bb969189
+      internalID: 1997304875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_1
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 4230.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b117db73596d54c66b44cf1358097b18
+      internalID: -344051359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_2
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 4230.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee668f1516ee4a28ac0a42f22e5a222
+      internalID: 1162312176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_3
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 4230.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dde167fe9496481bb121d9fa14d238b
+      internalID: 1022687436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_4
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 4230.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6cbe3985d1542399dc0b2ecdc6f426
+      internalID: -838673419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_5
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 4230.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d06b42ac01c764306bd2ed6ee2dcbf18
+      internalID: 533898009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_6
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 4230.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b5a975cedde4b39857384856521c98
+      internalID: -1481557280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_7
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3627.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8674494896384fd9957d35e1ef6a412
+      internalID: -845792977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_8
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 3627.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afdbae43111bc4b8298c86143a8ee049
+      internalID: 783303794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_9
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 3627.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c1f4d97cb594f54a18ad7501d16612
+      internalID: 1404816957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_10
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 3627.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d869c4fb5f3ad4dfba5b2fcb0046a344
+      internalID: -799299877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_11
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 3627.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25fd06de3fa24463299cec127ad77053
+      internalID: -1097093876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_12
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 3627.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6fd0e9e5befe4e31b2dda3614fab678
+      internalID: -2044564318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_13
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 3627.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f9524ad4dd5473c8e3892f34c54293
+      internalID: -872002989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_14
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3024.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ed93c8b6ee44bd599ccf648a6889ed
+      internalID: -1303503664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_15
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 3024.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32854ec16e2945dcb204f03bad6ec98
+      internalID: -1719809099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_16
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 3024.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131a716fa1e104e1f87de7b32bf82f69
+      internalID: -2012089962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_17
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 3024.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adaa53d41e994454eb55e13f060da344
+      internalID: -1124550987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_18
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 3024.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f830da6a061b40d596cbf08dfc73a0a
+      internalID: 120815706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_19
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 3024.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c067fdf2ac5d5481c901e9f688d5cc81
+      internalID: 2107512658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_20
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 3024.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edbaef405e651446081dbbb1fc4a5ccc
+      internalID: 773731028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_21
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2421.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9a1df6feef041fd994f145cc211f08
+      internalID: -445314815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_22
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 2421.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f923019541043fdb2346638b213178
+      internalID: -1843414215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_23
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 2421.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c52d4b22cf5433d85fe6f9748f0adb
+      internalID: 931852980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_24
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 2421.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc906fd463ce4ab79efd517576393cc
+      internalID: 1770344957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_25
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 2421.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a991b5a4bab4c418d5f37439784541
+      internalID: 150214890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_26
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 2421.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc32fbeac2e24e82a2a17b5c5799103
+      internalID: 442214379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_27
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 2421.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0250fdeed358b47508bf1b68e8b9a95c
+      internalID: 902846635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_28
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1818.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18a8a695d6634d8ca27938112c33a2b
+      internalID: -1963654102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_29
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1818.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59190914468d645d4acfdf17e73f1982
+      internalID: 160165935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_30
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 1818.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab91d01eea2d46d6869b2b445ab265e
+      internalID: 574980309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_31
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 1818.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5340d2e79f34445bf894548a7787af69
+      internalID: -624652148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_32
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 1818.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ef0dfdcb56f4184bce0f7f606d30d3
+      internalID: -1087708543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_33
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 1818.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30463640047744ef3b03a8e31231c3cb
+      internalID: 1384162505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_34
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 1818.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e84f24c16f704240bfd22ff48b3e181
+      internalID: -1727051646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_35
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1215.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5e68b7892374ea68f0bbc8f58a2a0a
+      internalID: 733290608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_36
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1215.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da2d0a9ec287440eea404503322c8fef
+      internalID: 1912665952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_37
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 1215.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ae0a58ff7f04bec8ab3e5ec07e3486
+      internalID: 846101568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_38
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 1215.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1766200f7b16a4e949d321558e66dce3
+      internalID: 2049793398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_39
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 1215.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fdad54a3b79b4ca8b0a8fe11bef5109
+      internalID: 1576509730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_40
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 1215.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e48aee9ada54568bc7f0473f754f76
+      internalID: 489021827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_41
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 1215.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d3a044f0e2f4c728e91e3a26f690d0
+      internalID: -1427654453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_42
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 612.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0950e5db86c6d412fa896159a9089f5d
+      internalID: -28616175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_43
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 612.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd64cf836bb2545dcb50dd1b42df0da6
+      internalID: 629766365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_44
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 612.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d134a85c4f93c4be49f6adcdd4939ebc
+      internalID: -1869278380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_45
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 612.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9a73b88e54e4def91768ad9049884a
+      internalID: 1359500349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_46
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 612.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 422ab09e225504af1b6a52b10602cc8a
+      internalID: 554331235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_47
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 612.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e15c2fca7fc4dd0ab51deefe6c6435
+      internalID: 554427938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_48
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 612.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d689541df23084a69a942540332df5a2
+      internalID: -2094099160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_49
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 9.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ed315759a104059a533f085e4b503f
+      internalID: 918256095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_50
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 9.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff86355fcabbe41aab58cebde9b6ad64
+      internalID: 1061100875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_51
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 9.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebdcd1fc0c5c84520bf81110d4fb95d3
+      internalID: 622634827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_52
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 9.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617c8521afa404e0d8bb88053a7a1d77
+      internalID: -1000327578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_53
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 9.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a3bb9025f604776a64d925741c8c92
+      internalID: 400524231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_54
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 9.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30381d5dc407c4d08849f33e3bc282ff
+      internalID: -658352760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act1 tile fixed_55
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 9.25
+        width: 599.7143
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89a6a357f7e34cc08b5beeb56b2dec9
+      internalID: 1129153201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ham act1 tile fixed_0: 1997304875
+      ham act1 tile fixed_1: -344051359
+      ham act1 tile fixed_10: -799299877
+      ham act1 tile fixed_11: -1097093876
+      ham act1 tile fixed_12: -2044564318
+      ham act1 tile fixed_13: -872002989
+      ham act1 tile fixed_14: -1303503664
+      ham act1 tile fixed_15: -1719809099
+      ham act1 tile fixed_16: -2012089962
+      ham act1 tile fixed_17: -1124550987
+      ham act1 tile fixed_18: 120815706
+      ham act1 tile fixed_19: 2107512658
+      ham act1 tile fixed_2: 1162312176
+      ham act1 tile fixed_20: 773731028
+      ham act1 tile fixed_21: -445314815
+      ham act1 tile fixed_22: -1843414215
+      ham act1 tile fixed_23: 931852980
+      ham act1 tile fixed_24: 1770344957
+      ham act1 tile fixed_25: 150214890
+      ham act1 tile fixed_26: 442214379
+      ham act1 tile fixed_27: 902846635
+      ham act1 tile fixed_28: -1963654102
+      ham act1 tile fixed_29: 160165935
+      ham act1 tile fixed_3: 1022687436
+      ham act1 tile fixed_30: 574980309
+      ham act1 tile fixed_31: -624652148
+      ham act1 tile fixed_32: -1087708543
+      ham act1 tile fixed_33: 1384162505
+      ham act1 tile fixed_34: -1727051646
+      ham act1 tile fixed_35: 733290608
+      ham act1 tile fixed_36: 1912665952
+      ham act1 tile fixed_37: 846101568
+      ham act1 tile fixed_38: 2049793398
+      ham act1 tile fixed_39: 1576509730
+      ham act1 tile fixed_4: -838673419
+      ham act1 tile fixed_40: 489021827
+      ham act1 tile fixed_41: -1427654453
+      ham act1 tile fixed_42: -28616175
+      ham act1 tile fixed_43: 629766365
+      ham act1 tile fixed_44: -1869278380
+      ham act1 tile fixed_45: 1359500349
+      ham act1 tile fixed_46: 554331235
+      ham act1 tile fixed_47: 554427938
+      ham act1 tile fixed_48: -2094099160
+      ham act1 tile fixed_49: 918256095
+      ham act1 tile fixed_5: 533898009
+      ham act1 tile fixed_50: 1061100875
+      ham act1 tile fixed_51: 622634827
+      ham act1 tile fixed_52: -1000327578
+      ham act1 tile fixed_53: 400524231
+      ham act1 tile fixed_54: -658352760
+      ham act1 tile fixed_55: 1129153201
+      ham act1 tile fixed_6: -1481557280
+      ham act1 tile fixed_7: -845792977
+      ham act1 tile fixed_8: 783303794
+      ham act1 tile fixed_9: 1404816957
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

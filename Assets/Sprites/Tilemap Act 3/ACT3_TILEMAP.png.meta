@@ -1,0 +1,2283 @@
+fileFormatVersion: 2
+guid: d031ed4ca84e74d2c9494031bf088f49
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 399
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4230.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38aa65b76fcec4835bdc9351578f3e69
+      internalID: 528419069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_1
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 4230.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0250c439b7e645c596dd08bdc127cc3
+      internalID: 1645844150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_2
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 4230.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3390ff5970641ff9790ae4b837640a
+      internalID: -46693809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_3
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 4230.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79cb8534c78f848a88b5d56fdbdcfe13
+      internalID: 1699748154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_4
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 4230.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8086ce0f119a9490da2196dbdd867b70
+      internalID: 1483354805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_5
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 4230.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906347f2272ba444c9fcf6757fd629cc
+      internalID: -1774160788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_6
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 4230.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5adb2c4e9044ccf898e2739443bf51
+      internalID: -471768309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_7
+      rect:
+        serializedVersion: 2
+        x: 4223
+        y: 4230.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b245ee542645b43a6ab0475a9035e032
+      internalID: -328391286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_8
+      rect:
+        serializedVersion: 2
+        x: 4826
+        y: 4230.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c08475bd48f443e486c94c6328e543a
+      internalID: -54661555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_9
+      rect:
+        serializedVersion: 2
+        x: 5429
+        y: 4230.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771cabdee072b4a4eabeced6700174f4
+      internalID: 1891363236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_10
+      rect:
+        serializedVersion: 2
+        x: 6032
+        y: 4230.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5c9ca25d2b644d490edeac0d441a3b
+      internalID: -830131479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_11
+      rect:
+        serializedVersion: 2
+        x: 6635
+        y: 4230.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa3dc8782e1846e9a03033a13c75b8a
+      internalID: 336074374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_12
+      rect:
+        serializedVersion: 2
+        x: 7238
+        y: 4230.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2821612acfa84bfe8eb6cd66143955d
+      internalID: -1878192404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_13
+      rect:
+        serializedVersion: 2
+        x: 7841
+        y: 4230.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2435e62e73e4952adbefb358ee3a4b
+      internalID: -285667835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_14
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3627.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900d2826f1b814e1ca7ba0b62dc61050
+      internalID: 2046904100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_15
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 3627.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47fd198c6a924487fba744a06634909f
+      internalID: 970570055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_16
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 3627.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7069a00e68736471ab2c04f63fb1a605
+      internalID: -2032229420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_17
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 3627.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc90a27fcde148efb340ef02baf857f
+      internalID: -95056924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_18
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 3627.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6947666db6e44a1c8b8307507ad955e
+      internalID: -1714306312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_19
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 3627.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623542a9bf68f47d2aff1fae1ff28676
+      internalID: -187122458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_20
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 3627.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac0d32cd1d8e44e4a6ccc4aa485d9ff
+      internalID: 669798600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_21
+      rect:
+        serializedVersion: 2
+        x: 4223
+        y: 3627.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6f574c7be5f4b84ad0c5f1bcc3cd45
+      internalID: -1412833306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_22
+      rect:
+        serializedVersion: 2
+        x: 4826
+        y: 3627.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b609b8f2f9c1d46f5ba315de41588401
+      internalID: -721528107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_23
+      rect:
+        serializedVersion: 2
+        x: 5429
+        y: 3627.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb90aa6e1ca8484d816cadec7ef7933
+      internalID: 891101899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_24
+      rect:
+        serializedVersion: 2
+        x: 6032
+        y: 3627.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a520404fde94b3bb21b668ae0f3c47
+      internalID: 692777886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_25
+      rect:
+        serializedVersion: 2
+        x: 6635
+        y: 3627.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fba224b51d884c4389b0b3c52a78d4c
+      internalID: 1129180960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_26
+      rect:
+        serializedVersion: 2
+        x: 7238
+        y: 3627.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af455c7e80d7441138631203c1f7ad3d
+      internalID: 937801377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_27
+      rect:
+        serializedVersion: 2
+        x: 7841
+        y: 3627.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839b1ac960e54478a8be8f9d97347b59
+      internalID: -1824430811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_28
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3024.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36bd50ff9200046059ef7f05bbfcdd26
+      internalID: 1696631132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_29
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 3024.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934690504269d40ebb50cfeb9c9b7a0d
+      internalID: -1127443401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_30
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 3024.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c0ac990e81840d18899c1434295199
+      internalID: 2111015502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_31
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 3024.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0913d2ebc72864881909ea878c2e9f1b
+      internalID: 1104362625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_32
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 3024.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab505828bd42430285557551210f65d
+      internalID: -250765903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_33
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 3024.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c689d53db992e4034aa4b7367ef60d1f
+      internalID: 2141463412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_34
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 3024.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff1cebf935b64c519cdf75ea918d7cc
+      internalID: -1903689094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_35
+      rect:
+        serializedVersion: 2
+        x: 4223
+        y: 3024.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d37681484a614d6989e33a4ad3a1268
+      internalID: -2118041082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_36
+      rect:
+        serializedVersion: 2
+        x: 4826
+        y: 3024.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce415c2cd84374d6694d3e9768f38992
+      internalID: 1339433641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_37
+      rect:
+        serializedVersion: 2
+        x: 5429
+        y: 3024.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d3b4f0dd0ba4f74b1b11e9a8a2f32e
+      internalID: 1342486791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_38
+      rect:
+        serializedVersion: 2
+        x: 6032
+        y: 3024.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747c1df2467724bbc80f16feceacbf45
+      internalID: -1531438049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_39
+      rect:
+        serializedVersion: 2
+        x: 6635
+        y: 3024.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c33f13598674dca96af157a49277bb
+      internalID: -413165233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_40
+      rect:
+        serializedVersion: 2
+        x: 7238
+        y: 3024.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96bda9bc63d5b484683d2dad08bbc77c
+      internalID: 991387789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_41
+      rect:
+        serializedVersion: 2
+        x: 7841
+        y: 3024.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e0aa03cb2354b008a142c3fcdae84e
+      internalID: -1070248610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_42
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2421.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70177d309d243448983e75102419275e
+      internalID: 2116997045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_43
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 2421.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9531ee254133e496aa5a32ad5e963b91
+      internalID: 1578919406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_44
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 2421.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3a2c19440eb54ed497aac22a41db4d4
+      internalID: -420685031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_45
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 2421.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73fe0913e0239464e8fe5d197f2220ba
+      internalID: 811734324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_46
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 2421.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2d4effa83224df081fbc21e7407c9f
+      internalID: 1916329382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_47
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 2421.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1163458077c3144f8af05237a573daf1
+      internalID: 1443487576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_48
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 2421.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18950ac7830e04e9c87f71a7c232d23a
+      internalID: -1659960779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_49
+      rect:
+        serializedVersion: 2
+        x: 4223
+        y: 2421.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67514f2f0436348ab9f94bf0b0df9d3c
+      internalID: 1413415570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_50
+      rect:
+        serializedVersion: 2
+        x: 4826
+        y: 2421.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9ce2783d3e524d04a233ae6e3f98994
+      internalID: -938249996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_51
+      rect:
+        serializedVersion: 2
+        x: 5429
+        y: 2421.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae227cc2b8ac048888170649eb51b4a4
+      internalID: 348475527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_52
+      rect:
+        serializedVersion: 2
+        x: 6032
+        y: 2421.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d49c7fc7673470d957a145b63de9a6
+      internalID: 1349722423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_53
+      rect:
+        serializedVersion: 2
+        x: 6635
+        y: 2421.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736f147d79689401ba41cf4b6faa981f
+      internalID: 22540717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_54
+      rect:
+        serializedVersion: 2
+        x: 7238
+        y: 2421.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f9286fd96fd44658abe4ad0cb65051
+      internalID: 844083181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_55
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1818.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a21f5b912e2064222b9629819776aff6
+      internalID: -400950349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_56
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1818.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9503e67fdb2cb44e2913445de19b4db2
+      internalID: -1361079204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_57
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 1818.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06647a810249147a990b4700ddaed57f
+      internalID: -1709432872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_58
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 1818.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406424ea763104b8b945df2e218e4168
+      internalID: -1144197330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_59
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 1818.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913325b0e76a3467681e7affe9f41b73
+      internalID: -1531287749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_60
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 1818.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c790e3d2cddc4166afda4bc6ec0318b
+      internalID: 886276576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_61
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 1818.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8ee894ad4054b818a1d56354e2a715
+      internalID: 1368846775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_62
+      rect:
+        serializedVersion: 2
+        x: 4223
+        y: 1818.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0cb5a075a89415695f45a3b42d3a2d
+      internalID: -2024254098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_63
+      rect:
+        serializedVersion: 2
+        x: 4826
+        y: 1818.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a86ce53aaeb740bf89a3fbf30684c6c
+      internalID: -581682382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_64
+      rect:
+        serializedVersion: 2
+        x: 5429
+        y: 1818.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5549493693e342cea06bd0a93ca9892
+      internalID: 918411482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_65
+      rect:
+        serializedVersion: 2
+        x: 6032
+        y: 1818.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5af5227a9fe9474f97d3b47498e6dc0
+      internalID: -2072491847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_66
+      rect:
+        serializedVersion: 2
+        x: 6635
+        y: 1818.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38826ba526348496f851a7090b8483f1
+      internalID: -1039402362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_67
+      rect:
+        serializedVersion: 2
+        x: 7238
+        y: 1818.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad70cf6a9d5d40c6bf874437c508e23
+      internalID: 438227565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_68
+      rect:
+        serializedVersion: 2
+        x: 7841
+        y: 1818.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b14cc176a4c4166b199a7660458ff7
+      internalID: -1870192888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_69
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1215.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93befe3aa0fd4ae39c0f4197b22576b
+      internalID: -396543155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_70
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1215.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443768cf8e90740c8a348d06f935ca82
+      internalID: 937351659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_71
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 1215.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68143ade97ba649b48c51eb4b96db57f
+      internalID: 17087000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_72
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 1215.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b099cf8bd01dd4a0592f98d1ae7ce20c
+      internalID: -2118558167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_73
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 1215.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed7ff19b061514e95a73af3d92f954e6
+      internalID: -1779968922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_74
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 1215.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ecbdc6a5f6ae4c6790ad524ab23ac77
+      internalID: 1668331016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_75
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 1215.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff881472472a47dfae86389a0debbc1
+      internalID: 1709783000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_76
+      rect:
+        serializedVersion: 2
+        x: 4223
+        y: 1215.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e3e5ab3cb815471a801bda195428abf
+      internalID: 1522105330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_77
+      rect:
+        serializedVersion: 2
+        x: 4826
+        y: 1215.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427e6bef398464ee4b2f26bc9287ccde
+      internalID: -1326644918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_78
+      rect:
+        serializedVersion: 2
+        x: 5429
+        y: 1215.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4df9ca919a424ea598f7c9eb1babeac
+      internalID: 1170740951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_79
+      rect:
+        serializedVersion: 2
+        x: 6032
+        y: 1215.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176494062069940be9b0bc5f0c5723f2
+      internalID: 1454756105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_80
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 612.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3726df26e90b4999a737f660f0a8ae1
+      internalID: 755680447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_81
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 612.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb8d02764eda4bf4a1b0c32ae5e0b15
+      internalID: -1341712389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_82
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 612.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e39501469e84344bc1ec305ec52fd2
+      internalID: -240296203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_83
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 612.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327b8b0dfd3404eb6affd9a4565021a5
+      internalID: -2102614557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_84
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 612.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd7a3d72d07c44778566755dc58331d
+      internalID: -1787094569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_85
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 612.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173e7d32ff8014ce8ad34228f847c9d0
+      internalID: -167762107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_86
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 612.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d15c4d17a494d7d8104dd2106fc492
+      internalID: -1258112468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_87
+      rect:
+        serializedVersion: 2
+        x: 4223
+        y: 612.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ea63eb998e54f4689ad0a57234ecbd
+      internalID: 308350542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_88
+      rect:
+        serializedVersion: 2
+        x: 4826
+        y: 612.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff29b07a8aab41fd9b5ae7820b814a0
+      internalID: 451439962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_89
+      rect:
+        serializedVersion: 2
+        x: 5429
+        y: 612.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0992fd624ce0642a6988da5cbf1b0a8b
+      internalID: 1141907217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_90
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 9.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3151a140a38945459ab56724282b080
+      internalID: 158581271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_91
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 9.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835d9fbe37e864dc7b224d26e97f0892
+      internalID: 2066841638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_92
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 9.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0ce42ad5b6541abbec01e70fd3e991
+      internalID: 1652657456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_93
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 9.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1ccdaf096954fed8fc3eebeafc4f76
+      internalID: 793003202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_94
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 9.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 983b23b86ea4743058a8625249a76acb
+      internalID: 1535309918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_95
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 9.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e469d08910fe64c01949b49e3727a3c4
+      internalID: 1918708897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_96
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 9.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c002cfdccc4d4be5ad382d57c76c836
+      internalID: 1140825029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ACT3_TILEMAP_97
+      rect:
+        serializedVersion: 2
+        x: 4223
+        y: 9.25
+        width: 599.8571
+        height: 599.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbee2f9fb22c4df78d5b809c0eac2b3
+      internalID: -936964349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ACT3_TILEMAP_0: 528419069
+      ACT3_TILEMAP_1: 1645844150
+      ACT3_TILEMAP_10: -830131479
+      ACT3_TILEMAP_11: 336074374
+      ACT3_TILEMAP_12: -1878192404
+      ACT3_TILEMAP_13: -285667835
+      ACT3_TILEMAP_14: 2046904100
+      ACT3_TILEMAP_15: 970570055
+      ACT3_TILEMAP_16: -2032229420
+      ACT3_TILEMAP_17: -95056924
+      ACT3_TILEMAP_18: -1714306312
+      ACT3_TILEMAP_19: -187122458
+      ACT3_TILEMAP_2: -46693809
+      ACT3_TILEMAP_20: 669798600
+      ACT3_TILEMAP_21: -1412833306
+      ACT3_TILEMAP_22: -721528107
+      ACT3_TILEMAP_23: 891101899
+      ACT3_TILEMAP_24: 692777886
+      ACT3_TILEMAP_25: 1129180960
+      ACT3_TILEMAP_26: 937801377
+      ACT3_TILEMAP_27: -1824430811
+      ACT3_TILEMAP_28: 1696631132
+      ACT3_TILEMAP_29: -1127443401
+      ACT3_TILEMAP_3: 1699748154
+      ACT3_TILEMAP_30: 2111015502
+      ACT3_TILEMAP_31: 1104362625
+      ACT3_TILEMAP_32: -250765903
+      ACT3_TILEMAP_33: 2141463412
+      ACT3_TILEMAP_34: -1903689094
+      ACT3_TILEMAP_35: -2118041082
+      ACT3_TILEMAP_36: 1339433641
+      ACT3_TILEMAP_37: 1342486791
+      ACT3_TILEMAP_38: -1531438049
+      ACT3_TILEMAP_39: -413165233
+      ACT3_TILEMAP_4: 1483354805
+      ACT3_TILEMAP_40: 991387789
+      ACT3_TILEMAP_41: -1070248610
+      ACT3_TILEMAP_42: 2116997045
+      ACT3_TILEMAP_43: 1578919406
+      ACT3_TILEMAP_44: -420685031
+      ACT3_TILEMAP_45: 811734324
+      ACT3_TILEMAP_46: 1916329382
+      ACT3_TILEMAP_47: 1443487576
+      ACT3_TILEMAP_48: -1659960779
+      ACT3_TILEMAP_49: 1413415570
+      ACT3_TILEMAP_5: -1774160788
+      ACT3_TILEMAP_50: -938249996
+      ACT3_TILEMAP_51: 348475527
+      ACT3_TILEMAP_52: 1349722423
+      ACT3_TILEMAP_53: 22540717
+      ACT3_TILEMAP_54: 844083181
+      ACT3_TILEMAP_55: -400950349
+      ACT3_TILEMAP_56: -1361079204
+      ACT3_TILEMAP_57: -1709432872
+      ACT3_TILEMAP_58: -1144197330
+      ACT3_TILEMAP_59: -1531287749
+      ACT3_TILEMAP_6: -471768309
+      ACT3_TILEMAP_60: 886276576
+      ACT3_TILEMAP_61: 1368846775
+      ACT3_TILEMAP_62: -2024254098
+      ACT3_TILEMAP_63: -581682382
+      ACT3_TILEMAP_64: 918411482
+      ACT3_TILEMAP_65: -2072491847
+      ACT3_TILEMAP_66: -1039402362
+      ACT3_TILEMAP_67: 438227565
+      ACT3_TILEMAP_68: -1870192888
+      ACT3_TILEMAP_69: -396543155
+      ACT3_TILEMAP_7: -328391286
+      ACT3_TILEMAP_70: 937351659
+      ACT3_TILEMAP_71: 17087000
+      ACT3_TILEMAP_72: -2118558167
+      ACT3_TILEMAP_73: -1779968922
+      ACT3_TILEMAP_74: 1668331016
+      ACT3_TILEMAP_75: 1709783000
+      ACT3_TILEMAP_76: 1522105330
+      ACT3_TILEMAP_77: -1326644918
+      ACT3_TILEMAP_78: 1170740951
+      ACT3_TILEMAP_79: 1454756105
+      ACT3_TILEMAP_8: -54661555
+      ACT3_TILEMAP_80: 755680447
+      ACT3_TILEMAP_81: -1341712389
+      ACT3_TILEMAP_82: -240296203
+      ACT3_TILEMAP_83: -2102614557
+      ACT3_TILEMAP_84: -1787094569
+      ACT3_TILEMAP_85: -167762107
+      ACT3_TILEMAP_86: -1258112468
+      ACT3_TILEMAP_87: 308350542
+      ACT3_TILEMAP_88: 451439962
+      ACT3_TILEMAP_89: 1141907217
+      ACT3_TILEMAP_9: 1891363236
+      ACT3_TILEMAP_90: 158581271
+      ACT3_TILEMAP_91: 2066841638
+      ACT3_TILEMAP_92: 1652657456
+      ACT3_TILEMAP_93: 793003202
+      ACT3_TILEMAP_94: 1535309918
+      ACT3_TILEMAP_95: 1918708897
+      ACT3_TILEMAP_96: 1140825029
+      ACT3_TILEMAP_97: -936964349
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
