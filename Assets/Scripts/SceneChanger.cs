@@ -23,10 +23,10 @@ public class SceneChanger : MonoBehaviour
     private Volume volume;
     private float shake = 0;
     public float shakeAmount;
-    private float decreaseFactor;
+    public float decreaseFactor;
     public float initialShakeAmount;
     public float blurInTime;
-
+    private CameraSystem cameraSystem;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +35,7 @@ public class SceneChanger : MonoBehaviour
         changer = GameObject.FindGameObjectWithTag("SceneChanger").GetComponentInChildren<SceneChanger>();
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         volume = cam.GetComponentInChildren<Volume>();
+        cameraSystem = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraSystem>();
     }
 
     // Update is called once per frame
@@ -42,7 +43,7 @@ public class SceneChanger : MonoBehaviour
     {
         if(shake > 0) 
         {
-            cam.transform.localPosition = Random.insideUnitSphere * shakeAmount;
+            cam.transform.localPosition = Random.insideUnitSphere * shakeAmount + cameraSystem.target_position;
             shake -= Time.deltaTime * decreaseFactor;
 
         } else
@@ -64,12 +65,15 @@ public class SceneChanger : MonoBehaviour
         Application.Quit();
     }
 
+    [YarnCommand("FadeIn")]
     public void FadeIn()
     {
         DOVirtual.Float(1, 0, curtainInTime, AdjustCurtainAlpha);
         //StartCoroutine(MoveCurtainAway());
     }
 
+
+    [YarnCommand("FadeOut")]
     public void FadeOut()
     {
         curtain.rectTransform.position = new Vector2(960, 540);

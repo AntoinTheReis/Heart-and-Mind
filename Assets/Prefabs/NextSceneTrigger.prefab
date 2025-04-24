@@ -144,5 +144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curtain: {fileID: 0}
-  curtainInTime: 0
-  curtainOutTime: 0
+  curtainInTime: 2.5
+  curtainOutTime: 2.5
+  shakeAmount: 1
+  initialShakeAmount: 1
+  blurInTime: 0.5
