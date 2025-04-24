@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Act II pt.2 (Heart).unity
     guid: be0b162c0337dce48a915dff161ffbef
+  - enabled: 1
+    path: Assets/Scenes/Act III.unity
+    guid: 104ea9047019e6348bad5133eb0e1de1
+  - enabled: 1
+    path: Assets/Scenes/Act III - Antonio Working.unity
+    guid: 13cee3915ea98964dbd670c5d134ce1e
   m_configObjects: {}
