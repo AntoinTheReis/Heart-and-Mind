@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,18 +10,32 @@ public class TriggerEvents : MonoBehaviour
     public UnityEvent OnFirstEnter;
     public UnityEvent OnEnter;
     public UnityEvent OnExit;
+
+    public string tagToCheckFor;
+
+    private void Start()
+    {
+        if(tagToCheckFor == null || tagToCheckFor == "") tagToCheckFor = "Player";
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.CompareTag(tagToCheckFor))
         {
-            if(!triggered) OnFirstEnter.Invoke();
+            if (!triggered)
+            {
+                Debug.Log(name + "OnFirstEnter triggered");
+                OnFirstEnter.Invoke();
+            }
             triggered = true;
+            Debug.Log(name + "Enter triggered");
             OnEnter.Invoke();
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if(other.tag == "Player") OnExit.Invoke();
+        Debug.Log(name + "Exit triggered");
+        if(other.gameObject.CompareTag("Player")) OnExit.Invoke();
     }
 }
