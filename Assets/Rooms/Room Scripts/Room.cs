@@ -23,6 +23,9 @@ public class Room : MonoBehaviour
     
     public float CamSizeInRoom = 7f;
     public bool isSubroom = false;
+    private Switcher switcher;
+
+    private bool respawned;
     
     
     [Serializable]
@@ -68,6 +71,8 @@ public class Room : MonoBehaviour
         // Set bounds of collider
         room_bounds = GetComponent<BoxCollider2D>();
         room_bounds.size = new Vector2(room_width-1, room_height-1);
+
+        switcher = GameObject.FindGameObjectWithTag("Switcher").GetComponent<Switcher>();
     }
 
     void Update()
@@ -121,9 +126,30 @@ public class Room : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (RoomTracker.current_room != null && RoomTracker.current_room.isSubroom) return;
-        if (collision.transform == RoomTracker.target)
+        /*if(switcher.activeCharacter != 1 && !respawned)
         {
+            respawned = true;
+            Debug.Log("Heart's running away");
+            collision.gameObject.GetComponent<DamageAndRespawn>().ForeignRespawn();
+            StartCoroutine(FewSeconds());
+            return;
+        }*/
+
+        Debug.Log("Room Changer: Trigger Enter Room");
+        if(collision.gameObject.tag == "Player" && gameObject.name == "Start")
+        {
+            Debug.Log("Room Changer: Succesfull");
+            switchRoomToThis();
+            return;
+        }
+        if (RoomTracker.current_room != null && RoomTracker.current_room.isSubroom)
+        {
+            Debug.Log("Room Changer: RoomTracker.current_room != null && RoomTracker.current_room.isSubroom");
+            return;
+        }
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Room Changer: Succesfull");
             switchRoomToThis();
         }
     }
@@ -151,6 +177,12 @@ public class Room : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         if (RoomTracker.current_room == this && !room_is_selected) RoomTracker.current_room = null;
+    }
+
+    IEnumerator FewSeconds()
+    {
+        yield return new WaitForSeconds(3f);
+        respawned = false;
     }
 
 }

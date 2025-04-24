@@ -222,4 +222,9 @@ public class DamageAndRespawn : MonoBehaviour
         }
     }
 
+    public void ForeignRespawn()
+    {
+        StartCoroutine(Respawn());
+    }
+
 }
