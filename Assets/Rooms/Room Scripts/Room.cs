@@ -136,12 +136,12 @@ public class Room : MonoBehaviour
         }*/
 
         Debug.Log("Room Changer: Trigger Enter Room");
-        if(collision.gameObject.tag == "Player" && gameObject.name == "Start")
+        /*if(collision.gameObject.tag == "Player" && gameObject.name == "Start")
         {
             Debug.Log("Room Changer: Succesfull");
             switchRoomToThis();
             return;
-        }
+        }*/
         if (RoomTracker.current_room != null && RoomTracker.current_room.isSubroom)
         {
             Debug.Log("Room Changer: RoomTracker.current_room != null && RoomTracker.current_room.isSubroom");
