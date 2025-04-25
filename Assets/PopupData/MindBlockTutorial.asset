@@ -19,4 +19,4 @@ MonoBehaviour:
   recipient: 2
   exitAction: Primary
   followupPopup: {fileID: 11400000, guid: 28f1dc9347007ff49a7361f61d7c29c3, type: 2}
-  location: 1
+  location: 2

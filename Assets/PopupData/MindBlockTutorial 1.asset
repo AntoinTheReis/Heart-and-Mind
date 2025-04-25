@@ -17,6 +17,6 @@ MonoBehaviour:
   message: WASD
   title: Blocks are to be moved. Make a path for Heart
   recipient: 2
-  exitAction: Interact
-  followupPopup: {fileID: 0}
+  exitAction: 
+  followupPopup: {fileID: 11400000, guid: 06f33b2aeb9312341a2dbec31265c8dd, type: 2}
   location: 2

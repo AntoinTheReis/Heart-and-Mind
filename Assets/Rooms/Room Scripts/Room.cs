@@ -27,6 +27,10 @@ public class Room : MonoBehaviour
 
     private bool respawned;
     
+    public void setCheckpoint(Transform checkpoint)
+    {
+        this.checkpoint = checkpoint;
+    }
     
     [Serializable]
     public class RoomEvent : UnityEvent<Room, Room> { }
@@ -61,7 +65,6 @@ public class Room : MonoBehaviour
         Gizmos.color = new Color(0, 0, 0, 0.4F);
         if(transform.Find("cover").GetComponent<SpriteRenderer>().enabled) Gizmos.DrawCube(transform.position, new Vector3(room_width, room_height, 0));
     }
-    
 
     void Start()
     {

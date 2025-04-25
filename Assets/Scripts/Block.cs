@@ -44,10 +44,7 @@ public class Block : MonoBehaviour
     public FMODUnity.EventReference cloud;
     FMOD.Studio.EventInstance sfx_cloudInstance;
     #endregion
-
-    //this is the most unoptimized pile of dogshit iv ever written but it works so well
-    //so real past me
-
+    
     private void Start()
     {
         #region Audio EventInstances

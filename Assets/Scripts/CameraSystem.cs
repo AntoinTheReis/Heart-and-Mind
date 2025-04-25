@@ -32,7 +32,7 @@ public class CameraSystem : MonoBehaviour
     [Tooltip("Number of seconds until a call of screenShake() ends")] [SerializeField] float shakeDuration = 0.2f;
     [Tooltip("The magnitude of each shake")] [SerializeField] float shakeAmount = 0.2f;
     [Tooltip("Repeat shake every n seconds. (The lower, the faster)")] [SerializeField] float shakeRate = 0.2f;
-
+    
     public Vector3 target_position;
     
     
@@ -253,8 +253,7 @@ public class CameraSystem : MonoBehaviour
     {
         if(roomNameUI != null && RoomTracker.current_room != null) roomNameUI.text = RoomTracker.current_room.name;
     }
-
-
+    
     IEnumerator IdleFollow()  //Transporting other character into new Room
     {
         //case where room is either null or has no bus stops (we dont want to move the mind in this case)
