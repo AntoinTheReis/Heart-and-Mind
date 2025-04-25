@@ -3,8 +3,8 @@ tags:
 ---
 HEART: Aha! Another rose! Let’s grab it!
 
-MIND: I like your excitement, but this does seem like a trap or something…
-<<wait 5>>
+MIND: I like your excitement, but this does seem like a trap or something… but I can’t sense anything wrong with it.
+<<wait 0.5>>
 
 HEART: Just.. 
 <<wait 3>>
@@ -12,4 +12,6 @@ be careful, ok? This is not worth it if you get hurt.
 
 MIND: Alright, alright. This is a change, you're actually being cautious for once. I’ll be careful, I promise.
 
+<<CutToBlack SceneScriptHolder>>
+<<NextScene SceneScriptHolder>>
 ===

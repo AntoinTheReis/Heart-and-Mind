@@ -18,6 +18,7 @@ HEART: ...
 HEART: What was that?
 HEART: Mind?
 
+<<CutToBlack SceneScriptHolder>>
 <<NextScene SceneScriptHolder>>
 
 ===

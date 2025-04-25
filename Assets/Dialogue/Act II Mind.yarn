@@ -23,10 +23,12 @@ Mind: Ugh! I can't float. That fall did more damage than I thought. I need to fi
 
 Heart: I remember now... it was the heartbreak from the memory inside the rose. It must have what have weakened the floor to the point of breaking... is everything here a metaphor?! 
 
-<<wait 3>>
+<<wait 1>>
 
 Heart: ...
 
 Heart: Nevermind. Right now, I have to find a way to Mind.
 
+<<CutToBlack SceneScriptHolder>>
+<<NextScene SceneScriptHolder>>
 ===
