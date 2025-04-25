@@ -70,18 +70,22 @@ public class Movement : MonoBehaviour
     public float wallSticky;
     public float slideSpeed;
     public float wallAcceleration;
-    public float wallJumpAir = 0.5f;
-    public float wallJumpAirTime = 0.5f;
-    public float wallJumpHorizontal = 1;
-    public float wallJumpVertical = 1;
-    public float coyoteTimeWall = 0.2f;
     public float nudgeWall = 0.01f;
-    private float coyoteTimeWallCounter;
     private float wallTime;
     private float currentWallSpeed;
     private bool wallJumping;
     private float currentWallJumpAir;
     private bool leftWall;   //as in leaving, not as in the side
+
+    [Header ("Wall Jump")]
+    public float wallJumpAir = 0.5f;
+    public float wallJumpAirTime = 0.5f;
+    public float wallJumpHorizontal = 1;
+    public float wallJumpVertical = 1;
+    public float coyoteTimeWall = 0.2f;
+    private float coyoteTimeWallCounter;
+    public float wallStickJumpLimit = 0.5f;
+    private float wallStickJumpCurrent = 0;
 
     [Header("Floor and Wall Checks")]
     public float collisionRadius = 0.25f;
@@ -172,6 +176,7 @@ public class Movement : MonoBehaviour
         {
             if (onFloor)
             {
+                wallStickJumpCurrent = 0;
                 currentWallSpeed = 0;
                 if (!wallJumping && onWalls && ((wallSide == 1 && input.MoveInput().x > 0) || (wallSide == -1 && input.MoveInput().x < 0)))
                 {
@@ -193,10 +198,23 @@ public class Movement : MonoBehaviour
             {
                 if (!wallJumping && onWalls && ((wallSide == 1 && input.MoveInput().x > 0) || (wallSide == -1 && input.MoveInput().x < 0)))
                 {
+                    wallStickJumpCurrent = 0;
                     horizontal_movement = 0;
+                }
+                else if(!wallJumping && onWalls && ((wallSide == 1 && input.MoveInput().x < 0) || (wallSide == -1 && input.MoveInput().x > 0)))
+                {
+                    if(wallStickJumpCurrent >= wallStickJumpLimit)
+                    {
+                        if (input.MoveInput().x > 0) inputDirection = 1;
+                        else if (input.MoveInput().x < 0) inputDirection = -1;
+                        else inputDirection = 0;
+                        horizontal_movement += inputDirection * airMoveMultiplier * Time.deltaTime;
+                    }
+                    wallStickJumpCurrent += Time.deltaTime * 1;
                 }
                 else if (turnedOn)
                 {
+                    wallStickJumpCurrent = 0;
                     if (input.MoveInput().x > 0) inputDirection = 1;
                     else if (input.MoveInput().x < 0) inputDirection = -1;
                     else inputDirection = 0;
@@ -208,6 +226,10 @@ public class Movement : MonoBehaviour
                     }
                 }
             }
+        }
+        else
+        {
+            wallStickJumpCurrent = 0;
         }
 
         //maxVelocity calculations
