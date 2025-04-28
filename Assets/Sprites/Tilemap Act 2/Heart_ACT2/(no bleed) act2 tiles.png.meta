@@ -1,0 +1,1359 @@
+fileFormatVersion: 2
+guid: 730cfc3e99cfb4dbaa44a8d29f9eb436
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 399
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442ced715f985409ebdc3ed842fd1281
+      internalID: -466260045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_1
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa12dcea8e3a4c9ab64e786e7c4eb3b
+      internalID: -2093688520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_2
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f33bc1bae22ca4d9b8cdede7fc71b475
+      internalID: -1657812091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_3
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299629937b3494cf19af21b53874cb38
+      internalID: 1509964171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_4
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e3159cb40914b8b833f05e35072208
+      internalID: -481203673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_5
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e76315b6f124bab96ca29e4244bda6
+      internalID: -1868556060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_6
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c822211d13c4d6d90bc98e56eba30f
+      internalID: 2116541660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa46ad88710304a9ebd6bd4ba62c9d0a
+      internalID: -1955038423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_8
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f8e140659b3549a49ca1ea3999cc831
+      internalID: -333864205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_9
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b4158e5b79f47b1b3ed6a3d6cda296
+      internalID: 199710066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_10
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1ce694a41ba4fa08b56d68b5e252d3
+      internalID: -1293887758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_11
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2525b07892a9b4d2e8ef858e6d9135e2
+      internalID: -602375869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_12
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caea67826e14140328acd12a1d4710c7
+      internalID: 987502081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_13
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e964dc71f77d941fca55a66fa0e18f05
+      internalID: -1031622145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b9b4402db8344789236988a19eb327
+      internalID: 335205067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_15
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 676737f19b7164fd6ab59fe31e1a6763
+      internalID: -1474225416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_16
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff314c127eec4a55860f053e3305786
+      internalID: 1001942791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_17
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc466041b39e4a34adb8be7cda2a8a6
+      internalID: 530045835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_18
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7710085952f2a4111856f4de1b26ed5e
+      internalID: 997485146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_19
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71ba0ce81b7e471c838303291fc479b
+      internalID: 1365041713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_20
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd305b4fc384240748214ca49ab8933a
+      internalID: -71913176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 875210f1b27574d55b5cf3d758e3646b
+      internalID: -1319030849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_22
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf56825d0e04d46c98f8f39b3b4c1265
+      internalID: 2106199042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_23
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e48fea7bb0b4dcdbe81e1f11b89051
+      internalID: -2044855426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_24
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af467c0322f2d446fa31a411318d4a42
+      internalID: 1580173152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_25
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff9008b513c040fdb68c3b0f10348d3
+      internalID: 1861200778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_26
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9739bc5b23c4ee593e88600d4b319f
+      internalID: 2001228866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_27
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f39e886126104c03b5022d987d0a858
+      internalID: -1556457870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b79ce379c0f4271b085fc2c80f78cd
+      internalID: -174929799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_29
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132eb86429a0143d28cbf53b1d196e85
+      internalID: 1723785596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_30
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3bf7b190294c4f1884ae30326906ff0
+      internalID: -1574431892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_31
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc7b63acd5e14bf0ac53ad47155e7a3
+      internalID: 1008196922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_32
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1141fdbf8f564552a9834cbedfb2674
+      internalID: 978180353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_33
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b6fb4c8243f46d4944f2686f51a757
+      internalID: -211566055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_34
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92baa5b150914d5ebf086253565716b
+      internalID: -1270713797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b099f3747113048379ec0d7f30061dd5
+      internalID: 637142368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_36
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d71d8d277cfe417f9161ee353800560
+      internalID: -1636979448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_37
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843352a51d1894157aa24f8232ca8472
+      internalID: 1516184377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_38
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e839402a18a724c009070f7273e904dc
+      internalID: -2139598040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_39
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5dd57614e3a4d119ba07f401f24f94
+      internalID: 2091640342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_40
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3464d6e23b2d4dbc85486cfd6e4af15
+      internalID: -1175479089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_41
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b147970cd69647e8a4a1d05708bda0d
+      internalID: 146018155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 604
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcbadd850a2884e15967e1070b7352ff
+      internalID: 47809168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_43
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 604
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406b40e6ae03a4e16bbdfb6e98b3d30e
+      internalID: -1242000199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_44
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 604
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a86240fb3ba4492a5a87ff0120530f
+      internalID: -639691973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_45
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 604
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2fd2ce26de54256979e65136bb91f6
+      internalID: 1202603020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_46
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 604
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08d863650bed4c71bc072fc67539059
+      internalID: -1777400609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_47
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 604
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13acd56d6ebb4477789861d074240365
+      internalID: 1320574015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_48
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 604
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c264a20b530b341a0935be22def0a927
+      internalID: 310308684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8cbb14e189fe49c2aae74f2b4e61f28
+      internalID: -1311580150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_50
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 0
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977a6a1c38e234b138b5c9ca7aa64d98
+      internalID: 428856494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_51
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 0
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81551bb5f28d43f8ab2d04bf5ac11e1
+      internalID: 1765895576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_52
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 0
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6e4b7572d204b95ac6210f6f3eef27
+      internalID: 292217443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_53
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 0
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a7189e0cf227422f820c24a697f7994
+      internalID: -276401454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_54
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 0
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61171babb7c5742c5aafcda1443a6e0b
+      internalID: -507492240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ham act2 heart tilemap 1_55
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 0
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dabc6ba22ea1b45b1b538ef6ab0e0141
+      internalID: -2089771844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ham act2 heart tilemap 1_0: -466260045
+      ham act2 heart tilemap 1_1: -2093688520
+      ham act2 heart tilemap 1_10: -1293887758
+      ham act2 heart tilemap 1_11: -602375869
+      ham act2 heart tilemap 1_12: 987502081
+      ham act2 heart tilemap 1_13: -1031622145
+      ham act2 heart tilemap 1_14: 335205067
+      ham act2 heart tilemap 1_15: -1474225416
+      ham act2 heart tilemap 1_16: 1001942791
+      ham act2 heart tilemap 1_17: 530045835
+      ham act2 heart tilemap 1_18: 997485146
+      ham act2 heart tilemap 1_19: 1365041713
+      ham act2 heart tilemap 1_2: -1657812091
+      ham act2 heart tilemap 1_20: -71913176
+      ham act2 heart tilemap 1_21: -1319030849
+      ham act2 heart tilemap 1_22: 2106199042
+      ham act2 heart tilemap 1_23: -2044855426
+      ham act2 heart tilemap 1_24: 1580173152
+      ham act2 heart tilemap 1_25: 1861200778
+      ham act2 heart tilemap 1_26: 2001228866
+      ham act2 heart tilemap 1_27: -1556457870
+      ham act2 heart tilemap 1_28: -174929799
+      ham act2 heart tilemap 1_29: 1723785596
+      ham act2 heart tilemap 1_3: 1509964171
+      ham act2 heart tilemap 1_30: -1574431892
+      ham act2 heart tilemap 1_31: 1008196922
+      ham act2 heart tilemap 1_32: 978180353
+      ham act2 heart tilemap 1_33: -211566055
+      ham act2 heart tilemap 1_34: -1270713797
+      ham act2 heart tilemap 1_35: 637142368
+      ham act2 heart tilemap 1_36: -1636979448
+      ham act2 heart tilemap 1_37: 1516184377
+      ham act2 heart tilemap 1_38: -2139598040
+      ham act2 heart tilemap 1_39: 2091640342
+      ham act2 heart tilemap 1_4: -481203673
+      ham act2 heart tilemap 1_40: -1175479089
+      ham act2 heart tilemap 1_41: 146018155
+      ham act2 heart tilemap 1_42: 47809168
+      ham act2 heart tilemap 1_43: -1242000199
+      ham act2 heart tilemap 1_44: -639691973
+      ham act2 heart tilemap 1_45: 1202603020
+      ham act2 heart tilemap 1_46: -1777400609
+      ham act2 heart tilemap 1_47: 1320574015
+      ham act2 heart tilemap 1_48: 310308684
+      ham act2 heart tilemap 1_49: -1311580150
+      ham act2 heart tilemap 1_5: -1868556060
+      ham act2 heart tilemap 1_50: 428856494
+      ham act2 heart tilemap 1_51: 1765895576
+      ham act2 heart tilemap 1_52: 292217443
+      ham act2 heart tilemap 1_53: -276401454
+      ham act2 heart tilemap 1_54: -507492240
+      ham act2 heart tilemap 1_55: -2089771844
+      ham act2 heart tilemap 1_6: 2116541660
+      ham act2 heart tilemap 1_7: -1955038423
+      ham act2 heart tilemap 1_8: -333864205
+      ham act2 heart tilemap 1_9: 199710066
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
