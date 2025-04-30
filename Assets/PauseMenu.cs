@@ -27,6 +27,7 @@ public class PauseMenu : MonoBehaviour
         paused = !paused;
         Time.timeScale = paused ? 1 : 0;
         canvas.enabled = !paused;
+
         
         if(!paused) DisableInputs(); else EnableInputs();
     }
