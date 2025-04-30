@@ -14,7 +14,7 @@ public class MindBlockTelekinesis : MonoBehaviour
     [SerializeField] private float blockSpeed;
 
     LinkedListNode<GameObject> selectedBlockNode = null;
-    Block selectedBlock = null;
+    public Block selectedBlock = null;
     private Switcher switcher;
 
     public Controls input;
