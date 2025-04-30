@@ -16,15 +16,18 @@ Heart: I saw them too! You're right, they were vague, but it was definitely from
 
 Heart: But... I don’t think they were from our past, Mind. They felt like they were from someone else’s past.
 
-Mind: This whole thing is terrifying, Heart. I don’t know what’s going on, let us forget this adventure and go home.
+<<CutToBlack ScreenScriptHolder>>
+<<NextScene ScreenScriptHolder>>
 
-Heart: I don’t think we can, Mind. I think we have to keep going, and find out what’s going on. You owe it to yourself, and I owe it to you.
+// Mind: This whole thing is terrifying, Heart. I don’t know what’s going on, let us forget this adventure and go home.
 
-Mind: I... don’t know, Heart. We could get seperated again, and I don’t want to lose you again, I... I can’t bear the thought of it. I can’t bear the thought of losing you again.
+// Heart: I don’t think we can, Mind. I think we have to keep going, and find out what’s going on. You owe it to yourself, and I owe it to you.
 
-Heart: But we <b>have to<b> keep going. Otherwise, you'd never get home, and this place won't have a ruler. It would fall apart without you.
+// Mind: I... don’t know, Heart. We could get seperated again, and I don’t want to lose you again, I... I can’t bear the thought of it. I can’t bear the thought of losing you again.
 
-Mind: ...okay. I'll trust that you'll get me through this. Not like I have a choice, right? You... are really stubborn, you know that?
+// Heart: But we <b>have to<b> keep going. Otherwise, you'd never get home, and this place won't have a ruler. It would fall apart without you.
 
-Heart: And proud of it!
+// Mind: ...okay. I'll trust that you'll get me through this. Not like I have a choice, right? You... are really stubborn, you know that?
+
+// Heart: And proud of it!
 ===
