@@ -189,6 +189,13 @@ MonoBehaviour:
       Data3: 2077444775
       Data4: 1183154189
     Path: event:/SFX_UIConfirm
+  glassBreakEvent:
+    Guid:
+      Data1: 224271910
+      Data2: 1178769310
+      Data3: -5331324
+      Data4: -806386337
+    Path: event:/SFX_GlassBreak
   currentValue1: 0
   targetValue1: 0
 --- !u!1 &64502019
@@ -427,6 +434,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1827835}
         m_TargetAssemblyTypeName: MainMenuSpeaker, Assembly-CSharp
         m_MethodName: fadeIntroMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1827835}
+        m_TargetAssemblyTypeName: MainMenuSpeaker, Assembly-CSharp
+        m_MethodName: playUIConfirm
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1088,6 +1107,18 @@ MonoBehaviour:
       - m_Target: {fileID: 708872786}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
         m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1827835}
+        m_TargetAssemblyTypeName: MainMenuSpeaker, Assembly-CSharp
+        m_MethodName: playUIConfirm
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
