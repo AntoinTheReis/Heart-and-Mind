@@ -353,6 +353,13 @@ MonoBehaviour:
       Data3: 1100329395
       Data4: -985501108
     Path: event:/SFX_Teleport
+  sfx_blockCancel:
+    Guid:
+      Data1: -757520935
+      Data2: 1326199402
+      Data3: -1407936078
+      Data4: -971229748
+    Path: event:/SFX_BlockCancel
 --- !u!1 &2166980037536431569
 GameObject:
   m_ObjectHideFlags: 0
