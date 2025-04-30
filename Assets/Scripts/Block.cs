@@ -89,22 +89,25 @@ public class Block : MonoBehaviour
         if(telekinesis.active && !telekinesis.selectedBlock.heavy) selectedIsLight = true;
         else selectedIsLight = false;
 
-        if (lightBlockTryingToPush)
+        if (!lingering)
         {
-            if (collidinbgWithLightBelow) rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-            else rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
-        }
-        else if (heavy && !collidingWithHeavy && !selected && !collidinbgWithLightBelow)
-        {
-            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
-        }
-        else if (heavy && (collidingWithHeavy || selected) && !selectedIsLight)
-        {
-            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        }
-        else if (heavy && collidinbgWithLightBelow && !selected)
-        {
-            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+            if (lightBlockTryingToPush)
+            {
+                if (collidinbgWithLightBelow) rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+                else rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+            }
+            else if (heavy && !collidingWithHeavy && !selected && !collidinbgWithLightBelow)
+            {
+                rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+            }
+            else if (heavy && (collidingWithHeavy || selected) && !selectedIsLight)
+            {
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            }
+            else if (heavy && collidinbgWithLightBelow && !selected)
+            {
+                rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+            }
         }
 
     }
