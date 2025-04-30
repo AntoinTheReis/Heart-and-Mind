@@ -8,7 +8,11 @@ public class BreakableGlass : MonoBehaviour
     [SerializeField] GameObject brokenPrefab;
     [SerializeField] Collider2D thisCollider;
     public GameObject heart;
+    public float dashGlassWait = 0.1f;
 
+    private bool dashingIn = false;
+    private float originalDistance;
+    private GameObject playerTarget;
 
     #region Audio
     public FMODUnity.EventReference glassBreak;
@@ -38,7 +42,6 @@ public class BreakableGlass : MonoBehaviour
         else thisCollider.enabled = true;
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         /*thisCollider.enabled = false;
@@ -48,6 +51,39 @@ public class BreakableGlass : MonoBehaviour
             Instantiate(brokenPrefab, transform.position, transform.rotation);
             sfx_glassBreakInstance.start();
             Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<Movement>().isDashing && !dashingIn)
+        {
+            Debug.Log("Dashing While Inside");
+            dashingIn = true;
+            originalDistance = Vector2.Distance(gameObject.transform.position, collision.gameObject.transform.position);
+            playerTarget = collision.gameObject;
+
+            StartCoroutine(CheckForDashInGlass());
+        }
+    }
+
+    IEnumerator CheckForDashInGlass()
+    {
+        yield return new WaitForSecondsRealtime(dashGlassWait);
+        if (dashingIn)
+        {
+            float currentDistance = Vector2.Distance(gameObject.transform.position, playerTarget.transform.position);
+            if (currentDistance < originalDistance)
+            {
+                Instantiate(brokenPrefab, transform.position, transform.rotation);
+                sfx_glassBreakInstance.start();
+                Destroy(gameObject);
+            }
+            else
+            {
+                Debug.Log("Glass Dash Stuff - OG Distance = " + originalDistance + " - New Distance = " + currentDistance);
+                dashingIn = false;
+            }
         }
     }
 

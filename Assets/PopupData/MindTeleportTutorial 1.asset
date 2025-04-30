@@ -17,5 +17,6 @@ MonoBehaviour:
   message: WASD
   title: Warp to nearby bus stops
   recipient: 2
-  exitAction: Move
-  followupPopup: {fileID: 0}
+  exitAction: 
+  followupPopup: {fileID: 11400000, guid: 49ace6b410fc2334fac4d4664d8ddd73, type: 2}
+  location: 0

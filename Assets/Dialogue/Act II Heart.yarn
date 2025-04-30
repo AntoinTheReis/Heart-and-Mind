@@ -13,13 +13,16 @@ Heart: I just need to keep moving. I can do this. I can get out of here. I can f
 
 Heart: That memento... what caused it to make the floor collapse? Think man, think!
 
-<<wait  5>>
+<<wait  1.1>>
 
 Heart: I remember now... it was the heartbreak from the memory inside the rose. It must have what have weakened the floor to the point of breaking... is everything here a metaphor?! 
 
-<<wait 3>>
+<<wait 1>>
 
 Heart: ...
 
 Heart: Nevermind. Right now, I have to find a way to Mind.
+
+<<CutToBlack SceneScriptHolder>>
+<<NextScene SceneScriptHolder>>
 ===

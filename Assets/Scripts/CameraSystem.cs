@@ -33,6 +33,8 @@ public class CameraSystem : MonoBehaviour
     [Tooltip("The magnitude of each shake")] [SerializeField] float shakeAmount = 0.2f;
     [Tooltip("Repeat shake every n seconds. (The lower, the faster)")] [SerializeField] float shakeRate = 0.2f;
     
+    public Vector3 target_position;
+    
     
     private SpriteRenderer followerSprite;
 
@@ -140,7 +142,7 @@ public class CameraSystem : MonoBehaviour
             Debug.LogError("No Camera target found");
             return;
         }
-        Vector3 target_position = target.transform.position;
+        target_position = target.transform.position;
 
         #region Clamping Camera's Target to Room Bounds
         if (bounded)
@@ -251,8 +253,7 @@ public class CameraSystem : MonoBehaviour
     {
         if(roomNameUI != null && RoomTracker.current_room != null) roomNameUI.text = RoomTracker.current_room.name;
     }
-
-
+    
     IEnumerator IdleFollow()  //Transporting other character into new Room
     {
         //case where room is either null or has no bus stops (we dont want to move the mind in this case)

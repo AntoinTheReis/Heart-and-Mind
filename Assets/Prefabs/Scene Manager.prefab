@@ -150,6 +150,10 @@ MonoBehaviour:
   curtain: {fileID: 8826839274584759909}
   curtainInTime: 2.5
   curtainOutTime: 2.5
+  shakeAmount: 0.05
+  decreaseFactor: 1
+  initialShakeAmount: 1
+  blurInTime: 0
 --- !u!1 &8928691678295296296
 GameObject:
   m_ObjectHideFlags: 0

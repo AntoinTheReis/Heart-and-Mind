@@ -177,4 +177,6 @@ public class Switcher : MonoBehaviour
         if(!mindObject.GetComponent<MindBlockTelekinesis>().active && !mindObject.GetComponent<MindTeleporting>().movementMode) mindObject.GetComponent<MindBlockTelekinesis>().ActivateTelekinesis();
     }
 
+ 
+
 }

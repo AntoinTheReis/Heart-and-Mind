@@ -21,6 +21,8 @@ public class PopupHandler : MonoBehaviour
 
     private InputAction ExitInputAction;
 
+    public Sprite image;
+
     private PopupScriptableObject followupPopup;
     
     private bool popupOpen = false;
@@ -52,13 +54,25 @@ public class PopupHandler : MonoBehaviour
     public void setPopup(PopupScriptableObject popupData)
     {
         SetRecipient((int)popupData.recipient);
-        titleFont = popupData.titleFont;
-        messageFont = popupData.messageFont;
+        setTitleFont(popupData.titleFont);
+        setMessageFont(popupData.messageFont);
         SetTitle(popupData.title);
         SetMessage(popupData.message);
         SetInputAction(popupData.exitAction);
         StoreFollowupPopup(popupData.followupPopup);
         SetLocation((int)popupData.location);
+    }
+
+    private void setTitleFont(TMP_FontAsset font)
+    {
+        titleFont = font;
+        titleText.font = font;
+    }
+
+    private void setMessageFont(TMP_FontAsset font)
+    {
+        messageFont = font;
+        messageText.font = font;
     }
 
     public void StoreFollowupPopup(PopupScriptableObject followupData)
@@ -84,6 +98,7 @@ public class PopupHandler : MonoBehaviour
     private void Start()
     {
         originalPosition = container.GetComponent<RectTransform>().anchoredPosition;
+        followupPopup = null;
         messageFont = messageText.font;
         titleFont = titleText.font;
         resetPosition();
@@ -95,22 +110,22 @@ public class PopupHandler : MonoBehaviour
         switch ((Location)local)
         {
             case Location.LEFT:
-                position = new Vector2(680, 0);
+                position = new Vector2(-680, 0);
                 break;
             case Location.RIGHT:
-                position = new Vector2(-680, 0);
+                position = new Vector2(680, 0);
                 break;
             case Location.TOP:
                 position = new Vector2(0, 330);
                 break;
             case Location.TOP_LEFT:
-                position = new Vector2(680, 330);
-                break;
-            case Location.TOP_RIGHT:
                 position = new Vector2(-680, 330);
                 break;
+            case Location.TOP_RIGHT:
+                position = new Vector2(680, 330);
+                break;
             default:
-                position = new Vector2(680, 0);
+                position = new Vector2(-680, 0);
                 break;
         }
         container.GetComponent<RectTransform>().anchoredPosition = position;
@@ -149,8 +164,8 @@ public class PopupHandler : MonoBehaviour
 
     public void HidePopup()
     {
-        StopAllCoroutines(); //avoids the edge case of a sequencial call of show then  where both coroutines are coexisting and fighting against eachother 
         if(!popupOpen) return;
+        StopAllCoroutines(); //avoids the edge case of a sequencial call of show then  where both coroutines are coexisting and fighting against eachother 
         if (followupPopup != null) //if we have a followup popup stored
         {
             popupOpen = false; //avoid loop
@@ -208,7 +223,7 @@ public class PopupHandler : MonoBehaviour
         messageText.font = messageFont;
         titleText.font = titleFont;
         resetPosition();
-        StopCoroutine(FadePopupOut());
+        //StopCoroutine(FadePopupOut());
     }
     
     public void SetTitle(string title)

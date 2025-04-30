@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: c37bb095df13f6248a912fffa67256cd, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 1
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -91,6 +91,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canSwitch: 1
+  onSwitch:
+    m_PersistentCalls:
+      m_Calls: []
   activeCharacter: 2
   mindObject: {fileID: 0}
   heartObject: {fileID: 0}
@@ -99,6 +102,7 @@ MonoBehaviour:
   telekinesisWaitTime: 0.55
   sizeMind: {x: 0.125, y: 0.125, z: 0.125}
   sizeHeart: {x: 0.1, y: 0.1, z: 0.1}
+  mindOnlyLevel: 0
   sfx_switchM:
     Guid:
       Data1: 1031606126
