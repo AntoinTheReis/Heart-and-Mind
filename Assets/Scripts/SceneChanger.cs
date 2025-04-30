@@ -52,6 +52,11 @@ public class SceneChanger : MonoBehaviour
         }
     }
 
+    public void GoToScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
 
     [YarnCommand("NextScene")]
     public void NextScene()
