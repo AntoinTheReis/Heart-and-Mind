@@ -406,7 +406,7 @@ MonoBehaviour:
       Data2: 1318459271
       Data3: 1716860328
       Data4: -637721636
-    Path: event:/SFX_Dialogue
+    Path: event:/SFX_DialogueHeart
   charVoice: 0
 --- !u!70 &3005949718448252378
 CapsuleCollider2D:
