@@ -160,7 +160,7 @@ public class Block : MonoBehaviour
     {
         //Won't linger if grounded
         Bounds b = collider.bounds;
-        if(Physics2D.OverlapBox(new Vector2(b.center.x, b.min.y - 0.1f), new Vector2(b.size.x, 0.05f), 0f,groundLayer)) yield break;
+        if(Physics2D.OverlapBox(new Vector2(b.center.x, b.min.y - 0.1f), new Vector2(0.85f * b.size.x, 0.05f), 0f,groundLayer)) yield break;
 
         if(BlockTracker.lingeringBlock != null) BlockTracker.lingeringBlock.StopLinger();
         BlockTracker.lingeringBlock = gameObject.GetComponent<Block>();
@@ -297,7 +297,6 @@ public class Block : MonoBehaviour
         }
     }
 
-
     private void OnTriggerExit2D(Collider2D collision)
     {
 
@@ -340,7 +339,8 @@ public class Block : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-
+        Bounds b = collider.bounds;
+        Gizmos.DrawWireCube(new Vector2(b.center.x, b.min.y - 0.1f), new Vector2((0.85f * b.size.x), 0.05f));
     }
 
     public void StopLinger()
