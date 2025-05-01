@@ -24,7 +24,7 @@ public class Controls : MonoBehaviour
     private void Awake()
     {
         InputUser.PerformPairingWithDevice(Keyboard.current, input.user, InputUserPairingOptions.None);  //forces keybaord to the playerInput
-        //InputUser.PerformPairingWithDevice(Gamepad.current, input.user, InputUserPairingOptions.None); //somehow lets controllers work i wont ask questions
+        InputUser.PerformPairingWithDevice(Gamepad.current, input.user, InputUserPairingOptions.None); //somehow lets controllers work i wont ask questions
 
         input.actions.Enable();  // Ensure input actions are enabled
         Debug.Log("PlayerInput enabled: " + input.enabled);
@@ -35,6 +35,7 @@ public class Controls : MonoBehaviour
     /// Returns true during the frame the 'jump' input is pressed
     /// </summary>
     public bool OnJumpPressed() => disabled ? false : input.actions["Jump"].triggered;
+    
     /// <summary>
     /// Returns true during the frame the 'jump' input is released
     /// </summary>
