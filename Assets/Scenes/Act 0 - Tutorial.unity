@@ -4014,10 +4014,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 210528420843331964, guid: 6a7e67304dc879744aae9b0fb84e4037, type: 3}
-      propertyPath: dashSpeed
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 210528420843331964, guid: 6a7e67304dc879744aae9b0fb84e4037, type: 3}
       propertyPath: wallStickJumpLimit
       value: 0.1
       objectReference: {fileID: 0}
