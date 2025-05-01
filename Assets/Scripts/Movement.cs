@@ -180,7 +180,7 @@ public class Movement : MonoBehaviour
                 currentWallSpeed = 0;
                 if (!wallJumping && onWalls && ((wallSide == 1 && input.MoveInput().x > 0) || (wallSide == -1 && input.MoveInput().x < 0)))
                 {
-                    Debug.Log("Horizontal input: " + input.MoveInput().x + "| making horizontal movement 0");
+                    //Debug.Log("Horizontal input: " + input.MoveInput().x + "| making horizontal movement 0");
                     horizontal_movement = 0;
                 }
                 else if (turnedOn)
@@ -221,7 +221,7 @@ public class Movement : MonoBehaviour
                     if (!wallJumping) horizontal_movement += inputDirection * airMoveMultiplier * Time.deltaTime;
                     else if (!(wallSide == input.MoveInput().x && onWalls))
                     {
-                        Debug.Log("This is what is happening when you wall jumo");
+                        //Debug.Log("This is what is happening when you wall jump");
                         horizontal_movement += inputDirection * airMoveMultiplier * currentWallJumpAir * Time.deltaTime;
                     }
                 }
@@ -307,7 +307,7 @@ public class Movement : MonoBehaviour
         }
 
         //wall jumping with coyote time
-        if ((jumpBufferCounter > 0) && (coyoteTimeWallCounter > 0) && turnedOn) WallJump(side);
+        if ((jumpBufferCounter > 0) && (coyoteTimeWallCounter > 0) && turnedOn) WallJump(wallSide * -1);
 
         //A check to make consecutive walljumps possible
         leftWall = !onWalls && wallJumping && !onFloor;
@@ -340,6 +340,7 @@ public class Movement : MonoBehaviour
         //}
         #endregion
 
+        Debug.Log("Jumped");
         rb.velocity = Vector2.up * jump;
         coyoteTimeJumpCounter = 0;
         jumpBufferCounter = 0;
@@ -348,6 +349,8 @@ public class Movement : MonoBehaviour
 
     private void WallJump(float side)
     {
+        Debug.Log("Wall Jump Side: " + side);
+
         Debug.Log("Wall jumped");
 
         #region WallJump Audio
@@ -363,12 +366,14 @@ public class Movement : MonoBehaviour
         Vector2 dir = new Vector2(Mathf.Sign(side) * wallJumpHorizontal, wallJumpVertical);
         rb.velocity = Vector2.zero;
 
+        Debug.Log("WallJump Jump Direction: " + dir);
+
         //rb.velocity = dir * jump;
         //rb.AddForce(dir * jump);
 
         rb.velocity = Vector2.up * jump * wallJumpVertical;
-        if (side > 0) horizontal_movement += wallJumpHorizontal;
-        else horizontal_movement -= wallJumpHorizontal;
+        if (side > 0) horizontal_movement = wallJumpHorizontal;
+        else horizontal_movement = -wallJumpHorizontal;
 
 
         coyoteTimeWallCounter = 0;
@@ -401,9 +406,13 @@ public class Movement : MonoBehaviour
 
         onWalls = Physics2D.OverlapBox((Vector2)transform.position + leftOffset, wallOverlapSize, 0, groundLayer) || Physics2D.OverlapBox((Vector2)transform.position + rightOffset, wallOverlapSize, 0, groundLayer);
 
-        if (Physics2D.OverlapBox((Vector2)transform.position + rightOffset, wallOverlapSize, 0, groundLayer)) wallSide = 1;
-        else if (Physics2D.OverlapBox((Vector2)transform.position + leftOffset, wallOverlapSize, 0, groundLayer)) wallSide = -1;
-        else wallSide = 0;
+        if (!onWalls) wallSide = 0;
+        else
+        {
+            if (Physics2D.OverlapBox((Vector2)transform.position + rightOffset, wallOverlapSize, 0, groundLayer)) wallSide = 1;
+            else if (Physics2D.OverlapBox((Vector2)transform.position + leftOffset, wallOverlapSize, 0, groundLayer)) wallSide = -1;
+        }
+
 
         if (!isDashing && onFloor)
         {
@@ -548,7 +557,7 @@ public class Movement : MonoBehaviour
         if (isDashing == false && height > heightLastFrame & Mathf.Abs(height - heightLastFrame) > fallingThreshold)
         {
             anim.SetTrigger("Jumping");
-            Debug.Log("Jumping" + height + " - " + heightLastFrame);
+            //Debug.Log("Jumping" + height + " - " + heightLastFrame);
         }
         anim.SetBool("Jumping", isDashing == false && height > heightLastFrame & Mathf.Abs(height - heightLastFrame) > fallingThreshold);
         if (anim.GetBool("Jumping") == false) anim.SetBool("Falling", isDashing == false && height < heightLastFrame && Mathf.Abs(height - heightLastFrame) > fallingThreshold);
