@@ -1,0 +1,20 @@
+﻿title: Sword_Memento_pt.2
+tags:
+---
+<<AddBlur SceneScriptHolder>>
+???: Oma, read story by me.
+
+???: Lohengrin? Of course!
+
+???: Mom, we can’t let him take this on the flight
+
+???: Grandma will take care of it, alright? Next time you come, I promise it will be just as sharp.
+
+???: When will you come next?
+
+???: I’m sorry, Mom, you know his job.
+
+???: Mad, we’ll try to visit more often.
+
+<<RemoveBlur SceneScriptHolder>>
+===
