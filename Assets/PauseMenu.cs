@@ -22,7 +22,6 @@ public class PauseMenu : MonoBehaviour
         TogglePause();
     }
 
-
     private void OnPauseActionPerformed(InputAction.CallbackContext context)
     {
         TogglePause();
