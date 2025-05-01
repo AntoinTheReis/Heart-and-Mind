@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 550702702045869734, guid: 415470c7c3c00494d8350eeeab58e5ea, type: 3}
       propertyPath: bottomOffset.x
-      value: -6.84
+      value: -6.59
       objectReference: {fileID: 0}
     - target: {fileID: 550702702045869734, guid: 415470c7c3c00494d8350eeeab58e5ea, type: 3}
       propertyPath: collisionRadius
@@ -10353,6 +10353,14 @@ PrefabInstance:
     - target: {fileID: 5530208685583841434, guid: 692ecb1dd84814546bcd4e3a6eff4425, type: 3}
       propertyPath: m_Name
       value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 8150116975637261001, guid: 692ecb1dd84814546bcd4e3a6eff4425, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8150116975637261001, guid: 692ecb1dd84814546bcd4e3a6eff4425, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
