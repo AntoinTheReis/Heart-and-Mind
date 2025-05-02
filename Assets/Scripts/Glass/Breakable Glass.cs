@@ -13,6 +13,7 @@ public class BreakableGlass : MonoBehaviour
     private bool dashingIn = false;
     private float originalDistance;
     private GameObject playerTarget;
+    private bool breaking = false;
 
     #region Audio
     public FMODUnity.EventReference glassBreak;
@@ -47,8 +48,10 @@ public class BreakableGlass : MonoBehaviour
         /*thisCollider.enabled = false;
         if((collision.gameObject.tag != "Player" || !collision.gameObject.GetComponent<Movement>().isDashing)) thisCollider.enabled = true;*/
         if (collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<Movement>().isDashing)
-        {   
+        {
+            breaking = true;
             Instantiate(brokenPrefab, transform.position, transform.rotation);
+            Debug.Log("Glass break 1");
             sfx_glassBreakInstance.start();
             Destroy(gameObject);
         }
@@ -63,7 +66,10 @@ public class BreakableGlass : MonoBehaviour
             originalDistance = Vector2.Distance(gameObject.transform.position, collision.gameObject.transform.position);
             playerTarget = collision.gameObject;
 
-            StartCoroutine(CheckForDashInGlass());
+            Instantiate(brokenPrefab, transform.position, transform.rotation);
+            Debug.Log("Glass break 2");
+            sfx_glassBreakInstance.start();
+            Destroy(gameObject);
         }
     }
 
@@ -72,18 +78,7 @@ public class BreakableGlass : MonoBehaviour
         yield return new WaitForSecondsRealtime(dashGlassWait);
         if (dashingIn)
         {
-            float currentDistance = Vector2.Distance(gameObject.transform.position, playerTarget.transform.position);
-            if (currentDistance < originalDistance)
-            {
-                Instantiate(brokenPrefab, transform.position, transform.rotation);
-                sfx_glassBreakInstance.start();
-                Destroy(gameObject);
-            }
-            else
-            {
-                Debug.Log("Glass Dash Stuff - OG Distance = " + originalDistance + " - New Distance = " + currentDistance);
-                dashingIn = false;
-            }
+            
         }
     }
 
