@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5601744830904922853, guid: 2a37304cbf5d09c49a1dba0df672ba6d, type: 3}
       propertyPath: m_Name
-      value: Orange Falling Platform (1) Variant
+      value: Blue Falling Platform
       objectReference: {fileID: 0}
     - target: {fileID: 6612819267189921424, guid: 2a37304cbf5d09c49a1dba0df672ba6d, type: 3}
       propertyPath: m_Sprite

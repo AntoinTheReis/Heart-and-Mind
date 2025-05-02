@@ -49,7 +49,7 @@ MonoBehaviour:
   continueActionKeyCode: 32
   continueActionButtonName: Jump
   continueActionOnButtonRelease: 0
-  continueActionReference: {fileID: 0}
+  continueActionReference: {fileID: -1924739031715287927, guid: c37bb095df13f6248a912fffa67256cd, type: 3}
   continueAction:
     m_Name: Skip
     m_Type: 1

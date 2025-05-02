@@ -2,7 +2,6 @@
 tags:
 ---
 Mind: Heart! My goodness, I thought I’d lost you!
-//Have them rush to each other, Heart and Mind together again at last.
 
 Heart: I thought I’d lost you too! I was so scared, s-so scared...
 
@@ -16,8 +15,7 @@ Heart: I saw them too! You're right, they were vague, but it was definitely from
 
 Heart: But... I don’t think they were from our past, Mind. They felt like they were from someone else’s past.
 
-<<CutToBlack ScreenScriptHolder>>
-<<NextScene ScreenScriptHolder>>
+<<NextScene SceneScriptHolder>>
 
 // Mind: This whole thing is terrifying, Heart. I don’t know what’s going on, let us forget this adventure and go home.
 
