@@ -97,73 +97,119 @@ public class DamageAndRespawn : MonoBehaviour
     {
         if(collision.gameObject.tag == "Damage")  //For spikes and stuff !Death with knockback!
         {
-            #region Death Audio
-            if (sfx_deathInstance.isValid())
-            {
-                sfx_deathInstance.start();
-            }
-            #endregion
-
-            if (heartOrMind == 1)
-            {
-                movement.ZeroMovement();
-                movement.enabled = false;
-            }
-            else
-            {
-                //mMovement.ZeroMovement();
-                //mMovement.enabled = false;
-                GetComponent<MindBlockTelekinesis>().enabled = false;
-            }
-            respawning = true;
-            rb.gravityScale = 0;
-            rb.drag = 0;
-            //collider2d.enabled = false;
-
-            // Calculate Angle Between the collision point and the player
-            Vector2 dir = collision.contacts[0].point - new Vector2(transform.position.x, transform.position.y);
-            dir = -dir.normalized;
-
-            DOVirtual.Float(dragDashMax, 0, respawnTime, RigidbodyDrag);
-            rb.AddForce(dir * damagePush);
-
-            characterAnimator.SetBool("Dead", true);
-
-            StartCoroutine(Respawn());
+            // #region Death Audio
+            // if (sfx_deathInstance.isValid())
+            // {
+            //     sfx_deathInstance.start();
+            // }
+            // #endregion
+            //
+            // if (heartOrMind == 1)
+            // {
+            //     movement.ZeroMovement();
+            //     movement.enabled = false;
+            // }
+            // else
+            // {
+            //     //mMovement.ZeroMovement();
+            //     //mMovement.enabled = false;
+            //     GetComponent<MindBlockTelekinesis>().enabled = false;
+            // }
+            // respawning = true;
+            // rb.gravityScale = 0;
+            // rb.drag = 0;
+            // //collider2d.enabled = false;
+            //
+            // // Calculate Angle Between the collision point and the player
+            // Vector2 dir = collision.contacts[0].point - new Vector2(transform.position.x, transform.position.y);
+            // dir = -dir.normalized;
+            //
+            // DOVirtual.Float(dragDashMax, 0, respawnTime, RigidbodyDrag);
+            // rb.AddForce(dir * damagePush);
+            //
+            // characterAnimator.SetBool("Dead", true);
+            //
+            // StartCoroutine(Respawn());
+            
+            DeathWithKnockback(collision);
         }
 
         if(collision.gameObject.tag == "Death")  //For deaths without knockback, such as falling in a pit
         {
-            #region Death Audio
-            if (sfx_deathInstance.isValid())
-            {
-                sfx_deathInstance.start();
-            }
-            #endregion
+            // #region Death Audio
+            // if (sfx_deathInstance.isValid())
+            // {
+            //     sfx_deathInstance.start();
+            // }
+            // #endregion
+            //
+            // if (heartOrMind == 1)
+            // {
+            //     movement.ZeroMovement();
+            //     movement.enabled = false;
+            // }
+            // else
+            // {
+            //     mMovement.ZeroMovement();
+            //     mMovement.enabled = false;
+            //     GetComponent<MindBlockTelekinesis>().enabled = false;
+            // }
+            // respawning = true;
+            // rb.gravityScale = 0;
+            // rb.drag = 0;
+            //
+            // StartCoroutine(Respawn());
 
-            if (heartOrMind == 1)
-            {
-                movement.ZeroMovement();
-                movement.enabled = false;
-            }
-            else
-            {
-                mMovement.ZeroMovement();
-                mMovement.enabled = false;
-                GetComponent<MindBlockTelekinesis>().enabled = false;
-            }
-            respawning = true;
-            rb.gravityScale = 0;
-            rb.drag = 0;
-
-            StartCoroutine(Respawn());
+            Death(respawnTime);
         }
 
     }
 
-    IEnumerator Respawn()
+    private void Death(float time)
     {
-        yield return new WaitForSeconds(respawnTime);
+        #region Death Audio
+        if (sfx_deathInstance.isValid())
+        {
+            sfx_deathInstance.start();
+        }
+        #endregion
+        
+        if (heartOrMind == 1)
+        {
+            movement.ZeroMovement();
+            movement.enabled = false;
+        }
+        else
+        {
+            //mMovement.ZeroMovement();
+            //mMovement.enabled = false;
+            GetComponent<MindBlockTelekinesis>().enabled = false;
+        }
+        
+        respawning = true;
+        rb.gravityScale = 0;
+        rb.drag = 0;
+
+        StartCoroutine(Respawn(time));
+    }
+
+    private void DeathWithKnockback(Collision2D collision)
+    {
+        // Calculate Angle Between the collision point and the player
+        Vector2 dir = collision.contacts[0].point - new Vector2(transform.position.x, transform.position.y);
+        dir = -dir.normalized;
+
+        DOVirtual.Float(dragDashMax, 0, respawnTime, RigidbodyDrag);
+        rb.AddForce(dir * damagePush);
+
+        characterAnimator.SetBool("Dead", true);
+        
+        Death(respawnTime);
+    }
+
+    IEnumerator Respawn(float delay)
+    {
+        yield return new WaitForSeconds(delay);
         curtain.SetTrigger("Died");
         yield return new WaitForSeconds(0.3f);
 
@@ -178,7 +224,7 @@ public class DamageAndRespawn : MonoBehaviour
         {
             if (resetableValues[i].z == 1)
             {
-                //resetables[i].transform.position = new Vector2(resetableValues[i].x, resetableValues[i].y);
+                resetables[i].transform.position = new Vector2(resetableValues[i].x, resetableValues[i].y);
             }
             else if (resetables[i] == null)
             {
@@ -196,6 +242,8 @@ public class DamageAndRespawn : MonoBehaviour
 
         DOVirtual.Float(0, 1, materializationTime, SpriteAlpha);
     }
+    
+    
 
     private void RigidbodyDrag(float x)
     {
@@ -222,9 +270,9 @@ public class DamageAndRespawn : MonoBehaviour
         }
     }
 
-    public void ForeignRespawn()
+    public void ForeignRespawn(float respawnTime)
     {
-        StartCoroutine(Respawn());
+        StartCoroutine(Respawn(respawnTime));
     }
 
 }

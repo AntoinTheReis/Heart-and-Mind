@@ -261,9 +261,11 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                 m_RebindOperation?.Dispose();
                 m_RebindOperation = null;
             }
-
+            action.Disable();
             // Configure the rebind.
             m_RebindOperation = action.PerformInteractiveRebinding(bindingIndex)
+                .WithControlsExcluding("Mouse")
+                .WithControlsExcluding("<Pointer>/position")
                 .OnCancel(
                     operation =>
                     {
@@ -272,11 +274,23 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                         UpdateBindingDisplay();
                         CleanUp();
                     })
+                .Start()
                 .OnComplete(
                     operation =>
                     {
+                        
+                        action.Enable();
                         m_RebindOverlay?.SetActive(false);
                         m_RebindStopEvent?.Invoke(this, operation);
+
+                        if (CheckDuplicateBindings(action, bindingIndex, allCompositeParts))
+                        {
+                            action.RemoveBindingOverride(bindingIndex);
+                            CleanUp();
+                            PerformInteractiveRebind(action, bindingIndex, allCompositeParts);
+                            return;
+                        }
+                        
                         UpdateBindingDisplay();
                         CleanUp();
 
@@ -314,6 +328,33 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
             m_RebindStartEvent?.Invoke(this, m_RebindOperation);
 
             m_RebindOperation.Start();
+        }
+
+        private bool CheckDuplicateBindings(InputAction action, int bindingIndex, bool allCompositeParts = false)
+        {
+            InputBinding newBinding = action.bindings[bindingIndex];
+            foreach (InputBinding binding in action.actionMap.bindings)
+            {
+                if (binding.action == newBinding.action) continue;
+                if (binding.effectivePath == newBinding.effectivePath)
+                {
+                    Debug.LogError($"Duplicate binding '{binding.name}' found @: " + newBinding.effectivePath);
+                    return true;
+                }
+            }
+            //check for duplicate composite bindings
+            if (allCompositeParts)
+            {
+                for (int i = 1; i < bindingIndex; ++i)
+                {
+                    if (action.bindings[i].effectivePath == newBinding.effectivePath)
+                    {
+                        Debug.LogError($"Duplicate binding '{action.bindings[i].name}' found @: " + newBinding.effectivePath);
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
 
         protected void OnEnable()
