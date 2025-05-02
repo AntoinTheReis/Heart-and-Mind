@@ -29,6 +29,6 @@ Heart: ...
 
 Heart: Nevermind. Right now, I have to find a way to Mind.
 
-<<CutToBlack SceneScriptHolder>>
+<<FadeOut SceneScriptHolder>>
 <<NextScene SceneScriptHolder>>
 ===

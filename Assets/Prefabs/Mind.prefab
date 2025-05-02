@@ -250,11 +250,11 @@ MonoBehaviour:
     Path: event:/SFX_Jump
   sfx_dialogue:
     Guid:
-      Data1: -576654384
-      Data2: 1318459271
-      Data3: 1716860328
-      Data4: -637721636
-    Path: event:/SFX_Dialogue
+      Data1: -1699688055
+      Data2: 1277833414
+      Data3: 1800086417
+      Data4: -311089568
+    Path: event:/SFX_DialogueMind
 --- !u!50 &4817034444311610703
 Rigidbody2D:
   serializedVersion: 4
@@ -353,6 +353,13 @@ MonoBehaviour:
       Data3: 1100329395
       Data4: -985501108
     Path: event:/SFX_Teleport
+  sfx_blockCancel:
+    Guid:
+      Data1: -757520935
+      Data2: 1326199402
+      Data3: -1407936078
+      Data4: -971229748
+    Path: event:/SFX_BlockCancel
 --- !u!1 &2166980037536431569
 GameObject:
   m_ObjectHideFlags: 0

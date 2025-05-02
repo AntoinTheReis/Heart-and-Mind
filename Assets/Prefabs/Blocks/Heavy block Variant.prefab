@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: heavy
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6945390150975884338, guid: 9883322c3734a3e4a9da4ec777d5cf7e, type: 3}
+      propertyPath: heightDifference
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6954786409546946531, guid: 9883322c3734a3e4a9da4ec777d5cf7e, type: 3}
       propertyPath: m_Color.b
       value: 0.74509805

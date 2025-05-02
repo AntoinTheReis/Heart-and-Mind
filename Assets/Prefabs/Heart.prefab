@@ -340,10 +340,10 @@ MonoBehaviour:
   airCruisingCap: 0.05
   floorAcceleration: 11
   maxActualSpeed: {x: 7, y: 7}
-  dashSpeed: 90
+  dashSpeed: 60
   dashWait: 0.2
   dragDashDuration: 0.9
-  dragDashMax: 20
+  dragDashMax: 12.5
   dashGray: 0.66
   isDashing: 0
   jump: 20
@@ -406,7 +406,7 @@ MonoBehaviour:
       Data2: 1318459271
       Data3: 1716860328
       Data4: -637721636
-    Path: event:/SFX_Dialogue
+    Path: event:/SFX_DialogueHeart
   charVoice: 0
 --- !u!70 &3005949718448252378
 CapsuleCollider2D:

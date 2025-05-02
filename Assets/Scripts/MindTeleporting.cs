@@ -39,6 +39,8 @@ public class MindTeleporting : MonoBehaviour
     #region Audio
     public FMODUnity.EventReference sfx_teleport;
     FMOD.Studio.EventInstance sfx_teleportInstance;
+    public FMODUnity.EventReference sfx_blockCancel;
+    FMOD.Studio.EventInstance sfx_blockCancelInstance;
     #endregion
 
     // Start is called before the first frame update
@@ -46,6 +48,7 @@ public class MindTeleporting : MonoBehaviour
     {
         #region Audio EventInstances
         sfx_teleportInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_teleport);
+        sfx_blockCancelInstance = FMODUnity.RuntimeManager.CreateInstance(sfx_blockCancel);
         #endregion
 
         switcher = GameObject.FindGameObjectWithTag("Switcher").GetComponent<Switcher>();
@@ -147,7 +150,16 @@ public class MindTeleporting : MonoBehaviour
             movementMode = !movementMode;
             if(!movementMode)
                 telekinesis.ActivateTelekinesis();
-
+            else
+            {
+                //Play sound
+                #region Cancel Block Audio
+                if (sfx_blockCancelInstance.isValid())
+                {
+                    sfx_blockCancelInstance.start();
+                }
+                #endregion
+            }
             PickOptions();
         }
         else if (input.OnJumpPressed())

@@ -35,6 +35,7 @@ public class Controls : MonoBehaviour
     /// Returns true during the frame the 'jump' input is pressed
     /// </summary>
     public bool OnJumpPressed() => disabled ? false : input.actions["Jump"].triggered;
+    
     /// <summary>
     /// Returns true during the frame the 'jump' input is released
     /// </summary>

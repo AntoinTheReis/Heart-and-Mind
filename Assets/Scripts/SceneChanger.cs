@@ -36,6 +36,8 @@ public class SceneChanger : MonoBehaviour
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         volume = cam.GetComponentInChildren<Volume>();
         cameraSystem = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraSystem>();
+
+        Time.timeScale = 1.0f;
     }
 
     // Update is called once per frame
