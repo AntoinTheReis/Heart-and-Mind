@@ -19,6 +19,8 @@ HEART: What was that?
 HEART: Mind?
 
 <<CutToBlack SceneScriptHolder>>
-<<NextScene SceneScriptHolder>>
 
+<<playGlassBreak SceneScriptHolder>>
+HEART: <i><b>MIIIIINNNNNND!<b><i>
+<<NextScene SceneScriptHolder>>
 ===

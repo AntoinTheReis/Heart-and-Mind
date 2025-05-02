@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
+using Yarn.Unity;
 
 public class MainMenuSpeaker : MonoBehaviour
 {
@@ -19,12 +20,17 @@ public class MainMenuSpeaker : MonoBehaviour
     public EventReference fmodEvent2; // Assign FMOD Event in Inspector for Confirm
     private EventInstance eventInstance2;
 
+    public EventReference glassBreakEvent; // Assign FMOD Event in Inspector for Glass Break
+    private EventInstance glassBreakInstance;
+
     public float currentValue1 = 0f;
     public float targetValue1 = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
+
         eventInstance = RuntimeManager.CreateInstance(fmodEvent);
 
         FMOD.Studio.EventDescription eventDescription;
@@ -35,6 +41,8 @@ public class MainMenuSpeaker : MonoBehaviour
 
         eventInstance1 = RuntimeManager.CreateInstance(fmodEvent1);
         eventInstance2 = RuntimeManager.CreateInstance(fmodEvent2);
+
+        glassBreakInstance = RuntimeManager.CreateInstance(glassBreakEvent);
 
         eventInstance.start();
     }
@@ -52,13 +60,20 @@ public class MainMenuSpeaker : MonoBehaviour
         }
     }
 
+    [YarnCommand("playUIToggle")]
     public void playUIToggle()
     {
         eventInstance1.start();
     }
+    [YarnCommand("playUIConfirm")]
     public void playUIConfirm()
     {
         eventInstance2.start();
+    }
+    [YarnCommand("playGlassBreak")]
+    public void playGlassBreak()
+    {
+        glassBreakInstance.start();
     }
 
     public void fadeIntroMusic()

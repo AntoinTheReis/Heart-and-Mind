@@ -9,6 +9,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 using Yarn.Unity;
 
 /*
@@ -124,6 +125,9 @@ public class CameraSystem : MonoBehaviour
     {
         //Determining Target:
         //If not in dialogue
+
+        if (SceneManager.GetActiveScene().buildIndex == 0) return;
+
         if (dialogueRunner != null && !dialogueRunner.IsDialogueRunning)
         {
             //if character switcher exists (relevant for acts 1 and 3)
@@ -142,6 +146,7 @@ public class CameraSystem : MonoBehaviour
             Debug.LogError("No Camera target found");
             return;
         }
+        
         target_position = target.transform.position;
 
         #region Clamping Camera's Target to Room Bounds

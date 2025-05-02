@@ -34,11 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5396830181890157952, guid: 84aa18ea4c43b484383b3d1cab84971e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 160.36
+      value: 124.53016
       objectReference: {fileID: 0}
     - target: {fileID: 5396830181890157952, guid: 84aa18ea4c43b484383b3d1cab84971e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 37.44
+      value: -19.840574
       objectReference: {fileID: 0}
     - target: {fileID: 5396830181890157952, guid: 84aa18ea4c43b484383b3d1cab84971e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -50,15 +50,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5396830181890157952, guid: 84aa18ea4c43b484383b3d1cab84971e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5396830181890157952, guid: 84aa18ea4c43b484383b3d1cab84971e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5396830181890157952, guid: 84aa18ea4c43b484383b3d1cab84971e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5396830181890157952, guid: 84aa18ea4c43b484383b3d1cab84971e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -83,6 +83,14 @@ PrefabInstance:
     - target: {fileID: 5446917501486044360, guid: 84aa18ea4c43b484383b3d1cab84971e, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.0471
+      objectReference: {fileID: 0}
+    - target: {fileID: 6360047565615602837, guid: 84aa18ea4c43b484383b3d1cab84971e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429970212165885941, guid: 84aa18ea4c43b484383b3d1cab84971e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7677026188022670632, guid: 84aa18ea4c43b484383b3d1cab84971e, type: 3}
       propertyPath: m_LocalScale.x

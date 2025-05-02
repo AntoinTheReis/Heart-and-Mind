@@ -1,0 +1,14 @@
+﻿title: Chess_Piece_Memento_pt.2
+tags:
+---
+<<AddBlur SceneScriptHolder>>
+<<wait 0.5>>
+
+Madiline: <b>Your turn.<b>
+
+<<wait 1>>
+
+Madiline: <b> <I> Why?! I will defeat him! <I> <b>
+
+<<RemoveBlur SceneScriptHolder>>
+===

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -35,6 +36,13 @@ public class Block : MonoBehaviour
     private Animator curtain;
 
     public bool heavy;
+    public float heightDifference = 2.2f;
+
+    private bool collidingWithHeavy = false;
+    private bool collidinbgWithLightBelow = false;
+    private bool lightBlockTryingToPush = false;
+    private bool selectedIsLight = false;
+    private MindBlockTelekinesis telekinesis;
 
     #region Audio
     public FMODUnity.EventReference select;
@@ -60,6 +68,15 @@ public class Block : MonoBehaviour
 
         overlappingColliders = new List<Collider2D>();
 
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        for(int i = 0; i < players.Length; i++)
+        {
+            if(players[i].GetComponent<MindBlockTelekinesis>() != null)
+            {
+                telekinesis = players[i].GetComponent<MindBlockTelekinesis>();
+                break;
+            }
+        }
 
         curtain = GameObject.FindGameObjectWithTag("DeathCurtain").GetComponent<Animator>();
     }
@@ -67,6 +84,31 @@ public class Block : MonoBehaviour
     private void Update()
     {
         if(RoomTracker.current_room != null) lastActualRoom = RoomTracker.current_room;
+
+
+        if(telekinesis.active && !telekinesis.selectedBlock.heavy) selectedIsLight = true;
+        else selectedIsLight = false;
+
+        if (!lingering)
+        {
+            if (lightBlockTryingToPush)
+            {
+                if (collidinbgWithLightBelow) rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+                else rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+            }
+            else if (heavy && !collidingWithHeavy && !selected && !collidinbgWithLightBelow)
+            {
+                rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+            }
+            else if (heavy && (collidingWithHeavy || selected) && !selectedIsLight)
+            {
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            }
+            else if (heavy && collidinbgWithLightBelow && !selected)
+            {
+                rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+            }
+        }
 
     }
 
@@ -118,7 +160,7 @@ public class Block : MonoBehaviour
     {
         //Won't linger if grounded
         Bounds b = collider.bounds;
-        if(Physics2D.OverlapBox(new Vector2(b.center.x, b.min.y - 0.1f), new Vector2(b.size.x, 0.05f), 0f,groundLayer)) yield break;
+        if(Physics2D.OverlapBox(new Vector2(b.center.x, b.min.y - 0.1f), new Vector2(0.85f * b.size.x, 0.05f), 0f,groundLayer)) yield break;
 
         if(BlockTracker.lingeringBlock != null) BlockTracker.lingeringBlock.StopLinger();
         BlockTracker.lingeringBlock = gameObject.GetComponent<Block>();
@@ -225,31 +267,35 @@ public class Block : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if(heavy)
+        Block target = collision.gameObject.GetComponent<Block>();
+
+        if (heavy)
         {
-            if ((collision.gameObject.name == "Player Block" || collision.gameObject.tag == "Player"))
+            if (target != null && target.heavy) collidingWithHeavy = false;
+            else if ((target != null && !target.heavy) || collision.gameObject.tag == "PlayerBlockRespawn" || collision.gameObject.name == "Player Block")
             {
-                rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
-                rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX;//Heavy block cannot be pushed by players
-            }
-            else if (collision.gameObject.tag == "Blocks" && !collision.gameObject.GetComponent<Block>().heavy)
-            {
-                rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX;  ////Heavy block cannot be pushed by light block
-                rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
-                Debug.Log("Deactivating heavy status");
+                collidinbgWithLightBelow = false;
+                lightBlockTryingToPush = false;
             }
         }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (heavy && !selected)
+        Block target = collision.gameObject.GetComponent<Block>();
+
+        if (heavy)
         {
-            if ((collision.gameObject.name == "Player Block" || collision.gameObject.tag == "Player")) rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;  //Heavy block cannot be pushed by players
-            else if (collision.gameObject.tag == "Blocks" && !collision.gameObject.GetComponent<Block>().heavy) rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;  ////Heavy block cannot be pushed by light block
+            if (target != null && target.heavy) collidingWithHeavy = true;
+            else if ((target != null && !target.heavy) || collision.gameObject.tag == "PlayerBlockRespawn" || collision.gameObject.name == "Player Block")
+            {
+                if (target.selected) lightBlockTryingToPush = true;
+                else lightBlockTryingToPush = false;
+                if (gameObject.transform.position.y - collision.gameObject.transform.position.y > heightDifference) collidinbgWithLightBelow = true;
+                else collidinbgWithLightBelow = false;
+            }
         }
     }
-
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -293,7 +339,8 @@ public class Block : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-
+        Bounds b = collider.bounds;
+        Gizmos.DrawWireCube(new Vector2(b.center.x, b.min.y - 0.1f), new Vector2((0.85f * b.size.x), 0.05f));
     }
 
     public void StopLinger()
