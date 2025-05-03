@@ -107,6 +107,7 @@ public class Movement : MonoBehaviour
 
     public FMODUnity.EventReference sfx_walk;
     FMOD.Studio.EventInstance sfx_walkInstance;
+    public bool scenetransit = false;
 
     public FMODUnity.EventReference sfx_dialogue;
     FMOD.Studio.EventInstance sfx_dialogueInstance;
@@ -531,7 +532,7 @@ public class Movement : MonoBehaviour
         //anim.SetInteger("FacingParam", facing);
 
         anim.SetBool("IsWalking", Mathf.Abs(input.MoveInput().x) > 0 && onFloor && turnedOn);
-        if (anim.GetBool("IsWalking"))
+        if (anim.GetBool("IsWalking") && !scenetransit)
         {
             //PUT WALKING SOUND HERE
             if (sfx_walkInstance.isValid())
@@ -589,5 +590,10 @@ public class Movement : MonoBehaviour
     public void StopWalkSound()
     {
         sfx_walkInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+    void OnDestroy()
+    {
+        StopWalkSound();
+        scenetransit = true;
     }
 }
