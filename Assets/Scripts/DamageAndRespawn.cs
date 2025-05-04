@@ -224,7 +224,7 @@ public class DamageAndRespawn : MonoBehaviour
         {
             if (resetableValues[i].z == 1)
             {
-                resetables[i].transform.position = new Vector2(resetableValues[i].x, resetableValues[i].y);
+                //resetables[i].transform.position = new Vector2(resetableValues[i].x, resetableValues[i].y);
             }
             else if (resetables[i] == null)
             {

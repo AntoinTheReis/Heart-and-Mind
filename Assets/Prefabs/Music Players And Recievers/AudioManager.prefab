@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8612827530531742835
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8645617500973773404}
+  - component: {fileID: 5295965510996334322}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8645617500973773404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8612827530531742835}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 72.00579, y: -0.6722333, z: -0.38765442}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5295965510996334322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8612827530531742835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db260b0ca3c5fe24c9f37050050fcc8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MXVolume: 0.5
+  SFXVolume: 0.5
+  MasterVolume: 1
+  sfxTestEvent:
+    Guid:
+      Data1: 219152212
+      Data2: 1331147608
+      Data3: 1100329395
+      Data4: -985501108
+    Path: event:/SFX_Teleport
+  fmodEvent:
+    Guid:
+      Data1: -772833333
+      Data2: 1223997175
+      Data3: -1560931447
+      Data4: 2122768389
+    Path: event:/MX_WhereYouAre
+  fadeValue: 0
+  fmodEvent1:
+    Guid:
+      Data1: -951741740
+      Data2: 1303815143
+      Data3: -288563822
+      Data4: 1563538740
+    Path: event:/SFX_UIToggle
+  fmodEvent2:
+    Guid:
+      Data1: -1070534906
+      Data2: 1321994102
+      Data3: 2077444775
+      Data4: 1183154189
+    Path: event:/SFX_UIConfirm
+  glassBreakEvent:
+    Guid:
+      Data1: 224271910
+      Data2: 1178769310
+      Data3: -5331324
+      Data4: -806386337
+    Path: event:/SFX_GlassBreak
+  currentValue1: 0
+  targetValue1: 0
