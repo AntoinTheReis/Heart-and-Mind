@@ -40,7 +40,6 @@ public class MainMenuSpeaker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
 
         MX = FMODUnity.RuntimeManager.GetBus("bus:/Master/MX");
         SFX = FMODUnity.RuntimeManager.GetBus("bus:/Master/SFX");
