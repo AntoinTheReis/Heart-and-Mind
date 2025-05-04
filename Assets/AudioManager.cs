@@ -5,7 +5,7 @@ using FMODUnity;
 using FMOD.Studio;
 using Yarn.Unity;
 
-public class MainMenuSpeaker : MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
 
     public FMOD.Studio.Bus MX;
@@ -40,6 +40,7 @@ public class MainMenuSpeaker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
 
         MX = FMODUnity.RuntimeManager.GetBus("bus:/Master/MX");
         SFX = FMODUnity.RuntimeManager.GetBus("bus:/Master/SFX");
@@ -59,8 +60,6 @@ public class MainMenuSpeaker : MonoBehaviour
         eventInstance2 = RuntimeManager.CreateInstance(fmodEvent2);
 
         glassBreakInstance = RuntimeManager.CreateInstance(glassBreakEvent);
-
-        eventInstance.start();
     }
 
     // Update is called once per frame
@@ -120,12 +119,11 @@ public class MainMenuSpeaker : MonoBehaviour
             Debug.Log("SFX Valid");
             FMOD.Studio.PLAYBACK_STATE playbackState;
             sfxTestEventInstance.getPlaybackState(out playbackState);
-            if (playbackState == FMOD.Studio.PLAYBACK_STATE.PLAYING)
+            if (playbackState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
             {
-                sfxTestEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                sfxTestEventInstance.start();
                 Debug.Log("SFX Stopped");
             }
-            sfxTestEventInstance.start();
         }
         Debug.Log("SFX Changed");
     }
