@@ -116,6 +116,8 @@ public class Switcher : MonoBehaviour
             }
         }
 
+        if (input.OnJumpPressed()) Debug.Log("Jump pressed on Character Switcher");
+
     }
 
     public void setCanSwitch(bool canSwitch)

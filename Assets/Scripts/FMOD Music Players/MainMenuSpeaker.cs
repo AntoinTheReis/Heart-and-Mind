@@ -8,6 +8,17 @@ using Yarn.Unity;
 public class MainMenuSpeaker : MonoBehaviour
 {
 
+    public FMOD.Studio.Bus MX;
+    public FMOD.Studio.Bus SFX;
+    public FMOD.Studio.Bus Master;
+
+    public float MXVolume = 0.5f;
+    public float SFXVolume = 0.5f;
+    public float MasterVolume = 0.5f;
+
+    public EventReference sfxTestEvent; // Assign FMOD Event in Inspector for Music
+    private EventInstance sfxTestEventInstance;
+
     public EventReference fmodEvent; // Assign FMOD Event in Inspector for Music
     private EventInstance eventInstance;
     FMOD.Studio.PARAMETER_ID eventParameter;
@@ -29,7 +40,12 @@ public class MainMenuSpeaker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+
+        MX = FMODUnity.RuntimeManager.GetBus("bus:/Master/MX");
+        SFX = FMODUnity.RuntimeManager.GetBus("bus:/Master/SFX");
+        Master = FMODUnity.RuntimeManager.GetBus("bus:/Master");
+
+        sfxTestEventInstance = RuntimeManager.CreateInstance(sfxTestEvent);
 
         eventInstance = RuntimeManager.CreateInstance(fmodEvent);
 
@@ -50,6 +66,10 @@ public class MainMenuSpeaker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Affect audio changes here
+        MX.setVolume(MXVolume);
+        SFX.setVolume(SFXVolume);
+
         // Smoothly transition towards the target value
         currentValue1 = Mathf.Lerp(currentValue1, targetValue1, Time.deltaTime * 2);
         eventInstance.setParameterByID(eventParameter, currentValue1);
@@ -79,5 +99,34 @@ public class MainMenuSpeaker : MonoBehaviour
     public void fadeIntroMusic()
     {
         targetValue1 = 1;
+    }
+
+    public void MasterVolumeLevel(float newMasterVolume)
+    {
+        MasterVolume = newMasterVolume;
+        Debug.Log("MasterBus Changed");
+    }
+    public void MusicVolumeLevel(float newMusicVolume)
+    {
+        MXVolume = newMusicVolume;
+        Debug.Log("MX Changed");
+    }
+    public void SFXVolumeLevel(float newSFXVolume)
+    {
+        SFXVolume = newSFXVolume;
+
+        if (sfxTestEventInstance.isValid())
+        {
+            Debug.Log("SFX Valid");
+            FMOD.Studio.PLAYBACK_STATE playbackState;
+            sfxTestEventInstance.getPlaybackState(out playbackState);
+            if (playbackState == FMOD.Studio.PLAYBACK_STATE.PLAYING)
+            {
+                sfxTestEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                Debug.Log("SFX Stopped");
+            }
+            sfxTestEventInstance.start();
+        }
+        Debug.Log("SFX Changed");
     }
 }
