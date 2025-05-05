@@ -1,0 +1,10 @@
+﻿title: Chess_Piece_pt_3
+tags:
+---
+<<AddBlur SceneScriptHolder>>
+???: Mad, want to play a game?
+
+???: I don’t play anymore.
+
+<<RemoveBlur SceneScriptHolder>>
+===

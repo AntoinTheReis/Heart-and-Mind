@@ -1,0 +1,13 @@
+﻿title: Sword_Memento_pt.3
+tags:
+---
+<<AddBlur SceneScriptHolder>>
+???: Du solltest Leon nicht alleine mit der alten Dame lassen. <i> (You shouldn’t have let Leon alone with her) <i>
+
+???: Mom, I’m taking Leon back.
+
+???: Take care of yourself, Mom. He’s… busy. We gotta get back.
+
+???:...I’m sorry.
+<<RemoveBlur SceneScriptHolder>>
+===
