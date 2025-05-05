@@ -65335,7 +65335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3424147957585281729, guid: 00854705ffe99e74ca23c4f48bdff21a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 238
+      value: 91
       objectReference: {fileID: 0}
     - target: {fileID: 3663002583064748920, guid: 00854705ffe99e74ca23c4f48bdff21a, type: 3}
       propertyPath: m_Name
@@ -65635,7 +65635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7621822767573661484, guid: 00854705ffe99e74ca23c4f48bdff21a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 242
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 7621822768303873176, guid: 00854705ffe99e74ca23c4f48bdff21a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -66335,7 +66335,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 368677d342cea644f87a8b87772effbf, type: 3}
     - target: {fileID: 7142590554564481759, guid: a3bdbd1d5353d5d44b990fa145c9a55e, type: 3}
       propertyPath: startNode
-      value: Sword_Memento pt.2
+      value: Sword_Memento_pt.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
