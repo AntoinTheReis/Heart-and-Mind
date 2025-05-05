@@ -73516,7 +73516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4616317907011536564, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
       propertyPath: room_width
-      value: 35
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 4616317907011536564, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
       propertyPath: room_height
@@ -73536,7 +73536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7039342606817489809, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 84.299995
+      value: 85.5
       objectReference: {fileID: 0}
     - target: {fileID: 7039342606817489809, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -77453,7 +77453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4616317907011536564, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
       propertyPath: room_width
-      value: 35
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4616317907011536564, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
       propertyPath: room_height
@@ -78049,7 +78049,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4616317907011536564, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
       propertyPath: room_width
-      value: 35
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4616317907011536564, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
       propertyPath: room_height
@@ -78065,7 +78065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7039342606817489809, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 149.4
+      value: 146.9
       objectReference: {fileID: 0}
     - target: {fileID: 7039342606817489809, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -79313,7 +79313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4616317907011536564, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
       propertyPath: room_height
-      value: 19
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 4616317907011536564, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
       propertyPath: CamSizeInRoom
@@ -79329,7 +79329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7039342606817489809, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 33
+      value: 33.89
       objectReference: {fileID: 0}
     - target: {fileID: 7039342606817489809, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
       propertyPath: m_LocalPosition.z

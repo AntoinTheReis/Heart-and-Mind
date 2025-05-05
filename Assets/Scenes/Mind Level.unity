@@ -6623,6 +6623,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4616317907011536564, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
+      propertyPath: room_width
+      value: 52
+      objectReference: {fileID: 0}
     - target: {fileID: 4842622105886183416, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
       propertyPath: m_Name
       value: Static Cam Mind Room (2)
@@ -6804,7 +6808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7039342606817489809, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 54.89
+      value: 57.5
       objectReference: {fileID: 0}
     - target: {fileID: 7039342606817489809, guid: 2705a13da73548a44a7e6edcde4be17d, type: 3}
       propertyPath: m_LocalPosition.y
