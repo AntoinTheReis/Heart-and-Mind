@@ -75,12 +75,12 @@ public class PauseMenu : MonoBehaviour
                 menu.gameObject.SetActive(false);
             }
             startingMenu.SetActive(true);
-            //DisableInputs();
+            DisableInputs();
         }
         else
         {
             UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
-            //EnableInputs();
+            EnableInputs();
         }
     }
     

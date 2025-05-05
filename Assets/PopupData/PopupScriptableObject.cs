@@ -19,6 +19,7 @@ public class PopupScriptableObject : ScriptableObject
     public TMP_FontAsset messageFont;
     public TMP_FontAsset titleFont;
     public string message;
+    public InputActionReference messageAction;
     public string title;
     public Recipient recipient;
     public string exitAction;

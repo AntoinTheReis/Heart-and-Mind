@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messageFont: {fileID: 11400000, guid: 275c40311541c86479b8819534cad51f, type: 2}
   titleFont: {fileID: 11400000, guid: 6daa85973f3414a4c8d7a70af147305f, type: 2}
-  message: WASD
+  message: 
+  messageAction: {fileID: -1602114995565895769, guid: c37bb095df13f6248a912fffa67256cd, type: 3}
   title: Warp to nearby bus stops
   recipient: 2
   exitAction: 

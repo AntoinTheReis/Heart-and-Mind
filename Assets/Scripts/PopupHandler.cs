@@ -20,6 +20,8 @@ public class PopupHandler : MonoBehaviour
     [SerializeField] private InputActionAsset inputActions;
 
     private InputAction ExitInputAction;
+    public InputActionReference messageAction;
+
 
     public Sprite image;
 
@@ -232,8 +234,19 @@ public class PopupHandler : MonoBehaviour
     }
     public void SetMessage(string message)
     {
+        if(messageAction != null)
+        {
+            char[] displayString = messageAction.action.GetBindingDisplayString().ToCharArray();
+            foreach(char c in displayString)
+            {
+                //
+            }
+        }
         messageText.text = message;
     }
+
+
+
     [Tooltip("0 = NONE, 1 = HEART, 2 = MIND")]
     public void SetRecipient(int _recipient)
     {

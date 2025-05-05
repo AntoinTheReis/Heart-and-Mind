@@ -15,6 +15,7 @@ MonoBehaviour:
   messageFont: {fileID: 11400000, guid: 275c40311541c86479b8819534cad51f, type: 2}
   titleFont: {fileID: 11400000, guid: 0e899dbcbbaa70f4684ffcce208e3432, type: 2}
   message: e
+  messageAction: {fileID: 0}
   title: SWITCH CHARACTERS
   recipient: 1
   exitAction: Interact
