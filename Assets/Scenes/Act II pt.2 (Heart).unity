@@ -91402,6 +91402,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 459763067530764152, guid: 5ee55de34c4cbfe49b722e9d93c2c49a, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804725576147798641, guid: 5ee55de34c4cbfe49b722e9d93c2c49a, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3879234502361452556, guid: 5ee55de34c4cbfe49b722e9d93c2c49a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.231536
@@ -91442,9 +91450,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5367033542102361175, guid: 5ee55de34c4cbfe49b722e9d93c2c49a, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468933644664821959, guid: 5ee55de34c4cbfe49b722e9d93c2c49a, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178830575251163832, guid: 5ee55de34c4cbfe49b722e9d93c2c49a, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8097525031882977658, guid: 5ee55de34c4cbfe49b722e9d93c2c49a, type: 3}
       propertyPath: m_Name
       value: Act II Heart Lights
+      objectReference: {fileID: 0}
+    - target: {fileID: 8128761539257337625, guid: 5ee55de34c4cbfe49b722e9d93c2c49a, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252069071181729783, guid: 5ee55de34c4cbfe49b722e9d93c2c49a, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8323782018004650615, guid: 5ee55de34c4cbfe49b722e9d93c2c49a, type: 3}
+      propertyPath: m_Intensity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
