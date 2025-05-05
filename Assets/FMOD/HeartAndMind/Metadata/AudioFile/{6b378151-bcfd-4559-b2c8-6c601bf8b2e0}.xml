@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6b378151-bcfd-4559-b2c8-6c601bf8b2e0}">
+		<property name="assetPath">
+			<value>2 - Clarion Piano Lead.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>55.062494331065757</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b68a2418-38d4-4045-be64-28ac98ce7f22}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,28 +1,30 @@
 ﻿title: Rose_Memento_pt.2
 tags:
 ---
-“Girls! Come down and help set the table! Lana!”
-At the sound of her mom’s voice, Lana jumps back instantly.
-You watch her, mesmerized—her flushed cheeks, her lips, as delicate as a rose.
-“We’re coming, Mom!”
-She hurriedly smooths down the bangs you just trimmed.
-“Come on, let’s go.”
-Her beautiful green eyes refuse to meet yours.
-You love being around Lana, feeling her warmth. Just being near her makes you happy. But how is this any different from before? You’re still friends… just that now, you crave her more.
-You don’t resist the urge. You take her hand—right at the school gate. She stiffens for a second before quickly tucking her hand into her pocket.
-“Can we go to your place?”
-She smiles.
-You don’t like that smile.
-“...Sure.”
-“Lana…” You say her name, nerves tightening in your chest like before an exam.
-She’s nervous too—you can feel it in the slight dampness of her palm.
-“What is it, Mad…”
-“Can you… be my girlfriend?”
-…
-Silence. Suffocating silence.
-“Please, Lana, say something…”
-“We shouldn’t. We are both—”
-You cut her off.
-“Do you not feel anything for me at all?”
+<<AddBlur SceneScriptHolder>>
+???: Girls! Come down and help set the table! Lana!
 
+???: We’re coming, Mom!
+
+???: Come on, let’s go.
+
+???: Can we go to your place?
+
+<<wait 0.5>>
+???: ...Sure.
+
+???: Lana…
+
+???: What is it, Mad…
+
+???: Can you… be my girlfriend?
+
+<<wait 0.5>>
+
+???: Please, Lana, say something…
+
+???: We shouldn’t. We are both—
+
+???: Do you not feel anything for me at all?
+<<RemoveBlur SceneScriptHolder>>
 ===
