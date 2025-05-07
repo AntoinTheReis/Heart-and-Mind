@@ -1,0 +1,2305 @@
+fileFormatVersion: 2
+guid: 03c01b8741316491eae45be471264a40
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 399
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b7718d4c04140ea8338d3f4d355c58
+      internalID: -1486039007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_1
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3544fa21f78d64d6baad81a5cda65aee
+      internalID: 2063415803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_2
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 833110503bcff47318773ca7bba0f30a
+      internalID: -987762387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_3
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 281f05f1147704de7b40caa6fbe880f2
+      internalID: -709047113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_4
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f3dff9bbcdb480897fe700632ec60d
+      internalID: 438932111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_5
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09dd5115dde344878ac06e5a9e5f2248
+      internalID: -1866235804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_6
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97c405884f44415d89fd8ad6c4e05ca
+      internalID: 1970077302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_7
+      rect:
+        serializedVersion: 2
+        x: 4228
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e55200bdd53f412cb8421c49fd8600d
+      internalID: 539448339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_8
+      rect:
+        serializedVersion: 2
+        x: 4832
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28493aac951eb4351b19291a1a0f8bc3
+      internalID: -1076364673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_9
+      rect:
+        serializedVersion: 2
+        x: 5436
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af2cc4def03148be8a1cc67bcfea87a
+      internalID: 70828923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_10
+      rect:
+        serializedVersion: 2
+        x: 6040
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0263a2c34242e4d12919da547d4366a3
+      internalID: -2099476423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_11
+      rect:
+        serializedVersion: 2
+        x: 6644
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece236620f3354758ab1f1c3900db56a
+      internalID: -280929241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_12
+      rect:
+        serializedVersion: 2
+        x: 7248
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d38d7ed9be584e22ae3f8a6ccbee78d
+      internalID: 1791208457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_13
+      rect:
+        serializedVersion: 2
+        x: 7852
+        y: 4228
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e1b67151c6b4d96ad3541c304f4499
+      internalID: 65763784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e656523eed0314b28b30533f65153a69
+      internalID: 1581494406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_15
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77bc46f04010d4de4a15abf4e9107399
+      internalID: -828157915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_16
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0944d0f7ca5614cb49397bad468ea7e9
+      internalID: -393274596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_17
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd10c290836e4303a0901a7a82ed450
+      internalID: 1447253980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_18
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96af4b2bf33624919a6ded25b86be582
+      internalID: -1793503804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_19
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c8ae46f1100470f924dd98f207fa7e
+      internalID: -406272760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_20
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04a562d2f2254949b24f135d3ac27c8
+      internalID: 895958750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_21
+      rect:
+        serializedVersion: 2
+        x: 4228
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56854f1fe8087424985249c369e69214
+      internalID: 1590269940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_22
+      rect:
+        serializedVersion: 2
+        x: 4832
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a934e8e24f3346f19db5c4428ec26b3
+      internalID: -904525065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_23
+      rect:
+        serializedVersion: 2
+        x: 5436
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44969df1c921d4d08a857c6e2a88e160
+      internalID: 1504467778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_24
+      rect:
+        serializedVersion: 2
+        x: 6040
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626686f48a30e4203a61ee199de750ee
+      internalID: -902639600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_25
+      rect:
+        serializedVersion: 2
+        x: 6644
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1471b45f67bed490db613699cb26d738
+      internalID: 1645301734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_26
+      rect:
+        serializedVersion: 2
+        x: 7248
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d671bfb791974b0eb385942ba79cd58
+      internalID: -119029154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_27
+      rect:
+        serializedVersion: 2
+        x: 7852
+        y: 3624
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f09fd1a46bc41849c8882021f22f78
+      internalID: 1113312572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58bcded7f3c794b8ca9a0b09b38c5da5
+      internalID: 1387279993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_29
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abaed23b46b5f41a58a0ea38f314cacc
+      internalID: -6490016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_30
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a68f3a8f7889445683986cae87d6c89
+      internalID: 1809362958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_31
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f10431095cb4bde95b7a1ff7f8dd6c
+      internalID: -28546578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_32
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb11d802b4c04e3ab662bac03bff87f
+      internalID: -1380414713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_33
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd409a02d5b84084b94501a549dc50f
+      internalID: 424895750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_34
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d092a3ee9ea498cb077ef88187af5c
+      internalID: -639741364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_35
+      rect:
+        serializedVersion: 2
+        x: 4228
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29e1c46623d94601be6275b5f75351e
+      internalID: 1381443717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_36
+      rect:
+        serializedVersion: 2
+        x: 4832
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1910f4c6ff1c427198b7608601813ae
+      internalID: -737290324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_37
+      rect:
+        serializedVersion: 2
+        x: 5436
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad0990020ed44179965b73b31d1f5ff
+      internalID: -677789675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_38
+      rect:
+        serializedVersion: 2
+        x: 6040
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b31ca1661004d4ca83a8791cdc2fba
+      internalID: -1868250131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_39
+      rect:
+        serializedVersion: 2
+        x: 6644
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5672446957664d25a1d01983965bf55
+      internalID: -1062244036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_40
+      rect:
+        serializedVersion: 2
+        x: 7248
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a21909acc2b2464d9c48c4022a33452
+      internalID: -1814688516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_41
+      rect:
+        serializedVersion: 2
+        x: 7852
+        y: 3020
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 005b40cbe7aee4eff9d2fddbc0b18a98
+      internalID: -1309499863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2b1ab8b53bc40aa95fc02c57edac3f
+      internalID: -828352060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_43
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9e9fd0009de4d6ea7f09e74058acf7
+      internalID: -987285112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_44
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aefc1a73acfc4d649a9a58e35ac25a3
+      internalID: 980579776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_45
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282fd74627ab04f50994b2625cb4990b
+      internalID: 1800204989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_46
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80758081a995b48819c64be44948b114
+      internalID: 313721867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_47
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfaf5225b332e49bdb5d7c3beaba473c
+      internalID: -1446509936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_48
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df89237ec6604fe7817d483d8fcbaaf
+      internalID: 1382771849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_49
+      rect:
+        serializedVersion: 2
+        x: 4228
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b1ca2f4f7fb64f4faf3b98ec14b62d4
+      internalID: 985609196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_50
+      rect:
+        serializedVersion: 2
+        x: 4832
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b454947c6cce4fc0a5389c98b778667
+      internalID: -1025002100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_51
+      rect:
+        serializedVersion: 2
+        x: 5436
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a919d0ab2ae41328ac3a401950d93b
+      internalID: 996781339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_52
+      rect:
+        serializedVersion: 2
+        x: 6040
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d16649c618e4ec08a33c6d0601e0a3
+      internalID: 108414143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_53
+      rect:
+        serializedVersion: 2
+        x: 6644
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cabe3763cf144d64a95afe0c57ffbc4
+      internalID: 1949574094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_54
+      rect:
+        serializedVersion: 2
+        x: 7248
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c06b62d0d7794d228e832955d35277d
+      internalID: -410191327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_55
+      rect:
+        serializedVersion: 2
+        x: 7852
+        y: 2416
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d711e1578c63435799b453c695fb0e6
+      internalID: -1172835421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7436486f3e62b43888faea5e799abe78
+      internalID: 1175910727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_57
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996e970a089ad441b9d84fbf354482a5
+      internalID: -1310416383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_58
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abced402e5af64ee5af5dc9ad171cc4c
+      internalID: 2042896728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_59
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8a3aa183a914b9ab40d8b0ba31aff4
+      internalID: -1769310866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_60
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01a64c60c220473da4eda16b0a0841d
+      internalID: 1498546822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_61
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c0fc7ee59204da0833dfe712ebc323
+      internalID: 1451435636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_62
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cb656ef73f4b4bcfbcdac8ed50daa0f
+      internalID: 1063667450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_63
+      rect:
+        serializedVersion: 2
+        x: 4228
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882652bd04c1c4640a72082efbf271a0
+      internalID: 133102263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_64
+      rect:
+        serializedVersion: 2
+        x: 4832
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301160623ce79474ea81cbd84e4e89a4
+      internalID: 2123414166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_65
+      rect:
+        serializedVersion: 2
+        x: 5436
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe4c80e9f38542f58ec11591fbbeb3c
+      internalID: 1342832957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_66
+      rect:
+        serializedVersion: 2
+        x: 6040
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05dac9075432742a0b29ff945289ffb2
+      internalID: -1421359800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_67
+      rect:
+        serializedVersion: 2
+        x: 6644
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91fef8ff63cd242ff948843dcf3b09eb
+      internalID: -865293484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_68
+      rect:
+        serializedVersion: 2
+        x: 7248
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ba9a4caf1d14f3ba2dd9d7ea97a77e
+      internalID: -1630150696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_69
+      rect:
+        serializedVersion: 2
+        x: 7852
+        y: 1812
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1c36240381f4970b6b62c1bda66c65
+      internalID: 143728217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865b8a9c73e6848ae9d16801fe4d4898
+      internalID: -1318697242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_71
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0167426428741aeba252dca659e4c5
+      internalID: -1612665493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_72
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d443e16888d4a9e8a9ffce473e743d
+      internalID: -1399867746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_73
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58bd5363ddf6493b8d8c8837fe364f7
+      internalID: -498149128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_74
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19eea1f3694a4008bf52f860ed6c2c8
+      internalID: 844829151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_75
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81c27cc4674240d1ac686462ab0a82e
+      internalID: -1873926047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_76
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716dd56298036458eacd5b790a3e1118
+      internalID: 346835876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_77
+      rect:
+        serializedVersion: 2
+        x: 4228
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ac0800a4b1c4ba3a389576417c4306
+      internalID: 462783096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_78
+      rect:
+        serializedVersion: 2
+        x: 4832
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b692646a9ea45049c0103d112e704b
+      internalID: 1364509517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_79
+      rect:
+        serializedVersion: 2
+        x: 5436
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f34f5d6e872d42cc96cc95a8dc9b55b
+      internalID: -106895793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_80
+      rect:
+        serializedVersion: 2
+        x: 6040
+        y: 1208
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117c923cf350a489fac3424d27b50a42
+      internalID: 2133776803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 604
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d558c6203dfc4be0be244814b99e7e5
+      internalID: -1703739557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_82
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 604
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1327663f6554c40ba8261ee6a626302f
+      internalID: 80993419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_83
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 604
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720ba563ec603409f87514c1833ca95b
+      internalID: 673884702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_84
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 604
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 186e2cb32efe84475bef6b2b6f8a1531
+      internalID: 1311113192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_85
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 604
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd162fac5aff5464dbf7a076e7218375
+      internalID: 391642723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_86
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 604
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3b39c60108d480a968e1cd653eba6c
+      internalID: 258950058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_87
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 604
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7675b34ac04be438baaabf9d8b8d5c7c
+      internalID: -109913256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_88
+      rect:
+        serializedVersion: 2
+        x: 4228
+        y: 604
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0566ce643d842468cb0def4f4956cf9a
+      internalID: -1389621749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_89
+      rect:
+        serializedVersion: 2
+        x: 4832
+        y: 604
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221bac9c2aa554f3ab210797042a64db
+      internalID: 1962096090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_90
+      rect:
+        serializedVersion: 2
+        x: 5436
+        y: 604
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa38528dbb38400eb05e30ee6780cf4
+      internalID: 747771306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3457d544378b4d77bdf04958e916b60
+      internalID: 834832587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_92
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 0
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b367b1a66d746c883261c978ba7c7d
+      internalID: -243741269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_93
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 0
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a453f187608041ac9075daba54ffe18
+      internalID: 264448213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_94
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 0
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f49bb7abfe94675aabbbc2aabbb436
+      internalID: 1124628307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_95
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 0
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1f9603754554d07ade0ae0a7f8e0ec
+      internalID: -588926418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_96
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 0
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d07ed1864dc0f4db984bf207711536b9
+      internalID: 1074901127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_97
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 0
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae65b9e00df244db99ca439b6067bf1a
+      internalID: 1648985969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FIX_ACT3_TILES_98
+      rect:
+        serializedVersion: 2
+        x: 4228
+        y: 0
+        width: 604
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db3be97e69b94033ab86ff73f4d5bd6
+      internalID: 1709947401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FIX_ACT3_TILES_0: -1486039007
+      FIX_ACT3_TILES_1: 2063415803
+      FIX_ACT3_TILES_10: -2099476423
+      FIX_ACT3_TILES_11: -280929241
+      FIX_ACT3_TILES_12: 1791208457
+      FIX_ACT3_TILES_13: 65763784
+      FIX_ACT3_TILES_14: 1581494406
+      FIX_ACT3_TILES_15: -828157915
+      FIX_ACT3_TILES_16: -393274596
+      FIX_ACT3_TILES_17: 1447253980
+      FIX_ACT3_TILES_18: -1793503804
+      FIX_ACT3_TILES_19: -406272760
+      FIX_ACT3_TILES_2: -987762387
+      FIX_ACT3_TILES_20: 895958750
+      FIX_ACT3_TILES_21: 1590269940
+      FIX_ACT3_TILES_22: -904525065
+      FIX_ACT3_TILES_23: 1504467778
+      FIX_ACT3_TILES_24: -902639600
+      FIX_ACT3_TILES_25: 1645301734
+      FIX_ACT3_TILES_26: -119029154
+      FIX_ACT3_TILES_27: 1113312572
+      FIX_ACT3_TILES_28: 1387279993
+      FIX_ACT3_TILES_29: -6490016
+      FIX_ACT3_TILES_3: -709047113
+      FIX_ACT3_TILES_30: 1809362958
+      FIX_ACT3_TILES_31: -28546578
+      FIX_ACT3_TILES_32: -1380414713
+      FIX_ACT3_TILES_33: 424895750
+      FIX_ACT3_TILES_34: -639741364
+      FIX_ACT3_TILES_35: 1381443717
+      FIX_ACT3_TILES_36: -737290324
+      FIX_ACT3_TILES_37: -677789675
+      FIX_ACT3_TILES_38: -1868250131
+      FIX_ACT3_TILES_39: -1062244036
+      FIX_ACT3_TILES_4: 438932111
+      FIX_ACT3_TILES_40: -1814688516
+      FIX_ACT3_TILES_41: -1309499863
+      FIX_ACT3_TILES_42: -828352060
+      FIX_ACT3_TILES_43: -987285112
+      FIX_ACT3_TILES_44: 980579776
+      FIX_ACT3_TILES_45: 1800204989
+      FIX_ACT3_TILES_46: 313721867
+      FIX_ACT3_TILES_47: -1446509936
+      FIX_ACT3_TILES_48: 1382771849
+      FIX_ACT3_TILES_49: 985609196
+      FIX_ACT3_TILES_5: -1866235804
+      FIX_ACT3_TILES_50: -1025002100
+      FIX_ACT3_TILES_51: 996781339
+      FIX_ACT3_TILES_52: 108414143
+      FIX_ACT3_TILES_53: 1949574094
+      FIX_ACT3_TILES_54: -410191327
+      FIX_ACT3_TILES_55: -1172835421
+      FIX_ACT3_TILES_56: 1175910727
+      FIX_ACT3_TILES_57: -1310416383
+      FIX_ACT3_TILES_58: 2042896728
+      FIX_ACT3_TILES_59: -1769310866
+      FIX_ACT3_TILES_6: 1970077302
+      FIX_ACT3_TILES_60: 1498546822
+      FIX_ACT3_TILES_61: 1451435636
+      FIX_ACT3_TILES_62: 1063667450
+      FIX_ACT3_TILES_63: 133102263
+      FIX_ACT3_TILES_64: 2123414166
+      FIX_ACT3_TILES_65: 1342832957
+      FIX_ACT3_TILES_66: -1421359800
+      FIX_ACT3_TILES_67: -865293484
+      FIX_ACT3_TILES_68: -1630150696
+      FIX_ACT3_TILES_69: 143728217
+      FIX_ACT3_TILES_7: 539448339
+      FIX_ACT3_TILES_70: -1318697242
+      FIX_ACT3_TILES_71: -1612665493
+      FIX_ACT3_TILES_72: -1399867746
+      FIX_ACT3_TILES_73: -498149128
+      FIX_ACT3_TILES_74: 844829151
+      FIX_ACT3_TILES_75: -1873926047
+      FIX_ACT3_TILES_76: 346835876
+      FIX_ACT3_TILES_77: 462783096
+      FIX_ACT3_TILES_78: 1364509517
+      FIX_ACT3_TILES_79: -106895793
+      FIX_ACT3_TILES_8: -1076364673
+      FIX_ACT3_TILES_80: 2133776803
+      FIX_ACT3_TILES_81: -1703739557
+      FIX_ACT3_TILES_82: 80993419
+      FIX_ACT3_TILES_83: 673884702
+      FIX_ACT3_TILES_84: 1311113192
+      FIX_ACT3_TILES_85: 391642723
+      FIX_ACT3_TILES_86: 258950058
+      FIX_ACT3_TILES_87: -109913256
+      FIX_ACT3_TILES_88: -1389621749
+      FIX_ACT3_TILES_89: 1962096090
+      FIX_ACT3_TILES_9: 70828923
+      FIX_ACT3_TILES_90: 747771306
+      FIX_ACT3_TILES_91: 834832587
+      FIX_ACT3_TILES_92: -243741269
+      FIX_ACT3_TILES_93: 264448213
+      FIX_ACT3_TILES_94: 1124628307
+      FIX_ACT3_TILES_95: -588926418
+      FIX_ACT3_TILES_96: 1074901127
+      FIX_ACT3_TILES_97: 1648985969
+      FIX_ACT3_TILES_98: 1709947401
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
