@@ -2540,11 +2540,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 444918310394211783, guid: 6a7e67304dc879744aae9b0fb84e4037, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 703.2
+      value: -23.99
       objectReference: {fileID: 0}
     - target: {fileID: 444918310394211783, guid: 6a7e67304dc879744aae9b0fb84e4037, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 38.1
+      value: -12.45
       objectReference: {fileID: 0}
     - target: {fileID: 444918310394211783, guid: 6a7e67304dc879744aae9b0fb84e4037, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9425,11 +9425,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: room_height
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: CamSizeInRoom
-      value: 5.34
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10744,11 +10744,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: room_height
-      value: 29
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: CamSizeInRoom
-      value: 12.35
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7715817786371453934, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12360,7 +12360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: room_height
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: CamSizeInRoom
@@ -249836,7 +249836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: room_height
-      value: 21
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: CamSizeInRoom

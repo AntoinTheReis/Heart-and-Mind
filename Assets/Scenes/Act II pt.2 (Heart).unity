@@ -613,11 +613,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: room_height
-      value: 30
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: CamSizeInRoom
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
+      propertyPath: room_is_selected
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: mindBusStops.Array.size
@@ -2559,7 +2563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: room_height
-      value: 30
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: CamSizeInRoom
@@ -8505,7 +8509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: room_height
-      value: 30
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: CamSizeInRoom
@@ -9043,7 +9047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: room_height
-      value: 30
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: CamSizeInRoom
@@ -9221,7 +9225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: room_height
-      value: 30
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: CamSizeInRoom
@@ -14539,7 +14543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: room_height
-      value: 30
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: CamSizeInRoom
@@ -223614,7 +223618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: room_height
-      value: 30
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: CamSizeInRoom
@@ -225843,7 +225847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: room_height
-      value: 30
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: CamSizeInRoom
@@ -237002,7 +237006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: room_height
-      value: 35
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: CamSizeInRoom
