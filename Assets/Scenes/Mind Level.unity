@@ -7722,7 +7722,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 44ad8abc57afc864689ed6b102f198bc, type: 3}
     - target: {fileID: 7142590554564481759, guid: a3bdbd1d5353d5d44b990fa145c9a55e, type: 3}
       propertyPath: startNode
-      value: Chess_Piece_Memento_pt.3
+      value: Chess_Piece_pt_3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
