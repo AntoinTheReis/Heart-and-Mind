@@ -42,7 +42,7 @@ public class FMODSenderAct2 : MonoBehaviour
         }
         else
         {
-            speaker.GetComponent<FMODSpeaker>().StopSound();
+            speaker.GetComponent<FMODSpeakerAct2>().StopSound();
         }
     }
 }
