@@ -7,6 +7,8 @@ using Yarn.Unity;
 
 public class FMODSpeaker : MonoBehaviour
 {
+    public bool playOnLoad;
+
     public string parameterName; // Name of FMOD parameter
 
     public string triggerTag; // Name of Trigger Gameobject Tag
@@ -28,6 +30,11 @@ public class FMODSpeaker : MonoBehaviour
         FMOD.Studio.PARAMETER_DESCRIPTION eventParameterDescription;
         eventDescription.getParameterDescriptionByName(parameterName, out eventParameterDescription);
         eventParameter = eventParameterDescription.id;
+
+        if (playOnLoad)
+        {
+            eventInstance.start();
+        }
     }
 
     void Update()

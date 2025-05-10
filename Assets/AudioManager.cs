@@ -34,6 +34,9 @@ public class AudioManager : MonoBehaviour
     public EventReference glassBreakEvent; // Assign FMOD Event in Inspector for Glass Break
     private EventInstance glassBreakInstance;
 
+    public EventReference endMusicEvent; // Assign FMOD Event in Inspector for End Credit Music
+    private EventInstance endMusicInstance;
+
     public float currentValue1 = 0f;
     public float targetValue1 = 0f;
 
@@ -60,6 +63,8 @@ public class AudioManager : MonoBehaviour
         eventInstance2 = RuntimeManager.CreateInstance(fmodEvent2);
 
         glassBreakInstance = RuntimeManager.CreateInstance(glassBreakEvent);
+
+        endMusicInstance = RuntimeManager.CreateInstance(endMusicEvent);
     }
 
     // Update is called once per frame
@@ -93,6 +98,11 @@ public class AudioManager : MonoBehaviour
     public void playGlassBreak()
     {
         glassBreakInstance.start();
+    }
+    [YarnCommand("playEndMusic")]
+    public void playEndMusic()
+    {
+        endMusicInstance.start();
     }
 
     public void fadeIntroMusic()
