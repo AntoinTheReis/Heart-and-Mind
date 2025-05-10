@@ -27,7 +27,11 @@ public class SceneChanger : MonoBehaviour
     public float initialShakeAmount;
     public float blurInTime;
     private CameraSystem cameraSystem;
+    private bool creditsFinished = false;
     // Start is called before the first frame update
+
+    private bool isCredits = false;
+    private Animator creditsAnimator;
     void Start()
     {
         FadeIn();
@@ -38,6 +42,12 @@ public class SceneChanger : MonoBehaviour
         cameraSystem = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraSystem>();
 
         Time.timeScale = 1.0f;
+
+        if (SceneManager.GetActiveScene().buildIndex == 8)
+        {
+            isCredits = true;
+            creditsAnimator = GameObject.FindGameObjectWithTag("Credits").GetComponent<Animator>();
+        }
     }
 
     // Update is called once per frame
@@ -52,6 +62,14 @@ public class SceneChanger : MonoBehaviour
         {
             shake = 0.0f;
         }
+
+        if(isCredits && creditsAnimator.GetCurrentAnimatorStateInfo(0).IsName("credit end") && !creditsFinished)
+        {
+            creditsFinished = true;
+            FadeOut();
+            StartCoroutine(returnToMenu());
+        }
+        
     }
 
     public void GoToScene(string sceneName)
@@ -164,5 +182,10 @@ public class SceneChanger : MonoBehaviour
         volume.weight = fd;
     }
 
+    IEnumerator returnToMenu()
+    {
+        yield return new WaitForSecondsRealtime(curtainOutTime);
+        SceneManager.LoadScene(0);
+    }
 
 }
