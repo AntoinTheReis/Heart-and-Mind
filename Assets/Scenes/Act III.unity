@@ -46952,7 +46952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: OnDiscovery.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: OnDiscovery.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -123867,11 +123867,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8723337734164825098, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1874384648}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3174949928152191781, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1736780684}
   m_SourcePrefab: {fileID: 100100000, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
 --- !u!4 &743887164 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8723337734164825098, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
+  m_PrefabInstance: {fileID: 743887163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &743887165 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3174949928152191781, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
   m_PrefabInstance: {fileID: 743887163}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &745592649
@@ -283908,6 +283916,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3554911403713001784, guid: 3e85948cde1808d4f872031a9959ae0d, type: 3}
   m_PrefabInstance: {fileID: 1651875054}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1656892059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3174949928152191781, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
+  m_PrefabInstance: {fileID: 1726478521}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1656892063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656892059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7785a20f8c98ddf43a6d45ad8b024a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startNode: The_End
+  OnDialogueFinished:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1660243165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -284229,35 +284258,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: OnDiscovery.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: OnDiscovery.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: OnDiscovery.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2984200554096235937, guid: efa4d2fd1749f824db9de776b6ca2e6b, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: OnDiscovery.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: OnDiscovery.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartDialogue
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: OnDiscovery.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Yarn.Unity.DialogueRunner, YarnSpinner.Unity
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: OnDiscovery.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: The_End
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: OnDiscovery.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4768338351335730396, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: m_Color.a
@@ -284278,7 +284307,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3174949928152191781, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1656892063}
   m_SourcePrefab: {fileID: 100100000, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
 --- !u!1001 &1734486327
 PrefabInstance:
@@ -284404,6 +284436,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
   m_PrefabInstance: {fileID: 743887163}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1736780684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743887165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7785a20f8c98ddf43a6d45ad8b024a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startNode: Act_III_Reunion
+  OnDialogueFinished:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1783242380 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2046843607443177467, guid: b09480d03d8223a41ac2c89c2924a83c, type: 3}
