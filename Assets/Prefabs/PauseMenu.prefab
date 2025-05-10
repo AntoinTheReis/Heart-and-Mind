@@ -1494,6 +1494,13 @@ MonoBehaviour:
       Data3: -5331324
       Data4: -806386337
     Path: event:/SFX_GlassBreak
+  endMusicEvent:
+    Guid:
+      Data1: 1934037372
+      Data2: 1251622043
+      Data3: -1922484549
+      Data4: 1101720204
+    Path: event:/MX_I Will Remember For You
   currentValue1: 0
   targetValue1: 0
 --- !u!1 &3700900707266466667

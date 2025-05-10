@@ -1692,11 +1692,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5295965510996334322, guid: 4c66d225b0f4d8241954e244a421dcaf, type: 3}
       propertyPath: MXVolume
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5295965510996334322, guid: 4c66d225b0f4d8241954e244a421dcaf, type: 3}
       propertyPath: SFXVolume
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5295965510996334322, guid: 4c66d225b0f4d8241954e244a421dcaf, type: 3}
       propertyPath: sfxTestEvent.Path

@@ -2649,6 +2649,91 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949068726}
   m_CullTransparentMesh: 1
+--- !u!1001 &2040595745
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1494597186978068540, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494597186978068540, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494597186978068540, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494597186978068540, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494597186978068540, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494597186978068540, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494597186978068540, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494597186978068540, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494597186978068540, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494597186978068540, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5660331621308329659, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: playOnLoad
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5660331621308329659, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: parameterName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5660331621308329659, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: fmodEvent.Path
+      value: event:/MX_I Will Remember For You
+      objectReference: {fileID: 0}
+    - target: {fileID: 5660331621308329659, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: fmodEvent.Guid.Data1
+      value: 1934037372
+      objectReference: {fileID: 0}
+    - target: {fileID: 5660331621308329659, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: fmodEvent.Guid.Data2
+      value: 1251622043
+      objectReference: {fileID: 0}
+    - target: {fileID: 5660331621308329659, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: fmodEvent.Guid.Data3
+      value: -1922484549
+      objectReference: {fileID: 0}
+    - target: {fileID: 5660331621308329659, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: fmodEvent.Guid.Data4
+      value: 1101720204
+      objectReference: {fileID: 0}
+    - target: {fileID: 7373685036282754441, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
+      propertyPath: m_Name
+      value: Broken Promises Speaker
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd0dcc3c61137314e85d419bc53fefb3, type: 3}
 --- !u!1 &2078533537
 GameObject:
   m_ObjectHideFlags: 0
@@ -2729,3 +2814,4 @@ SceneRoots:
   - {fileID: 1914216674}
   - {fileID: 900634425}
   - {fileID: 1549277868}
+  - {fileID: 2040595745}
