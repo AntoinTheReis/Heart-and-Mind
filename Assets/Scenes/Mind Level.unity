@@ -7268,11 +7268,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4173102428790595679, guid: a3bdbd1d5353d5d44b990fa145c9a55e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.8
+      value: 44.35
       objectReference: {fileID: 0}
     - target: {fileID: 4173102428790595679, guid: a3bdbd1d5353d5d44b990fa145c9a55e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2
+      value: 5.1
       objectReference: {fileID: 0}
     - target: {fileID: 4173102428790595679, guid: a3bdbd1d5353d5d44b990fa145c9a55e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7308,11 +7308,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5752290204587780760, guid: a3bdbd1d5353d5d44b990fa145c9a55e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.68
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5752290204587780760, guid: a3bdbd1d5353d5d44b990fa145c9a55e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.89
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6579167101344995982, guid: a3bdbd1d5353d5d44b990fa145c9a55e, type: 3}
       propertyPath: m_Sprite
@@ -7722,7 +7722,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 44ad8abc57afc864689ed6b102f198bc, type: 3}
     - target: {fileID: 7142590554564481759, guid: a3bdbd1d5353d5d44b990fa145c9a55e, type: 3}
       propertyPath: startNode
-      value: Chess_Piece_Memento_pt.3
+      value: Chess_Piece_pt_3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
