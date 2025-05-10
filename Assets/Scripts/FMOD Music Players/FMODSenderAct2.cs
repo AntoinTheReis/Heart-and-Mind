@@ -10,6 +10,8 @@ public class FMODSenderAct2 : MonoBehaviour
 
     public bool pause; // True if pause audio, false if is trigger
 
+    public bool destroy;
+
     public GameObject speaker;
 
     private void Start()
@@ -43,6 +45,10 @@ public class FMODSenderAct2 : MonoBehaviour
         else
         {
             speaker.GetComponent<FMODSpeakerAct2>().StopSound();
+        }
+        if (destroy)
+        {
+            speaker.GetComponent<FMODSpeakerAct2>().Destroy();
         }
     }
 }

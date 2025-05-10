@@ -8,6 +8,8 @@ public class FMODSender : MonoBehaviour
 
     public bool pause; // True if pause audio, false if is trigger
 
+    public bool destroy;
+
     public GameObject speaker;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -17,6 +19,10 @@ public class FMODSender : MonoBehaviour
             speaker.GetComponent<FMODSpeaker>().SetTargetParameter(parameterValue);
         }
         else
+        {
+            speaker.GetComponent<FMODSpeaker>().StopSound();
+        }
+        if (destroy)
         {
             speaker.GetComponent<FMODSpeaker>().StopSound();
         }

@@ -113,4 +113,9 @@ public class FMODSpeakerAct2 : MonoBehaviour
         eventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         eventInstance.release();
     }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
+    }
 }
