@@ -9,11 +9,11 @@ tags:
 
 ??? 1: I speak English, I know.
 
-<<wait  0.5>>
+<<wait  0.3>>
 
 ??? 3: Take care of yourself, Mom. He’s… busy. We gotta get back.
 
-<<wait 1>>
+<<wait 0.7>>
 
 ??? 2: I’m sorry.
 

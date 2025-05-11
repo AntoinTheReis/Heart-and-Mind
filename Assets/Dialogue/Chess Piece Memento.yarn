@@ -1,9 +1,11 @@
 ﻿title: Chess_Piece_Memento
 tags:
 ---
+<<AddBlur SceneScriptHolder>>
+
 ???: <b> Should I capture this rook or force the king to move first? <b>//make this bold
 
-<<wait 2.5>>
+<<wait 1>>
 
 ???: <b> I think I will capture the rook. It will force the king to move. <b>
 
@@ -25,4 +27,7 @@ tags:
 // Lana: <b> Mad, want to play a game? <b>
 
 // Madiline: <b> I don’t play anymore. <b>
+
+<<RemoveBlur SceneScriptHolder>>
+
 ===
