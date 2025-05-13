@@ -11,9 +11,9 @@ public class Coin : MonoBehaviour
     Collider2D col;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        coinManager = GameObject.FindGameObjectWithTag("CoinManager").GetComponent<TransitCoin>();
+        coinManager = GameObject.FindGameObjectWithTag("SceneChanger").GetComponent<TransitCoin>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         col = GetComponent<Collider2D>();
@@ -29,10 +29,13 @@ public class Coin : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         coinManager.CoinGot(gameObject);
+        col.enabled = false;
+        animator.SetBool("Got", true);
     }
 
     public void TurnOff()
     {
+        Debug.Log("Turn off coin");
         spriteRenderer.enabled = false;
         col.enabled = false;
     }

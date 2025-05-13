@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class TransitCoin : MonoBehaviour
 {
 
-    static List<Vector3> allCoins;
+    static List<Vector3> allCoins = new List<Vector3>();
     //x is the scene build number of the coin
     //y is the number of the coin in the scene 
     //z is whetgher the coin has been obtained or not (0 is no, 1 is yes)
@@ -31,22 +31,31 @@ public class TransitCoin : MonoBehaviour
 
         coinsInLevel = GameObject.FindGameObjectsWithTag("Coin").ToList();
 
+        if (coinsInLevel.Count > 1 && !coinsInLevel[1].name.Contains("1"))
+        {
+            Swap(coinsInLevel[1], coinsInLevel[0]);
+        }
+
         if (!levelsVisited.Contains(currentScene))
         {
             levelsVisited.Add(currentScene);
+            Debug.Log("Visiting New Scene");
 
             for (int i = 0; i < coinsInLevel.Count; i++)
             {
                 allCoins.Add(new Vector3(currentScene, i, 0));
+                Debug.Log("Add coin to list: " + currentScene+ "," + i+ "," + 0);
             }
         }
         else
         {
+            Debug.Log("Visiting Old Scene");
             for (int i = 0; i < allCoins.Count; i++)
             {
-                if (allCoins[i].x == currentScene && allCoins[i].y == 1)
+                if (allCoins[i].x == currentScene && allCoins[i].z == 1)
                 {
-                    coinsInLevel[(int)allCoins[i].y].GetComponent<Coin>().TurnOff();
+                    coinsInLevel[(int)(allCoins[i].y)].GetComponent<Coin>().TurnOff();
+                    Debug.Log("Turning off coin: " + allCoins[i].x + "," + allCoins[i].y + "," + allCoins[i].z);
                 }
             }
         }
@@ -71,8 +80,32 @@ public class TransitCoin : MonoBehaviour
             if(SceneManager.GetActiveScene().buildIndex == coinBeingChecked.x && coinYvalue == allCoins[i].y)
             {
                 allCoins[i] = new Vector3(coinBeingChecked.x, coinBeingChecked.y, 1);
+                Debug.Log("Obtained coin: " + allCoins[i].x + "," + allCoins[i].y + "," + allCoins[i].z);
             }
         }
+    }
+
+    public int GetAcmountOfCoinsFoundButNotNecessarilyGotten()
+    {
+        Debug.Log(allCoins.Count() + " coins found so far");
+        return allCoins.Count();
+    }
+
+    public bool AllCoinsGotten()
+    {
+        Debug.Log("Have all the coins");
+        for(int i = 0; i < allCoins.Count; i++)
+        {
+            if (allCoins[i].z == 0) return false;
+        }
+        return true;
+    }
+
+    void Swap(GameObject a, GameObject b)
+    {
+        GameObject temp = a;
+        a = b;
+        b = temp;
     }
 
 }
