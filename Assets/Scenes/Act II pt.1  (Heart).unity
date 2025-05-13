@@ -906,6 +906,7 @@ MonoBehaviour:
   parameterValue: 0.3
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &219930033
 PrefabInstance:
@@ -1079,6 +1080,7 @@ MonoBehaviour:
   parameterValue: 0
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &233418701
 PrefabInstance:
@@ -1284,6 +1286,7 @@ MonoBehaviour:
   parameterValue: 1
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &248652125
 PrefabInstance:
@@ -1547,6 +1550,7 @@ MonoBehaviour:
   parameterValue: 0.9
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &306957609
 PrefabInstance:
@@ -1658,6 +1662,7 @@ MonoBehaviour:
   parameterValue: 0.7
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &319676701
 PrefabInstance:
@@ -2162,6 +2167,7 @@ MonoBehaviour:
   parameterValue: 0.1
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &432946491
 PrefabInstance:
@@ -2273,6 +2279,7 @@ MonoBehaviour:
   parameterValue: 0.3
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &441119720
 PrefabInstance:
@@ -2451,6 +2458,7 @@ MonoBehaviour:
   parameterValue: 0.9
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &459483801
 PrefabInstance:
@@ -8611,6 +8619,7 @@ MonoBehaviour:
   parameterValue: 0.5
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1 &506659373
 GameObject:
@@ -8804,6 +8813,7 @@ MonoBehaviour:
   parameterValue: 0.4
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1 &557851051
 GameObject:
@@ -9305,6 +9315,7 @@ MonoBehaviour:
   parameterValue: 0.4
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &668799594
 PrefabInstance:
@@ -9486,6 +9497,7 @@ MonoBehaviour:
   parameterValue: 0.4
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1 &682974423
 GameObject:
@@ -62730,6 +62742,7 @@ MonoBehaviour:
   parameterValue: 0.6
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1 &896382231
 GameObject:
@@ -63698,6 +63711,7 @@ MonoBehaviour:
   parameterValue: 1
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!4 &1065517000 stripped
 Transform:
@@ -63719,6 +63733,7 @@ MonoBehaviour:
   parameterValue: 0.3
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &1080787861
 PrefabInstance:
@@ -186592,6 +186607,7 @@ MonoBehaviour:
   parameterValue: 0.7
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &1221706173
 PrefabInstance:
@@ -187745,6 +187761,7 @@ MonoBehaviour:
   parameterValue: 0.1
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &1438782974
 PrefabInstance:
@@ -187856,6 +187873,7 @@ MonoBehaviour:
   parameterValue: 1
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &1463988943
 PrefabInstance:
@@ -187967,6 +187985,7 @@ MonoBehaviour:
   parameterValue: 0.1
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &1471788590
 PrefabInstance:
@@ -188227,6 +188246,7 @@ MonoBehaviour:
   parameterValue: 0.5
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &1529087258
 PrefabInstance:
@@ -188878,6 +188898,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6460356595988901958, guid: 357e383de6111584d8b5eb10179bd63b, type: 3}
   m_PrefabInstance: {fileID: 1607015214}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1621771186
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3368575293071864304, guid: a8fdecdebed4c244caeafc2ecde6ab31, type: 3}
+      propertyPath: m_Name
+      value: Transit Coin Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822272157209237856, guid: a8fdecdebed4c244caeafc2ecde6ab31, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 44.420986
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822272157209237856, guid: a8fdecdebed4c244caeafc2ecde6ab31, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 25.607672
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822272157209237856, guid: a8fdecdebed4c244caeafc2ecde6ab31, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.07678376
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822272157209237856, guid: a8fdecdebed4c244caeafc2ecde6ab31, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822272157209237856, guid: a8fdecdebed4c244caeafc2ecde6ab31, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822272157209237856, guid: a8fdecdebed4c244caeafc2ecde6ab31, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822272157209237856, guid: a8fdecdebed4c244caeafc2ecde6ab31, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822272157209237856, guid: a8fdecdebed4c244caeafc2ecde6ab31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822272157209237856, guid: a8fdecdebed4c244caeafc2ecde6ab31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822272157209237856, guid: a8fdecdebed4c244caeafc2ecde6ab31, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a8fdecdebed4c244caeafc2ecde6ab31, type: 3}
 --- !u!1 &1635218690
 GameObject:
   m_ObjectHideFlags: 0
@@ -193612,6 +193689,7 @@ MonoBehaviour:
   parameterValue: 1
   parameter: 2
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1 &1783242380 stripped
 GameObject:
@@ -204867,6 +204945,7 @@ MonoBehaviour:
   parameterValue: 0.3
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &1995913302
 PrefabInstance:
@@ -204955,6 +205034,7 @@ MonoBehaviour:
   parameterValue: 0.2
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1 &2025398879
 GameObject:
@@ -207758,6 +207838,7 @@ MonoBehaviour:
   parameterValue: 0
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &2107611536
 PrefabInstance:
@@ -207869,6 +207950,7 @@ MonoBehaviour:
   parameterValue: 0.1
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &2108289738
 PrefabInstance:
@@ -208094,3 +208176,4 @@ SceneRoots:
   - {fileID: 21277635}
   - {fileID: 519032329080713621}
   - {fileID: 1221706173}
+  - {fileID: 1621771186}
