@@ -2334,7 +2334,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Thank You to Our Prefessors
+  m_text: Thank You to Our Professors
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e899dbcbbaa70f4684ffcce208e3432, type: 2}
   m_sharedMaterial: {fileID: -6521525747720700571, guid: 0e899dbcbbaa70f4684ffcce208e3432, type: 2}
