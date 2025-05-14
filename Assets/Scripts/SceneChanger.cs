@@ -30,6 +30,8 @@ public class SceneChanger : MonoBehaviour
     private bool creditsFinished = false;
     // Start is called before the first frame update
 
+    public static List <int> levelsVisited = new List <int>();
+
     private bool isCredits = false;
     private Animator creditsAnimator;
     void Start()
@@ -47,6 +49,11 @@ public class SceneChanger : MonoBehaviour
         {
             isCredits = true;
             creditsAnimator = GameObject.FindGameObjectWithTag("Credits").GetComponent<Animator>();
+        }
+
+        if (!levelsVisited.Contains(SceneManager.GetActiveScene().buildIndex))
+        {
+            levelsVisited.Add(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

@@ -15,6 +15,8 @@ TagManager:
   - Speaker
   - SceneChanger
   - Credits
+  - CoinManager
+  - Coin
   layers:
   - Default
   - TransparentFX
