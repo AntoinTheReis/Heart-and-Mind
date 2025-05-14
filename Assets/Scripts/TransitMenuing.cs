@@ -86,6 +86,7 @@ public class TransitMenuing : MonoBehaviour
 
     public void MementosMenu()
     {
+        SceneManager.LoadScene(9);
         if (allcoinsGotten)
         {
             SceneManager.LoadScene(9);

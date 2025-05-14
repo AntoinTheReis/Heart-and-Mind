@@ -4,6 +4,7 @@ using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
 using Yarn.Unity;
+using static UnityEngine.ParticleSystem;
 
 public class MainMenuSpeaker : MonoBehaviour
 {
@@ -62,6 +63,15 @@ public class MainMenuSpeaker : MonoBehaviour
 
         glassBreakInstance = RuntimeManager.CreateInstance(glassBreakEvent);
 
+        if (eventInstance.isValid())
+        {
+            FMOD.Studio.PLAYBACK_STATE playbackState;
+            eventInstance.getPlaybackState(out playbackState);
+            if (playbackState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+            {
+                eventInstance.start();
+            }
+        }
         eventInstance.start();
         if (oldSpeaker == null)
         {
@@ -135,5 +145,14 @@ public class MainMenuSpeaker : MonoBehaviour
             sfxTestEventInstance.start();
         }
         Debug.Log("SFX Changed");
+    }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
+    }
+    public void OnDestroy()
+    {
+        eventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }

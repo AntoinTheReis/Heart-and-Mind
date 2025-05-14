@@ -327,6 +327,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0bb88a2afedd764da7dd9041eb9860d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minis: []
+  numberLeft: {fileID: 0}
+  numberLeftBackground: {fileID: 0}
+  left: {fileID: 0}
+  leftBackground: {fileID: 0}
+  allObtained: {fileID: 0}
+  allObtainedBackground: {fileID: 0}
 --- !u!1 &64502019
 GameObject:
   m_ObjectHideFlags: 0
