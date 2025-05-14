@@ -100984,6 +100984,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6460356595988901958, guid: 357e383de6111584d8b5eb10179bd63b, type: 3}
   m_PrefabInstance: {fileID: 1080787861}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1092750358
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2518759789533489669, guid: b03849430297314408cbaab8eabcc37d, type: 3}
+      propertyPath: startNode
+      value: Act_II_Heart_Middle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728981794686458501, guid: b03849430297314408cbaab8eabcc37d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 150.16806
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728981794686458501, guid: b03849430297314408cbaab8eabcc37d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.531739
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728981794686458501, guid: b03849430297314408cbaab8eabcc37d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.1263912
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728981794686458501, guid: b03849430297314408cbaab8eabcc37d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728981794686458501, guid: b03849430297314408cbaab8eabcc37d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728981794686458501, guid: b03849430297314408cbaab8eabcc37d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728981794686458501, guid: b03849430297314408cbaab8eabcc37d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728981794686458501, guid: b03849430297314408cbaab8eabcc37d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728981794686458501, guid: b03849430297314408cbaab8eabcc37d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728981794686458501, guid: b03849430297314408cbaab8eabcc37d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135420606350950685, guid: b03849430297314408cbaab8eabcc37d, type: 3}
+      propertyPath: m_Name
+      value: Act II Heart Middle Dialogue
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b03849430297314408cbaab8eabcc37d, type: 3}
 --- !u!1001 &1095763282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -359655,3 +359716,4 @@ SceneRoots:
   - {fileID: 769421714}
   - {fileID: 501619139}
   - {fileID: 533133599}
+  - {fileID: 1092750358}

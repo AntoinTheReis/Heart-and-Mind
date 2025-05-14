@@ -1,0 +1,21 @@
+﻿title: Act_II_Mind_Start
+tags:
+---
+Mind: Heart?
+
+Mind: ...
+
+Mind: Heart, where are you?
+
+<<startShaking Camera>>
+
+<<wait 1.5>>
+
+<<stopShaking Camera>>
+
+Mind: ...
+
+Mind: Where am I...?
+
+Mind: What...am I doing here?
+===
