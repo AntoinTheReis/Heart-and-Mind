@@ -30,7 +30,7 @@ public class LevelSelect : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("SceneChanger") != null) sceneChanger = GameObject.FindGameObjectWithTag("SceneChanger").GetComponent<SceneChanger>();
 
 
-        if (gameObject.name == "Level Select" && coinManager.BeenToCredits())
+        if (gameObject.name == "Level Select" && !coinManager.BeenToCredits())
         {
             gameObject.SetActive(false);
         }
@@ -98,25 +98,25 @@ public class LevelSelect : MonoBehaviour
 
     public void LoadTutorial()
     {
-        SceneManager.LoadScene(1);
         sceneChanger.ComingFromLevelSelect();
+        SceneManager.LoadScene(1);
     }
 
     public void LoadAct1()
     {
-        SceneManager.LoadScene(2);
         sceneChanger.ComingFromLevelSelect();
+        SceneManager.LoadScene(2);
     }
 
     public void LoadAct2()
     {
-        SceneManager.LoadScene(3);
         sceneChanger.ComingFromLevelSelect();
+        SceneManager.LoadScene(3);
     }
 
     public void LoadAct3()
     {
-        SceneManager.LoadScene(7);
         sceneChanger.ComingFromLevelSelect();
+        SceneManager.LoadScene(7);
     }
 }

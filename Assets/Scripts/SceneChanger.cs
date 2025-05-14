@@ -35,6 +35,8 @@ public class SceneChanger : MonoBehaviour
     private bool isCredits = false;
     private Animator creditsAnimator;
 
+    private static bool firstGo = true;
+
     static bool comingFromLevelSelect = false;
 
     void Start()
@@ -48,15 +50,23 @@ public class SceneChanger : MonoBehaviour
 
         Time.timeScale = 1.0f;
 
+        if (firstGo)
+        {
+            PlayerPrefs.SetInt("CurrentScene", 1);
+            firstGo = false;
+        }
+
         if (SceneManager.GetActiveScene().buildIndex == 8)
         {
             isCredits = true;
             creditsAnimator = GameObject.FindGameObjectWithTag("Credits").GetComponent<Animator>();
+            PlayerPrefs.SetInt("CurrentScene", 1);
         }
         else if(SceneManager.GetActiveScene().buildIndex == 10)
         {
             comingFromLevelSelect = false;
         }
+
 
         if (!levelsVisited.Contains(SceneManager.GetActiveScene().buildIndex))
         {
@@ -92,16 +102,18 @@ public class SceneChanger : MonoBehaviour
         if (sceneName == "MainMenu")
         {
             //this function is only called right now by the main menu button in the pause menu; thus we should save our current scene in player perfs
+            //SceneManager.LoadScene(lastActualScene);
             PlayerPrefs.SetInt("CurrentScene", SceneManager.GetActiveScene().buildIndex);
         }
-        
         SceneManager.LoadScene(sceneName);
+
     }
 
 
     [YarnCommand("NextScene")]
     public void NextScene()
     {
+        //lastActualScene = SceneManager.GetActiveScene().buildIndex;
         FadeOut();
         StartCoroutine(NextSceneStart());
     }
@@ -145,8 +157,18 @@ public class SceneChanger : MonoBehaviour
 
         int activeSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
-        if(!comingFromLevelSelect) SceneManager.LoadScene(activeSceneIndex + 1);
-        else if(activeSceneIndex == 1 || activeSceneIndex == 2 || activeSceneIndex == 6 || activeSceneIndex == 7) SceneManager.LoadScene(10);
+        if (!comingFromLevelSelect)
+        {
+            if (SceneManager.GetActiveScene().buildIndex != 0)
+            {
+                SceneManager.LoadScene(activeSceneIndex + 1);
+            }
+            else
+            {
+                SceneManager.LoadScene(PlayerPrefs.GetInt("CurrentScene"));
+            }
+        }
+        else if (activeSceneIndex == 1 || activeSceneIndex == 2 || activeSceneIndex == 6 || activeSceneIndex == 7) SceneManager.LoadScene(10);
         else SceneManager.LoadScene(activeSceneIndex + 1);
     }
 
