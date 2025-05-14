@@ -14,6 +14,7 @@ public class SceneChangerDebug : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Period)) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   
+        if ((Input.GetKeyDown(KeyCode.Period)) && SceneManager.GetActiveScene().buildIndex == 8) SceneManager.LoadScene(0);
+        else if(Input.GetKeyDown(KeyCode.Period)) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   
     }
 }

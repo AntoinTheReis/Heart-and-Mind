@@ -139398,6 +139398,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1751196336278717478, guid: a8fdecdebed4c244caeafc2ecde6ab31, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1751196336278717478, guid: a8fdecdebed4c244caeafc2ecde6ab31, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3368575293071864304, guid: a8fdecdebed4c244caeafc2ecde6ab31, type: 3}
       propertyPath: m_Name
       value: Transit Coin Variant

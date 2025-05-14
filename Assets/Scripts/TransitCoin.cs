@@ -14,6 +14,7 @@ public class TransitCoin : MonoBehaviour
     //z is whetgher the coin has been obtained or not (0 is no, 1 is yes)
 
     List<GameObject> coinsInLevel;
+    List<GameObject> coinsInLevelPre;
 
     static List<int> levelsVisited = new List<int>();
 
@@ -31,10 +32,15 @@ public class TransitCoin : MonoBehaviour
 
         coinsInLevel = GameObject.FindGameObjectsWithTag("Coin").ToList();
 
+
         if (coinsInLevel.Count > 1 && !coinsInLevel[1].name.Contains("1"))
         {
+            Debug.Log("Coin in second position is" + coinsInLevel[1].name);
+            Debug.Log("Swapped coin positions");
+
             Swap(coinsInLevel[1], coinsInLevel[0]);
         }
+
 
         if (!levelsVisited.Contains(currentScene))
         {
@@ -44,7 +50,7 @@ public class TransitCoin : MonoBehaviour
             for (int i = 0; i < coinsInLevel.Count; i++)
             {
                 allCoins.Add(new Vector3(currentScene, i, 0));
-                Debug.Log("Add coin to list: " + currentScene+ "," + i+ "," + 0);
+                Debug.Log("Add coin to list: " + currentScene + "," + i + "," + 0);
             }
         }
         else
@@ -101,11 +107,21 @@ public class TransitCoin : MonoBehaviour
         return true;
     }
 
-    void Swap(GameObject a, GameObject b)
+    public int AmountOfCoinsLeft()
     {
-        GameObject temp = a;
-        a = b;
-        b = temp;
+        int numba = 0;
+        for (int i = 0; i < allCoins.Count; i++)
+        {
+            if (allCoins[i].z == 0) numba++;
+        }
+        return numba;
+    }
+
+    void Swap(GameObject shouldGoFirst, GameObject shouldGoSecond)
+    {
+        GameObject temp = coinsInLevel[1];
+        coinsInLevel[1] = coinsInLevel[0];
+        coinsInLevel[0] = temp;
     }
 
 }
