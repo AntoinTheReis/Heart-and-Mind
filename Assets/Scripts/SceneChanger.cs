@@ -34,6 +34,9 @@ public class SceneChanger : MonoBehaviour
 
     private bool isCredits = false;
     private Animator creditsAnimator;
+
+    static bool comingFromLevelSelect = false;
+
     void Start()
     {
         FadeIn();
@@ -50,11 +53,16 @@ public class SceneChanger : MonoBehaviour
             isCredits = true;
             creditsAnimator = GameObject.FindGameObjectWithTag("Credits").GetComponent<Animator>();
         }
+        else if(SceneManager.GetActiveScene().buildIndex == 10)
+        {
+            comingFromLevelSelect = false;
+        }
 
         if (!levelsVisited.Contains(SceneManager.GetActiveScene().buildIndex))
         {
             levelsVisited.Add(SceneManager.GetActiveScene().buildIndex);
         }
+
     }
 
     // Update is called once per frame
@@ -128,7 +136,12 @@ public class SceneChanger : MonoBehaviour
     IEnumerator NextSceneStart()
     {
         yield return new WaitForSecondsRealtime(curtainOutTime);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        int activeSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if(!comingFromLevelSelect) SceneManager.LoadScene(activeSceneIndex + 1);
+        else if(activeSceneIndex == 1 || activeSceneIndex == 2 || activeSceneIndex == 6 || activeSceneIndex == 7) SceneManager.LoadScene(10);
+        else SceneManager.LoadScene(activeSceneIndex + 1);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -193,6 +206,11 @@ public class SceneChanger : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(curtainOutTime);
         SceneManager.LoadScene(0);
+    }
+
+    public void ComingFromLevelSelect()
+    {
+        comingFromLevelSelect = true;
     }
 
 }

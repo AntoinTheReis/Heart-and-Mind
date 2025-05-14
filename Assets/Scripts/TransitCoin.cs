@@ -124,4 +124,10 @@ public class TransitCoin : MonoBehaviour
         coinsInLevel[0] = temp;
     }
 
+    public bool CheckIfObtained(int i)
+    {
+        if (allCoins[i].z == 1) return true;
+        else return false;
+    }
+
 }
