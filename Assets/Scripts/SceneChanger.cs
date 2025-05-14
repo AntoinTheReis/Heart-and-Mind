@@ -89,6 +89,12 @@ public class SceneChanger : MonoBehaviour
 
     public void GoToScene(string sceneName)
     {
+        if (sceneName == "MainMenu")
+        {
+            //this function is only called right now by the main menu button in the pause menu; thus we should save our current scene in player perfs
+            PlayerPrefs.SetInt("CurrentScene", SceneManager.GetActiveScene().buildIndex);
+        }
+        
         SceneManager.LoadScene(sceneName);
     }
 

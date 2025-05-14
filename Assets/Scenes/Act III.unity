@@ -53400,6 +53400,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4a143d0575d2b24c8adb89628a28699, type: 3}
+--- !u!114 &612350126 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3326574486249414294, guid: a4a143d0575d2b24c8adb89628a28699, type: 3}
+  m_PrefabInstance: {fileID: 612350125}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28bb3b13fda06c54eb4959ee03f0c323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &614591126
 GameObject:
   m_ObjectHideFlags: 0
@@ -132821,6 +132832,10 @@ PrefabInstance:
     - target: {fileID: 5460848854515469499, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 612350126}
+    - target: {fileID: 5460848854515469499, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToScene
       objectReference: {fileID: 0}
     - target: {fileID: 7608321955969428886, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
       propertyPath: m_Name
@@ -317614,6 +317629,7 @@ SceneRoots:
   - {fileID: 1705895416}
   - {fileID: 814910777}
   - {fileID: 1876106211}
+  - {fileID: 918209296}
   - {fileID: 410528446}
   - {fileID: 1937732979}
   - {fileID: 743887163}
@@ -317638,7 +317654,6 @@ SceneRoots:
   - {fileID: 1597855280}
   - {fileID: 1455467707}
   - {fileID: 1726478521}
-  - {fileID: 918209296}
   - {fileID: 339067843}
   - {fileID: 158452067}
   - {fileID: 64353552}
