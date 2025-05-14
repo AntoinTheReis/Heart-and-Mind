@@ -35,14 +35,17 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (eventInstance.isValid())
+        if (collision.gameObject.name == "Heart")
         {
-            eventInstance.start();
-        }
+            coinManager.CoinGot(gameObject);
+            col.enabled = false;
+            animator.SetBool("Got", true);
 
-        coinManager.CoinGot(gameObject);
-        col.enabled = false;
-        animator.SetBool("Got", true);
+            if (eventInstance.isValid())
+            {
+                eventInstance.start();
+            }
+        }
     }
 
     public void TurnOff()

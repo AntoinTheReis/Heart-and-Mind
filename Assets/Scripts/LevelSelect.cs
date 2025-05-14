@@ -35,37 +35,47 @@ public class LevelSelect : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        for(int i = 0; i < minis.Count; i++)
+        if (coinManager.GetAcmountOfCoinsFoundButNotNecessarilyGotten() == 7)
         {
-            if (!coinManager.CheckIfObtained(i))
+            for (int i = 0; i < minis.Count; i++)
             {
-                amountLeft++;
-                completed = false;
-                minis[i].color = Color.gray;
+                if (!coinManager.CheckIfObtained(i))
+                {
+                    amountLeft++;
+                    completed = false;
+                    minis[i].color = Color.gray;
+                }
             }
-        }
-
-        if (completed)
-        {
-            numberLeft.enabled = false;
-            numberLeftBackground.enabled = false;
-            left.enabled = false;
-            leftBackground.enabled = false;
-
-            allObtained.enabled = true;
-            allObtainedBackground.enabled = true;
         }
         else
         {
-            numberLeft.enabled = true;
-            numberLeftBackground.enabled = true;
-            numberLeft.text = amountLeft.ToString();
-            numberLeftBackground.text = amountLeft.ToString();
-            left.enabled = true;
-            leftBackground.enabled = true;
+            completed = false;
+        }
 
-            allObtained.enabled = false;
-            allObtainedBackground.enabled = false;
+        if(SceneManager.GetActiveScene().buildIndex == 10)
+        {
+            if (completed)
+            {
+                numberLeft.enabled = false;
+                numberLeftBackground.enabled = false;
+                left.enabled = false;
+                leftBackground.enabled = false;
+
+                allObtained.enabled = true;
+                allObtainedBackground.enabled = true;
+            }
+            else
+            {
+                numberLeft.enabled = true;
+                numberLeftBackground.enabled = true;
+                numberLeft.text = amountLeft.ToString();
+                numberLeftBackground.text = amountLeft.ToString();
+                left.enabled = true;
+                leftBackground.enabled = true;
+
+                allObtained.enabled = false;
+                allObtainedBackground.enabled = false;
+            }
         }
 
     }
