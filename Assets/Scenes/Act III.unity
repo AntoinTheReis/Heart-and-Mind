@@ -556,6 +556,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2970257628571545032, guid: d0a594811f230c344a0add8fd62a6bfe, type: 3}
   m_PrefabInstance: {fileID: 651875101}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &108750544
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 517.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 45.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
 --- !u!1 &110945648
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,88 +868,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1255601925768820557, guid: 27be88a80bf96d946928068042b475ba, type: 3}
   m_PrefabInstance: {fileID: 366894180}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &128524195
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 913283382}
-    m_Modifications:
-    - target: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 131.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 44.15996
-      objectReference: {fileID: 0}
-    - target: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2027506260500518925, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 24.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 2027506260500518925, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 3174949928152191781, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-      propertyPath: m_Name
-      value: Room Template (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-      propertyPath: room_width
-      value: 54
-      objectReference: {fileID: 0}
-    - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-      propertyPath: room_height
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-      propertyPath: CamSizeInRoom
-      value: 10
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
---- !u!4 &128524196 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
-  m_PrefabInstance: {fileID: 128524195}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &129959285
 PrefabInstance:
@@ -43717,6 +43697,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
   m_PrefabInstance: {fileID: 293381455}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &296194427
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 139.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights (12)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
 --- !u!1001 &303676686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44545,6 +44595,76 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &426387279
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 789.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 35.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights (17)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
 --- !u!1001 &431815251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44811,7 +44931,7 @@ Transform:
   m_GameObject: {fileID: 449554899}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 296.1808, y: 25.6, z: -4.105969}
+  m_LocalPosition: {x: 296.1808, y: 40.4, z: -4.105969}
   m_LocalScale: {x: 3.05, y: 1.38, z: 3.05}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -51578,6 +51698,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &520693710
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 532.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 45.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
 --- !u!1 &530334606
 GameObject:
   m_ObjectHideFlags: 0
@@ -54591,6 +54773,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2212309946410271578, guid: 2a37304cbf5d09c49a1dba0df672ba6d, type: 3}
   m_PrefabInstance: {fileID: 724044453}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &733588453
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 801.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 35.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights (16)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
 --- !u!1001 &743887163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -132241,6 +132493,76 @@ Transform:
   - {fileID: 1321515578}
   m_Father: {fileID: 913283382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &836863051
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 129.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
 --- !u!4 &838894653 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3554911403713001784, guid: 3e85948cde1808d4f872031a9959ae0d, type: 3}
@@ -132647,7 +132969,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3399012289592400489, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
       propertyPath: CamSizeInRoom
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -132769,7 +133091,6 @@ Transform:
   - {fileID: 2046084527}
   - {fileID: 695910721}
   - {fileID: 1256609447}
-  - {fileID: 128524196}
   - {fileID: 835388001}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -145019,6 +145340,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4151832300223379847, guid: 72f621974c0e510458912d19f668a79a, type: 3}
   m_PrefabInstance: {fileID: 1622566311}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1061155342
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 702.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 40.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights (14)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
 --- !u!4 &1082102838 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
@@ -268744,6 +269135,76 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e85948cde1808d4f872031a9959ae0d, type: 3}
+--- !u!1001 &1273296515
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 506.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 18.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
 --- !u!4 &1274737738 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4151832300223379847, guid: 72f621974c0e510458912d19f668a79a, type: 3}
@@ -269295,6 +269756,76 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e85948cde1808d4f872031a9959ae0d, type: 3}
+--- !u!1001 &1357743695
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 198.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
 --- !u!4 &1357965754 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3554911403713001784, guid: 3e85948cde1808d4f872031a9959ae0d, type: 3}
@@ -273454,6 +273985,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1255601925768820557, guid: 27be88a80bf96d946928068042b475ba, type: 3}
   m_PrefabInstance: {fileID: 1418995635}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1423485621
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 181.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
 --- !u!1001 &1455467707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -299671,6 +300272,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2970257628571545032, guid: d0a594811f230c344a0add8fd62a6bfe, type: 3}
   m_PrefabInstance: {fileID: 1516315879}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1517843067
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 298.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
 --- !u!1001 &1519804383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -312359,6 +313030,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2975821126933334691, guid: fb0895939c0ee1a48919d50b805ac597, type: 3}
   m_PrefabInstance: {fileID: 1836851707}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1838388165
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 267.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 16.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
 --- !u!1 &1842905436
 GameObject:
   m_ObjectHideFlags: 0
@@ -312940,6 +313681,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2970257628571545032, guid: d0a594811f230c344a0add8fd62a6bfe, type: 3}
   m_PrefabInstance: {fileID: 1296022916}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1896789990
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 145.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
 --- !u!1001 &1901234247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -313326,6 +314137,68 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72f621974c0e510458912d19f668a79a, type: 3}
+--- !u!1001 &1932888642
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 547.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 45.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
 --- !u!1001 &1937732979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -313815,6 +314688,138 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1047939897060880204, guid: ee1c1d9a2eba797468d976f5373022b8, type: 3}
   m_PrefabInstance: {fileID: 1994790252}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1997004366
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 523.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 45.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+--- !u!1001 &1999104761
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 63.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights (13)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
 --- !u!1001 &2025786613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -313979,6 +314984,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 613931786872590872, guid: f8b585d5f0214e349964711f60f47e01, type: 3}
   m_PrefabInstance: {fileID: 2034059801}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2035925164
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 169.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
 --- !u!1001 &2046084526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -317225,6 +318300,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2975821126933334691, guid: fb0895939c0ee1a48919d50b805ac597, type: 3}
   m_PrefabInstance: {fileID: 2048293063}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2049138004
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975764013889521309, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 776.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 35.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297770955948515465, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672954998892788346, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+      propertyPath: m_Name
+      value: Act II Mind 2 Lights (15)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 7089090303532062995, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 8076599947115484720, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 2834889030798191094, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 1698873700282538598, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    - {fileID: 7734828418979135910, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77b9472508f8daa48b50303377fd92ae, type: 3}
 --- !u!1001 &2051180365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -317663,3 +318808,21 @@ SceneRoots:
   - {fileID: 1091993906}
   - {fileID: 1104384202}
   - {fileID: 1112291729}
+  - {fileID: 1932888642}
+  - {fileID: 520693710}
+  - {fileID: 108750544}
+  - {fileID: 1997004366}
+  - {fileID: 1273296515}
+  - {fileID: 1517843067}
+  - {fileID: 1838388165}
+  - {fileID: 1357743695}
+  - {fileID: 1423485621}
+  - {fileID: 2035925164}
+  - {fileID: 836863051}
+  - {fileID: 1896789990}
+  - {fileID: 296194427}
+  - {fileID: 1999104761}
+  - {fileID: 1061155342}
+  - {fileID: 2049138004}
+  - {fileID: 733588453}
+  - {fileID: 426387279}
