@@ -34,6 +34,8 @@ public class MainMenuSpeaker : MonoBehaviour
     public EventReference glassBreakEvent; // Assign FMOD Event in Inspector for Glass Break
     private EventInstance glassBreakInstance;
 
+    public GameObject oldSpeaker;
+
     public float currentValue1 = 0f;
     public float targetValue1 = 0f;
 
@@ -61,6 +63,11 @@ public class MainMenuSpeaker : MonoBehaviour
         glassBreakInstance = RuntimeManager.CreateInstance(glassBreakEvent);
 
         eventInstance.start();
+        if (oldSpeaker == null)
+        {
+            oldSpeaker = GameObject.FindGameObjectWithTag("Speaker");
+            oldSpeaker.GetComponent<FMODSpeakerAct2>().Destroy();
+        }
     }
 
     // Update is called once per frame
