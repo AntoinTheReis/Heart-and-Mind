@@ -264,9 +264,13 @@ public class Movement : MonoBehaviour
             rb.velocity += Vector2.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
 
-        //Speed limiters
+        //X Speed limiters
         if(!isDashing && (rb.velocity.x > maxActualSpeed.x)) rb.velocity = new Vector2(maxActualSpeed.x, rb.velocity.y);
         else if(!isDashing && (rb.velocity.x < -(maxActualSpeed.x))) rb.velocity = new Vector2(-(maxActualSpeed.x), rb.velocity.y);
+
+        //Y Speed Limiters
+        if (!isDashing && (rb.velocity.y < -maxActualSpeed.y)) rb.velocity = new Vector2(rb.velocity.x, -(maxActualSpeed.y));
+
 
         //Wall Slide Calcs
         if (onWalls && !onFloor && (!wallJumping || leftWall))

@@ -339,7 +339,7 @@ MonoBehaviour:
   airDeaccelerator: 7
   airCruisingCap: 0.05
   floorAcceleration: 11
-  maxActualSpeed: {x: 7, y: 7}
+  maxActualSpeed: {x: 7, y: 20}
   dashSpeed: 60
   dashWait: 0.2
   dragDashDuration: 0.9
@@ -400,6 +400,7 @@ MonoBehaviour:
       Data3: 1887673497
       Data4: 1663020063
     Path: event:/SFX_Walk
+  scenetransit: 0
   sfx_dialogue:
     Guid:
       Data1: -576654384
