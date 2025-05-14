@@ -429,3 +429,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 540a04b693c3fc44db9efa28fb2692f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fmodEvent:
+    Guid:
+      Data1: 1532068458
+      Data2: 1305817562
+      Data3: 832997021
+      Data4: 1004345480
+    Path: event:/SFX_Coin
