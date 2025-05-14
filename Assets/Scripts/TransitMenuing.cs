@@ -56,7 +56,7 @@ public class TransitMenuing : MonoBehaviour
         {
             menuMementosButton = true;
 
-            if (coinManager.GetAcmountOfCoinsFoundButNotNecessarilyGotten() == 7)
+            if (coinManager.BeenToCredits())
             {
                 if (!coinManager.AllCoinsGotten())
                 {

@@ -20,10 +20,14 @@ public class TransitCoin : MonoBehaviour
 
     SceneChanger sceneManager;
 
+    static bool beenToCredits;
+
     void Start()
     {
 
         int currentScene = SceneManager.GetActiveScene().buildIndex;
+
+        if(currentScene == 8) beenToCredits = true;
 
         if (GetComponent<SceneChanger>() != null)
         {
@@ -128,6 +132,11 @@ public class TransitCoin : MonoBehaviour
     {
         if (allCoins[i].z == 1) return true;
         else return false;
+    }
+
+    public bool BeenToCredits()
+    {
+        return beenToCredits;
     }
 
 }
