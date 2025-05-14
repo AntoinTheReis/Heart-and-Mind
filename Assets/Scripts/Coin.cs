@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
 
 public class Coin : MonoBehaviour
 {
@@ -10,9 +12,14 @@ public class Coin : MonoBehaviour
     Animator animator;
     Collider2D col;
 
+    public EventReference fmodEvent; 
+    private EventInstance eventInstance;
+
     // Start is called before the first frame update
     void Awake()
     {
+        eventInstance = RuntimeManager.CreateInstance(fmodEvent);
+
         coinManager = GameObject.FindGameObjectWithTag("SceneChanger").GetComponent<TransitCoin>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -28,6 +35,11 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (eventInstance.isValid())
+        {
+            eventInstance.start();
+        }
+
         coinManager.CoinGot(gameObject);
         col.enabled = false;
         animator.SetBool("Got", true);
