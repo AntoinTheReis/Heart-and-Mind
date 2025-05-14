@@ -20,7 +20,11 @@ HEART: Mind?
 
 <<CutToBlack SceneScriptHolder>>
 
-<<playGlassBreak SceneScriptHolder>>
+<<wait  0.5>>
+
 HEART: <i><b>MIIIIINNNNNND!<b><i>
-<<NextScene SceneScriptHolder>>
+
+<<wait  0.5>>
+
+<<NextSceneNoFade SceneScriptHolder>>
 ===

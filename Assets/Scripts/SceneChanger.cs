@@ -241,4 +241,25 @@ public class SceneChanger : MonoBehaviour
         comingFromLevelSelect = true;
     }
 
+    [YarnCommand("NextSceneNoFade")]
+    public void NextSceneNoFade()
+    {
+        //lastActualScene = SceneManager.GetActiveScene().buildIndex;
+        int activeSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (!comingFromLevelSelect)
+        {
+            if (SceneManager.GetActiveScene().buildIndex != 0)
+            {
+                SceneManager.LoadScene(activeSceneIndex + 1);
+            }
+            else
+            {
+                SceneManager.LoadScene(PlayerPrefs.GetInt("CurrentScene"));
+            }
+        }
+        else if (activeSceneIndex == 1 || activeSceneIndex == 2 || activeSceneIndex == 6 || activeSceneIndex == 7) SceneManager.LoadScene(10);
+        else SceneManager.LoadScene(activeSceneIndex + 1);
+    }
+
 }
