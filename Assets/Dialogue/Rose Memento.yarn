@@ -20,9 +20,6 @@ HEART: Mind?
 
 <<CutToBlack SceneScriptHolder>>
 
-<<wait  0.5>>
-
-HEART: <i><b>MIIIIINNNNNND!<b><i>
 
 <<wait  0.5>>
 

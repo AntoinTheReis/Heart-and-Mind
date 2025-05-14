@@ -368,7 +368,7 @@ MonoBehaviour:
   rightOffset: {x: 0.43, y: -0.09}
   leftOffset: {x: -0.43, y: -0.09}
   wallOverlapSize: {x: 0.29, y: 0.6, z: 0}
-  floorOverlapSize: {x: 0.96, y: 0.42, z: 0}
+  floorOverlapSize: {x: 0.7, y: 0.42, z: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 384
