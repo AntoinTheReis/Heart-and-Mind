@@ -110,8 +110,16 @@ public class PauseMenu : MonoBehaviour
         player.GetComponent<DamageAndRespawn>().ForeignRespawn(0f);
         TogglePause();
     }
-    
-    
 
-    
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.P))
+        {
+            UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
+        }
+    }
+
+
+
+
 }

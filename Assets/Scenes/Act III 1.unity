@@ -1299,6 +1299,7 @@ MonoBehaviour:
   parameterValue: 0.3
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &207670209
 PrefabInstance:
@@ -1488,6 +1489,7 @@ MonoBehaviour:
   parameterValue: 0
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!4 &222280611 stripped
 Transform:
@@ -1760,6 +1762,7 @@ MonoBehaviour:
   parameterValue: 1
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &288752657
 PrefabInstance:
@@ -1871,6 +1874,7 @@ MonoBehaviour:
   parameterValue: 0.9
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &303676686
 PrefabInstance:
@@ -2072,6 +2076,7 @@ MonoBehaviour:
   parameterValue: 0.7
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &310576882
 PrefabInstance:
@@ -2901,6 +2906,7 @@ MonoBehaviour:
   parameterValue: 0.1
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &431815251
 PrefabInstance:
@@ -3069,6 +3075,7 @@ MonoBehaviour:
   parameterValue: 0.3
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &444214799
 PrefabInstance:
@@ -3458,6 +3465,7 @@ MonoBehaviour:
   parameterValue: 0.9
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &459483801
 PrefabInstance:
@@ -20061,6 +20069,7 @@ MonoBehaviour:
   parameterValue: 0.5
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1 &509820429
 GameObject:
@@ -20256,6 +20265,7 @@ MonoBehaviour:
   parameterValue: 0.4
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1 &530334606
 GameObject:
@@ -21925,6 +21935,7 @@ MonoBehaviour:
   parameterValue: 0.4
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1 &644766416
 GameObject:
@@ -22300,6 +22311,7 @@ MonoBehaviour:
   parameterValue: 0.4
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1 &688707884
 GameObject:
@@ -100403,6 +100415,7 @@ MonoBehaviour:
   parameterValue: 0.6
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!4 &838894653 stripped
 Transform:
@@ -100854,79 +100867,6 @@ Transform:
   - {fileID: 835388001}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &918209296
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1256673308963427249, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
-      propertyPath: m_text
-      value: REBINDINGS DO NOT WORK RIGHT NOW
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322037089738115110, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322037089738115110, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322037089738115110, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322037089738115110, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322037089738115110, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322037089738115110, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322037089738115110, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322037089738115110, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322037089738115110, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322037089738115110, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4686701283890247319, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5460848854515469499, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7608321955969428886, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
-      propertyPath: m_Name
-      value: PauseMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 8728962187705781538, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3a7017a093f555043a048c31b2feada3, type: 3}
 --- !u!1001 &933004908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -109796,6 +109736,7 @@ MonoBehaviour:
   parameterValue: 1
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!4 &1060084888 stripped
 Transform:
@@ -109827,6 +109768,7 @@ MonoBehaviour:
   parameterValue: 0.3
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!4 &1082102838 stripped
 Transform:
@@ -110431,6 +110373,7 @@ MonoBehaviour:
   parameterValue: 0.7
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &1225097973
 PrefabInstance:
@@ -237208,6 +237151,7 @@ MonoBehaviour:
   parameterValue: 0.1
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &1418995635
 PrefabInstance:
@@ -237405,6 +237349,7 @@ MonoBehaviour:
   parameterValue: 0
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &1455467707
 PrefabInstance:
@@ -237590,6 +237535,7 @@ MonoBehaviour:
   parameterValue: 0.1
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1 &1473943662
 GameObject:
@@ -259956,6 +259902,7 @@ MonoBehaviour:
   parameterValue: 0.5
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &1538296976
 PrefabInstance:
@@ -260067,6 +260014,7 @@ MonoBehaviour:
   parameterValue: 1
   parameter: 2
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!4 &1571447451 stripped
 Transform:
@@ -261450,6 +261398,7 @@ MonoBehaviour:
   parameterValue: 0
   parameter: 0
   pause: 1
+  destroy: 0
   speaker: {fileID: 1197442645}
 --- !u!1 &1783242380 stripped
 GameObject:
@@ -273378,6 +273327,7 @@ MonoBehaviour:
   parameterValue: 0.3
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &1988050059
 PrefabInstance:
@@ -273556,6 +273506,7 @@ MonoBehaviour:
   parameterValue: 0.2
   parameter: 1
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1 &2003973580
 GameObject:
@@ -297538,6 +297489,7 @@ MonoBehaviour:
   parameterValue: 0
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &2107611536
 PrefabInstance:
@@ -297649,6 +297601,7 @@ MonoBehaviour:
   parameterValue: 0.1
   parameter: 3
   pause: 0
+  destroy: 0
   speaker: {fileID: 0}
 --- !u!1001 &2123083184
 PrefabInstance:
@@ -297816,5 +297769,4 @@ SceneRoots:
   - {fileID: 913283382}
   - {fileID: 1455467707}
   - {fileID: 1726478521}
-  - {fileID: 918209296}
   - {fileID: 158452067}
